@@ -79,56 +79,70 @@ Here is the folder structure we have been using in this project
 flutter-app/
 |- android
 |- assets/
-    |- icons
-    |- images
-    |- licences
-    |- spalshscreen
-    |- sounds
+|   |- icons
+|   |- images
+|   |- licences
+|   |- spalshscreen
+|   |- sounds
 |- build
 |- ios
 |- lib/
-    |- core/
-        |- constants/
-            |- colors.dart
-            |- dates.dart
-            |- styles.dart
-        |- enums/
-            |- datetime.dart
-            |- module.dart
-            |- pages.dart
-        |- erros/
-            |- exceptions.dart
-            |- failures.dart
-        |- extensions/
-            |- bool.dart
-            |- string.dart
-            |- datetime.dart
-        |- themes/
-            |- dark/
-                |- dark.dart
-                |- hight_contrast.dart
-            |- light/
-                |- light.dart
-                |- hight_contrast.dart
-        |- routing
-            |- app_router.dart
-    |- modules/
-        |- authentication/
-            |- login/
-                |- data
-                |- domain
-                |- presenter  
-            |- register/
-                |- data
-                |- domain
-                |- presenter
-            |- reset_passaword/
-                |- data
-                |- domain
-                |- presenter
-        |- responsive
-        |- settings   
-    |- main.dart
+|   |- core/
+|   |   |- constants/
+|   |   |   |- colors.dart
+|   |   |   |- dates.dart
+|   |   |   |- styles.dart
+|   |   |- enums/
+|   |   |   |- datetime.dart
+|   |   |   |- module.dart
+|   |   |   |- pages.dart
+|   |   |- erros/
+|   |   |   |- exceptions.dart
+|   |   |   |- failures.dart
+|   |   |- extensions/
+|   |   |   |- bool.dart
+|   |   |   |- string.dart
+|   |   |   |- datetime.dart
+|   |   |- themes/
+|   |   |   |- dark/
+|   |   |   |   |- dark.dart
+|   |   |   |   |- hight_contrast.dart
+|   |   |   |- light/
+|   |   |   |   |- light.dart
+|   |   |   |   |- hight_contrast.dart
+|   |   |- routing
+|   |   |   |- app_router.dart
+|   |- modules/
+|   |   |- authentication/
+|   |   |   |- login/
+|   |   |   |   |- data
+|   |   |   |   |- domain
+|   |   |   |   |- presenter  
+|   |   |   |- register/
+|   |   |   |   |- data
+|   |   |   |   |- domain
+|   |   |   |   |- presenter
+|   |   |   |- reset_passaword/
+|   |   |   |   |- data
+|   |   |   |   |- domain
+|   |   |   |   |- presenter
+|   |   |- responsive
+|   |   |   |   |- domain
+|   |   |   |   |   |- breakpoints.dart
+|   |   |   |   |   |- device.dart
+|   |   |   |   |   |- sizing_info.dart
+|   |   |   |   |- presenter
+|   |   |   |   |   |- context.dart
+|   |   |   |   |   |- responsive_builder.dart
+|   |   |   |   |   |- responsive_view.dart
+|   |   |- settings
+|   |- ui
+|   |   |- appbar
+|   |   |- buttons
+|   |   |- cards
+|   |   |- pickers
+|   |   |- textfields
+|   |- main.dart
 |- test
 ```
 
@@ -156,41 +170,6 @@ constants/
 |- endpoints.dart
 |- preferences.dart
 |- strings.dart
-```
-
-### Data
-
-All the business logic of your application will go into this directory, it represents the data layer of your application. It is sub-divided into three directories `local`, `network` and `sharedperf`, each containing the domain specific logic. Since each layer exists independently, that makes it easier to unit test. The communication between UI and data layer is handled by using central repository.
-
-```
-data/
-|- local/
-    |- constants/
-    |- datasources/
-    |- app_database.dart
-   
-|- network/
-    |- constants/
-    |- exceptions/
-    |- rest_client.dart
-    
-|- sharedpref
-    |- constants/
-    |- shared_preference_helper.dart
-    
-|- repository.dart
-
-```
-
-### Stores
-
-The store is where all your application state lives in flutter. The Store is basically a widget that stands at the top of the widget tree and passes it's data down using special methods. In-case of multiple stores, a separate folder for each store is created as shown in the example below:
-
-```
-stores/
-|- login/
-    |- login_store.dart
-    |- form_validator.dart
 ```
 
 ### UI

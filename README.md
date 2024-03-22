@@ -149,14 +149,10 @@ flutter-app/
 Now, lets dive into the lib folder which has the main code for the application.
 
 ```
-1- constants - All the application level constants are defined in this directory with-in their respective files. This directory contains the constants for `theme`, `dimentions`, `api endpoints`, `preferences` and `strings`.
-2- data - Contains the data layer of your project, includes directories for local, network and shared pref/cache.
-3- stores - Contains store(s) for state-management of your application, to connect the reactive data of your application with the UI. 
-4- ui — Contains all the ui of your project, contains sub directory for each screen.
-5- util — Contains the utilities/common functions of your application.
-6- widgets — Contains the common widgets for your applications. For example, Button, TextField etc.
-7- routes.dart — This file contains all the routes for your application.
-8- main.dart - This is the starting point of the application. All the application level configurations are defined in this file i.e, theme, routes, title, orientation etc.
+1- core -
+2- module - 
+3- ui -  
+4- main.dart - This is the starting point of the application. All the application level configurations are defined in this file i.e, theme, routes, title, orientation etc.
 ```
 
 ### Constants

@@ -1,0 +1,11 @@
+{
+
+  "appName": "Flutter folders Structure",
+  "@appName": {
+    "description": "The flutter folders structure"
+  },
+  "language": "English",
+  "@language": {
+    "description": "The current language"
+  }
+}

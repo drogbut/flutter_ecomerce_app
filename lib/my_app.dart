@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_folders_structure/core/Themes/dark/dark.dart';
+import 'package:flutter_folders_structure/core/Themes/dark/high_constrast.dart';
+import 'package:flutter_folders_structure/core/Themes/light/high_constrast.dart';
+import 'package:flutter_folders_structure/core/Themes/light/light.dart';
 import 'package:flutter_folders_structure/core/extensions/context.dart';
 import 'package:flutter_folders_structure/l10n/l10n.dart';
 import 'package:flutter_folders_structure/l10n/local_provider.dart';
 import 'package:flutter_folders_structure/my_home_page.dart';
+import 'package:flutter_folders_structure/theme/theme_provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -15,22 +21,32 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder(
-        valueListenable: LocaleProvider().localeNotifier,
-        builder: (context, locale, child) {
-          return MaterialApp(
-            title: 'Flutter folders structure',
-            locale: locale,
-            supportedLocales: L10n.all,
-            localizationsDelegates: AppLocalizations.localizationsDelegates,
-            theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
-              useMaterial3: true,
-            ),
-            home: Builder(builder: (context) {
-              return MyHomePage(title: context.translate.appName);
-            }),
-          );
+    return ChangeNotifierProvider(
+        create: (context) => ThemeProvider(),
+        builder: (context, _) {
+          final themeProvider = Provider.of<ThemeProvider>(context);
+
+          return ValueListenableBuilder(
+              valueListenable: LocaleProvider().localeNotifier,
+              builder: (context, locale, child) {
+                return MaterialApp(
+                  title: 'Flutter folders structure',
+                  locale: locale,
+                  supportedLocales: L10n.all,
+                  localizationsDelegates:
+                      AppLocalizations.localizationsDelegates,
+                  themeMode: themeProvider.themeMode,
+                  theme: ThemesLight.lightTheme,
+                  highContrastTheme:
+                      ThemeLightHighContrast.lightHighContrastTheme,
+                  darkTheme: ThemesDark.darkTheme,
+                  highContrastDarkTheme:
+                      ThemesDarkHighContrast.darkHighContrastTheme,
+                  home: Builder(builder: (context) {
+                    return MyHomePage(title: context.translate.appName);
+                  }),
+                );
+              });
         });
   }
 }

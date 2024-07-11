@@ -14,7 +14,8 @@ class UtilityDeviceInfo {
 
   void setModel(String value) => _model = value;
 
-  Future<String> setAndGetModelFromDeviceInfo({DeviceInfoPlugin? deviceInfoPluginMock}) async {
+  Future<String> setAndGetModelFromDeviceInfo(
+      {DeviceInfoPlugin? deviceInfoPluginMock}) async {
     DeviceInfoPlugin deviceInfoPlugin;
     if (deviceInfoPluginMock == null) {
       deviceInfoPlugin = DeviceInfoPlugin(); // coverage:ignore-line

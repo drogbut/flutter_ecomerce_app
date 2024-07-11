@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/_utilities.dart';
 import '../../../../locator.dart';
+import '../core/utilities/preferences.dart';
 
 class ThemeProvider extends ChangeNotifier {
   ThemeMode themeMode = ThemeMode.system;
@@ -15,13 +15,14 @@ class ThemeProvider extends ChangeNotifier {
     } else if (theme == 'System') {
       themeMode = ThemeMode.system;
     } else if (theme == '') {
-      themeMode = ThemeMode.dark;
+      themeMode = ThemeMode.light;
     }
   }
 
   bool get isDarkMode {
     if (themeMode == ThemeMode.system) {
-      final brightness = WidgetsBinding.instance.platformDispatcher.platformBrightness;
+      final brightness =
+          WidgetsBinding.instance.platformDispatcher.platformBrightness;
 
       return brightness == Brightness.dark;
     }

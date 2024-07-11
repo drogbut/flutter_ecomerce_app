@@ -47,20 +47,20 @@ In Visual Studio Code, navigate to `Preferences` -> `Settings` and search for `F
 **/*.g.dart
 ```
 
-## Boilerplate Features:
+## Features:
 
+* Multilingual Support
+* Dependency Injection
+* App Theme
 * Splash
 * Login
 * Home
 * Routing
-* Theme
 * Dio
 * Database
 * Encryption
 * Validation
 * User Notifications
-* Dependency Injection
-* Multilingual Support
 
 ### Up-Coming Features:
 

@@ -1,16 +1,4 @@
-import '../../locator.dart';
-import '../_enums.dart';
-import '../_utilities.dart';
-
 extension TextAlternativeExtension on String {
-  String alternative({Module? module, bool plusAndSymbol = false}) {
-    return sl.get<UtilityTextAlternative>().getAlternativeText(
-          this,
-          module: module,
-          plusAndSymbol: plusAndSymbol,
-        );
-  }
-
   double parseToDoubleTime() {
     try {
       return double.parse(replaceAll(',', '.').replaceAll(':', '.'));
@@ -26,4 +14,19 @@ extension TextAlternativeExtension on String {
 
 extension ReportCodeString on String {
   int get intVal => int.parse(this);
+}
+
+extension TwBool on String {
+  bool toBool({bool defaultBool = false}) {
+    switch (toLowerCase()) {
+      case 'true':
+        return true;
+
+      case 'false':
+        return false;
+
+      default:
+        return defaultBool;
+    }
+  }
 }

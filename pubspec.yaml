@@ -27,6 +27,11 @@ dependencies:
 
 
   shared_preferences: ^2.2.3
+  package_info_plus: ^5.0.1
+  connectivity_plus: ^6.0.3
+  device_info_plus: ^9.1.2
+
+
 
 
 dev_dependencies:

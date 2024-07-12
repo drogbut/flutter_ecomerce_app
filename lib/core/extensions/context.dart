@@ -54,4 +54,34 @@ extension ContextExt on BuildContext {
 
   /// Indicates whether the current context is in high contrast mode.
   bool get isHighContrast => mediaQuery.highContrast;
+
+  DeviceScreenType get deviceType {
+    double deviceWidth = mediaQuerySize.shortestSide;
+
+    if (deviceWidth > DeviceBreakpoints.largeDesktop) {
+      return DeviceScreenType.largeDesktop;
+    }
+
+    if (deviceWidth > DeviceBreakpoints.desktop) {
+      return DeviceScreenType.desktop;
+    }
+
+    if (deviceWidth > DeviceBreakpoints.tablet) {
+      return DeviceScreenType.tablet;
+    }
+
+    if (deviceWidth <= DeviceBreakpoints.wearable) {
+      return DeviceScreenType.wearable;
+    }
+
+    return DeviceScreenType.mobile;
+  }
+
+  bool get isWearable => deviceType == DeviceScreenType.wearable;
+  bool get isPhone => deviceType == DeviceScreenType.mobile;
+  bool get isTablet => deviceType == DeviceScreenType.tablet;
+  bool get isDesktop => deviceType == DeviceScreenType.desktop;
+  bool get is4k => deviceType == DeviceScreenType.largeDesktop;
+
+  bool get isPhoneOrSmaller => isPhone || isWearable;
 }

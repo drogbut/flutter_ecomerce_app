@@ -52,25 +52,9 @@ In Visual Studio Code, navigate to `Preferences` -> `Settings` and search for `F
 * Multilingual Support
 * Dependency Injection
 * App Theme
-* Splash
-* Login
-* Home
-* Routing
-* Dio
-* Database
-* Encryption
-* Validation
-* User Notifications
-
-### Up-Coming Features:
-
-* Connectivity Support
-* Background Fetch Support
-
-### Libraries & Tools Used
-
-* [Dio](https://github.com/flutterchina/dio)
+* Responsive App 
 * 
+
 
 ### Folder Structure
 Here is the folder structure we have been using in this project
@@ -101,8 +85,13 @@ flutter-app/
 |   |   |   |- failures.dart
 |   |   |- extensions/
 |   |   |   |- bool.dart
+|   |   |   |- color.dart
+|   |   |   |- context.dart
+|   |   |   |- date_time.dart
 |   |   |   |- string.dart
-|   |   |   |- datetime.dart
+|   |   |   |- widget.dart
+|   |   |- routing
+|   |   |   |- app_router.dart
 |   |   |- themes/
 |   |   |   |- dark/
 |   |   |   |   |- dark.dart
@@ -110,8 +99,6 @@ flutter-app/
 |   |   |   |- light/
 |   |   |   |   |- light.dart
 |   |   |   |   |- hight_contrast.dart
-|   |   |- routing
-|   |   |   |- app_router.dart
 |   |- modules/
 |   |   |- authentication/
 |   |   |   |- login/

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../../responsive/domain/breakpoints.dart';
+import '../../responsive/domain/device.dart';
+
 /// An extension on the BuildContext class providing easy access to various
 /// commonly used properties and methods.
 ///

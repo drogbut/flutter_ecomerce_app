@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TwAppBarTitle extends StatelessWidget implements PreferredSizeWidget {
+class MyAppBarTitle extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final Widget? leading;
   final List<Widget>? actions;
   final PreferredSizeWidget? bottom;
   final double? customHeight;
 
-  const TwAppBarTitle({
+  const MyAppBarTitle({
     required this.title,
     this.leading,
     this.actions,

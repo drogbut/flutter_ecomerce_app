@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class TwOutlineIcon extends StatelessWidget {
+class MyOutlineIcon extends StatelessWidget {
   final VoidCallback? onPressed;
   final IconData? iconData;
   final String? tooltip;
   final Color? iconColor;
   final double? iconSize;
 
-  const TwOutlineIcon({
+  const MyOutlineIcon({
     required this.onPressed,
     required this.iconData,
     this.tooltip,

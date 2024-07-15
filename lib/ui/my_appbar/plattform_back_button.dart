@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../core/_utilities.dart';
+import '../../core/utilities/platform.dart';
 import '../../locator.dart';
 
-class TwAppBarBackButton extends StatelessWidget {
+class MyAppBarBackButton extends StatelessWidget {
   final Function()? onPressed;
 
-  const TwAppBarBackButton({
+  const MyAppBarBackButton({
     super.key,
     this.onPressed,
   });

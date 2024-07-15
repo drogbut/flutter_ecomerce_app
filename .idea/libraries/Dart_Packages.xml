@@ -254,6 +254,13 @@
             </list>
           </value>
         </entry>
+        <entry key="font_awesome_flutter">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/font_awesome_flutter-10.7.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="frontend_server_client">
           <value>
             <list>
@@ -716,6 +723,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/file-7.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fixnum-1.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_lints-4.0.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/font_awesome_flutter-10.7.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/frontend_server_client-4.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/get_it-7.6.7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/glob-2.1.2/lib" />

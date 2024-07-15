@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class TwCircleIcon extends StatelessWidget {
+class MyCircleIcon extends StatelessWidget {
   final VoidCallback? onPressed;
   final IconData? iconData;
   final String? tooltip;
   final Color? iconColor;
   final double? iconSize;
 
-  const TwCircleIcon({
+  const MyCircleIcon({
     required this.onPressed,
     required this.iconData,
     this.tooltip,
@@ -20,7 +20,8 @@ class TwCircleIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
-      decoration: BoxDecoration(color: iconColor?.withOpacity(0.2), shape: BoxShape.circle),
+      decoration: BoxDecoration(
+          color: iconColor?.withOpacity(0.2), shape: BoxShape.circle),
       child: IconButton(
         padding: EdgeInsets.zero,
         constraints: const BoxConstraints(),

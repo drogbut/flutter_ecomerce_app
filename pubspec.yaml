@@ -30,6 +30,7 @@ dependencies:
   package_info_plus: ^5.0.1
   connectivity_plus: ^6.0.3
   device_info_plus: ^9.1.2
+  font_awesome_flutter: ^10.7.0
 
 
 

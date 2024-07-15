@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_folders_structure/core/extensions/context.dart';
+import 'package:flutter_folders_structure/core/extensions/widget.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import '../core/_constants.dart';
-import '../core/_extensions.dart';
-import '../ui/gesture_detector_user_activity.dart';
 
 Future showMaterialInformationDialog(
   BuildContext context,
@@ -28,12 +26,12 @@ Future showMaterialInformationDialog(
             children: [
               SizedBox(
                 child: FaIcon(
-                  FontAwesomeIcons.lightCircleInfo,
-                  color: TwConstants().colorInfo,
+                  FontAwesomeIcons.info,
+                  color: Colors.red,
                 ),
               ).withPadding(10.rightPadding),
               Text(
-                title ?? context.translate.information.alternative(),
+                title ?? context.translate.sample,
                 style: TextStyle(
                   color: context.colorScheme.primary,
                 ),
@@ -73,7 +71,8 @@ Future showMaterialInformationDialog(
   );
 }
 
-Future showMaterialWarningDialog(BuildContext context, String description, {String? title, String? buttonTitle}) async {
+Future showMaterialWarningDialog(BuildContext context, String description,
+    {String? title, String? buttonTitle}) async {
   return await showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -91,12 +90,12 @@ Future showMaterialWarningDialog(BuildContext context, String description, {Stri
             children: [
               SizedBox(
                 child: FaIcon(
-                  FontAwesomeIcons.lightTriangleExclamation,
-                  color: TwConstants().colorWarning,
+                  FontAwesomeIcons.triangleExclamation,
+                  color: Colors.orange,
                 ),
               ).withPadding(10.rightPadding),
               Text(
-                title ?? context.translate.warning.alternative(),
+                title ?? context.translate.sample,
                 style: TextStyle(
                   color: context.colorScheme.primary,
                 ),
@@ -119,7 +118,7 @@ Future showMaterialWarningDialog(BuildContext context, String description, {Stri
               ),
               child: ElevatedButton(
                 child: Text(
-                  buttonTitle ?? context.translate.okay.alternative(),
+                  buttonTitle ?? context.translate.okay,
                   style: const TextStyle(
                     fontWeight: FontWeight.normal,
                   ),
@@ -136,7 +135,8 @@ Future showMaterialWarningDialog(BuildContext context, String description, {Stri
   );
 }
 
-Future showMaterialErrorDialog(BuildContext context, String description, {String? title, String? buttonTitle}) async {
+Future showMaterialErrorDialog(BuildContext context, String description,
+    {String? title, String? buttonTitle}) async {
   return await showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -154,13 +154,13 @@ Future showMaterialErrorDialog(BuildContext context, String description, {String
             children: [
               SizedBox(
                 child: FaIcon(
-                  FontAwesomeIcons.lightCircleExclamation,
+                  FontAwesomeIcons.circle,
                   size: 30,
-                  color: TwConstants().colorAlarm,
+                  color: Colors.red,
                 ),
               ).withPadding(10.rightPadding),
               Text(
-                title ?? context.translate.error.alternative(),
+                title ?? context.translate.sample,
                 style: TextStyle(
                   color: context.colorScheme.primary,
                 ),
@@ -183,7 +183,7 @@ Future showMaterialErrorDialog(BuildContext context, String description, {String
               ),
               child: ElevatedButton(
                 child: Text(
-                  buttonTitle ?? context.translate.okay.alternative(),
+                  buttonTitle ?? context.translate.okay,
                   style: const TextStyle(
                     fontWeight: FontWeight.normal,
                   ),
@@ -227,12 +227,12 @@ Future showMaterialQuestionDialog(
             children: [
               SizedBox(
                 child: FaIcon(
-                  FontAwesomeIcons.lightQuestion,
-                  color: TwConstants().colorInfo,
+                  FontAwesomeIcons.question,
+                  color: Colors.blue,
                 ),
               ).withPadding(10.rightPadding),
               Text(
-                title ?? context.translate.question.alternative(),
+                title ?? context.translate.sample,
                 style: TextStyle(
                   color: context.colorScheme.primary,
                 ),
@@ -279,7 +279,7 @@ Future showMaterialQuestionDialog(
                 ),
               ),
               child: Text(
-                secondButtonTitle ?? context.translate.no.alternative(),
+                secondButtonTitle ?? context.translate.sample,
                 style: const TextStyle(
                   fontWeight: FontWeight.normal,
                 ),
@@ -295,7 +295,7 @@ Future showMaterialQuestionDialog(
               ),
               child: ElevatedButton(
                 child: Text(
-                  firstButtonTitle ?? context.translate.yes.alternative(),
+                  firstButtonTitle ?? context.translate.sample,
                   style: const TextStyle(
                     fontWeight: FontWeight.normal,
                   ),

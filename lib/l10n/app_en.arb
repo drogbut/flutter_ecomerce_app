@@ -15,5 +15,9 @@
   "done": "Done",
   "@done": {
     "description": "Done"
+  },
+  "sample": "sample",
+  "@sample": {
+    "description": "Done"
   }
 }

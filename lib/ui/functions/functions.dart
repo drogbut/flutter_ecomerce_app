@@ -2,17 +2,16 @@ import 'dart:async';
 
 import 'package:android_id/android_id.dart';
 import 'package:device_info_plus/device_info_plus.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_folders_structure/core/extensions/context.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
-import '../../core/utilities/color.dart';
+import '../../core/utilities/dialog.dart';
+import '../../core/utilities/navigation.dart';
 import '../../core/utilities/platform.dart';
 import '../../locator.dart';
-import '../../theme/theme_provider.dart';
 
 UtilityPlatform platformUtil = sl.get<UtilityPlatform>();
 
@@ -427,16 +426,14 @@ String checkDoubleNoOnBlur(
           int.parse((signs[1])).isNaN) {
         showMaterialErrorDialog(
           _currentCtx,
-          _currentCtx.translate.percentFormatOrContentWrong
-              .alternative(module: Module.workflow),
+          _currentCtx.translate.sample,
         );
       } else if (signs[1] != '' &&
           signs[1].length < digitAfterDot &&
           int.parse((signs[1])).isNaN) {
         showMaterialErrorDialog(
           _currentCtx,
-          _currentCtx.translate.percentFormatOrContentWrong
-              .alternative(module: Module.workflow),
+          _currentCtx.translate.sample,
         );
       }
     }
@@ -603,7 +600,7 @@ Color getFlashShadowColor() {
 
 FaIcon getCustomControlWidgetDropdownIcon() {
   return const FaIcon(
-    FontAwesomeIcons.lightChevronDown,
+    FontAwesomeIcons.chevronDown,
   );
 }
 

@@ -31,6 +31,11 @@ dependencies:
   connectivity_plus: ^6.0.3
   device_info_plus: ^9.1.2
   font_awesome_flutter: ^10.7.0
+  geolocator: ^11.1.0
+  keyboard_actions: ^4.2.0
+  android_id: ^0.4.0
+  calendar_view: ^1.2.0
+  multi_select_flutter: ^4.1.3
 
 
 

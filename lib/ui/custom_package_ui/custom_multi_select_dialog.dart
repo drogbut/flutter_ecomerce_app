@@ -5,15 +5,12 @@
 // coverage:ignore-file
 
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_folders_structure/core/extensions/context.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:multi_select_flutter/multi_select_flutter.dart';
 
-import '../custom_field.dart';
-
-import '../../core/_extensions.dart';
-
-import '../../standard/functions.dart';
+import '../fields/custom_fileds.dart';
+import '../functions/functions.dart';
 
 /// A dialog containing either a classic checkbox style list, or a chip style list.
 class MultiSelectDialog<T> extends StatefulWidget with MultiSelectActions<T> {
@@ -160,16 +157,20 @@ class _MultiSelectDialogState<T> extends State<MultiSelectDialog<T>> {
         dense: true, // Custom new
         checkColor: widget.checkColor,
         value: item.selected,
-        activeColor:
-            widget.colorator != null ? widget.colorator!(item.value) ?? widget.selectedColor : widget.selectedColor,
+        activeColor: widget.colorator != null
+            ? widget.colorator!(item.value) ?? widget.selectedColor
+            : widget.selectedColor,
         title: Text(
           item.label,
-          style: item.selected ? widget.selectedItemsTextStyle : widget.itemsTextStyle,
+          style: item.selected
+              ? widget.selectedItemsTextStyle
+              : widget.itemsTextStyle,
         ),
         controlAffinity: ListTileControlAffinity.leading,
         onChanged: (checked) {
           setState(() {
-            _selectedValues = widget.onItemCheckedChange(_selectedValues, item.value, checked!);
+            _selectedValues = widget.onItemCheckedChange(
+                _selectedValues, item.value, checked!);
 
             if (checked) {
               item.selected = true;
@@ -217,7 +218,8 @@ class _MultiSelectDialogState<T> extends State<MultiSelectDialog<T>> {
             item.selected = false;
           }
           setState(() {
-            _selectedValues = widget.onItemCheckedChange(_selectedValues, item.value, checked);
+            _selectedValues = widget.onItemCheckedChange(
+                _selectedValues, item.value, checked);
           });
           if (widget.onSelectionChanged != null) {
             widget.onSelectionChanged!(_selectedValues);
@@ -232,7 +234,7 @@ class _MultiSelectDialogState<T> extends State<MultiSelectDialog<T>> {
     return AlertDialog(
       backgroundColor: widget.backgroundColor,
       title: widget.searchable == false
-          ? widget.title ?? Text(context.translate.select.alternative()) // Custom change
+          ? widget.title ?? Text(context.translate.sample) // Custom change
           : Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -242,31 +244,39 @@ class _MultiSelectDialogState<T> extends State<MultiSelectDialog<T>> {
                           // Custom change
                           textWidget: Container(
                               // Custom change
-                              key: _globalTextWidgetSearchTextKey, // Custom change
+                              key:
+                                  _globalTextWidgetSearchTextKey, // Custom change
                               padding: const EdgeInsets.only(
                                   // Custom change
                                   bottom: 10 // Custom change
                                   ), // Custom change
                               child: Text(
                                 // Custom change
-                                context.translate.projectText.alternative(), // Custom change
-                                style: getCustomTextWidgetStyle(), // Custom change
+                                context.translate.sample, // Custom change
+                                style:
+                                    getCustomTextWidgetStyle(), // Custom change
                               ) // Custom change
                               ), // Custom change
                           controlWidget: TextField(
                             // Custom change
-                            key: _globalControlWidgetSearchTextKey, // Custom change
-                            style: getCustomControlWidgetStyle(), // Custom change
-                            decoration: getCustomControlWidgetDecoration().copyWith(
+                            key:
+                                _globalControlWidgetSearchTextKey, // Custom change
+                            style:
+                                getCustomControlWidgetStyle(), // Custom change
+                            decoration:
+                                getCustomControlWidgetDecoration().copyWith(
                               // Custom change
-                              hintText: widget.searchHint ?? context.translate.search.alternative(), // Custom change
+                              hintText: widget.searchHint ??
+                                  context.translate.sample, // Custom change
                             ), // Custom change
                             onChanged: (val) {
                               List<MultiSelectItem<T>> filteredList = [];
-                              filteredList = widget.updateSearchQuery(val, widget.items);
+                              filteredList =
+                                  widget.updateSearchQuery(val, widget.items);
                               setState(() {
                                 if (widget.separateSelectedItems) {
-                                  _items = widget.separateSelected(filteredList);
+                                  _items =
+                                      widget.separateSelected(filteredList);
                                 } else {
                                   _items = filteredList;
                                 }
@@ -275,11 +285,15 @@ class _MultiSelectDialogState<T> extends State<MultiSelectDialog<T>> {
                           ),
                         ),
                       )
-                    : widget.title ?? Text(context.translate.select.alternative()), // Custom change
+                    : widget.title ??
+                        Text(context.translate.sample), // Custom change
                 IconButton(
                   icon: _showSearch
-                      ? widget.closeSearchIcon ?? const FaIcon(FontAwesomeIcons.xmark) // Custom change
-                      : widget.searchIcon ?? const FaIcon(FontAwesomeIcons.lightMagnifyingGlass), // Custom change
+                      ? widget.closeSearchIcon ??
+                          const FaIcon(FontAwesomeIcons.xmark) // Custom change
+                      : widget.searchIcon ??
+                          const FaIcon(FontAwesomeIcons
+                              .magnifyingGlass), // Custom change
                   onPressed: () {
                     setState(() {
                       _showSearch = !_showSearch;
@@ -295,13 +309,15 @@ class _MultiSelectDialogState<T> extends State<MultiSelectDialog<T>> {
                 ),
               ],
             ),
-      contentPadding: widget.listType == null || widget.listType == MultiSelectListType.LIST
-          ? const EdgeInsets.only(top: 12.0)
-          : const EdgeInsets.all(20),
+      contentPadding:
+          widget.listType == null || widget.listType == MultiSelectListType.LIST
+              ? const EdgeInsets.only(top: 12.0)
+              : const EdgeInsets.all(20),
       content: SizedBox(
         height: widget.height,
         width: widget.width ?? context.screenWidth * 0.73,
-        child: widget.listType == null || widget.listType == MultiSelectListType.LIST
+        child: widget.listType == null ||
+                widget.listType == MultiSelectListType.LIST
             ? ListView.builder(
                 itemCount: _items.length,
                 itemBuilder: (context, index) {
@@ -319,8 +335,10 @@ class _MultiSelectDialogState<T> extends State<MultiSelectDialog<T>> {
           // Custom change
           style: ElevatedButton.styleFrom(
             // Custom change
-            backgroundColor: Theme.of(context).scaffoldBackgroundColor, // Custom change
-            foregroundColor: Theme.of(context).colorScheme.primary, // Custom change
+            backgroundColor:
+                Theme.of(context).scaffoldBackgroundColor, // Custom change
+            foregroundColor:
+                Theme.of(context).colorScheme.primary, // Custom change
             side: BorderSide(
               // Custom change
               color: Theme.of(context).colorScheme.primary, // Custom change
@@ -332,7 +350,7 @@ class _MultiSelectDialogState<T> extends State<MultiSelectDialog<T>> {
           }, // Custom change
           child: Text(
             // Custom change
-            context.translate.cancel.alternative(), // Custom change
+            context.translate.sample, // Custom change
             style: const TextStyle(
               // Custom change
               fontWeight: FontWeight.normal, // Custom change
@@ -349,11 +367,12 @@ class _MultiSelectDialogState<T> extends State<MultiSelectDialog<T>> {
             // Custom change
             onPressed: () {
               // Custom change
-              widget.onConfirmTap(context, _selectedValues, widget.onConfirm); // Custom change
+              widget.onConfirmTap(
+                  context, _selectedValues, widget.onConfirm); // Custom change
             }, // Custom change
             child: Text(
               // Custom change
-              context.translate.okay.alternative(), // Custom change
+              context.translate.okay, // Custom change
               style: const TextStyle(
                 // Custom change
                 fontWeight: FontWeight.normal, // Custom change

@@ -3,12 +3,12 @@
 // that can be found in the LICENSE file.
 
 import 'dart:math';
-import 'dart:ui';
 
-import 'package:flutter/material.dart';
 import 'package:calendar_view/calendar_view.dart' hide DateTimeExtensions;
-import '../../core/_extensions.dart';
-import '../../core/_utilities.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_folders_structure/core/extensions/date_time.dart';
+
+import '../../core/utilities/platform.dart';
 import '../../locator.dart';
 
 typedef CellWeekTapCallback<T extends Object?> = void Function(DateTime date);
@@ -17,7 +17,7 @@ class Constants {
   Constants._();
 
   static final Random _random = Random();
-  static final int _maxColor = 256;
+  static const int _maxColor = 256;
   static const int hoursADay = 24;
   static const int minutesADay = 1440;
 
@@ -30,7 +30,8 @@ class Constants {
   static const Color offWhite = Color(0xfff0f0f0);
   static const Color headerBackground = Color(0xFFDCF0FF);
   static Color get randomColor {
-    return Color.fromRGBO(_random.nextInt(_maxColor), _random.nextInt(_maxColor), _random.nextInt(_maxColor), 1);
+    return Color.fromRGBO(_random.nextInt(_maxColor),
+        _random.nextInt(_maxColor), _random.nextInt(_maxColor), 1);
   }
 }
 
@@ -56,12 +57,19 @@ extension DateTimeExtensions on DateTime {
   }
 
   /// Gets difference of days between [date] and calling object.
-  int getDayDifference(DateTime date) =>
-      DateTime.utc(year, month, day).difference(DateTime.utc(date.year, date.month, date.day)).inDays.abs();
+  int getDayDifference(DateTime date) => DateTime.utc(year, month, day)
+      .difference(DateTime.utc(date.year, date.month, date.day))
+      .inDays
+      .abs();
 
   /// Gets difference of weeks between [date] and calling object.
   int getWeekDifference(DateTime date, {WeekDays start = WeekDays.monday}) =>
-      (firstDayOfWeek(start: start).difference(date.firstDayOfWeek(start: start)).inDays.abs() / 7).ceil();
+      (firstDayOfWeek(start: start)
+                  .difference(date.firstDayOfWeek(start: start))
+                  .inDays
+                  .abs() /
+              7)
+          .ceil();
 
   /// Returns The List of date of Current Week, all of the dates will be without
   /// time.
@@ -80,7 +88,8 @@ extension DateTimeExtensions on DateTime {
     // adding 1 in index. So, new formula with WeekDays is,
     //    difference = (weekdays - (start.index + 1))%7
     //
-    final startDay = DateTime(year, month, day - (weekday - start.index - 1) % 7);
+    final startDay =
+        DateTime(year, month, day - (weekday - start.index - 1) % 7);
 
     return [
       startDay,
@@ -108,7 +117,8 @@ extension DateTimeExtensions on DateTime {
   List<DateTime> datesOfMonths({WeekDays startDay = WeekDays.monday}) {
     final monthDays = <DateTime>[];
     for (var i = 1, start = 1; i < 7; i++, start += 7) {
-      monthDays.addAll(DateTime(year, month, start).datesOfWeek(start: startDay));
+      monthDays
+          .addAll(DateTime(year, month, start).datesOfWeek(start: startDay));
     }
     return monthDays;
   }
@@ -145,7 +155,8 @@ extension DateTimeExtensions on DateTime {
 
   bool get isDayStart => hour % 24 == 0 && minute % 60 == 0;
 
-  @Deprecated("This extension is not being used in this package and will be removed "
+  @Deprecated(
+      "This extension is not being used in this package and will be removed "
       "in next major release. Please use withoutTime instead.")
   DateTime get dateYMD => DateTime(year, month, day);
 }
@@ -282,7 +293,7 @@ class MonthView<T extends Object?> extends StatefulWidget {
 
   /// Main [Widget] to display month view.
   const MonthView({
-    Key? key,
+    super.key,
     this.showBorder = true,
     this.borderColor = Constants.defaultBorderColor,
     this.cellBuilder,
@@ -311,7 +322,7 @@ class MonthView<T extends Object?> extends StatefulWidget {
     this.safeAreaOption = const SafeAreaOption(),
     this.showNumberOfWeeks = 6, // custom change
     this.showCalendarWeeks = true, // custom change
-  }) : super(key: key);
+  });
 
   @override
   MonthViewState<T> createState() => MonthViewState<T>();
@@ -378,7 +389,8 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
   void didChangeDependencies() {
     super.didChangeDependencies();
 
-    final newController = widget.controller ?? CalendarControllerProvider.of<T>(context).controller;
+    final newController = widget.controller ??
+        CalendarControllerProvider.of<T>(context).controller;
 
     if (newController != _controller) {
       _controller = newController;
@@ -399,7 +411,8 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
   void didUpdateWidget(MonthView<T> oldWidget) {
     super.didUpdateWidget(oldWidget);
     // Update controller.
-    final newController = widget.controller ?? CalendarControllerProvider.of<T>(context).controller;
+    final newController = widget.controller ??
+        CalendarControllerProvider.of<T>(context).controller;
 
     if (newController != _controller) {
       _controller?.removeListener(_reloadCallback);
@@ -408,7 +421,8 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
     }
 
     // Update date range.
-    if (widget.minMonth != oldWidget.minMonth || widget.maxMonth != oldWidget.maxMonth) {
+    if (widget.minMonth != oldWidget.minMonth ||
+        widget.maxMonth != oldWidget.maxMonth) {
       _setDateRange();
       _regulateCurrentDate();
 
@@ -438,7 +452,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               width: _width,
               child: _headerBuilder(_currentDate),
             ),
@@ -455,17 +469,19 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
+                      SizedBox(
                         width: _width,
                         child: Row(
                           children: [
-                            if (widget.showCalendarWeeks) ...[ // custom change
+                            if (widget.showCalendarWeeks) ...[
+                              // custom change
                               SizedBox(
                                 width: _width * _weekFactor,
-                                child: Center(
+                                child: const Center(
                                   child: Text(
                                     'KW',
-                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
                                   ),
                                 ),
                               ),
@@ -475,7 +491,8 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
                               (index) => Expanded(
                                 child: SizedBox(
                                   width: _cellWidth,
-                                  child: _weekBuilder(weekDays[index].weekday - 1),
+                                  child:
+                                      _weekBuilder(weekDays[index].weekday - 1),
                                 ),
                               ),
                             ),
@@ -485,11 +502,14 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
                       Expanded(
                         child: LayoutBuilder(builder: (context, constraints) {
                           final double localHeight =
-                              _height > constraints.maxHeight ? constraints.maxHeight : _height; // custom change
+                              _height > constraints.maxHeight
+                                  ? constraints.maxHeight
+                                  : _height; // custom change
 
-                          final _cellAspectRatio = widget.useAvailableVerticalSpace
-                              ? calculateCellAspectRatio(localHeight)
-                              : widget.cellAspectRatio;
+                          final _cellAspectRatio =
+                              widget.useAvailableVerticalSpace
+                                  ? calculateCellAspectRatio(localHeight)
+                                  : widget.cellAspectRatio;
 
                           return SizedBox(
                             height: localHeight,
@@ -571,7 +591,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
 
   void _assignBuilders() {
     // Initialize cell builder. Assign default if widget.cellBuilder is null.
-    _cellBuilder = widget.cellBuilder ?? _defaultCellBuilder;
+    ///TODO _cellBuilder = widget.cellBuilder ?? _defaultCellBuilder;
 
     // Initialize week builder. Assign default if widget.weekBuilder is null.
     // This widget will come under header this will display week days.
@@ -669,7 +689,8 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
   }
 
   /// Default cell builder. Used when [widget.cellBuilder] is null
-  Widget _defaultCellBuilder(date, List<CalendarEventData<T>> events, isToday, isInMonth) {
+  Widget _defaultCellBuilder(
+      date, List<CalendarEventData<T>> events, isToday, isInMonth) {
     return FilledCell<T>(
       date: date,
       shouldHighlight: isToday,
@@ -714,9 +735,11 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
   /// Arguments [duration] and [curve] will override default values provided
   /// as [MonthView.pageTransitionDuration] and [MonthView.pageTransitionCurve]
   /// respectively.
-  Future<void> animateToPage(int page, {Duration? duration, Curve? curve}) async {
+  Future<void> animateToPage(int page,
+      {Duration? duration, Curve? curve}) async {
     await _pageController.animateToPage(page,
-        duration: duration ?? widget.pageTransitionDuration, curve: curve ?? widget.pageTransitionCurve);
+        duration: duration ?? widget.pageTransitionDuration,
+        curve: curve ?? widget.pageTransitionCurve);
   }
 
   /// Returns current page number.
@@ -735,7 +758,8 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
   /// Arguments [duration] and [curve] will override default values provided
   /// as [MonthView.pageTransitionDuration] and [MonthView.pageTransitionCurve]
   /// respectively.
-  Future<void> animateToMonth(DateTime month, {Duration? duration, Curve? curve}) async {
+  Future<void> animateToMonth(DateTime month,
+      {Duration? duration, Curve? curve}) async {
     if (month.isBefore(_minDate) || month.isAfter(_maxDate)) {
       throw "Invalid date selected.";
     }
@@ -775,7 +799,7 @@ class _CalendarWeekView<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     final monthDays = date.datesOfMonths(startDay: startDay);
 
-    return Container(
+    return SizedBox(
       width: width,
       height: height,
       child: LayoutBuilder(
@@ -784,17 +808,22 @@ class _CalendarWeekView<T> extends StatelessWidget {
             children: List.generate(
               showNumberOfWeeks,
               (index) {
-                final weekNo = date.add(Duration(days: index * 7)).weekNo.toString();
+                final weekNo =
+                    date.add(Duration(days: index * 7)).weekNo.toString();
 
                 return GestureDetector(
-                  onTap: sl.get<UtilityPlatform>().isWebOrIsWindows ? () => onWeekLongPress?.call(monthDays[index * 7]) : null,
-                  onLongPress: !sl.get<UtilityPlatform>().isWebOrIsWindows ? () => onWeekLongPress?.call(monthDays[index * 7]) : null,
+                  onTap: sl.get<UtilityPlatform>().isWebOrIsWindows
+                      ? () => onWeekLongPress?.call(monthDays[index * 7])
+                      : null,
+                  onLongPress: !sl.get<UtilityPlatform>().isWebOrIsWindows
+                      ? () => onWeekLongPress?.call(monthDays[index * 7])
+                      : null,
                   child: SizedBox(
                     height: constraints.maxHeight / showNumberOfWeeks,
                     child: Center(
                       child: Text(
                         weekNo,
-                        style: TextStyle(fontSize: 18),
+                        style: const TextStyle(fontSize: 18),
                       ),
                     ),
                   ),
@@ -845,11 +874,11 @@ class _MonthPageBuilder<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     final monthDays = date.datesOfMonths(startDay: startDay);
 
-    return Container(
+    return SizedBox(
       width: width,
       height: height,
       child: GridView.builder(
-        physics: ClampingScrollPhysics(),
+        physics: const ClampingScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 7,
           childAspectRatio: cellRatio,
@@ -876,6 +905,7 @@ class _MonthPageBuilder<T> extends StatelessWidget {
                 events,
                 monthDays[index].compareWithoutTime(DateTime.now()),
                 monthDays[index].month == date.month,
+                showBorder,
               ),
             ),
           );

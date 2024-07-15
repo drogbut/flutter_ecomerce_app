@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../core/_extensions.dart';
-import '../modules/settings/theme/data/our_theme.dart';
+import 'package:flutter_folders_structure/core/extensions/context.dart';
 
 class CustomTextField extends StatefulWidget {
   final Widget textWidget;
@@ -10,7 +8,12 @@ class CustomTextField extends StatefulWidget {
   final double? height;
   final Color? color;
 
-  const CustomTextField({required this.textWidget, required this.controlWidget, Key? key, this.height, this.color})
+  const CustomTextField(
+      {required this.textWidget,
+      required this.controlWidget,
+      Key? key,
+      this.height,
+      this.color})
       : super(key: key);
 
   @override
@@ -65,7 +68,12 @@ class CustomDropdownField extends StatefulWidget {
   final double? height;
   final Color? color;
 
-  const CustomDropdownField({required this.textWidget, required this.controlWidget, Key? key, this.height, this.color})
+  const CustomDropdownField(
+      {required this.textWidget,
+      required this.controlWidget,
+      Key? key,
+      this.height,
+      this.color})
       : super(key: key);
 
   @override
@@ -120,7 +128,12 @@ class CustomDateField extends StatefulWidget {
   final double? height;
   final Color? color;
 
-  const CustomDateField({required this.textWidget, required this.controlWidget, Key? key, this.height, this.color})
+  const CustomDateField(
+      {required this.textWidget,
+      required this.controlWidget,
+      Key? key,
+      this.height,
+      this.color})
       : super(key: key);
 
   @override
@@ -173,42 +186,63 @@ class CustomField extends CustomPainter {
 
   final Color? color;
 
-  const CustomField({required this.context, required this.textWidget, required this.controlWidget, this.color})
+  const CustomField(
+      {required this.context,
+      required this.textWidget,
+      required this.controlWidget,
+      this.color})
       : super();
 
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint()
-      ..color = (color ?? (context.theme.extension<OurTheme>()!.unobtrusive))!
+      ..color = (color ?? Colors.red)
       ..strokeWidth = 1;
     var path = Path();
 
     // coverage:ignore-start
     if (color == null && context.isHighContrast) {
-      paint.color = context.theme.extension<OurTheme>()!.primary!;
+      paint.color = context.theme.colorScheme.primary;
       paint.strokeWidth = 0.5;
       paint.style = PaintingStyle.stroke;
     }
     // coverage:ignore-end
 
     // Measurements of the shape and widgets
-    double widthControlWidget =
-        ((controlWidget.key as GlobalKey).currentContext!.findRenderObject() as RenderBox).size.width;
-    double heightControlWidget =
-        ((controlWidget.key as GlobalKey).currentContext!.findRenderObject() as RenderBox).size.height;
+    double widthControlWidget = ((controlWidget.key as GlobalKey)
+            .currentContext!
+            .findRenderObject() as RenderBox)
+        .size
+        .width;
+    double heightControlWidget = ((controlWidget.key as GlobalKey)
+            .currentContext!
+            .findRenderObject() as RenderBox)
+        .size
+        .height;
 
-    double widthTextWidget = ((textWidget.key as GlobalKey).currentContext!.findRenderObject() as RenderBox).size.width;
-    double heigthTextWidget =
-        ((textWidget.key as GlobalKey).currentContext!.findRenderObject() as RenderBox).size.height - 7;
+    double widthTextWidget = ((textWidget.key as GlobalKey)
+            .currentContext!
+            .findRenderObject() as RenderBox)
+        .size
+        .width;
+    double heigthTextWidget = ((textWidget.key as GlobalKey)
+                .currentContext!
+                .findRenderObject() as RenderBox)
+            .size
+            .height -
+        7;
 
-    double slopeOfset = 10; // The smaller this number, the steeper the slope of the cutout
+    double slopeOfset =
+        10; // The smaller this number, the steeper the slope of the cutout
     double borderRadius = 5;
     double edgeChamfer = 5;
 
     // ==== Cutout ====
-    path.moveTo(0, heigthTextWidget); // Move start of the shape under the textwidget
+    path.moveTo(
+        0, heigthTextWidget); // Move start of the shape under the textwidget
     path.lineTo(widthTextWidget, heigthTextWidget); // Draw to end of textwidget
-    path.lineTo(widthTextWidget + slopeOfset, 0); // Draw the slope to the top of the rectangle
+    path.lineTo(widthTextWidget + slopeOfset,
+        0); // Draw the slope to the top of the rectangle
 
     // ==== Rest of the rect ====
     path.lineTo(widthControlWidget - edgeChamfer, 0);

@@ -14,7 +14,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_folders_structure/core/extensions/context.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../custom_field.dart';
+import '../fields/custom_fileds.dart';
+import '../functions/functions.dart';
 import 'custom_calendar_date_picker.dart' as custom_calendar_date_picker;
 import 'custom_input_date_picker_form_field.dart'
     as custom_input_date_picker_form_field;
@@ -527,7 +528,7 @@ class _DatePickerDialogState extends State<DatePickerDialog>
             onPressed: _handleCancel, // Custom change
             child: Text(
               // Custom change
-              context.translate.cancel.alternative(), // Custom change
+              context.translate.sample, // Custom change
               style: const TextStyle(
                 // Custom change
                 fontWeight: FontWeight.normal, // Custom change
@@ -545,7 +546,7 @@ class _DatePickerDialogState extends State<DatePickerDialog>
               onPressed: _handleOk, // Custom change
               child: Text(
                 // Custom change
-                context.translate.okay.alternative(), // Custom change
+                context.translate.okay, // Custom change
                 style: const TextStyle(
                   // Custom change
                   fontWeight: FontWeight.normal, // Custom change
@@ -635,7 +636,7 @@ class _DatePickerDialogState extends State<DatePickerDialog>
         entryModeButton = orientation == Orientation.portrait
             ? IconButton(
                 // Custom change
-                icon: const FaIcon(FontAwesomeIcons.lightPen), // Custom change
+                icon: const FaIcon(FontAwesomeIcons.lifeRing), // Custom change
                 color: headerForegroundColor,
                 tooltip: localizations.inputDateModeButtonLabel,
                 onPressed: _handleEntryModeToggle,
@@ -649,7 +650,7 @@ class _DatePickerDialogState extends State<DatePickerDialog>
                 ), // Custom new
                 child: IconButton(
                   // Custom new
-                  icon: const FaIcon(FontAwesomeIcons.lightPen), // Custom new
+                  icon: const FaIcon(FontAwesomeIcons.lifeRing), // Custom new
                   color: headerForegroundColor, // Custom new
                   tooltip: localizations.inputDateModeButtonLabel, // Custom new
                   onPressed: _handleEntryModeToggle, // Custom new
@@ -663,7 +664,7 @@ class _DatePickerDialogState extends State<DatePickerDialog>
       case DatePickerEntryMode.input:
         picker = inputDatePicker();
         entryModeButton = IconButton(
-          icon: const FaIcon(FontAwesomeIcons.lightCalendar), // Custom change
+          icon: const FaIcon(FontAwesomeIcons.calendar), // Custom change
           color: headerForegroundColor,
           tooltip: localizations.calendarModeButtonLabel,
           onPressed: _handleEntryModeToggle,

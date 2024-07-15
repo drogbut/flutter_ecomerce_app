@@ -1,25 +1,24 @@
 import 'package:flutter/material.dart';
-
-import '../core/_utilities.dart';
-import '../core/extensions/context.dart';
+import 'package:flutter_folders_structure/core/extensions/context.dart';
 
 class GestureDetectorUserActivityDetected extends StatelessWidget {
   final Widget? child;
 
-  const GestureDetectorUserActivityDetected({Key? key, this.child}) : super(key: key);
+  const GestureDetectorUserActivityDetected({Key? key, this.child})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Focus(
       onKey: (node, event) {
-        UtilitySessionTimeout().userActivityDetected();
+        //UtilitySessionTimeout().userActivityDetected();
 
         return KeyEventResult.ignored;
       },
       canRequestFocus: false,
       child: GestureDetector(
         onTap: () {
-          UtilitySessionTimeout().userActivityDetected();
+          //UtilitySessionTimeout().userActivityDetected();
 
           FocusScopeNode currentFocus = context.focusScope;
 
@@ -27,8 +26,8 @@ class GestureDetectorUserActivityDetected extends StatelessWidget {
             currentFocus.unfocus();
           }
         },
-        onPanDown: UtilitySessionTimeout().userActivityDetected,
-        onScaleStart: UtilitySessionTimeout().userActivityDetected,
+        //onPanDown: UtilitySessionTimeout().userActivityDetected,
+        //onScaleStart: UtilitySessionTimeout().userActivityDetected,
         child: child,
       ),
     );

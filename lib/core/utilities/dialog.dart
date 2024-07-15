@@ -3,6 +3,8 @@ import 'package:flutter_folders_structure/core/extensions/context.dart';
 import 'package:flutter_folders_structure/core/extensions/widget.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../ui/gesture_detector/gesture_detector_user_activity.dart';
+
 Future showMaterialInformationDialog(
   BuildContext context,
   String description, {
@@ -24,7 +26,7 @@ Future showMaterialInformationDialog(
           ),
           title: Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 child: FaIcon(
                   FontAwesomeIcons.info,
                   color: Colors.red,
@@ -54,7 +56,7 @@ Future showMaterialInformationDialog(
               ),
               child: ElevatedButton(
                 child: Text(
-                  buttonTitle ?? context.translate.okay.alternative(),
+                  buttonTitle ?? context.translate.okay,
                   style: const TextStyle(
                     fontWeight: FontWeight.normal,
                   ),
@@ -88,7 +90,7 @@ Future showMaterialWarningDialog(BuildContext context, String description,
           ),
           title: Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 child: FaIcon(
                   FontAwesomeIcons.triangleExclamation,
                   color: Colors.orange,
@@ -152,7 +154,7 @@ Future showMaterialErrorDialog(BuildContext context, String description,
           ),
           title: Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 child: FaIcon(
                   FontAwesomeIcons.circle,
                   size: 30,
@@ -225,7 +227,7 @@ Future showMaterialQuestionDialog(
           ),
           title: Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 child: FaIcon(
                   FontAwesomeIcons.question,
                   color: Colors.blue,

@@ -11,5 +11,9 @@
   "okay": "Okay",
   "@okay": {
     "description": "Okay"
+  },
+  "done": "Done",
+  "@done": {
+    "description": "Done"
   }
 }

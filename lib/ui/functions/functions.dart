@@ -4,46 +4,43 @@ import 'package:android_id/android_id.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_folders_structure/core/extensions/context.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
-import '../classes/custom_field.dart';
-import '../classes/dialog.dart';
-import '../core/_constants.dart';
-import '../core/_enums.dart';
-import '../core/_extensions.dart';
-import '../core/_utilities.dart';
-import '../locator.dart';
-import '../modules/settings/theme/data/our_theme.dart';
-import '../modules/settings/theme/presenter/theme_provider.dart';
-
-import '../ui/gesture_detector_user_activity.dart';
-import 'constants.dart';
+import '../../core/utilities/color.dart';
+import '../../core/utilities/platform.dart';
+import '../../locator.dart';
+import '../../theme/theme_provider.dart';
 
 UtilityPlatform platformUtil = sl.get<UtilityPlatform>();
 
-DecorationImage getBackgroundImage(ThemeProvider themeProvider) {
+/*DecorationImage getBackgroundImage(ThemeProvider themeProvider) {
   if (!themeProvider.isDarkMode) {
     return DecorationImage(
       image: const AssetImage(tisowareDarkModeImageBackground),
-      colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.7), BlendMode.srcOver),
+      colorFilter:
+          ColorFilter.mode(Colors.white.withOpacity(0.7), BlendMode.srcOver),
       fit: BoxFit.cover,
     );
   }
 
   return DecorationImage(
     image: const AssetImage(tisowareLightModeImageBackground),
-    colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.3), BlendMode.srcOver),
+    colorFilter:
+        ColorFilter.mode(Colors.black.withOpacity(0.3), BlendMode.srcOver),
     fit: BoxFit.cover,
   );
-}
+}*/
 
-KeyboardActionsConfig buildKeyboardActionsConfigDoneButtonIOS(List<FocusNode> focusNodes) {
+KeyboardActionsConfig buildKeyboardActionsConfigDoneButtonIOS(
+    List<FocusNode> focusNodes) {
   return KeyboardActionsConfig(
     keyboardActionsPlatform: KeyboardActionsPlatform.IOS,
     nextFocus: false,
-    keyboardBarColor: _currentCtx.theme.scaffoldBackgroundColor.withOpacity(0.7),
+    keyboardBarColor:
+        _currentCtx.theme.scaffoldBackgroundColor.withOpacity(0.7),
     actions: List.generate(focusNodes.length, (index) {
       return KeyboardActionsItem(
         focusNode: focusNodes[index],
@@ -54,7 +51,7 @@ KeyboardActionsConfig buildKeyboardActionsConfigDoneButtonIOS(List<FocusNode> fo
                 right: 10,
               ),
               child: ElevatedButton(
-                child: Text(_currentCtx.translate.done.alternative()),
+                child: Text(_currentCtx.translate.done),
                 onPressed: () {
                   node.unfocus();
                 },
@@ -67,7 +64,7 @@ KeyboardActionsConfig buildKeyboardActionsConfigDoneButtonIOS(List<FocusNode> fo
   );
 }
 
-Future<bool?> showCheckSecureModeDialog() async {
+/*Future<bool?> showCheckSecureModeDialog() async {
   Timer? timer;
 
   TextEditingController secureModePinController = TextEditingController();
@@ -78,7 +75,11 @@ Future<bool?> showCheckSecureModeDialog() async {
   bool? value = await showDialog(
     context: _currentCtx,
     builder: (context) {
-      timer = Timer(Duration(seconds: sl.get<UtilityConfigBuildingBlock>().getSecureModePinInputTimeout()), () {
+      timer = Timer(
+          Duration(
+              seconds: sl
+                  .get<UtilityConfigBuildingBlock>()
+                  .getSecureModePinInputTimeout()), () {
         Navigator.of(context).pop();
       });
 
@@ -172,7 +173,8 @@ Future<bool?> showCheckSecureModeDialog() async {
                   ),
                 ),
                 onPressed: () {
-                  if (secureModePinController.text == sl.get<UtilityConfigBuildingBlock>().getSecureModePin()) {
+                  if (secureModePinController.text ==
+                      sl.get<UtilityConfigBuildingBlock>().getSecureModePin()) {
                     Navigator.of(context).pop(true);
                   } else {
                     Navigator.of(context).pop(false);
@@ -193,15 +195,16 @@ Future<bool?> showCheckSecureModeDialog() async {
   });
 
   return value;
-}
+}*/
 
-Future<bool> checkSecureModeAuthenticated() async {
+/*Future<bool> checkSecureModeAuthenticated() async {
   bool? authenticated = await showCheckSecureModeDialog();
 
   return authenticated != null && authenticated;
-}
+}*/
 
-Future<String> getUniqueId(DeviceInfoPlugin deviceInfoPlugin, {AndroidId? androidIdPluginMock}) async {
+Future<String> getUniqueId(DeviceInfoPlugin deviceInfoPlugin,
+    {AndroidId? androidIdPluginMock}) async {
   if (platformUtil.isNotWebAndIsAndroid) {
     AndroidId androidIdPlugin;
     if (androidIdPluginMock == null) {
@@ -251,7 +254,8 @@ Future<Position?> determineGeoPosition() async {
       return null;
     }
 
-    return await Geolocator.getCurrentPosition(timeLimit: const Duration(seconds: 1, microseconds: 500));
+    return await Geolocator.getCurrentPosition(
+        timeLimit: const Duration(seconds: 1, microseconds: 500));
   } catch (error) {
     return null;
   }
@@ -261,11 +265,12 @@ TextStyle getCustomTextStyleMuted({FontWeight? fontWeight, double? fontSize}) {
   return TextStyle(
     fontWeight: fontWeight,
     fontSize: fontSize,
-    color: _currentCtx.theme.extension<OurTheme>()!.muted,
+    color: Colors.blue,
   );
 }
 
-MaterialStateProperty<Color?>? dataRowMaterialStatePropertyFirst([double amount = .05]) {
+MaterialStateProperty<Color?>? dataRowMaterialStatePropertyFirst(
+    [double amount = .05]) {
   Color? color = _currentCtx.theme.cardColor;
 
   return MaterialStateProperty.resolveWith((states) {
@@ -276,7 +281,7 @@ MaterialStateProperty<Color?>? dataRowMaterialStatePropertyFirst([double amount 
       return _currentCtx.theme.highlightColor;
     }
     if (states.contains(MaterialState.selected)) {
-      return sl.get<UtilityColor>().getUntouchableOrMuted(_currentCtx);
+      //return sl.get<UtilityColor>().getUntouchableOrMuted(_currentCtx);
     }
 
     final hsl = HSLColor.fromColor(color);
@@ -286,7 +291,8 @@ MaterialStateProperty<Color?>? dataRowMaterialStatePropertyFirst([double amount 
   });
 }
 
-MaterialStateProperty<Color?>? dataRowMaterialStatePropertySecond([double amount = .1]) {
+MaterialStateProperty<Color?>? dataRowMaterialStatePropertySecond(
+    [double amount = .1]) {
   Color? color = _currentCtx.theme.cardColor;
 
   return MaterialStateProperty.resolveWith((states) {
@@ -297,7 +303,7 @@ MaterialStateProperty<Color?>? dataRowMaterialStatePropertySecond([double amount
       return _currentCtx.theme.highlightColor;
     }
     if (states.contains(MaterialState.selected)) {
-      return sl.get<UtilityColor>().getUntouchableOrMuted(_currentCtx);
+      //return sl.get<UtilityColor>().getUntouchableOrMuted(_currentCtx);
     }
 
     final hsl = HSLColor.fromColor(color);
@@ -309,8 +315,9 @@ MaterialStateProperty<Color?>? dataRowMaterialStatePropertySecond([double amount
 
 String getAdditionalAssetPath() => '';
 
-int getProgramId() => kIsWeb ? programIdWebApp : programIdApp;
+//int getProgramId() => kIsWeb ? programIdWebApp : programIdApp;
 
+/*
 bool checkIfWebNotAppMinVersion() {
   if (kIsWeb &&
       UtilityConfig().functionVersion != 0 &&
@@ -325,6 +332,7 @@ bool checkIfWebNotAppMinVersion() {
 
   return false;
 }
+*/
 
 Color? dataRowTextColor({bool selected = false}) {
   if (selected) {
@@ -334,14 +342,17 @@ Color? dataRowTextColor({bool selected = false}) {
   return null;
 }
 
-String checkDoubleNo(String value, int digitBeforeDot, String dot, int digitAfterdot) {
+String checkDoubleNo(
+    String value, int digitBeforeDot, String dot, int digitAfterdot) {
   if (!value.contains(dot) && value.contains(',')) {
     value = value.replaceAll(RegExp(','), dot);
   }
 
-  value = value.replaceAll(RegExp('[^0-9.]'), '').replaceAll(RegExp('\\.+'), '.');
+  value =
+      value.replaceAll(RegExp('[^0-9.]'), '').replaceAll(RegExp('\\.+'), '.');
 
-  if (value.length == (digitBeforeDot + digitAfterdot) && !value.contains(dot)) {
+  if (value.length == (digitBeforeDot + digitAfterdot) &&
+      !value.contains(dot)) {
     String val1 = value.substring(0, digitBeforeDot);
     String val2 = value.substring(digitBeforeDot);
 
@@ -369,7 +380,8 @@ String checkDoubleNoOnBlur(
     }
 
     String vDot = dot == '.' ? '\\.' : dot;
-    String regExpStr = '^(([0-9]{1,${digitBeforeDot.toString()}})(($vDot)?([0-9]{0,${digitAfterDot.toString()}}))?)\$';
+    String regExpStr =
+        '^(([0-9]{1,${digitBeforeDot.toString()}})(($vDot)?([0-9]{0,${digitAfterDot.toString()}}))?)\$';
     RegExp varExpr = RegExp(regExpStr);
 
     String tempValue = value;
@@ -388,12 +400,15 @@ String checkDoubleNoOnBlur(
 
       value = signs[0] + dot + signs[1];
     } else {
-      val1 = value.substring(0, value.length <= digitBeforeDot ? value.length : digitBeforeDot);
+      val1 = value.substring(
+          0, value.length <= digitBeforeDot ? value.length : digitBeforeDot);
 
       if (valLen > digitBeforeDot) {
         val2 = value.substring(
           digitBeforeDot,
-          valLen < (digitBeforeDot + digitAfterDot) ? valLen : (digitBeforeDot + digitAfterDot),
+          valLen < (digitBeforeDot + digitAfterDot)
+              ? valLen
+              : (digitBeforeDot + digitAfterDot),
         );
       }
 
@@ -412,18 +427,23 @@ String checkDoubleNoOnBlur(
           int.parse((signs[1])).isNaN) {
         showMaterialErrorDialog(
           _currentCtx,
-          _currentCtx.translate.percentFormatOrContentWrong.alternative(module: Module.workflow),
+          _currentCtx.translate.percentFormatOrContentWrong
+              .alternative(module: Module.workflow),
         );
-      } else if (signs[1] != '' && signs[1].length < digitAfterDot && int.parse((signs[1])).isNaN) {
+      } else if (signs[1] != '' &&
+          signs[1].length < digitAfterDot &&
+          int.parse((signs[1])).isNaN) {
         showMaterialErrorDialog(
           _currentCtx,
-          _currentCtx.translate.percentFormatOrContentWrong.alternative(module: Module.workflow),
+          _currentCtx.translate.percentFormatOrContentWrong
+              .alternative(module: Module.workflow),
         );
       }
     }
 
     if (maxNr > 0 && double.parse(value) > maxNr) {
-      showMaterialErrorDialog(_currentCtx, inpNrGrMaxNr.replaceAll('-nr-', maxNr.toStringAsFixed(2)));
+      showMaterialErrorDialog(_currentCtx,
+          inpNrGrMaxNr.replaceAll('-nr-', maxNr.toStringAsFixed(2)));
     }
   }
 
@@ -436,7 +456,7 @@ TextStyle getCustomLabelWidgetStyle() {
 
 TextStyle getCustomTextWidgetStyleMuted() {
   return _currentCtx.textTheme.labelSmall!.copyWith(
-    color: _currentCtx.theme.extension<OurTheme>()!.untouchable,
+    color: Colors.red,
   );
 }
 
@@ -576,7 +596,9 @@ BoxShadow getFlashBoxShadow() {
 }
 
 Color getFlashShadowColor() {
-  return _currentCtx.theme.brightness == Brightness.dark ? Colors.black : const Color.fromRGBO(36, 36, 36, 0.15);
+  return _currentCtx.theme.brightness == Brightness.dark
+      ? Colors.black
+      : const Color.fromRGBO(36, 36, 36, 0.15);
 }
 
 FaIcon getCustomControlWidgetDropdownIcon() {
@@ -601,4 +623,5 @@ TextStyle getCustomControlWidgetStyle() {
   );
 }
 
-BuildContext get _currentCtx => sl.get<UtilityNavigation>().navigatorKey.currentContext!;
+BuildContext get _currentCtx =>
+    sl.get<UtilityNavigation>().navigatorKey.currentContext!;

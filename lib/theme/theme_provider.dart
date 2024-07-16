@@ -15,7 +15,7 @@ class ThemeProvider extends ChangeNotifier {
     } else if (theme == 'System') {
       themeMode = ThemeMode.system;
     } else if (theme == '') {
-      themeMode = ThemeMode.light;
+      themeMode = ThemeMode.dark;
     }
   }
 

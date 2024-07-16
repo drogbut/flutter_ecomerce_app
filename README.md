@@ -200,7 +200,7 @@ import 'package:flutter/material.dart';
 
 import 'ui/post/post_list.dart';
 import 'ui/login/login.dart';
-import 'ui/splash/splash.dart';
+import 'ui/splash/splash_page.dart';
 
 class Routes {
   Routes._();
@@ -229,7 +229,7 @@ import 'package:flutter/services.dart';
 
 import 'constants/app_theme.dart';
 import 'constants/strings.dart';
-import 'ui/splash/splash.dart';
+import 'ui/splash/splash_page.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations([

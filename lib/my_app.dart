@@ -3,10 +3,9 @@ import 'package:flutter_folders_structure/core/Themes/dark/dark.dart';
 import 'package:flutter_folders_structure/core/Themes/dark/high_constrast.dart';
 import 'package:flutter_folders_structure/core/Themes/light/high_constrast.dart';
 import 'package:flutter_folders_structure/core/Themes/light/light.dart';
-import 'package:flutter_folders_structure/core/extensions/context.dart';
 import 'package:flutter_folders_structure/l10n/l10n.dart';
 import 'package:flutter_folders_structure/l10n/local_provider.dart';
-import 'package:flutter_folders_structure/my_home_page.dart';
+import 'package:flutter_folders_structure/modules/splash_page/splash_page.dart';
 import 'package:flutter_folders_structure/theme/theme_provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
@@ -31,6 +30,7 @@ class _MyAppState extends State<MyApp> {
               builder: (context, locale, child) {
                 return MaterialApp(
                   title: 'Flutter folders structure',
+                  debugShowCheckedModeBanner: false,
                   locale: locale,
                   supportedLocales: L10n.all,
                   localizationsDelegates:
@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
                   highContrastDarkTheme:
                       ThemesDarkHighContrast.darkHighContrastTheme,
                   home: Builder(builder: (context) {
-                    return MyHomePage(title: context.translate.appName);
+                    return SplashPage();
                   }),
                 );
               });

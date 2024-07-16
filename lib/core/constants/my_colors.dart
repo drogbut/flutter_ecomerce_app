@@ -4,7 +4,7 @@ class MyColors {
   MyColors._();
 
   /// Light
-  static const Color primary = Color(0xFF0062e3);
+  static const Color primary = Color(0xff8E6CEF);
   static const Color onPrimary = Color(0xFFFFFFFF);
   static const Color primaryContainer = Color(0xFFE8DDFF);
   static const Color onPrimaryContainer = Color(0xFFFFFFFF);
@@ -20,7 +20,7 @@ class MyColors {
   static const Color errorContainer = Color(0xFFFFDAD6);
   static const Color onError = Color(0xFFFFFFFF);
   static const Color onErrorContainer = Color(0xFF410002);
-  static const Color background = Color(0xFFFAFDFD);
+  static const Color background = Color(0xff1D182A);
   static const Color onBackground = Color(0xFF05203c);
   static const Color outline = Color(0xFF7A757F);
   static const Color onInverseSurface = Color(0xFFEFF1F1);

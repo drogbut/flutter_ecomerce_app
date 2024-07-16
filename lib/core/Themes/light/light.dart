@@ -6,6 +6,8 @@ class ThemesLight {
   /// LIGHT THEME
   static final lightTheme = ThemeData(
     useMaterial3: false,
+    fontFamily: 'Poppins',
+    brightness: Brightness.light,
 
     /// ODERS
   );

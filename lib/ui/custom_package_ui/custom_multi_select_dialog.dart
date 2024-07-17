@@ -9,7 +9,7 @@ import 'package:flutter_folders_structure/core/extensions/context.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:multi_select_flutter/multi_select_flutter.dart';
 
-import '../fields/custom_fileds.dart';
+import '../fields/custom1/custom_text_field.dart';
 import '../functions/functions.dart';
 
 /// A dialog containing either a classic checkbox style list, or a chip style list.

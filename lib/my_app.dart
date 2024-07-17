@@ -5,7 +5,7 @@ import 'package:flutter_folders_structure/core/Themes/light/high_constrast.dart'
 import 'package:flutter_folders_structure/core/Themes/light/light.dart';
 import 'package:flutter_folders_structure/l10n/l10n.dart';
 import 'package:flutter_folders_structure/l10n/local_provider.dart';
-import 'package:flutter_folders_structure/modules/splash_page/splash_page.dart';
+import 'package:flutter_folders_structure/modules/splash_page/presenter/ui/splash_page.dart';
 import 'package:flutter_folders_structure/theme/theme_provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';

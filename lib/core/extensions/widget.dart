@@ -60,6 +60,8 @@ extension SpaceExt on num {
 /// An extension on a record with horizontal and vertical padding.
 extension PadExt on ({num h, num v}) {
   /// Returns EdgeInsets with symmetric padding.
+  ///
+  /// ex: ..withPadding((h:16, v:10).symmetricPadding)
   EdgeInsets get symmetricPadding =>
       EdgeInsets.symmetric(horizontal: h.toDouble(), vertical: v.toDouble());
 }

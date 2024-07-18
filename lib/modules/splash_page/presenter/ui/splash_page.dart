@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_folders_structure/modules/splash_page/domain/app_vectors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/constants/my_colors.dart';
+import '../../domain/app_vectors.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -10,7 +10,7 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyColors.primary,
+      backgroundColor: MyColors.lightPrimary,
       body: Center(
         child: SvgPicture.asset(
           AppVectors.appLogo,

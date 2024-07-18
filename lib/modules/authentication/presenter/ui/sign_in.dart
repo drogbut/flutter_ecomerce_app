@@ -1,96 +1,55 @@
-import 'package:ecommerce/common/helper/navigator/app_navigator.dart';
-import 'package:ecommerce/common/widgets/appbar/app_bar.dart';
-import 'package:ecommerce/common/widgets/button/basic_app_button.dart';
-import 'package:ecommerce/data/auth/models/user_signin_req.dart';
-import 'package:ecommerce/presentation/auth/pages/enter_password.dart';
-import 'package:ecommerce/presentation/auth/pages/signup.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_folders_structure/core/extensions/context.dart';
+import 'package:flutter_folders_structure/core/extensions/widget.dart';
+import 'package:flutter_folders_structure/modules/authentication/presenter/ui/enter_password.dart';
+import 'package:flutter_folders_structure/modules/authentication/presenter/ui/sign_up.dart';
+import 'package:flutter_folders_structure/ui/buttons/primary.dart';
+import 'package:flutter_folders_structure/ui/fields/primary.dart';
+import 'package:flutter_folders_structure/ui/text/my_richt_text.dart';
 
-class SigninPage extends StatelessWidget {
-  SigninPage({super.key});
+import '../../../../core/constants/my_styles.dart';
+import '../../../../routing/navigator.dart';
+import '../../../../ui/my_appbar/plattform_back_button.dart';
+import '../../../../ui/text/title_text.dart';
 
+class SignInPage extends StatelessWidget {
   final TextEditingController _emailCon = TextEditingController();
+  SignInPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const BasicAppbar(hideBack: true,),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 40
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _siginText(context),
-            const SizedBox(height: 20,),
-            _emailField(context),
-            const SizedBox(height: 20,),
-            _continueButton(context),
-            const SizedBox(height: 20,),
-            _createAccount(context)
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _siginText(BuildContext context) {
-    return const Text(
-      'Sign in',
-      style: TextStyle(
-        fontSize: 32,
-        fontWeight: FontWeight.bold
-      ),
-    );
-  }
-
-  Widget _emailField(BuildContext context) {
-    return TextField(
-      controller: _emailCon,
-      decoration: const InputDecoration(
-        hintText: 'Enter Email'
-      ),
-    );
-  }
-
-  Widget _continueButton(BuildContext context) {
-    return BasicAppButton(
-      onPressed: (){
-        AppNavigator.push(
-          context, 
-          EnterPasswordPage(
-            signinReq: UserSigninReq(
-              email: _emailCon.text,
-            ),
-          )
-        );
-      },
-      title: 'Continue'
-    );
-  }
-
-  Widget _createAccount(BuildContext context) {
-    return RichText(
-      text: TextSpan(
-        children:  [
-          const TextSpan(
-            text: "Don't you have an account? "
+      appBar: const MyAppBarBackButton(hideBack: true),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          MyTitle(context.translate.signIn),
+          MyStyles.spacingBetweenTextField.sbh,
+          MyPrimaryTextField(
+            controller: _emailCon,
+            hintText: context.translate.enterEmail,
           ),
-           TextSpan(
-            text: 'Create one',
-            recognizer:TapGestureRecognizer()..onTap = () {
-              AppNavigator.push(context,SignupPage());
-            } ,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold
-            )
+          MyStyles.spacingBetweenTextField.sbh,
+          SizedBox(
+            width: double.maxFinite,
+            child: MyPrimaryButton(
+              title: context.translate.btnContinue,
+              onPressed: () => AppNavigator.push(context, EnterPasswordPage()),
+            ),
+          ),
+          MyStyles.spacingBetweenTextField.sbh,
+          MyRichText(
+            firstText: context.translate.doYouHaveAnAccount,
+            secondText: context.translate.createOne,
+            secondRecognizer: TapGestureRecognizer()
+              ..onTap = () {
+                AppNavigator.push(context, SignupPage());
+              },
           )
-        ]
-
-      ),
+        ],
+      ).withPadding((h: 16, v: 10).symmetricPadding),
     );
   }
 }

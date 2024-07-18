@@ -1,26 +1,59 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_folders_structure/core/extensions/context.dart';
+import 'package:flutter_folders_structure/core/extensions/widget.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../core/utilities/platform.dart';
 import '../../locator.dart';
 
-class MyAppBarBackButton extends StatelessWidget {
+class MyAppBarBackButton extends StatelessWidget
+    implements PreferredSizeWidget {
+  final Widget? title;
+  final Widget? action;
+  final Color? backgroundColor;
+  final bool hideBack;
+  final double? customHeight;
   final Function()? onPressed;
 
   const MyAppBarBackButton({
-    super.key,
+    this.title,
+    this.hideBack = false,
+    this.action,
+    this.backgroundColor,
+    this.customHeight,
     this.onPressed,
+    super.key,
   });
 
   @override
+  Size get preferredSize => Size.fromHeight(customHeight ?? kToolbarHeight);
+
+  @override
   Widget build(BuildContext context) {
-    return IconButton(
-      icon: getIcon(),
-      tooltip: MaterialLocalizations.of(context).backButtonTooltip,
-      onPressed: onPressed ??
-          () {
-            Navigator.maybePop(context);
-          },
+    return AppBar(
+      backgroundColor: backgroundColor,
+      automaticallyImplyLeading: false,
+      title: title ?? const Text(''),
+      actions: [action ?? 0.sbs],
+      leading: hideBack
+          ? null
+          : IconButton(
+              icon: Container(
+                width: 50,
+                height: 50,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: context.colorScheme.primaryContainer.withOpacity(0.1),
+                  shape: BoxShape.circle,
+                ),
+                child: getIcon(),
+              ),
+              tooltip: MaterialLocalizations.of(context).backButtonTooltip,
+              onPressed: onPressed ??
+                  () {
+                    Navigator.maybePop(context);
+                  },
+            ),
     );
   }
 

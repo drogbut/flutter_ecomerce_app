@@ -1,121 +1,55 @@
-import 'package:ecommerce/common/bloc/button/button_state_cubit.dart';
-import 'package:ecommerce/common/helper/navigator/app_navigator.dart';
-import 'package:ecommerce/common/widgets/appbar/app_bar.dart';
-import 'package:ecommerce/common/widgets/button/basic_app_button.dart';
-import 'package:ecommerce/common/widgets/button/basic_reactive_button.dart';
-import 'package:ecommerce/data/auth/models/user_signin_req.dart';
-import 'package:ecommerce/domain/auth/usecases/signin.dart';
-import 'package:ecommerce/presentation/auth/pages/forgot_password.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_folders_structure/core/extensions/context.dart';
+import 'package:flutter_folders_structure/core/extensions/widget.dart';
+import 'package:flutter_folders_structure/modules/authentication/presenter/ui/sign_up.dart';
+import 'package:flutter_folders_structure/ui/my_appbar/plattform_back_button.dart';
 
-import '../../../common/bloc/button/button_state.dart';
+import '../../../../core/constants/my_styles.dart';
+import '../../../../routing/navigator.dart';
+import '../../../../ui/buttons/primary.dart';
+import '../../../../ui/fields/primary.dart';
+import '../../../../ui/text/my_richt_text.dart';
+import '../../../../ui/text/title_text.dart';
 
 class EnterPasswordPage extends StatelessWidget {
-  final UserSigninReq signinReq;
-  EnterPasswordPage({
-    required this.signinReq,
-    super.key
-  });
-
   final TextEditingController _passwordCon = TextEditingController();
+
+  EnterPasswordPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const BasicAppbar(),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 40
-        ),
-        child: BlocProvider(
-          create: (context) => ButtonStateCubit(),
-          child: BlocListener<ButtonStateCubit,ButtonState>(
-            listener: (context, state) {
-              if (state is ButtonFailureState){
-                var snackbar = SnackBar(content: Text(state.errorMessage),behavior: SnackBarBehavior.floating,);
-                ScaffoldMessenger.of(context).showSnackBar(snackbar);
-              }
-
-              if (state is ButtonSuccessState) {
-                
-              }
-            },
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _siginText(context),
-                const SizedBox(height: 20,),
-                _passwordField(context),
-                const SizedBox(height: 20,),
-                _continueButton(context),
-                const SizedBox(height: 20,),
-                _forgotPassword(context)
-              ],
+      appBar: const MyAppBarBackButton(hideBack: true),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          MyTitle(context.translate.signIn),
+          MyStyles.spacingBetweenTextField.sbh,
+          MyPrimaryTextField(
+            controller: _passwordCon,
+            hintText: context.translate.enterPassword,
+          ),
+          MyStyles.spacingBetweenTextField.sbh,
+          SizedBox(
+            width: double.maxFinite,
+            child: MyPrimaryButton(
+              title: context.translate.btnContinue,
+              onPressed: () => AppNavigator.push(context, EnterPasswordPage()),
             ),
           ),
-        ),
-      ),
-    );
-  }
-
-  Widget _siginText(BuildContext context) {
-    return const Text(
-      'Sign in',
-      style: TextStyle(
-        fontSize: 32,
-        fontWeight: FontWeight.bold
-      ),
-    );
-  }
-
-  Widget _passwordField(BuildContext context) {
-    return TextField(
-      controller: _passwordCon,
-      decoration: const InputDecoration(
-        hintText: 'Enter Password'
-      ),
-    );
-  }
-
-  Widget _continueButton(BuildContext context) {
-    return Builder(
-      builder: (context) {
-        return BasicReactiveButton(
-          onPressed: (){
-            signinReq.password = _passwordCon.text;
-            context.read<ButtonStateCubit>().execute(
-              usecase: SigninUseCase(),
-              params: signinReq
-            );
-          },
-          title: 'Continue'
-        );
-      }
-    );
-  }
-
-  Widget _forgotPassword(BuildContext context) {
-    return RichText(
-      text: TextSpan(
-        children:  [
-          const TextSpan(
-            text: "Forgot password? "
-          ),
-           TextSpan(
-            text: 'Reset',
-            recognizer:TapGestureRecognizer()..onTap = () {
-              AppNavigator.push(context, const ForgotPasswordPage());
-            } ,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold
-            )
+          MyStyles.spacingBetweenTextField.sbh,
+          MyRichText(
+            firstText: context.translate.forgotPassword,
+            secondText: context.translate.reset,
+            secondRecognizer: TapGestureRecognizer()
+              ..onTap = () {
+                AppNavigator.push(context, SignupPage());
+              },
           )
-        ]
-
-      ),
+        ],
+      ).withPadding((h: 16, v: 10).symmetricPadding),
     );
   }
 }

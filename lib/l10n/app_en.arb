@@ -18,6 +18,51 @@
   },
   "sample": "sample",
   "@sample": {
-    "description": "Done"
+    "description": "Sample"
+  },
+  "doYouHaveAnAccount": "Don't have an account?",
+  "@doYouHaveAnAccount": {
+    "description": "Don't have an account?"
+  },
+  "createOne": "Create one",
+  "@createOne": {
+    "description": "Create one"
+  },
+  "createAccount": "Create Account",
+  "@createAccount": {
+    "description": "Create Account"
+  },
+  "firstname": "Firstname",
+  "@firstname": {
+    "description": "Firstname"
+  },
+  "lastname": "Lastname",
+  "@lastname": {
+    "description": "Lastname"
+  },
+  "signIn": "Sign in",
+  "@signIn": {
+    "description": "Sign in"
+  },
+  "enterEmail": "Email Address",
+  "@enterEmail": {
+    "description": "Email Address"
+  },
+  "btnContinue": "Continue",
+  "@btnContinue": {
+    "description": "Continue"
+  },
+  "forgotPassword": "Forgot password",
+  "@forgotPassword": {
+    "description": "Forgot password?"
+  },
+  "reset": "Reset",
+  "@reset": {
+    "description": "Reset"
+  },
+  "enterPassword": "Password",
+  "@enterPassword": {
+    "description": "Password"
   }
+
 }

@@ -1,56 +1,42 @@
-import 'package:ecommerce/common/widgets/appbar/app_bar.dart';
-import 'package:ecommerce/common/widgets/button/basic_app_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_folders_structure/core/extensions/context.dart';
+
+import '../../../../core/constants/my_styles.dart';
+import '../../../../core/extensions/widget.dart';
+import '../../../../ui/buttons/primary.dart';
+import '../../../../ui/fields/primary.dart';
+import '../../../../ui/my_appbar/plattform_back_button.dart';
+import '../../../../ui/text/title_text.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
-  const ForgotPasswordPage({super.key});
+  final TextEditingController _emailCon = TextEditingController();
+
+  ForgotPasswordPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const BasicAppbar(),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 40
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _siginText(context),
-            const SizedBox(height: 20,),
-            _emailField(context),
-            const SizedBox(height: 20,),
-            _continueButton(context),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _siginText(BuildContext context) {
-    return const Text(
-      'Forgot Password',
-      style: TextStyle(
-        fontSize: 32,
-        fontWeight: FontWeight.bold
-      ),
-    );
-  }
-
-  Widget _emailField(BuildContext context) {
-    return const TextField(
-      decoration: InputDecoration(
-        hintText: 'Enter Email'
-      ),
-    );
-  }
-
-  Widget _continueButton(BuildContext context) {
-    return BasicAppButton(
-      onPressed: (){
-      },
-      title: 'Continue'
+      appBar: const MyAppBarBackButton(),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          MyTitle(context.translate.forgotPassword),
+          MyStyles.spacingBetweenTextField.sbh,
+          MyPrimaryTextField(
+            controller: _emailCon,
+            hintText: context.translate.enterEmail,
+          ),
+          MyStyles.spacingBetweenTextField.sbh,
+          SizedBox(
+            width: double.maxFinite,
+            child: MyPrimaryButton(
+              title: context.translate.btnContinue,
+              onPressed: () {},
+            ),
+          ),
+        ],
+      ).withPadding((h: 16, v: 10).symmetricPadding),
     );
   }
 }

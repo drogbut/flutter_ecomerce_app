@@ -20,7 +20,7 @@ class EnterPasswordPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const MyAppBarBackButton(hideBack: true),
+      appBar: const MyAppBarBackButton(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,

@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_folders_structure/core/Themes/dark/dark.dart';
-import 'package:flutter_folders_structure/core/Themes/dark/high_constrast.dart';
-import 'package:flutter_folders_structure/core/Themes/light/high_constrast.dart';
-import 'package:flutter_folders_structure/core/Themes/light/light.dart';
-import 'package:flutter_folders_structure/l10n/l10n.dart';
+import 'package:flutter_folders_structure/core/extensions/widget.dart';
 import 'package:flutter_folders_structure/l10n/local_provider.dart';
 import 'package:flutter_folders_structure/modules/authentication/presenter/ui/sign_in.dart';
+import 'package:flutter_folders_structure/modules/authentication/presenter/ui/splash_page.dart';
 import 'package:flutter_folders_structure/theme/theme_provider.dart';
+import 'package:flutter_folders_structure/ui/my_listenables/double_value_listenable.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:provider/provider.dart';
+
+import 'core/Themes/dark/dark.dart';
+import 'core/Themes/dark/high_constrast.dart';
+import 'core/Themes/light/high_constrast.dart';
+import 'core/Themes/light/light.dart';
+import 'l10n/l10n.dart';
+import 'modules/authentication/domain/enums/app_state.dart';
+import 'modules/authentication/presenter/provider/authentication_provider.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -20,33 +25,38 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-        create: (context) => ThemeProvider(),
-        builder: (context, _) {
-          final themeProvider = Provider.of<ThemeProvider>(context);
-
-          return ValueListenableBuilder(
-              valueListenable: LocaleProvider().localeNotifier,
-              builder: (context, locale, child) {
-                return MaterialApp(
-                  title: 'Flutter folders structure',
-                  debugShowCheckedModeBanner: false,
-                  locale: locale,
-                  supportedLocales: L10n.all,
-                  localizationsDelegates:
-                      AppLocalizations.localizationsDelegates,
-                  themeMode: themeProvider.themeMode,
-                  theme: ThemesLight.lightTheme,
-                  highContrastTheme:
-                      ThemeLightHighContrast.lightHighContrastTheme,
-                  darkTheme: ThemesDark.darkTheme,
-                  highContrastDarkTheme:
-                      ThemesDarkHighContrast.darkHighContrastTheme,
-                  home: Builder(builder: (context) {
-                    return SignInPage();
-                  }),
-                );
-              });
+    return MyDoubledValueListenableBuilder(
+        firstListenable: ThemeProvider().themeModeNotifier,
+        secondListenable: LocaleProvider().localeNotifier,
+        builder: (_, themeMode, locale, __) {
+          return MaterialApp(
+            title: 'Flutter folders structure',
+            debugShowCheckedModeBanner: false,
+            locale: locale,
+            supportedLocales: L10n.all,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            themeMode: themeMode,
+            theme: ThemesLight.lightTheme,
+            highContrastTheme: ThemeLightHighContrast.lightHighContrastTheme,
+            darkTheme: ThemesDark.darkTheme,
+            highContrastDarkTheme: ThemesDarkHighContrast.darkHighContrastTheme,
+            home: Builder(builder: (context) {
+              return ValueListenableBuilder(
+                  valueListenable: AuthenticationProvider().authStateNotifier,
+                  builder: (_, state, __) {
+                    switch (state) {
+                      case AuthState.unauthenticated:
+                        return SignInPage();
+                      case AuthState.authenticated:
+                        return const Scaffold();
+                      case AuthState.displaySplash:
+                        return const SplashPage();
+                      default:
+                        return 0.sbs;
+                    }
+                  });
+            }),
+          );
         });
   }
 }

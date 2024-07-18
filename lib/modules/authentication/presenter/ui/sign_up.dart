@@ -1,17 +1,17 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_folders_structure/core/extensions/context.dart';
-import 'package:flutter_folders_structure/modules/authentication/presenter/ui/forgot_password.dart';
-import 'package:flutter_folders_structure/ui/fields/primary.dart';
 
 import '../../../../core/constants/my_styles.dart';
+import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../routing/navigator.dart';
 import '../../../../ui/buttons/primary.dart';
+import '../../../../ui/fields/primary.dart';
 import '../../../../ui/my_appbar/plattform_back_button.dart';
 import '../../../../ui/text/my_richt_text.dart';
 import '../../../../ui/text/title_text.dart';
 import 'enter_password.dart';
+import 'forgot_password.dart';
 
 class SignupPage extends StatelessWidget {
   SignupPage({super.key});

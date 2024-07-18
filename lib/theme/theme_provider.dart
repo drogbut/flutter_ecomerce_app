@@ -3,19 +3,26 @@ import 'package:flutter/material.dart';
 import '../../../../locator.dart';
 import '../core/utilities/preferences.dart';
 
-class ThemeProvider extends ChangeNotifier {
-  ThemeMode themeMode = ThemeMode.system;
+class ThemeProvider {
+  final ValueNotifier<ThemeMode> _themeModeNotifier =
+      ValueNotifier(ThemeMode.system);
+
+  ValueNotifier<ThemeMode> get themeModeNotifier => _themeModeNotifier;
+
+  ThemeMode get themeMode => _themeModeNotifier.value;
+
+  setThemeMode(ThemeMode value) => _themeModeNotifier.value = value;
 
   ThemeProvider() {
     String theme = sl.get<UtilityPreferences>().getString('Theme');
     if (theme == 'Light') {
-      themeMode = ThemeMode.light;
+      setThemeMode(ThemeMode.light);
     } else if (theme == 'Dark') {
-      themeMode = ThemeMode.dark;
+      setThemeMode(ThemeMode.dark);
     } else if (theme == 'System') {
-      themeMode = ThemeMode.system;
+      setThemeMode(ThemeMode.system);
     } else if (theme == '') {
-      themeMode = ThemeMode.dark;
+      setThemeMode(ThemeMode.dark);
     }
   }
 
@@ -31,28 +38,19 @@ class ThemeProvider extends ChangeNotifier {
   }
 
   void changeTheme(ThemeMode themeModeIn) {
-    String themeModeString = '';
+    setThemeMode(themeModeIn);
+    String themeModeString;
     switch (themeModeIn) {
       case ThemeMode.light:
-        {
-          themeModeString = 'Light';
-          themeMode = ThemeMode.light;
-        }
+        themeModeString = 'Light';
         break;
       case ThemeMode.dark:
-        {
-          themeModeString = 'Dark';
-          themeMode = ThemeMode.dark;
-        }
+        themeModeString = 'Dark';
         break;
       case ThemeMode.system:
-        {
-          themeModeString = 'System';
-          themeMode = ThemeMode.system;
-        }
+        themeModeString = 'System';
         break;
     }
     sl.get<UtilityPreferences>().setString('Theme', themeModeString);
-    notifyListeners();
   }
 }

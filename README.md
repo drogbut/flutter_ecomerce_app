@@ -1,5 +1,81 @@
 # flutter_folders_structure
 
+### Folder Structure
+Here is the folder structure we have been using in this project
+
+```
+flutter-app/
+|- android
+|- assets/
+|   |- fonts
+|   |- icons
+|   |- images
+|   |- sounds
+|   |- vectors
+|- build
+|- ios
+|- lib/
+|   |- core/
+|   |   |- constants/
+|   |   |   |- colors.dart
+|   |   |   |- dates.dart
+|   |   |   |- styles.dart
+|   |   |- enums/
+|   |   |   |- datetime.dart
+|   |   |   |- module.dart
+|   |   |   |- pages.dart
+|   |   |- erros/
+|   |   |   |- exceptions.dart
+|   |   |   |- failures.dart
+|   |   |- extensions/
+|   |   |   |- bool.dart
+|   |   |   |- color.dart
+|   |   |   |- context.dart
+|   |   |   |- date_time.dart
+|   |   |   |- string.dart
+|   |   |   |- widget.dart
+|   |   |- routing
+|   |   |   |- app_router.dart
+|   |   |- themes/
+|   |   |   |- dark/
+|   |   |   |   |- dark.dart
+|   |   |   |   |- hight_contrast.dart
+|   |   |   |- light/
+|   |   |   |   |- light.dart
+|   |   |   |   |- hight_contrast.dart
+|   |- modules/
+|   |   |- authentication/
+|   |   |   |- data/  
+|   |   |   |- domain/
+|   |   |   |   |- constants
+|   |   |   |   |- enums
+|   |   |   |- presenter/
+|   |   |   |   |- providers
+|   |   |   |   |- ui
+|   |   |   |   |   |- enter_password.dart
+|   |   |   |   |   |- forgot_password.dart
+|   |   |   |   |   |- sign_in.dart
+|   |   |   |   |   |- sign_up.dart
+|   |   |   |   |   |- splash.dart
+|   |   |- responsive
+|   |   |   |   |- domain
+|   |   |   |   |   |- breakpoints.dart
+|   |   |   |   |   |- device.dart
+|   |   |   |   |   |- sizing_info.dart
+|   |   |   |   |- presenter
+|   |   |   |   |   |- context.dart
+|   |   |   |   |   |- responsive_builder.dart
+|   |   |   |   |   |- responsive_view.dart
+|   |- ui
+|   |   |- appbar
+|   |   |- buttons
+|   |   |- fileds
+|   |   |- icons
+|   |   |- text
+|   |- main.dart
+|- test
+```
+
 ## How to Use 
 
 **Step 1:**
@@ -54,212 +130,6 @@ In Visual Studio Code, navigate to `Preferences` -> `Settings` and search for `F
 * App Theme
 * Responsive App 
 * 
-
-
-### Folder Structure
-Here is the folder structure we have been using in this project
-
-```
-flutter-app/
-|- android
-|- assets/
-|   |- icons
-|   |- images
-|   |- licences
-|   |- spalshscreen
-|   |- sounds
-|- build
-|- ios
-|- lib/
-|   |- core/
-|   |   |- constants/
-|   |   |   |- colors.dart
-|   |   |   |- dates.dart
-|   |   |   |- styles.dart
-|   |   |- enums/
-|   |   |   |- datetime.dart
-|   |   |   |- module.dart
-|   |   |   |- pages.dart
-|   |   |- erros/
-|   |   |   |- exceptions.dart
-|   |   |   |- failures.dart
-|   |   |- extensions/
-|   |   |   |- bool.dart
-|   |   |   |- color.dart
-|   |   |   |- context.dart
-|   |   |   |- date_time.dart
-|   |   |   |- string.dart
-|   |   |   |- widget.dart
-|   |   |- routing
-|   |   |   |- app_router.dart
-|   |   |- themes/
-|   |   |   |- dark/
-|   |   |   |   |- dark.dart
-|   |   |   |   |- hight_contrast.dart
-|   |   |   |- light/
-|   |   |   |   |- light.dart
-|   |   |   |   |- hight_contrast.dart
-|   |- modules/
-|   |   |- authentication/
-|   |   |   |- login/
-|   |   |   |   |- data
-|   |   |   |   |- domain
-|   |   |   |   |- presenter  
-|   |   |   |- register/
-|   |   |   |   |- data
-|   |   |   |   |- domain
-|   |   |   |   |- presenter
-|   |   |   |- reset_passaword/
-|   |   |   |   |- data
-|   |   |   |   |- domain
-|   |   |   |   |- presenter
-|   |   |- responsive
-|   |   |   |   |- domain
-|   |   |   |   |   |- breakpoints.dart
-|   |   |   |   |   |- device.dart
-|   |   |   |   |   |- sizing_info.dart
-|   |   |   |   |- presenter
-|   |   |   |   |   |- context.dart
-|   |   |   |   |   |- responsive_builder.dart
-|   |   |   |   |   |- responsive_view.dart
-|   |   |- settings
-|   |- ui
-|   |   |- appbar
-|   |   |- buttons
-|   |   |- cards
-|   |   |- pickers
-|   |   |- textfields
-|   |- main.dart
-|- test
-```
-
-Now, lets dive into the lib folder which has the main code for the application.
-
-```
-1- core -
-2- module - 
-3- ui -  
-4- main.dart - This is the starting point of the application. All the application level configurations are defined in this file i.e, theme, routes, title, orientation etc.
-```
-
-### Constants
-
-This directory contains all the application level constants. A separate file is created for each type as shown in example below:
-
-```
-constants/
-|- app_theme.dart
-|- dimens.dart
-|- endpoints.dart
-|- preferences.dart
-|- strings.dart
-```
-
-### UI
-
-This directory contains all the ui of your application. Each screen is located in a separate folder making it easy to combine group of files related to that particular screen. All the screen specific widgets will be placed in `widgets` directory as shown in the example below:
-
-```
-ui/
-|- login
-   |- login_screen.dart
-   |- widgets
-      |- login_form.dart
-      |- login_button.dart
-```
-
-### Utils
-
-Contains the common file(s) and utilities used in a project. The folder structure is as follows: 
-
-```
-utils/
-|- encryption
-   |- xxtea.dart
-|- date
-  |- date_time.dart
-```
-
-### Widgets
-
-Contains the common widgets that are shared across multiple screens. For example, Button, TextField etc.
-
-```
-widgets/
-|- app_icon_widget.dart
-|- empty_app_bar.dart
-|- progress_indicator.dart
-```
-
-### Routes
-
-This file contains all the routes for your application.
-
-```dart
-import 'package:flutter/material.dart';
-
-import 'ui/post/post_list.dart';
-import 'ui/login/login.dart';
-import 'ui/splash/splash_page.dart';
-
-class Routes {
-  Routes._();
-
-  //static variables
-  static const String splash = '/splash';
-  static const String login = '/login';
-  static const String home = '/post';
-
-  static final routes = <String, WidgetBuilder>{
-    splash: (BuildContext context) => SplashScreen(),
-    login: (BuildContext context) => LoginScreen(),
-    home: (BuildContext context) => HomeScreen(),
-  };
-}
-```
-
-### Main
-
-This is the starting point of the application. All the application level configurations are defined in this file i.e, theme, routes, title, orientation etc.
-
-```dart
-import 'package:boilerplate/routes.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
-import 'constants/app_theme.dart';
-import 'constants/strings.dart';
-import 'ui/splash/splash_page.dart';
-
-void main() {
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-    DeviceOrientation.landscapeRight,
-    DeviceOrientation.landscapeLeft,
-  ]).then((_) {
-    runApp(MyApp());
-  });
-}
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: Strings.appName,
-      theme: themeData,
-      routes: Routes.routes,
-      home: SplashScreen(),
-    );
-  }
-}
-```
-
-## Wiki
-
-
 
 ## Conclusion
 

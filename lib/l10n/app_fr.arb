@@ -3,5 +3,16 @@
   "language": "Français",
   "okay": "Okay",
   "done": "terminee",
-  "sample": "example"
+  "sample": "exemple",
+  "doYouHaveAnAccount": "Avez-vous un compte ?",
+  "createOne": "Créer un compte",
+  "signIn": "Se connecter",
+  "enterEmail": "Entrez votre e-mail",
+  "btnContinue": "Continuer",
+  "forgotPassword": "Mot de passe oublié ?",
+  "reset": "Réinitialiser",
+  "enterPassword": "Entrer votre mot de passe",
+  "createAccount": "Créer un compte",
+  "firstname": "Prénom",
+  "lastname": "Nom"
 }

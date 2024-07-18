@@ -3,5 +3,16 @@
   "language": "Deutsch",
   "okay": "Okay",
   "done": "Fertig",
-  "sample": "Beispiel"
+  "sample": "Beispiel",
+  "doYouHaveAnAccount": "Haben Sie ein Konto?",
+  "createOne": "Ein Konto erstellen",
+  "signIn": "Anmelden",
+  "enterEmail": "E-Mail eingeben",
+  "btnContinue": "Weiter",
+  "forgotPassword": "Passwort vergessen?",
+  "reset": "Zurücksetzen",
+  "enterPassword": "Password eingeben",
+  "createAccount": "Konto erstellen",
+  "firstname": "Vorname",
+  "lastname": "Nachname"
 }

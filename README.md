@@ -83,7 +83,8 @@ flutter-app/
 * Dependency Injection
 * App Theme with material design 3
 * Responsive App
-* Firebase setup - Authentication 
+* [Firebase setup with CLI](https://firebase.flutter.dev/docs/cli/)
+* Firebase Authentication
 
 ## How to Use 
 

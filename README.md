@@ -79,7 +79,7 @@ flutter-app/
 ## Features:
 
 * [Flutter Clean Architecture by Reso Coder](https://resocoder.com/flutter-clean-architecture-tdd/)
-* [Multilingual Support](https://www.youtube.com/watch?v=WrqH5fF2ZuY&list=PLtuW0sh7ZGJFrd4FYRk0PJf0qHF-q96MQ&index=4)
+* [Multilingual Support by PodCoder](https://www.youtube.com/watch?v=WrqH5fF2ZuY&list=PLtuW0sh7ZGJFrd4FYRk0PJf0qHF-q96MQ&index=4)
 * Dependency Injection
 * App Theme with material design 3
 * Responsive App

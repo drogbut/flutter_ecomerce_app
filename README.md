@@ -76,6 +76,15 @@ flutter-app/
 |- test
 ```
 
+## Features:
+
+* [Flutter Clean Architecture by Reso Coder](https://resocoder.com/flutter-clean-architecture-tdd/)
+* [Multilingual Support](https://www.youtube.com/watch?v=WrqH5fF2ZuY&list=PLtuW0sh7ZGJFrd4FYRk0PJf0qHF-q96MQ&index=4)
+* Dependency Injection
+* App Theme with material design 3
+* Responsive App
+* Firebase setup - Authentication 
+
 ## How to Use 
 
 **Step 1:**
@@ -123,16 +132,10 @@ In Visual Studio Code, navigate to `Preferences` -> `Settings` and search for `F
 **/*.g.dart
 ```
 
-## Features:
 
-* Multilingual Support
-* Dependency Injection
-* App Theme
-* Responsive App 
-* 
 
 ## Conclusion
 
 I will be happy to answer any questions that you may have on this approach, and if you want to lend a hand with the boilerplate then please feel free to submit an issue and/or pull request 🙂
 
-Again to note, this is example can appear as over-architectured for what it is - but it is an example only. If you liked my work, don’t forget to ⭐ star the repo to show your support.
+Again to note, this is example can appear as over-architecture for what it is - but it is an example only. If you liked my work, don’t forget to ⭐ star the repo to show your support.

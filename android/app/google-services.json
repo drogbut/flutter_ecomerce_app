@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "813626309566",
+    "project_id": "flutter-folders-struture",
+    "storage_bucket": "flutter-folders-struture.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813626309566:android:314bd2661393ed32e297ef",
+        "android_client_info": {
+          "package_name": "com.example.flutter_folders_structure"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1mTtJBMvyTIwA6NrS6lQhnUkTC8uw5gM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

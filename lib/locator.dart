@@ -7,6 +7,7 @@ import 'core/utilities/device_info.dart';
 import 'core/utilities/navigation.dart';
 import 'core/utilities/platform.dart';
 import 'core/utilities/preferences.dart';
+import 'modules/authentication/data/sources/auth_firebase_service.dart';
 
 GetIt sl = GetIt.I;
 
@@ -18,4 +19,11 @@ void setupLocator() {
   sl.registerLazySingleton(() => UtilityDeviceInfo());
   sl.registerLazySingleton(() => UtilityNavigation());
   sl.registerLazySingleton(() => UtilityPlatform());
+
+  // Services
+  sl.registerLazySingleton(() => AuthFirebaseServiceImpl());
+
+  // Repositories
+
+  // Use-cases
 }

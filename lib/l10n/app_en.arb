@@ -63,6 +63,34 @@
   "enterPassword": "Password",
   "@enterPassword": {
     "description": "Password"
+  },
+  "tellUsAboutYouSelf": "Tell us about yourself",
+  "@tellUsAboutYouSelf": {
+    "description": "Tell us about yourself"
+  },
+  "whoDoYouShopFor": "Who do you shop for ?",
+  "@whoDoYouShopFor": {
+    "description": "Who do you shop for ?"
+  },
+  "men": "Men",
+  "@men": {
+    "description": "Men"
+  },
+  "women": "Women",
+  "@women": {
+    "description": "Women"
+  },
+  "howOldAreYou": "How old are you ?",
+  "@howOldAreYou": {
+    "description": "How old are you ?"
+  },
+  "ageRange": "Age range",
+  "@ageRange": {
+    "description": "Age range"
+  },
+  "btnFinish": "Finish",
+  "@btnFinish": {
+    "description": "Finish"
   }
 
 }

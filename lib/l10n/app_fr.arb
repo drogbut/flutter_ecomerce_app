@@ -14,5 +14,15 @@
   "enterPassword": "Entrer votre mot de passe",
   "createAccount": "Créer un compte",
   "firstname": "Prénom",
-  "lastname": "Nom"
+  "lastname": "Nom",
+  "tellUsAboutYouSelf": "Parlez-nous de vous",
+  "whoDoYouShopFor": "Pour qui faites-vous vos achats ?",
+  "men": "Hommes",
+  "women": "Femmes",
+  "howOldAreYou": "Quel âge avez-vous ?",
+  "ageRange": "Tranche d'âge",
+  "btnFinish": "Finish",
+  "@btnFinish": {
+    "description": "Terminé"
+  }
 }

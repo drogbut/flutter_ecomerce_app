@@ -73,8 +73,7 @@ Future showMaterialInformationDialog(
   );
 }
 
-Future showMaterialWarningDialog(BuildContext context, String description,
-    {String? title, String? buttonTitle}) async {
+Future showMaterialWarningDialog(BuildContext context, String description, {String? title, String? buttonTitle}) async {
   return await showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -137,8 +136,7 @@ Future showMaterialWarningDialog(BuildContext context, String description,
   );
 }
 
-Future showMaterialErrorDialog(BuildContext context, String description,
-    {String? title, String? buttonTitle}) async {
+Future showMaterialErrorDialog(BuildContext context, String description, {String? title, String? buttonTitle}) async {
   return await showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -313,4 +311,21 @@ Future showMaterialQuestionDialog(
       );
     },
   );
+}
+
+Future<void> myBottomSheet(
+  BuildContext context,
+  Widget widget,
+) {
+  return showModalBottomSheet(
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(25),
+          topLeft: Radius.circular(25),
+        ),
+      ),
+      builder: (_) {
+        return widget;
+      });
 }

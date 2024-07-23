@@ -10,7 +10,7 @@ import 'package:flutter_folders_structure/ui/text/my_richt_text.dart';
 
 import '../../../../core/constants/my_styles.dart';
 import '../../../../routing/navigator.dart';
-import '../../../../ui/my_appbar/plattform_back_button.dart';
+import '../../../../ui/my_appbar/platform_back_button.dart';
 import '../../../../ui/text/title_text.dart';
 
 class SignInPage extends StatelessWidget {
@@ -26,12 +26,12 @@ class SignInPage extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           MyTitle(context.translate.signIn),
-          MyStyles.spacingBetweenTextField.sbh,
+          MyStyles.mediumSpacingBetweenField.sbh,
           MyPrimaryTextField(
             controller: _emailCon,
             hintText: context.translate.enterEmail,
           ),
-          MyStyles.spacingBetweenTextField.sbh,
+          MyStyles.mediumSpacingBetweenField.sbh,
           SizedBox(
             width: double.maxFinite,
             child: MyPrimaryButton(
@@ -39,7 +39,7 @@ class SignInPage extends StatelessWidget {
               onPressed: () => AppNavigator.push(context, EnterPasswordPage()),
             ),
           ),
-          MyStyles.spacingBetweenTextField.sbh,
+          MyStyles.mediumSpacingBetweenField.sbh,
           MyRichText(
             firstText: context.translate.doYouHaveAnAccount,
             secondText: context.translate.createOne,

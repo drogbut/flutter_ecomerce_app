@@ -6,6 +6,7 @@ import '../../domain/models/user_signup_request.dart';
 
 abstract class AuthFirebaseService {
   Future<Either> signup(UserSignUpRequest user);
+  Future<Either> getAges();
 }
 
 class AuthFirebaseServiceImpl extends AuthFirebaseService {
@@ -39,6 +40,20 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
       } else {
         return const Left('An error occurred during signup.');
       }
+    } catch (e) {
+      return Left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either> getAges() async {
+    try {
+      final ageResponse = await FirebaseFirestore.instance.collection('Ages').get();
+
+      return Right(ageResponse.docs);
+    } on FirebaseException catch (e) {
+      print('FirebaseException: ${e.message}');
+      return Left('FirebaseException: ${e.message}');
     } catch (e) {
       return Left(e.toString());
     }

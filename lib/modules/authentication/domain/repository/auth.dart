@@ -3,4 +3,5 @@ import 'package:flutter_folders_structure/modules/authentication/domain/models/u
 
 abstract class AuthRepository {
   Future<Either> signup(UserSignUpRequest userRequest);
+  Future<Either> getAges();
 }

@@ -5,6 +5,7 @@ import 'package:flutter_folders_structure/modules/authentication/presenter/provi
 import '../../../../../core/constants/my_styles.dart';
 import '../../../../../core/extensions/context.dart';
 import '../../../../../core/utilities/dialog.dart';
+import '../../../../../ui/indicators/loading_indicator.dart';
 import '../../providers/gender_and_age_provider/age_selection_cubit.dart';
 import '../../providers/gender_and_age_provider/display_age_state.dart';
 import 'age_container.dart';
@@ -44,10 +45,7 @@ class AgeRangeButton extends StatelessWidget {
             child: BlocBuilder<AgesDisplayCubit, DisplayAgeState>(
               builder: (context, state) {
                 if (state is AgesLoading) {
-                  return Container(
-                    alignment: Alignment.center,
-                    child: const CircularProgressIndicator(),
-                  );
+                  return const LoadingIndicator();
                 }
 
                 if (state is AgesLoaded) {

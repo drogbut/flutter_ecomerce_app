@@ -37,6 +37,8 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
         return const Left('The password provided is too weak.');
       } else if (e.code == 'email-already-in-use') {
         return const Left('The email address is already in use.');
+      } else if (e.code == 'invalid-email') {
+        return const Left('The email address is not in a valid format.');
       } else {
         return const Left('An error occurred during signup.');
       }
@@ -52,7 +54,6 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
 
       return Right(ageResponse.docs);
     } on FirebaseException catch (e) {
-      print('FirebaseException: ${e.message}');
       return Left('FirebaseException: ${e.message}');
     } catch (e) {
       return Left(e.toString());

@@ -1,4 +1,3 @@
-import 'package:flutter_folders_structure/modules/authentication/domain/use_cases/get_ages.dart';
 import 'package:get_it/get_it.dart';
 
 import 'core/utilities/color.dart';
@@ -11,6 +10,8 @@ import 'core/utilities/preferences.dart';
 import 'modules/authentication/data/repository_impl/auth.dart';
 import 'modules/authentication/data/sources/auth_firebase_service.dart';
 import 'modules/authentication/domain/repository/auth.dart';
+import 'modules/authentication/domain/use_cases/get_ages.dart';
+import 'modules/authentication/domain/use_cases/signup.dart';
 
 GetIt sl = GetIt.I;
 
@@ -30,7 +31,7 @@ Future<void> setupLocator() async {
   sl.registerSingleton<AuthRepository>(AuthRepositoryImpl());
 
   // Use-cases
-  //sl.registerSingleton<SignupUseCase>(SignupUseCase());
+  sl.registerSingleton<SignupUseCase>(SignupUseCase());
 
   sl.registerSingleton<GetAgesUseCase>(GetAgesUseCase());
 }

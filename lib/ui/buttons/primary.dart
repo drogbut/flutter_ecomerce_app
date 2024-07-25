@@ -4,6 +4,7 @@ class MyPrimaryButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final String title;
   final double? width;
+  final double? height;
   final Color? textButtonColor;
   final Color? backgroundColor;
 
@@ -11,6 +12,7 @@ class MyPrimaryButton extends StatelessWidget {
     required this.title,
     required this.onPressed,
     this.width,
+    this.height,
     this.textButtonColor,
     this.backgroundColor,
     super.key,
@@ -24,6 +26,7 @@ class MyPrimaryButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           foregroundColor: textButtonColor,
           backgroundColor: backgroundColor,
+          minimumSize: Size.fromHeight(height ?? 50),
         ),
         onPressed: onPressed,
         child: Text(title),

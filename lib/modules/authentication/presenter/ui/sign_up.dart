@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_folders_structure/modules/authentication/domain/models/user_signup_request.dart';
 
 import '../../../../core/constants/my_styles.dart';
 import '../../../../core/extensions/context.dart';
@@ -56,7 +57,15 @@ class SignupPage extends StatelessWidget {
               width: double.maxFinite,
               child: MyPrimaryButton(
                 title: context.translate.btnContinue,
-                onPressed: () => AppNavigator.push(context, const GenderAndAgePage()),
+                onPressed: () => AppNavigator.push(
+                    context,
+                    GenderAndAgePage(
+                      userSignUpRequest: UserSignUpRequest(
+                          firstName: _firstNameCon.text,
+                          email: _emailCon.text,
+                          lastName: _lastNameCon.text,
+                          password: _passwordCon.text),
+                    )),
               ),
             ),
             MyStyles.mediumSpacingBetweenField.sbh,

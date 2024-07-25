@@ -3,8 +3,8 @@ class UserSignUpRequest {
   final String? lastName;
   final String email;
   final String password;
-  final int? gender;
-  final String? age;
+  int? gender;
+  String? age;
 
   UserSignUpRequest({
     required this.firstName,

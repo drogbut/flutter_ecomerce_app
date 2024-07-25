@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-import '../../domain/enums/app_state.dart';
+import '../../../domain/enums/app_state.dart';
 
 class AuthenticationProvider {
   final ValueNotifier<AuthState> _authStateNotifier = ValueNotifier(AuthState.displaySplash);

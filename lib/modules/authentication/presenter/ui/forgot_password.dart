@@ -5,7 +5,7 @@ import '../../../../core/constants/my_styles.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../ui/buttons/primary.dart';
 import '../../../../ui/fields/primary.dart';
-import '../../../../ui/my_appbar/plattform_back_button.dart';
+import '../../../../ui/my_appbar/platform_back_button.dart';
 import '../../../../ui/text/title_text.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
@@ -22,18 +22,16 @@ class ForgotPasswordPage extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           MyTitle(context.translate.forgotPassword),
-          MyStyles.spacingBetweenTextField.sbh,
+          MyStyles.mediumSpacingBetweenField.sbh,
           MyPrimaryTextField(
             controller: _emailCon,
             hintText: context.translate.enterEmail,
           ),
-          MyStyles.spacingBetweenTextField.sbh,
-          SizedBox(
+          MyStyles.mediumSpacingBetweenField.sbh,
+          MyPrimaryButton(
             width: double.maxFinite,
-            child: MyPrimaryButton(
-              title: context.translate.btnContinue,
-              onPressed: () {},
-            ),
+            title: context.translate.btnContinue,
+            onPressed: () {},
           ),
         ],
       ).withPadding((h: 16, v: 10).symmetricPadding),

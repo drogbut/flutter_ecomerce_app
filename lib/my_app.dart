@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_folders_structure/core/extensions/widget.dart';
-import 'package:flutter_folders_structure/l10n/local_provider.dart';
-import 'package:flutter_folders_structure/modules/authentication/presenter/ui/sign_in.dart';
-import 'package:flutter_folders_structure/modules/authentication/presenter/ui/splash_page.dart';
-import 'package:flutter_folders_structure/theme/theme_provider.dart';
-import 'package:flutter_folders_structure/ui/my_listenables/double_value_listenable.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'core/Themes/dark/dark.dart';
 import 'core/Themes/dark/high_constrast.dart';
 import 'core/Themes/light/high_constrast.dart';
 import 'core/Themes/light/light.dart';
+import 'core/extensions/widget.dart';
 import 'l10n/l10n.dart';
+import 'l10n/local_provider.dart';
 import 'modules/authentication/domain/enums/app_state.dart';
-import 'modules/authentication/presenter/provider/authentication_provider.dart';
+import 'modules/authentication/presenter/providers/auth_provider/authentication_provider.dart';
+import 'modules/authentication/presenter/ui/sign_in.dart';
+import 'modules/authentication/presenter/ui/splash_page.dart';
+import 'theme/theme_provider.dart';
+import 'ui/my_listenables/double_value_listenable.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});

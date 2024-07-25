@@ -14,5 +14,12 @@
   "enterPassword": "Password eingeben",
   "createAccount": "Konto erstellen",
   "firstname": "Vorname",
-  "lastname": "Nachname"
+  "lastname": "Nachname",
+  "tellUsAboutYouSelf": "Erzählen Sie uns von sich",
+  "whoDoYouShopFor": "Für wen kaufen Sie ein?",
+  "men": "Herren",
+  "women": "Damen",
+  "howOldAreYou": "Wie alt sind Sie?",
+  "ageRange": "Altersspanne",
+  "btnFinish": "Fertig"
 }

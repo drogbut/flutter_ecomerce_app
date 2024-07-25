@@ -47,7 +47,9 @@ class MyStyles {
   static const double labelSmallSpacing = 1.5;
 
   /// Spacing and Padding
-  static const double spacingBetweenTextField = 20;
+  static const double smallSpacingBetweenField = 10;
+  static const double mediumSpacingBetweenField = 20;
+  static const double largeSpacingBetweenField = 40;
 
   /// RADIUS
   static const double smallBorderRadius = 4.0;

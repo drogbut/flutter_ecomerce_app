@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/constants/my_styles.dart';
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../ui/buttons/primary.dart';
@@ -25,8 +24,6 @@ class _GenderAndAgePageState extends State<GenderAndAgePage> {
 
   @override
   Widget build(BuildContext context) {
-    final spacerBox = MyStyles.largeSpacingBetweenField.sbs;
-
     return Scaffold(
       appBar: const MyAppBarBackButton(hideBack: true),
       body: MultiBlocProvider(
@@ -34,29 +31,30 @@ class _GenderAndAgePageState extends State<GenderAndAgePage> {
           BlocProvider(create: (context) => AgeSelectionCubit()),
           BlocProvider(create: (context) => AgesDisplayCubit()),
         ],
-        child: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              MyTitle(context.translate.tellUsAboutYouSelf),
-              spacerBox,
-              Text(context.translate.whoDoYouShopFor),
-              spacerBox,
-              GenderContainer(genderAndAgeProvider: _genderAndAgeProvider),
-              spacerBox,
-              Text(context.translate.howOldAreYou),
-              spacerBox,
-              const AgeRangeButton(),
-              spacerBox,
-              const Spacer(),
-              MyPrimaryButton(
+        child: Column(
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  MyTitle(context.translate.tellUsAboutYouSelf).withPadding(40.bottomPadding),
+                  Text(context.translate.whoDoYouShopFor).withPadding(10.bottomPadding),
+                  GenderContainer(genderAndAgeProvider: _genderAndAgeProvider).withPadding(40.bottomPadding),
+                  Text(context.translate.howOldAreYou).withPadding(10.bottomPadding),
+                  const AgeRangeButton(),
+                ],
+              ).withPadding(16.allPadding),
+            ),
+            ColoredBox(
+              color: context.colorScheme.primaryContainer.withOpacity(0.2),
+              child: MyPrimaryButton(
                 width: context.screenWidth,
                 title: context.translate.btnFinish,
                 onPressed: () {},
-              )
-            ],
-          ).withPadding((h: 16, v: 10).symmetricPadding),
+              ).withPadding(16.allPadding),
+            ),
+          ],
         ),
       ),
     );

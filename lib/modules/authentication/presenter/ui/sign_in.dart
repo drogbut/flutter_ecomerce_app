@@ -21,37 +21,35 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const MyAppBarBackButton(hideBack: true),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            MyTitle(context.translate.signIn),
-            MyStyles.mediumSpacingBetweenField.sbh,
-            MyPrimaryTextField(
-              controller: _emailCon,
-              hintText: context.translate.enterEmail,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          MyTitle(context.translate.signIn),
+          MyStyles.mediumSpacingBetweenField.sbh,
+          MyPrimaryTextField(
+            controller: _emailCon,
+            hintText: context.translate.enterEmail,
+          ),
+          MyStyles.mediumSpacingBetweenField.sbh,
+          SizedBox(
+            width: double.maxFinite,
+            child: MyPrimaryButton(
+              title: context.translate.btnContinue,
+              onPressed: () => AppNavigator.push(context, EnterPasswordPage()),
             ),
-            MyStyles.mediumSpacingBetweenField.sbh,
-            SizedBox(
-              width: double.maxFinite,
-              child: MyPrimaryButton(
-                title: context.translate.btnContinue,
-                onPressed: () => AppNavigator.push(context, EnterPasswordPage()),
-              ),
-            ),
-            MyStyles.mediumSpacingBetweenField.sbh,
-            MyRichText(
-              firstText: context.translate.doYouHaveAnAccount,
-              secondText: context.translate.createOne,
-              secondRecognizer: TapGestureRecognizer()
-                ..onTap = () {
-                  AppNavigator.push(context, SignupPage());
-                },
-            )
-          ],
-        ).withPadding((h: 16, v: 10).symmetricPadding),
-      ),
+          ),
+          MyStyles.mediumSpacingBetweenField.sbh,
+          MyRichText(
+            firstText: context.translate.doYouHaveAnAccount,
+            secondText: context.translate.createOne,
+            secondRecognizer: TapGestureRecognizer()
+              ..onTap = () {
+                AppNavigator.push(context, SignupPage());
+              },
+          )
+        ],
+      ).withPadding((h: 16, v: 10).symmetricPadding),
     );
   }
 }

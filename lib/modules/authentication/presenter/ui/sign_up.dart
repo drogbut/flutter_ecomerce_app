@@ -25,50 +25,52 @@ class SignupPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const MyAppBarBackButton(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          MyTitle(context.translate.createAccount),
-          MyStyles.mediumSpacingBetweenField.sbh,
-          MyPrimaryTextField(
-            controller: _firstNameCon,
-            hintText: context.translate.firstname,
-          ),
-          MyStyles.mediumSpacingBetweenField.sbh,
-          MyPrimaryTextField(
-            controller: _lastNameCon,
-            hintText: context.translate.lastname,
-          ),
-          MyStyles.mediumSpacingBetweenField.sbh,
-          MyPrimaryTextField(
-            controller: _emailCon,
-            hintText: context.translate.enterEmail,
-          ),
-          MyStyles.mediumSpacingBetweenField.sbh,
-          MyPrimaryTextField(
-            controller: _passwordCon,
-            hintText: context.translate.enterPassword,
-          ),
-          MyStyles.mediumSpacingBetweenField.sbh,
-          SizedBox(
-            width: double.maxFinite,
-            child: MyPrimaryButton(
-              title: context.translate.btnContinue,
-              onPressed: () => AppNavigator.push(context, const GenderAndAgePage()),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            MyTitle(context.translate.createAccount),
+            MyStyles.mediumSpacingBetweenField.sbh,
+            MyPrimaryTextField(
+              controller: _firstNameCon,
+              hintText: context.translate.firstname,
             ),
-          ),
-          MyStyles.mediumSpacingBetweenField.sbh,
-          MyRichText(
-            firstText: '${context.translate.forgotPassword}?',
-            secondText: context.translate.reset,
-            secondRecognizer: TapGestureRecognizer()
-              ..onTap = () {
-                AppNavigator.push(context, ForgotPasswordPage());
-              },
-          )
-        ],
-      ).withPadding((h: 16, v: 10).symmetricPadding),
+            MyStyles.mediumSpacingBetweenField.sbh,
+            MyPrimaryTextField(
+              controller: _lastNameCon,
+              hintText: context.translate.lastname,
+            ),
+            MyStyles.mediumSpacingBetweenField.sbh,
+            MyPrimaryTextField(
+              controller: _emailCon,
+              hintText: context.translate.enterEmail,
+            ),
+            MyStyles.mediumSpacingBetweenField.sbh,
+            MyPrimaryTextField(
+              controller: _passwordCon,
+              hintText: context.translate.enterPassword,
+            ),
+            MyStyles.mediumSpacingBetweenField.sbh,
+            SizedBox(
+              width: double.maxFinite,
+              child: MyPrimaryButton(
+                title: context.translate.btnContinue,
+                onPressed: () => AppNavigator.push(context, const GenderAndAgePage()),
+              ),
+            ),
+            MyStyles.mediumSpacingBetweenField.sbh,
+            MyRichText(
+              firstText: '${context.translate.forgotPassword}?',
+              secondText: context.translate.reset,
+              secondRecognizer: TapGestureRecognizer()
+                ..onTap = () {
+                  AppNavigator.push(context, ForgotPasswordPage());
+                },
+            )
+          ],
+        ).withPadding((h: 16, v: 10).symmetricPadding),
+      ),
     );
   }
 }

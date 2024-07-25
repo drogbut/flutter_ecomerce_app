@@ -1,44 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../locator.dart';
 import '../core/utilities/preferences.dart';
 
-class ThemeProvider {
-  final ValueNotifier<ThemeMode> _themeModeNotifier =
-      ValueNotifier(ThemeMode.system);
+class ThemeCubit extends Cubit<ThemeMode> {
+  ThemeCubit() : super(ThemeMode.system) {
+    _initializeTheme();
+  }
 
-  ValueNotifier<ThemeMode> get themeModeNotifier => _themeModeNotifier;
-
-  ThemeMode get themeMode => _themeModeNotifier.value;
-
-  setThemeMode(ThemeMode value) => _themeModeNotifier.value = value;
-
-  ThemeProvider() {
+  void _initializeTheme() {
     String theme = sl.get<UtilityPreferences>().getString('Theme');
     if (theme == 'Light') {
-      setThemeMode(ThemeMode.light);
+      emit(ThemeMode.light);
     } else if (theme == 'Dark') {
-      setThemeMode(ThemeMode.dark);
+      emit(ThemeMode.dark);
     } else if (theme == 'System') {
-      setThemeMode(ThemeMode.system);
+      emit(ThemeMode.system);
     } else if (theme == '') {
-      setThemeMode(ThemeMode.dark);
+      emit(ThemeMode.dark);
     }
   }
 
   bool get isDarkMode {
-    if (themeMode == ThemeMode.system) {
-      final brightness =
-          WidgetsBinding.instance.platformDispatcher.platformBrightness;
-
+    if (state == ThemeMode.system) {
+      final brightness = WidgetsBinding.instance.platformDispatcher.platformBrightness;
       return brightness == Brightness.dark;
     }
-
-    return themeMode == ThemeMode.dark;
+    return state == ThemeMode.dark;
   }
 
   void changeTheme(ThemeMode themeModeIn) {
-    setThemeMode(themeModeIn);
+    emit(themeModeIn);
     String themeModeString;
     switch (themeModeIn) {
       case ThemeMode.light:

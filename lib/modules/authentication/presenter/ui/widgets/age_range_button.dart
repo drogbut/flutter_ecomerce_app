@@ -17,9 +17,9 @@ class AgeRangeButton extends StatelessWidget {
     return BlocBuilder<AgeSelectionCubit, String>(
       builder: (context, selectedAge) {
         return ListTile(
+          tileColor: context.colorScheme.primaryContainer.withOpacity(0.2),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(MyStyles.xLargeBorderRadius),
-            side: BorderSide(color: context.colorScheme.primary),
           ),
           leading: Text(selectedAge),
           trailing: const Icon(Icons.keyboard_arrow_down),

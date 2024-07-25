@@ -9,7 +9,7 @@ import '../../../../core/constants/my_styles.dart';
 import '../../../../routing/navigator.dart';
 import '../../../../ui/buttons/primary.dart';
 import '../../../../ui/fields/primary.dart';
-import '../../../../ui/text/my_richt_text.dart';
+import '../../../../ui/text/my_rich_text.dart';
 import '../../../../ui/text/title_text.dart';
 
 class EnterPasswordPage extends StatelessWidget {

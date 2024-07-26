@@ -11,6 +11,7 @@ import 'modules/authentication/data/repository_impl/auth.dart';
 import 'modules/authentication/data/sources/auth_firebase_service.dart';
 import 'modules/authentication/domain/repository/auth.dart';
 import 'modules/authentication/domain/use_cases/get_ages.dart';
+import 'modules/authentication/domain/use_cases/sign_in.dart';
 import 'modules/authentication/domain/use_cases/signup.dart';
 
 GetIt sl = GetIt.I;
@@ -32,6 +33,6 @@ Future<void> setupLocator() async {
 
   // Use-cases
   sl.registerSingleton<SignupUseCase>(SignupUseCase());
-
+  sl.registerSingleton<SignInUseCase>(SignInUseCase());
   sl.registerSingleton<GetAgesUseCase>(GetAgesUseCase());
 }

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_folders_structure/comon/providers/button/button_state_cubit.dart';
-import 'package:flutter_folders_structure/modules/authentication/presenter/providers/gender_selection_cubit.dart';
 
+import '../../../../commons/providers/button/button_state_cubit.dart';
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../ui/buttons/primary.dart';
@@ -13,6 +12,7 @@ import '../../domain/models/user_signup_request.dart';
 import '../../domain/use_cases/signup.dart';
 import '../providers/gender_and_age_provider/age_selection_cubit.dart';
 import '../providers/gender_and_age_provider/display_age_cubit.dart';
+import '../providers/gender_and_age_provider/gender_selection_cubit.dart';
 import 'widgets/age_range_button.dart';
 import 'widgets/gender_container.dart';
 

@@ -2,10 +2,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+import '../../domain/models/user_sign_in_request.dart';
 import '../../domain/models/user_signup_request.dart';
 
 abstract class AuthFirebaseService {
   Future<Either> signup(UserSignUpRequest user);
+  Future<Either> signIn(UserSignInRequest user);
   Future<Either> getAges();
 }
 
@@ -41,6 +43,28 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
         return const Left('The email address is not in a valid format.');
       } else {
         return const Left('An error occurred during signup.');
+      }
+    } catch (e) {
+      return Left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either> signIn(UserSignInRequest user) async {
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: user.email,
+        password: user.password,
+      );
+
+      return const Right('Login was successful');
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        return const Left('No user found for that email.');
+      } else if (e.code == 'wrong-password') {
+        return const Left('Wrong password provided for that user.');
+      } else {
+        return const Left('An error occurred during the login.');
       }
     } catch (e) {
       return Left(e.toString());

@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_folders_structure/modules/authentication/domain/models/user_signup_request.dart';
 
 import '../../../../core/constants/my_styles.dart';
 import '../../../../core/extensions/context.dart';
@@ -11,6 +10,7 @@ import '../../../../ui/fields/primary.dart';
 import '../../../../ui/my_appbar/platform_back_button.dart';
 import '../../../../ui/text/my_rich_text.dart';
 import '../../../../ui/text/title_text.dart';
+import '../../domain/models/user_signup_request.dart';
 import 'forgot_password.dart';
 import 'gender_and_age.dart';
 

@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:flutter_folders_structure/modules/authentication/domain/models/user_sign_in_request.dart';
 
 import '../../../../locator.dart';
 import '../../domain/models/user_signup_request.dart';
@@ -14,5 +15,10 @@ class AuthRepositoryImpl extends AuthRepository {
   @override
   Future<Either> getAges() async {
     return await sl<AuthFirebaseService>().getAges();
+  }
+
+  @override
+  Future<Either> signIn(UserSignInRequest userRequest) async {
+    return await sl<AuthFirebaseService>().signIn(userRequest);
   }
 }

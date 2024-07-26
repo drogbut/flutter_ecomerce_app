@@ -16,7 +16,9 @@ class ButtonStateCubit extends Cubit<ButtonState> {
       returnedData.fold((error) {
         emit(ButtonFailureState(errorMessage: error));
       }, (data) {
-        emit(ButtonSuccessState(successMessage: 'Your new account was successful register'));
+        emit(
+          ButtonSuccessState(successMessage: data.toString()),
+        );
       });
     } catch (e) {
       emit(ButtonFailureState(errorMessage: e.toString()));

@@ -1,5 +1,16 @@
 # flutter_folders_structure
 
+## Features:
+
+* [Flutter Clean Architecture by Reso Coder](https://resocoder.com/flutter-clean-architecture-tdd/)
+* [Multilingual Support by PodCoder](https://www.youtube.com/watch?v=WrqH5fF2ZuY&list=PLtuW0sh7ZGJFrd4FYRk0PJf0qHF-q96MQ&index=4)
+* Dependency Injection
+* App Theme with material design 3
+* Responsive App - mobile first as approach 
+* [Firebase setup with CLI](https://firebase.flutter.dev/docs/cli/)
+* [Cloud Firestore](https://firebase.flutter.dev/docs/firestore/)
+* Firebase Authentication - splash_screen, sign_in, sign_up, forgot_password and gender_and_age
+
 ### Folder Structure
 Here is the folder structure we have been using in this project
 
@@ -75,16 +86,6 @@ flutter-app/
 |   |- main.dart
 |- test
 ```
-
-## Features:
-
-* [Flutter Clean Architecture by Reso Coder](https://resocoder.com/flutter-clean-architecture-tdd/)
-* [Multilingual Support by PodCoder](https://www.youtube.com/watch?v=WrqH5fF2ZuY&list=PLtuW0sh7ZGJFrd4FYRk0PJf0qHF-q96MQ&index=4)
-* Dependency Injection
-* App Theme with material design 3
-* Responsive App
-* [Firebase setup with CLI](https://firebase.flutter.dev/docs/cli/)
-* Firebase Authentication
 
 ## How to Use 
 

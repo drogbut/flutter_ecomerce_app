@@ -91,6 +91,14 @@
   "btnFinish": "Finish",
   "@btnFinish": {
     "description": "Finish"
+  },
+  "btnReturnToLogin": "Return to Login",
+  "@btnReturnToLogin": {
+    "description": "Return to Login"
+  },
+  "resetPasswordMessage": "We send you an Email to reset your password",
+  "@resetPasswordMessage": {
+    "description": "We send you an Email to reset your password"
   }
 
 }

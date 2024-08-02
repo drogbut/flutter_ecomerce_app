@@ -21,8 +21,7 @@
   "women": "Femmes",
   "howOldAreYou": "Quel âge avez-vous ?",
   "ageRange": "Tranche d'âge",
-  "btnFinish": "Finish",
-  "@btnFinish": {
-    "description": "Terminé"
-  }
+  "btnFinish": "Terminé",
+  "btnReturnToLogin": "Retour à la connexion",
+  "resetPasswordMessage": "Nous vous avons envoyé un e-mail pour réinitialiser votre mot de passe."
 }

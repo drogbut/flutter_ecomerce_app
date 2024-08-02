@@ -8,6 +8,7 @@ import '../../domain/models/user_signup_request.dart';
 abstract class AuthFirebaseService {
   Future<Either> signup(UserSignUpRequest user);
   Future<Either> signIn(UserSignInRequest user);
+  Future<Either> resetPassword(String email);
   Future<Either> getAges();
 }
 
@@ -77,6 +78,18 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
       final ageResponse = await FirebaseFirestore.instance.collection('Ages').get();
 
       return Right(ageResponse.docs);
+    } on FirebaseException catch (e) {
+      return Left('FirebaseException: ${e.message}');
+    } catch (e) {
+      return Left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either> resetPassword(String email) async {
+    try {
+      await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
+      return const Right('Please check your email');
     } on FirebaseException catch (e) {
       return Left('FirebaseException: ${e.message}');
     } catch (e) {

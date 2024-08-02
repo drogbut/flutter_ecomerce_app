@@ -1,3 +1,4 @@
+import 'package:flutter_folders_structure/modules/authentication/domain/use_cases/reset_password.dart';
 import 'package:get_it/get_it.dart';
 
 import 'core/utilities/color.dart';
@@ -35,4 +36,5 @@ Future<void> setupLocator() async {
   sl.registerSingleton<SignupUseCase>(SignupUseCase());
   sl.registerSingleton<SignInUseCase>(SignInUseCase());
   sl.registerSingleton<GetAgesUseCase>(GetAgesUseCase());
+  sl.registerSingleton<ResetPasswordUseCase>(ResetPasswordUseCase());
 }

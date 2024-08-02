@@ -8,8 +8,8 @@
 * App Theme with material design 3
 * Responsive App - mobile first as approach 
 * [Firebase setup with CLI](https://firebase.flutter.dev/docs/cli/)
-* [Cloud Firestore](https://firebase.flutter.dev/docs/firestore/)
 * Firebase Authentication - splash_screen, sign_in, sign_up, forgot_password and gender_and_age
+* [Cloud Firestore](https://firebase.flutter.dev/docs/firestore/)
 
 ### Folder Structure
 Here is the folder structure we have been using in this project

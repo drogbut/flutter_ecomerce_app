@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_folders_structure/routing/navigator.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/constants/my_colors.dart';
 import '../../../authentication/presenter/ui/sign_in.dart';
+import '../../../home_page/presenter/ui/home.dart';
 import '../../domain/app_vectors.dart';
 import '../providers/splash_cubit.dart';
 import '../providers/splash_state.dart';
@@ -16,7 +18,10 @@ class SplashPage extends StatelessWidget {
     return BlocListener<SplashCubit, SplashState>(
       listener: (context, state) {
         if (state is UnAuthenticated) {
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignInPage()));
+          AppNavigator.pushReplacement(context, SignInPage());
+        }
+        if (state is Authenticated) {
+          AppNavigator.pushReplacement(context, const HomePage());
         }
       },
       child: Scaffold(
@@ -24,8 +29,12 @@ class SplashPage extends StatelessWidget {
         body: Center(
           child: SvgPicture.asset(
             AppVectors.appLogo,
-            color: Colors.white,
-            height: 200,
+            theme: const SvgTheme(
+              currentColor: Colors.white,
+              xHeight: 200,
+              fontSize: 200,
+            ),
+            //height: 200,
           ),
         ),
       ),

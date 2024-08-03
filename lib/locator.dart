@@ -1,3 +1,4 @@
+import 'package:flutter_folders_structure/modules/authentication/domain/use_cases/is_login.dart';
 import 'package:flutter_folders_structure/modules/authentication/domain/use_cases/reset_password.dart';
 import 'package:get_it/get_it.dart';
 
@@ -37,4 +38,5 @@ Future<void> setupLocator() async {
   sl.registerSingleton<SignInUseCase>(SignInUseCase());
   sl.registerSingleton<GetAgesUseCase>(GetAgesUseCase());
   sl.registerSingleton<ResetPasswordUseCase>(ResetPasswordUseCase());
+  sl.registerSingleton<IsLogInUseCase>(IsLogInUseCase());
 }

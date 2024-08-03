@@ -10,6 +10,7 @@ abstract class AuthFirebaseService {
   Future<Either> signIn(UserSignInRequest user);
   Future<Either> resetPassword(String email);
   Future<Either> getAges();
+  Future<Either> isLogin();
 }
 
 class AuthFirebaseServiceImpl extends AuthFirebaseService {
@@ -94,6 +95,15 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
       return Left('FirebaseException: ${e.message}');
     } catch (e) {
       return Left(e.toString());
+    }
+  }
+
+  @override
+  Future<Either> isLogin() async {
+    if (FirebaseAuth.instance.currentUser != null) {
+      return const Right(true);
+    } else {
+      return const Right(false);
     }
   }
 }

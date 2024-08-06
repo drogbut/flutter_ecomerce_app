@@ -13,7 +13,7 @@ import '../../../../ui/my_appbar/platform_back_button.dart';
 import '../../../../ui/text/my_rich_text.dart';
 import '../../../../ui/text/title_text.dart';
 import '../../../home_page/presenter/ui/home.dart';
-import '../../domain/models/user_sign_in_request.dart';
+import '../../domain/entities/user_sign_in_request.dart';
 import '../../domain/use_cases/sign_in.dart';
 import 'sign_up.dart';
 

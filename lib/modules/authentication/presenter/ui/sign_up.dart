@@ -10,7 +10,7 @@ import '../../../../ui/fields/primary.dart';
 import '../../../../ui/my_appbar/platform_back_button.dart';
 import '../../../../ui/text/my_rich_text.dart';
 import '../../../../ui/text/title_text.dart';
-import '../../domain/models/user_signup_request.dart';
+import '../../domain/entities/user_signup_request.dart';
 import 'forgot_password.dart';
 import 'gender_and_age.dart';
 

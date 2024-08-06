@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 
-import '../models/user_sign_in_request.dart';
-import '../models/user_signup_request.dart';
+import '../entities/user_sign_in_request.dart';
+import '../entities/user_signup_request.dart';
 
 abstract class AuthRepository {
   Future<Either> signup(UserSignUpRequest userRequest);
@@ -9,4 +9,5 @@ abstract class AuthRepository {
   Future<Either> resetPassword(String email);
   Future<Either> getAges();
   Future<Either> isLogin();
+  Future<Either> getUser();
 }

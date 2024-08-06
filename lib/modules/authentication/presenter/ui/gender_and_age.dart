@@ -8,7 +8,7 @@ import '../../../../ui/buttons/primary.dart';
 import '../../../../ui/indicators/loading_indicator.dart';
 import '../../../../ui/my_appbar/platform_back_button.dart';
 import '../../../../ui/text/title_text.dart';
-import '../../domain/models/user_signup_request.dart';
+import '../../domain/entities/user_signup_request.dart';
 import '../../domain/use_cases/signup.dart';
 import '../providers/gender_and_age_provider/age_selection_cubit.dart';
 import '../providers/gender_and_age_provider/display_age_cubit.dart';

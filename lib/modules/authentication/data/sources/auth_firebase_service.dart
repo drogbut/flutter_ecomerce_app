@@ -2,8 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-import '../../domain/models/user_sign_in_request.dart';
-import '../../domain/models/user_signup_request.dart';
+import '../../domain/entities/user_sign_in_request.dart';
+import '../../domain/entities/user_signup_request.dart';
 
 abstract class AuthFirebaseService {
   Future<Either> signup(UserSignUpRequest user);
@@ -11,6 +11,7 @@ abstract class AuthFirebaseService {
   Future<Either> resetPassword(String email);
   Future<Either> getAges();
   Future<Either> isLogin();
+  Future<Either> getUser();
 }
 
 class AuthFirebaseServiceImpl extends AuthFirebaseService {
@@ -104,6 +105,22 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
       return const Right(true);
     } else {
       return const Right(false);
+    }
+  }
+
+  @override
+  Future<Either> getUser() async {
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      final userData = await FirebaseFirestore.instance.collection('Users').doc(user?.uid).get().then(
+            (value) => value.data(),
+          );
+
+      return Right(userData);
+    } on FirebaseException catch (e) {
+      return Left('FirebaseException: ${e.message}');
+    } catch (e) {
+      return const Left('Something is wrong');
     }
   }
 }

@@ -112,9 +112,14 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
   Future<Either> getUser() async {
     try {
       final user = FirebaseAuth.instance.currentUser;
-      final userData = await FirebaseFirestore.instance.collection('Users').doc(user?.uid).get().then(
-            (value) => value.data(),
-          );
+      if (user == null) {
+        return const Left('No user is currently signed in');
+      }
+
+      final userData = await FirebaseFirestore.instance
+          .collection('Users')
+          .doc(user.uid)
+          .get().then((value) => value.data());
 
       return Right(userData);
     } on FirebaseException catch (e) {

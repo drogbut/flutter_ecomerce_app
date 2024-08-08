@@ -43,7 +43,7 @@ class AuthRepositoryImpl extends AuthRepository {
       },
       (data) {
         return Right(
-          UserModel.fromJson(data).toEntity(),
+          UserModel.fromJson(data)
         );
       },
     );

@@ -4,13 +4,12 @@ import 'package:flutter_folders_structure/core/extensions/context.dart';
 class GestureDetectorUserActivityDetected extends StatelessWidget {
   final Widget? child;
 
-  const GestureDetectorUserActivityDetected({Key? key, this.child})
-      : super(key: key);
+  const GestureDetectorUserActivityDetected({super.key, this.child});
 
   @override
   Widget build(BuildContext context) {
     return Focus(
-      onKey: (node, event) {
+      onKeyEvent: (node, event) {
         //UtilitySessionTimeout().userActivityDetected();
 
         return KeyEventResult.ignored;

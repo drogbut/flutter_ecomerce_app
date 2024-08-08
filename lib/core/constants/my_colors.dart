@@ -40,7 +40,7 @@ class MyColors {
   static const Color darkOnPrimary = Color(0xFFFFFFFF);
   static const Color darkPrimaryContainer = Color(0xFFE8DDFF);
   static const Color darkOnPrimaryContainer = Color(0xFFFFFFFF);
-  static const Color darkSecondary = Color(0xFF006A60);
+  static const Color darkSecondary = Color(0xff342F3F);
   static const Color darkOnSecondary = Color(0xFFFFFFFF);
   static const Color darkSecondaryContainer = Color(0xFF4FFBE6);
   static const Color darkOnSecondaryContainer = Color(0xFF05203c);

@@ -48,6 +48,11 @@ dependencies:
   firebase_auth: ^4.17.8
   cloud_firestore: ^4.15.8
 
+  # Code generator for data classes, unions, and cloning.
+  freezed: ^2.5.2
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
 
 
 
@@ -63,7 +68,8 @@ dev_dependencies:
   flutter_lints: ^4.0.0
 
   # A build system for Dart code generation and modular compilation.
-  build_runner: ^2.4.6
+  build_runner: ^2.4.11
+  json_serializable: ^6.8.0
 
 # The following section is specific to Flutter packages.
 flutter:
@@ -74,6 +80,7 @@ flutter:
   assets:
     - assets/fonts/
     - assets/vectors/
+    - assets/images/
 
   fonts:
     - family: Poppins

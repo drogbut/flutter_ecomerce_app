@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_folders_structure/core/extensions/context.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyCircleIcon extends StatelessWidget {
@@ -13,7 +14,7 @@ class MyCircleIcon extends StatelessWidget {
     required this.iconData,
     this.tooltip,
     this.iconColor,
-    this.iconSize = 16,
+    this.iconSize = 24,
     super.key,
   });
 
@@ -21,9 +22,9 @@ class MyCircleIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return DecoratedBox(
       decoration: BoxDecoration(
-          color: iconColor?.withOpacity(0.2), shape: BoxShape.circle),
+          color: context.colorScheme.primary, shape: BoxShape.circle),
       child: IconButton(
-        padding: EdgeInsets.zero,
+        padding: const EdgeInsets.all(8),
         constraints: const BoxConstraints(),
         tooltip: tooltip,
         icon: FaIcon(iconData, color: iconColor, size: iconSize),

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 /// Import the core Flutter material library for building UI components
@@ -13,7 +15,7 @@ import 'package:flutter/material.dart';
 /// (3) // complementaryColor will be "#FF0000" (red)
 /// Color myColor = Colors.green;
 /// Color complementaryColor = myColor.complementary;
-extension HexColor on Color {
+extension ExtensionColor on Color {
   /// Static method to convert a hex string to a Color object
   static Color fromHex(String hexString) {
     final buffer = StringBuffer();
@@ -44,5 +46,15 @@ extension HexColor on Color {
     String newBlue = (blue - 255).abs().toRadixString(16).padRight(2, '0');
 
     return Color(int.parse('0xFF$newRed$newGreen$newBlue'));
+  }
+
+  static Color randomColor(){
+    final random = Random();
+      return Color.fromARGB(
+        255,
+        random.nextInt(256),
+        random.nextInt(256),
+        random.nextInt(256),
+      );
   }
 }

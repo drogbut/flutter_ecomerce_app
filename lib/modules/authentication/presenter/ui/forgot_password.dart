@@ -31,7 +31,7 @@ class ForgotPasswordPage extends StatelessWidget {
               ScaffoldMessenger.of(context).showSnackBar(snackBar);
             }
             if (state is ButtonSuccessState) {
-              AppNavigator.push(context, ResetPasswordPage());
+              AppNavigator.push(context, const ResetPasswordPage());
             }
           },
           child: Column(

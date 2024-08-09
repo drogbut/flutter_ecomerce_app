@@ -6,7 +6,7 @@ import 'dart:math';
 
 import 'package:calendar_view/calendar_view.dart' hide DateTimeExtensions;
 import 'package:flutter/material.dart';
-import 'package:flutter_folders_structure/core/extensions/date_time.dart';
+import '../../core/extensions/date_time.dart';
 
 import '../../core/utilities/platform.dart';
 import '../../locator.dart';
@@ -21,7 +21,7 @@ class Constants {
   static const int hoursADay = 24;
   static const int minutesADay = 1440;
 
-  static final List<String> weekTitles = ["M", "T", "W", "T", "F", "S", "S"];
+  static final List<String> weekTitles = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 
   static const Color defaultLiveTimeIndicatorColor = Color(0xff444444);
   static const Color defaultBorderColor = Color(0xffdddddd);
@@ -124,7 +124,7 @@ extension DateTimeExtensions on DateTime {
   }
 
   /// Gives formatted date in form of 'month - year'.
-  String get formatted => "$month-$year";
+  String get formatted => '$month-$year';
 
   /// Returns total minutes this date is pointing at.
   /// if [DateTime] object is, DateTime(2021, 5, 13, 12, 4, 5)
@@ -156,8 +156,8 @@ extension DateTimeExtensions on DateTime {
   bool get isDayStart => hour % 24 == 0 && minute % 60 == 0;
 
   @Deprecated(
-      "This extension is not being used in this package and will be removed "
-      "in next major release. Please use withoutTime instead.")
+      'This extension is not being used in this package and will be removed '
+      'in next major release. Please use withoutTime instead.')
   DateTime get dateYMD => DateTime(year, month, day);
 }
 
@@ -506,7 +506,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
                                   ? constraints.maxHeight
                                   : _height; // custom change
 
-                          final _cellAspectRatio =
+                          final customCellAspectRatio =
                               widget.useAvailableVerticalSpace
                                   ? calculateCellAspectRatio(localHeight)
                                   : widget.cellAspectRatio;
@@ -536,7 +536,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
                                   borderColor: widget.borderColor,
                                   borderSize: widget.borderSize,
                                   cellBuilder: _cellBuilder,
-                                  cellRatio: _cellAspectRatio,
+                                  cellRatio: customCellAspectRatio,
                                   date: date,
                                   showBorder: widget.showBorder,
                                   startDay: widget.startDay,
@@ -565,7 +565,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
   /// initialization is complete.
   EventController<T> get controller {
     if (_controller == null) {
-      throw "EventController is not initialized yet.";
+      throw 'EventController is not initialized yet.';
     }
 
     return _controller!;
@@ -585,13 +585,13 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
   }
 
   double calculateCellAspectRatio(double height) {
-    final _cellHeight = height / widget.showNumberOfWeeks; // custom changes
-    return _cellWidth / _cellHeight;
+    final cellHeight = height / widget.showNumberOfWeeks; // custom changes
+    return _cellWidth / cellHeight;
   }
 
   void _assignBuilders() {
-    // Initialize cell builder. Assign default if widget.cellBuilder is null.
-    ///TODO _cellBuilder = widget.cellBuilder ?? _defaultCellBuilder;
+    /// Initialize cell builder. Assign default if widget.cellBuilder is null.
+    /// _cellBuilder = widget.cellBuilder ?? _defaultCellBuilder;
 
     // Initialize week builder. Assign default if widget.weekBuilder is null.
     // This widget will come under header this will display week days.
@@ -635,8 +635,8 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
 
     assert(
       _minDate.isBefore(_maxDate),
-      "Minimum date should be less than maximum date.\n"
-      "Provided minimum date: $_minDate, maximum date: $_maxDate",
+      'Minimum date should be less than maximum date.\n'
+      'Provided minimum date: $_minDate, maximum date: $_maxDate',
     );
 
     // Get number of months between _minDate and _maxDate.
@@ -689,7 +689,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
   }
 
   /// Default cell builder. Used when [widget.cellBuilder] is null
-  Widget _defaultCellBuilder(
+  /*Widget _defaultCellBuilder(
       date, List<CalendarEventData<T>> events, isToday, isInMonth) {
     return FilledCell<T>(
       date: date,
@@ -699,7 +699,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
       onTileTap: widget.onEventTap,
       dateStringBuilder: widget.dateStringBuilder,
     );
-  }
+  }*/
 
   /// Animate to next page
   ///
@@ -748,7 +748,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
   /// Jumps to page which gives month calendar for [month]
   void jumpToMonth(DateTime month) {
     if (month.isBefore(_minDate) || month.isAfter(_maxDate)) {
-      throw "Invalid date selected.";
+      throw 'Invalid date selected.';
     }
     _pageController.jumpToPage(_minDate.getMonthDifference(month) - 1);
   }
@@ -761,7 +761,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
   Future<void> animateToMonth(DateTime month,
       {Duration? duration, Curve? curve}) async {
     if (month.isBefore(_minDate) || month.isAfter(_maxDate)) {
-      throw "Invalid date selected.";
+      throw 'Invalid date selected.';
     }
     await _pageController.animateToPage(
       _minDate.getMonthDifference(month) - 1,
@@ -792,8 +792,8 @@ class _CalendarWeekView<T> extends StatelessWidget {
     required this.startDay,
     required this.onWeekLongPress,
     required this.showNumberOfWeeks,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -854,7 +854,7 @@ class _MonthPageBuilder<T> extends StatelessWidget {
   final int showNumberOfWeeks;
 
   const _MonthPageBuilder({
-    Key? key,
+    super.key,
     required this.cellRatio,
     required this.showBorder,
     required this.borderSize,
@@ -868,7 +868,7 @@ class _MonthPageBuilder<T> extends StatelessWidget {
     required this.onDateLongPress,
     required this.startDay,
     required this.showNumberOfWeeks,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

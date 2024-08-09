@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_folders_structure/routing/navigator.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/constants/my_colors.dart';
+import '../../../../routing/navigator.dart';
 import '../../../authentication/presenter/ui/sign_in.dart';
 import '../../../home_page/presenter/ui/home.dart';
 import '../../domain/app_vectors.dart';

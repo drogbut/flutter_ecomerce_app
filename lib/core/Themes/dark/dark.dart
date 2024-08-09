@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_folders_structure/core/constants/my_styles.dart';
-import 'package:flutter_folders_structure/core/extensions/widget.dart';
 
 import '../../constants/my_colors.dart';
+import '../../constants/my_styles.dart';
+import '../../extensions/widget.dart';
 
 class ThemesDark {
   ThemesDark._();

@@ -87,16 +87,12 @@ class UtilityDateFormat {
     _setDatePattern();
   }
 
-  bool containsDayPattern(String tempList) {
-    return tempList.toLowerCase().contains('dd') ||
+  bool containsDayPattern(String tempList) => tempList.toLowerCase().contains('dd') ||
         tempList.contains('24') ||
         tempList.contains('25') ||
         tempList.contains('23');
-  }
 
-  bool containsMonthPattern(String tempList) {
-    return tempList.toLowerCase().contains('mm') || tempList.contains('11');
-  }
+  bool containsMonthPattern(String tempList) => tempList.toLowerCase().contains('mm') || tempList.contains('11');
 
   void _setDatePattern() {
     switch (_dateFormat) {

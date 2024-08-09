@@ -31,13 +31,11 @@ extension ExtensionColor on Color {
   }
 
   /// Method to convert a Color object back to a hex string representation
-  String toHex({bool leadingHashSign = true}) {
-    return '${leadingHashSign ? '#' : ''}'
+  String toHex({bool leadingHashSign = true}) => '${leadingHashSign ? '#' : ''}'
         '${alpha.toRadixString(16).padLeft(2, '0')}'
         '${red.toRadixString(16).padLeft(2, '0')}'
         '${green.toRadixString(16).padLeft(2, '0')}'
         '${blue.toRadixString(16).padLeft(2, '0')}';
-  }
 
   /// Method to get the complementary color of the current Color object
   Color get complementary {

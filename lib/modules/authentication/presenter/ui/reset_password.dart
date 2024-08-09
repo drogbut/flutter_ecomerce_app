@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_folders_structure/modules/authentication/presenter/ui/sign_in.dart';
-import 'package:flutter_folders_structure/modules/splash/domain/app_vectors.dart';
-import 'package:flutter_folders_structure/routing/navigator.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/constants/my_styles.dart';
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
+import '../../../../routing/navigator.dart';
 import '../../../../ui/buttons/primary.dart';
 import '../../../../ui/text/title_text.dart';
+import '../../../splash/domain/app_vectors.dart';
+import 'sign_in.dart';
 
 class ResetPasswordPage extends StatelessWidget {
   const ResetPasswordPage({super.key});

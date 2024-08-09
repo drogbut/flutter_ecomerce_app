@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_folders_structure/modules/authentication/domain/use_cases/reset_password.dart';
-import 'package:flutter_folders_structure/modules/authentication/presenter/ui/reset_password.dart';
-import 'package:flutter_folders_structure/routing/navigator.dart';
 
 import '../../../../commons/providers/button/button_state_cubit.dart';
 import '../../../../core/constants/my_styles.dart';
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
+import '../../../../routing/navigator.dart';
 import '../../../../ui/buttons/primary.dart';
 import '../../../../ui/fields/primary.dart';
 import '../../../../ui/my_appbar/platform_back_button.dart';
 import '../../../../ui/text/title_text.dart';
+import '../../domain/use_cases/reset_password.dart';
+import 'reset_password.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
   final TextEditingController _emailCon = TextEditingController();

@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_folders_structure/core/extensions/context.dart';
-import 'package:flutter_folders_structure/core/extensions/widget.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../ui/gesture_detector/gesture_detector_user_activity.dart';
+import '../extensions/context.dart';
+import '../extensions/widget.dart';
 
 Future showMaterialInformationDialog(
   BuildContext context,
   String description, {
   String? title,
   String? buttonTitle,
-}) async {
-  return await showDialog(
+}) async => await showDialog(
     context: context,
-    builder: (BuildContext context) {
-      return GestureDetectorUserActivityDetected(
+    builder: (BuildContext context) => GestureDetectorUserActivityDetected(
         child: AlertDialog(
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(30.0)),
@@ -68,16 +66,12 @@ Future showMaterialInformationDialog(
             ),
           ],
         ),
-      );
-    },
+      ),
   );
-}
 
-Future showMaterialWarningDialog(BuildContext context, String description, {String? title, String? buttonTitle}) async {
-  return await showDialog(
+Future showMaterialWarningDialog(BuildContext context, String description, {String? title, String? buttonTitle}) async => await showDialog(
     context: context,
-    builder: (BuildContext context) {
-      return GestureDetectorUserActivityDetected(
+    builder: (BuildContext context) => GestureDetectorUserActivityDetected(
         child: AlertDialog(
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(30.0)),
@@ -131,16 +125,12 @@ Future showMaterialWarningDialog(BuildContext context, String description, {Stri
             ),
           ],
         ),
-      );
-    },
+      ),
   );
-}
 
-Future showMaterialErrorDialog(BuildContext context, String description, {String? title, String? buttonTitle}) async {
-  return await showDialog(
+Future showMaterialErrorDialog(BuildContext context, String description, {String? title, String? buttonTitle}) async => await showDialog(
     context: context,
-    builder: (BuildContext context) {
-      return GestureDetectorUserActivityDetected(
+    builder: (BuildContext context) => GestureDetectorUserActivityDetected(
         child: AlertDialog(
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(30.0)),
@@ -195,10 +185,8 @@ Future showMaterialErrorDialog(BuildContext context, String description, {String
             ),
           ],
         ),
-      );
-    },
+      ),
   );
-}
 
 Future showMaterialQuestionDialog(
   BuildContext context,
@@ -212,8 +200,7 @@ Future showMaterialQuestionDialog(
 
   return await showDialog(
     context: context,
-    builder: (BuildContext context) {
-      return GestureDetectorUserActivityDetected(
+    builder: (BuildContext context) => GestureDetectorUserActivityDetected(
         child: AlertDialog(
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(30.0)),
@@ -308,16 +295,14 @@ Future showMaterialQuestionDialog(
             ),
           ],
         ),
-      );
-    },
+      ),
   );
 }
 
 Future<void> myBottomSheet(
   BuildContext context,
   Widget widget,
-) {
-  return showModalBottomSheet(
+) => showModalBottomSheet(
       context: context,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
@@ -325,7 +310,4 @@ Future<void> myBottomSheet(
           topLeft: Radius.circular(25),
         ),
       ),
-      builder: (_) {
-        return widget;
-      });
-}
+      builder: (_) => widget);

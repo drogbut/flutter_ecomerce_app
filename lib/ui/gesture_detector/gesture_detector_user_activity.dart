@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_folders_structure/core/extensions/context.dart';
+import '../../core/extensions/context.dart';
 
 class GestureDetectorUserActivityDetected extends StatelessWidget {
   final Widget? child;

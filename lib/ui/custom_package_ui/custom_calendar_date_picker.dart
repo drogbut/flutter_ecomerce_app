@@ -947,7 +947,7 @@ class _DayPickerState extends State<_DayPicker> {
     }
 
     T? resolve<T>(
-        MaterialStateProperty<T>? Function(DatePickerThemeData? theme) getProperty, Set<MaterialState> states) {
+        WidgetStateProperty<T>? Function(DatePickerThemeData? theme) getProperty, Set<WidgetState> states) {
       return effectiveValue(
         (DatePickerThemeData? theme) {
           return getProperty(theme)?.resolve(states);
@@ -972,17 +972,17 @@ class _DayPickerState extends State<_DayPicker> {
         final bool isToday = DateUtils.isSameDay(widget.currentDate, dayToBuild);
         final String semanticLabelSuffix = isToday ? ', ${localizations.currentDateLabel}' : '';
 
-        final Set<MaterialState> states = <MaterialState>{
-          if (isDisabled) MaterialState.disabled,
-          if (isSelectedDay) MaterialState.selected,
+        final Set<WidgetState> states = <WidgetState>{
+          if (isDisabled) WidgetState.disabled,
+          if (isSelectedDay) WidgetState.selected,
         };
 
         final Color? dayForegroundColor = resolve<Color?>(
             (DatePickerThemeData? theme) => isToday ? theme?.todayForegroundColor : theme?.dayForegroundColor, states);
         final Color? dayBackgroundColor = resolve<Color?>(
             (DatePickerThemeData? theme) => isToday ? theme?.todayBackgroundColor : theme?.dayBackgroundColor, states);
-        final MaterialStateProperty<Color?> dayOverlayColor = MaterialStateProperty.resolveWith<Color?>(
-          (Set<MaterialState> states) =>
+        final WidgetStateProperty<Color?> dayOverlayColor = WidgetStateProperty.resolveWith<Color?>(
+          (Set<WidgetState> states) =>
               effectiveValue((DatePickerThemeData? theme) => theme?.dayOverlayColor?.resolve(states)),
         );
         final BoxDecoration decoration = isToday
@@ -1013,7 +1013,7 @@ class _DayPickerState extends State<_DayPicker> {
             focusNode: _dayFocusNodes[day - 1],
             onTap: () => widget.onChanged(dayToBuild),
             radius: _dayPickerRowHeight / 2 + 4,
-            statesController: MaterialStatesController(states),
+            statesController: WidgetStatesController(states),
             overlayColor: dayOverlayColor,
             child: Semantics(
               // We want the day of month to be spoken first irrespective of the
@@ -1175,7 +1175,7 @@ class _YearPickerState extends State<YearPicker> {
     }
 
     T? resolve<T>(
-        MaterialStateProperty<T>? Function(DatePickerThemeData? theme) getProperty, Set<MaterialState> states) {
+        WidgetStateProperty<T>? Function(DatePickerThemeData? theme) getProperty, Set<WidgetState> states) {
       return effectiveValue(
         (DatePickerThemeData? theme) {
           return getProperty(theme)?.resolve(states);
@@ -1192,9 +1192,9 @@ class _YearPickerState extends State<YearPicker> {
     const double decorationHeight = 36.0;
     const double decorationWidth = 72.0;
 
-    final Set<MaterialState> states = <MaterialState>{
-      if (isDisabled) MaterialState.disabled,
-      if (isSelected) MaterialState.selected,
+    final Set<WidgetState> states = <WidgetState>{
+      if (isDisabled) WidgetState.disabled,
+      if (isSelected) WidgetState.selected,
     };
 
     final Color? textColor = resolve<Color?>(
@@ -1203,8 +1203,8 @@ class _YearPickerState extends State<YearPicker> {
     final Color? background = resolve<Color?>(
         (DatePickerThemeData? theme) => isCurrentYear ? theme?.todayBackgroundColor : theme?.yearBackgroundColor,
         states);
-    final MaterialStateProperty<Color?> overlayColor = MaterialStateProperty.resolveWith<Color?>(
-      (Set<MaterialState> states) =>
+    final WidgetStateProperty<Color?> overlayColor = WidgetStateProperty.resolveWith<Color?>(
+      (Set<WidgetState> states) =>
           effectiveValue((DatePickerThemeData? theme) => theme?.dayOverlayColor?.resolve(states)),
     );
 
@@ -1245,7 +1245,7 @@ class _YearPickerState extends State<YearPicker> {
       yearItem = InkWell(
         key: ValueKey<int>(year),
         onTap: () => widget.onChanged(DateTime(year, widget.initialDate.month)),
-        statesController: MaterialStatesController(states),
+        statesController: WidgetStatesController(states),
         overlayColor: overlayColor,
         child: yearItem,
       );

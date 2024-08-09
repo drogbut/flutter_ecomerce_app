@@ -9,43 +9,29 @@ import '../sources/auth_firebase_service.dart';
 
 class AuthRepositoryImpl extends AuthRepository {
   @override
-  Future<Either> signup(UserSignUpRequest userRequest) async {
-    return await sl<AuthFirebaseService>().signup(userRequest);
-  }
+  Future<Either> signup(UserSignUpRequest userRequest) async => await sl<AuthFirebaseService>().signup(userRequest);
 
   @override
-  Future<Either> getAges() async {
-    return await sl<AuthFirebaseService>().getAges();
-  }
+  Future<Either> getAges() async => await sl<AuthFirebaseService>().getAges();
 
   @override
-  Future<Either> signIn(UserSignInRequest userRequest) async {
-    return await sl<AuthFirebaseService>().signIn(userRequest);
-  }
+  Future<Either> signIn(UserSignInRequest userRequest) async => await sl<AuthFirebaseService>().signIn(userRequest);
 
   @override
-  Future<Either> resetPassword(String email) async {
-    return await sl<AuthFirebaseService>().resetPassword(email);
-  }
+  Future<Either> resetPassword(String email) async => await sl<AuthFirebaseService>().resetPassword(email);
 
   @override
-  Future<Either> isLogin() async {
-    return await sl<AuthFirebaseService>().isLogin();
-  }
+  Future<Either> isLogin() async => await sl<AuthFirebaseService>().isLogin();
 
   @override
   Future<Either> getUser() async {
     var user = await sl<AuthFirebaseService>().getUser();
 
     return user.fold(
-      (failure) {
-        return Left(failure);
-      },
-      (data) {
-        return Right(
+      (failure) => Left(failure),
+      (data) => Right(
           UserModel.fromJson(data)
-        );
-      },
+        ),
     );
   }
 }

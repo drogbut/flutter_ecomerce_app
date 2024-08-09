@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_folders_structure/core/extensions/context.dart';
-import 'package:flutter_folders_structure/core/extensions/widget.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../core/extensions/context.dart';
+import '../../core/extensions/widget.dart';
 import '../../core/utilities/platform.dart';
 import '../../locator.dart';
 

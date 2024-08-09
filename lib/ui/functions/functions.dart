@@ -3,11 +3,11 @@ import 'dart:async';
 import 'package:android_id/android_id.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_folders_structure/core/extensions/context.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
+import '../../core/extensions/context.dart';
 import '../../core/utilities/dialog.dart';
 import '../../core/utilities/navigation.dart';
 import '../../core/utilities/platform.dart';
@@ -268,18 +268,18 @@ TextStyle getCustomTextStyleMuted({FontWeight? fontWeight, double? fontSize}) {
   );
 }
 
-MaterialStateProperty<Color?>? dataRowMaterialStatePropertyFirst(
+WidgetStateProperty<Color?>? dataRowMaterialStatePropertyFirst(
     [double amount = .05]) {
   Color? color = _currentCtx.theme.cardColor;
 
-  return MaterialStateProperty.resolveWith((states) {
-    if (states.contains(MaterialState.focused)) {
+  return WidgetStateProperty.resolveWith((states) {
+    if (states.contains(WidgetState.focused)) {
       return _currentCtx.theme.focusColor;
     }
-    if (states.contains(MaterialState.pressed)) {
+    if (states.contains(WidgetState.pressed)) {
       return _currentCtx.theme.highlightColor;
     }
-    if (states.contains(MaterialState.selected)) {
+    if (states.contains(WidgetState.selected)) {
       //return sl.get<UtilityColor>().getUntouchableOrMuted(_currentCtx);
     }
 
@@ -290,18 +290,18 @@ MaterialStateProperty<Color?>? dataRowMaterialStatePropertyFirst(
   });
 }
 
-MaterialStateProperty<Color?>? dataRowMaterialStatePropertySecond(
+WidgetStateProperty<Color?>? dataRowMaterialStatePropertySecond(
     [double amount = .1]) {
   Color? color = _currentCtx.theme.cardColor;
 
-  return MaterialStateProperty.resolveWith((states) {
-    if (states.contains(MaterialState.focused)) {
+  return WidgetStateProperty.resolveWith((states) {
+    if (states.contains(WidgetState.focused)) {
       return _currentCtx.theme.focusColor;
     }
-    if (states.contains(MaterialState.pressed)) {
+    if (states.contains(WidgetState.pressed)) {
       return _currentCtx.theme.highlightColor;
     }
-    if (states.contains(MaterialState.selected)) {
+    if (states.contains(WidgetState.selected)) {
       //return sl.get<UtilityColor>().getUntouchableOrMuted(_currentCtx);
     }
 

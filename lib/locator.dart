@@ -1,4 +1,3 @@
-import 'modules/authentication/domain/use_cases/get_user.dart';
 import 'package:get_it/get_it.dart';
 
 import 'core/utilities/color.dart';
@@ -12,6 +11,7 @@ import 'modules/authentication/data/repository_impl/auth.dart';
 import 'modules/authentication/data/sources/auth_firebase_service.dart';
 import 'modules/authentication/domain/repository/auth.dart';
 import 'modules/authentication/domain/use_cases/get_ages.dart';
+import 'modules/authentication/domain/use_cases/get_user.dart';
 import 'modules/authentication/domain/use_cases/is_login.dart';
 import 'modules/authentication/domain/use_cases/reset_password.dart';
 import 'modules/authentication/domain/use_cases/sign_in.dart';

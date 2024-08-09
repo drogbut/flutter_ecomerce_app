@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_folders_structure/modules/authentication/presenter/providers/gender_and_age_provider/display_age_cubit.dart';
 
 import '../../../../../core/constants/my_styles.dart';
 import '../../../../../core/extensions/context.dart';
 import '../../../../../core/utilities/dialog.dart';
 import '../../../../../ui/indicators/loading_indicator.dart';
 import '../../providers/gender_and_age_provider/age_selection_cubit.dart';
+import '../../providers/gender_and_age_provider/display_age_cubit.dart';
 import '../../providers/gender_and_age_provider/display_age_state.dart';
 import 'age_container.dart';
 

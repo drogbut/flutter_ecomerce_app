@@ -21,18 +21,14 @@ import 'package:intl/intl.dart';
 /// ```
 extension DateUtilExtension on DateTime {
   /// Returns the Monday of the current week based on the specified `dayOfWeek`.
-  DateTime getMonday({required int dayOfWeek}) {
-    return subtract(Duration(days: weekday - dayOfWeek)).copyWith(
+  DateTime getMonday({required int dayOfWeek}) => subtract(Duration(days: weekday - dayOfWeek)).copyWith(
       hour: 0,
       minute: 0,
       second: 1,
     );
-  }
 
   /// Returns the first day of the current month.
-  DateTime getFirstOfMonth() {
-    return DateTime(year, month, 1);
-  }
+  DateTime getFirstOfMonth() => DateTime(year, month, 1);
 
   /// Formats the current date including the weekday.
   String formatDateWithWeekday() => DateFormat.yMEd().format(this);
@@ -54,8 +50,7 @@ extension DateUtilExtension on DateTime {
     int? second,
     int? millisecond,
     int? microsecond,
-  }) {
-    return DateTime(
+  }) => DateTime(
       year ?? this.year,
       month ?? this.month,
       day ?? this.day,
@@ -65,7 +60,6 @@ extension DateUtilExtension on DateTime {
       millisecond ?? this.millisecond,
       microsecond ?? this.microsecond,
     );
-  }
 
   /// Returns the start of the day (00:00:00.000).
   DateTime get startOfDay => copyWith(
@@ -96,9 +90,7 @@ extension DateUtilExtension on DateTime {
   DateTime get previousMonth => DateTime(year, month - 1, day);
 
   /// Checks if two dates are the same (year, month, day).
-  bool isSame(DateTime other) {
-    return year == other.year && month == other.month && day == other.day;
-  }
+  bool isSame(DateTime other) => year == other.year && month == other.month && day == other.day;
 
   /// Checks if the current date is the same as or before another date.
   bool isSameOrBefore(DateTime other) => isBefore(other) || isSame(other);

@@ -3,12 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
-import '../extensions/to_gender.dart';
 import '../../../../ui/indicators/loading_indicator.dart';
+import '../../../../ui/my_icons/circle_icon.dart';
+import '../extensions/to_gender.dart';
 import '../providers/user_info_cubit.dart';
 import '../providers/user_info_state.dart';
 import 'widgets/circular_image_icon.dart';
-import '../../../../ui/my_icons/circle_icon.dart';
 
 class HeaderHomePage extends StatelessWidget {
   const HeaderHomePage({super.key});

@@ -7,9 +7,7 @@ extension TextAlternativeExtension on String {
     }
   }
 
-  double? tryParseToDoubleTime() {
-    return double.tryParse(replaceAll(',', '.').replaceAll(':', '.'));
-  }
+  double? tryParseToDoubleTime() => double.tryParse(replaceAll(',', '.').replaceAll(':', '.'));
 }
 
 extension ReportCodeString on String {

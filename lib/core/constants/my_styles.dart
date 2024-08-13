@@ -56,4 +56,5 @@ class MyStyles {
   static const double mediumBorderRadius = 8.0;
   static const double largeBorderRadius = 16.0;
   static const double xLargeBorderRadius = 24.0;
+  static const double buttonRadius = 50.0;
 }

@@ -16,6 +16,10 @@ import 'modules/authentication/domain/use_cases/is_login.dart';
 import 'modules/authentication/domain/use_cases/reset_password.dart';
 import 'modules/authentication/domain/use_cases/sign_in.dart';
 import 'modules/authentication/domain/use_cases/signup.dart';
+import 'modules/home_page/data/repositories_impl/category_impl.dart';
+import 'modules/home_page/data/sources/category_firebase_services.dart';
+import 'modules/home_page/domain/repositories/category.dart';
+import 'modules/home_page/domain/use_cases/get_categories.dart';
 
 GetIt sl = GetIt.I;
 
@@ -30,11 +34,14 @@ Future<void> setupLocator() async {
 
   // Services
   sl.registerSingleton<AuthFirebaseService>(AuthFirebaseServiceImpl());
+  sl.registerSingleton<CategoryFirebaseService>(CategoryFirebaseServiceImpl());
 
   // Repositories
   sl.registerSingleton<AuthRepository>(AuthRepositoryImpl());
+  sl.registerSingleton<CategoriyRepository>(CategoryReposityImpl());
 
   // Use-cases
+  // (1) Auth
   sl.registerSingleton<SignupUseCase>(SignupUseCase());
   sl.registerSingleton<SignInUseCase>(SignInUseCase());
   sl.registerSingleton<GetAgesUseCase>(GetAgesUseCase());
@@ -42,6 +49,6 @@ Future<void> setupLocator() async {
   sl.registerSingleton<IsLogInUseCase>(IsLogInUseCase());
   sl.registerSingleton<GetUserUseCase>(GetUserUseCase());
 
-
-
+  // (2) categories
+  sl.registerSingleton<GetCategoriesUseCase>(GetCategoriesUseCase());
 }

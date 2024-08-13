@@ -116,10 +116,8 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
         return const Left('No user is currently signed in');
       }
 
-      final userData = await FirebaseFirestore.instance
-          .collection('Users')
-          .doc(user.uid)
-          .get().then((value) => value.data());
+      final userData =
+          await FirebaseFirestore.instance.collection('Users').doc(user.uid).get().then((value) => value.data());
 
       return Right(userData);
     } on FirebaseException catch (e) {

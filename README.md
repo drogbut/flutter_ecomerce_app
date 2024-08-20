@@ -1,4 +1,4 @@
-# flutter_folders_structure
+# E-commerce App - Clean architecture
 
 ## Features:
 

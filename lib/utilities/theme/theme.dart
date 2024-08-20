@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/constants/my_colors.dart';
-import 'custom_themes/appbar_theme.dart';
-import 'custom_themes/colorscheme_theme.dart';
-import 'custom_themes/elevated_button_theme.dart';
-import 'custom_themes/input_decoration_theme.dart';
-import 'custom_themes/text_theme.dart';
+import 'custom_themes/_custom_theme.dart';
 
 class DTheme {
   DTheme._();

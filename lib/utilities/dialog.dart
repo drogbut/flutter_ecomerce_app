@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../ui/gesture_detector/gesture_detector_user_activity.dart';
-import '../extensions/context.dart';
-import '../extensions/widget.dart';
+import '../core/extensions/context.dart';
+import '../core/extensions/widget.dart';
 
 Future showMaterialInformationDialog(
   BuildContext context,
   String description, {
   String? title,
   String? buttonTitle,
-}) async => await showDialog(
-    context: context,
-    builder: (BuildContext context) => GestureDetectorUserActivityDetected(
+}) async =>
+    await showDialog(
+      context: context,
+      builder: (BuildContext context) => GestureDetectorUserActivityDetected(
         child: AlertDialog(
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(30.0)),
@@ -67,11 +68,13 @@ Future showMaterialInformationDialog(
           ],
         ),
       ),
-  );
+    );
 
-Future showMaterialWarningDialog(BuildContext context, String description, {String? title, String? buttonTitle}) async => await showDialog(
-    context: context,
-    builder: (BuildContext context) => GestureDetectorUserActivityDetected(
+Future showMaterialWarningDialog(BuildContext context, String description,
+        {String? title, String? buttonTitle}) async =>
+    await showDialog(
+      context: context,
+      builder: (BuildContext context) => GestureDetectorUserActivityDetected(
         child: AlertDialog(
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(30.0)),
@@ -126,11 +129,12 @@ Future showMaterialWarningDialog(BuildContext context, String description, {Stri
           ],
         ),
       ),
-  );
+    );
 
-Future showMaterialErrorDialog(BuildContext context, String description, {String? title, String? buttonTitle}) async => await showDialog(
-    context: context,
-    builder: (BuildContext context) => GestureDetectorUserActivityDetected(
+Future showMaterialErrorDialog(BuildContext context, String description, {String? title, String? buttonTitle}) async =>
+    await showDialog(
+      context: context,
+      builder: (BuildContext context) => GestureDetectorUserActivityDetected(
         child: AlertDialog(
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(30.0)),
@@ -186,7 +190,7 @@ Future showMaterialErrorDialog(BuildContext context, String description, {String
           ],
         ),
       ),
-  );
+    );
 
 Future showMaterialQuestionDialog(
   BuildContext context,
@@ -201,62 +205,42 @@ Future showMaterialQuestionDialog(
   return await showDialog(
     context: context,
     builder: (BuildContext context) => GestureDetectorUserActivityDetected(
-        child: AlertDialog(
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(30.0)),
-          ),
-          contentPadding: const EdgeInsets.only(
-            left: 24.0,
-            top: 20.0,
-            right: 24.0,
-          ),
-          title: Row(
-            children: [
-              const SizedBox(
-                child: FaIcon(
-                  FontAwesomeIcons.question,
-                  color: Colors.blue,
-                ),
-              ).withPadding(10.rightPadding),
-              Text(
-                title ?? context.translate.sample,
-                style: TextStyle(
-                  color: context.colorScheme.primary,
-                ),
+      child: AlertDialog(
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(30.0)),
+        ),
+        contentPadding: const EdgeInsets.only(
+          left: 24.0,
+          top: 20.0,
+          right: 24.0,
+        ),
+        title: Row(
+          children: [
+            const SizedBox(
+              child: FaIcon(
+                FontAwesomeIcons.question,
+                color: Colors.blue,
               ),
-            ],
-          ),
-          content: SingleChildScrollView(
-            child: ListBody(
-              children: <Widget>[
-                Text(
-                  description,
-                ),
-              ],
+            ).withPadding(10.rightPadding),
+            Text(
+              title ?? context.translate.sample,
+              style: TextStyle(
+                color: context.colorScheme.primary,
+              ),
             ),
-          ),
-          actions: <Widget>[
-            if (thirdButtonTitle != null) ...[
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: context.theme.scaffoldBackgroundColor,
-                  foregroundColor: context.colorScheme.primary,
-                  side: BorderSide(
-                    color: context.colorScheme.primary,
-                  ),
-                ),
-                child: Text(
-                  thirdButtonTitle,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.normal,
-                  ),
-                ),
-                onPressed: () {
-                  pressedAnswer = 3;
-                  context.navigator.pop(pressedAnswer);
-                },
+          ],
+        ),
+        content: SingleChildScrollView(
+          child: ListBody(
+            children: <Widget>[
+              Text(
+                description,
               ),
             ],
+          ),
+        ),
+        actions: <Widget>[
+          if (thirdButtonTitle != null) ...[
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: context.theme.scaffoldBackgroundColor,
@@ -266,48 +250,69 @@ Future showMaterialQuestionDialog(
                 ),
               ),
               child: Text(
-                secondButtonTitle ?? context.translate.sample,
+                thirdButtonTitle,
                 style: const TextStyle(
                   fontWeight: FontWeight.normal,
                 ),
               ),
               onPressed: () {
-                pressedAnswer = 2;
+                pressedAnswer = 3;
                 context.navigator.pop(pressedAnswer);
               },
             ),
-            Padding(
-              padding: const EdgeInsets.only(
-                right: 15,
-              ),
-              child: ElevatedButton(
-                child: Text(
-                  firstButtonTitle ?? context.translate.sample,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.normal,
-                  ),
-                ),
-                onPressed: () {
-                  pressedAnswer = 1;
-                  context.navigator.pop(pressedAnswer);
-                },
+          ],
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: context.theme.scaffoldBackgroundColor,
+              foregroundColor: context.colorScheme.primary,
+              side: BorderSide(
+                color: context.colorScheme.primary,
               ),
             ),
-          ],
-        ),
+            child: Text(
+              secondButtonTitle ?? context.translate.sample,
+              style: const TextStyle(
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+            onPressed: () {
+              pressedAnswer = 2;
+              context.navigator.pop(pressedAnswer);
+            },
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              right: 15,
+            ),
+            child: ElevatedButton(
+              child: Text(
+                firstButtonTitle ?? context.translate.sample,
+                style: const TextStyle(
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+              onPressed: () {
+                pressedAnswer = 1;
+                context.navigator.pop(pressedAnswer);
+              },
+            ),
+          ),
+        ],
       ),
+    ),
   );
 }
 
 Future<void> myBottomSheet(
   BuildContext context,
   Widget widget,
-) => showModalBottomSheet(
-      context: context,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          topRight: Radius.circular(25),
-          topLeft: Radius.circular(25),
+) =>
+    showModalBottomSheet(
+        context: context,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(25),
+            topLeft: Radius.circular(25),
+          ),
         ),
-      ),
-      builder: (_) => widget);
+        builder: (_) => widget);

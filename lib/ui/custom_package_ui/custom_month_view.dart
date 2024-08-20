@@ -6,10 +6,10 @@ import 'dart:math';
 
 import 'package:calendar_view/calendar_view.dart' hide DateTimeExtensions;
 import 'package:flutter/material.dart';
-import '../../core/extensions/date_time.dart';
 
-import '../../core/utilities/platform.dart';
+import '../../core/extensions/date_time.dart';
 import '../../locator.dart';
+import '../../utilities/platform.dart';
 
 typedef CellWeekTapCallback<T extends Object?> = void Function(DateTime date);
 
@@ -30,8 +30,7 @@ class Constants {
   static const Color offWhite = Color(0xfff0f0f0);
   static const Color headerBackground = Color(0xFFDCF0FF);
   static Color get randomColor {
-    return Color.fromRGBO(_random.nextInt(_maxColor),
-        _random.nextInt(_maxColor), _random.nextInt(_maxColor), 1);
+    return Color.fromRGBO(_random.nextInt(_maxColor), _random.nextInt(_maxColor), _random.nextInt(_maxColor), 1);
   }
 }
 
@@ -57,19 +56,12 @@ extension DateTimeExtensions on DateTime {
   }
 
   /// Gets difference of days between [date] and calling object.
-  int getDayDifference(DateTime date) => DateTime.utc(year, month, day)
-      .difference(DateTime.utc(date.year, date.month, date.day))
-      .inDays
-      .abs();
+  int getDayDifference(DateTime date) =>
+      DateTime.utc(year, month, day).difference(DateTime.utc(date.year, date.month, date.day)).inDays.abs();
 
   /// Gets difference of weeks between [date] and calling object.
   int getWeekDifference(DateTime date, {WeekDays start = WeekDays.monday}) =>
-      (firstDayOfWeek(start: start)
-                  .difference(date.firstDayOfWeek(start: start))
-                  .inDays
-                  .abs() /
-              7)
-          .ceil();
+      (firstDayOfWeek(start: start).difference(date.firstDayOfWeek(start: start)).inDays.abs() / 7).ceil();
 
   /// Returns The List of date of Current Week, all of the dates will be without
   /// time.
@@ -88,8 +80,7 @@ extension DateTimeExtensions on DateTime {
     // adding 1 in index. So, new formula with WeekDays is,
     //    difference = (weekdays - (start.index + 1))%7
     //
-    final startDay =
-        DateTime(year, month, day - (weekday - start.index - 1) % 7);
+    final startDay = DateTime(year, month, day - (weekday - start.index - 1) % 7);
 
     return [
       startDay,
@@ -117,8 +108,7 @@ extension DateTimeExtensions on DateTime {
   List<DateTime> datesOfMonths({WeekDays startDay = WeekDays.monday}) {
     final monthDays = <DateTime>[];
     for (var i = 1, start = 1; i < 7; i++, start += 7) {
-      monthDays
-          .addAll(DateTime(year, month, start).datesOfWeek(start: startDay));
+      monthDays.addAll(DateTime(year, month, start).datesOfWeek(start: startDay));
     }
     return monthDays;
   }
@@ -155,8 +145,7 @@ extension DateTimeExtensions on DateTime {
 
   bool get isDayStart => hour % 24 == 0 && minute % 60 == 0;
 
-  @Deprecated(
-      'This extension is not being used in this package and will be removed '
+  @Deprecated('This extension is not being used in this package and will be removed '
       'in next major release. Please use withoutTime instead.')
   DateTime get dateYMD => DateTime(year, month, day);
 }
@@ -389,8 +378,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
   void didChangeDependencies() {
     super.didChangeDependencies();
 
-    final newController = widget.controller ??
-        CalendarControllerProvider.of<T>(context).controller;
+    final newController = widget.controller ?? CalendarControllerProvider.of<T>(context).controller;
 
     if (newController != _controller) {
       _controller = newController;
@@ -411,8 +399,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
   void didUpdateWidget(MonthView<T> oldWidget) {
     super.didUpdateWidget(oldWidget);
     // Update controller.
-    final newController = widget.controller ??
-        CalendarControllerProvider.of<T>(context).controller;
+    final newController = widget.controller ?? CalendarControllerProvider.of<T>(context).controller;
 
     if (newController != _controller) {
       _controller?.removeListener(_reloadCallback);
@@ -421,8 +408,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
     }
 
     // Update date range.
-    if (widget.minMonth != oldWidget.minMonth ||
-        widget.maxMonth != oldWidget.maxMonth) {
+    if (widget.minMonth != oldWidget.minMonth || widget.maxMonth != oldWidget.maxMonth) {
       _setDateRange();
       _regulateCurrentDate();
 
@@ -480,8 +466,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
                                 child: const Center(
                                   child: Text(
                                     'KW',
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold),
+                                    style: TextStyle(fontWeight: FontWeight.bold),
                                   ),
                                 ),
                               ),
@@ -491,8 +476,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
                               (index) => Expanded(
                                 child: SizedBox(
                                   width: _cellWidth,
-                                  child:
-                                      _weekBuilder(weekDays[index].weekday - 1),
+                                  child: _weekBuilder(weekDays[index].weekday - 1),
                                 ),
                               ),
                             ),
@@ -502,14 +486,11 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
                       Expanded(
                         child: LayoutBuilder(builder: (context, constraints) {
                           final double localHeight =
-                              _height > constraints.maxHeight
-                                  ? constraints.maxHeight
-                                  : _height; // custom change
+                              _height > constraints.maxHeight ? constraints.maxHeight : _height; // custom change
 
-                          final customCellAspectRatio =
-                              widget.useAvailableVerticalSpace
-                                  ? calculateCellAspectRatio(localHeight)
-                                  : widget.cellAspectRatio;
+                          final customCellAspectRatio = widget.useAvailableVerticalSpace
+                              ? calculateCellAspectRatio(localHeight)
+                              : widget.cellAspectRatio;
 
                           return SizedBox(
                             height: localHeight,
@@ -735,11 +716,9 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
   /// Arguments [duration] and [curve] will override default values provided
   /// as [MonthView.pageTransitionDuration] and [MonthView.pageTransitionCurve]
   /// respectively.
-  Future<void> animateToPage(int page,
-      {Duration? duration, Curve? curve}) async {
+  Future<void> animateToPage(int page, {Duration? duration, Curve? curve}) async {
     await _pageController.animateToPage(page,
-        duration: duration ?? widget.pageTransitionDuration,
-        curve: curve ?? widget.pageTransitionCurve);
+        duration: duration ?? widget.pageTransitionDuration, curve: curve ?? widget.pageTransitionCurve);
   }
 
   /// Returns current page number.
@@ -758,8 +737,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
   /// Arguments [duration] and [curve] will override default values provided
   /// as [MonthView.pageTransitionDuration] and [MonthView.pageTransitionCurve]
   /// respectively.
-  Future<void> animateToMonth(DateTime month,
-      {Duration? duration, Curve? curve}) async {
+  Future<void> animateToMonth(DateTime month, {Duration? duration, Curve? curve}) async {
     if (month.isBefore(_minDate) || month.isAfter(_maxDate)) {
       throw 'Invalid date selected.';
     }
@@ -808,8 +786,7 @@ class _CalendarWeekView<T> extends StatelessWidget {
             children: List.generate(
               showNumberOfWeeks,
               (index) {
-                final weekNo =
-                    date.add(Duration(days: index * 7)).weekNo.toString();
+                final weekNo = date.add(Duration(days: index * 7)).weekNo.toString();
 
                 return GestureDetector(
                   onTap: sl.get<UtilityPlatform>().isWebOrIsWindows

@@ -1,12 +1,5 @@
 import 'package:get_it/get_it.dart';
 
-import 'core/utilities/color.dart';
-import 'core/utilities/connectivity.dart';
-import 'core/utilities/date_format.dart';
-import 'core/utilities/device_info.dart';
-import 'core/utilities/navigation.dart';
-import 'core/utilities/platform.dart';
-import 'core/utilities/preferences.dart';
 import 'modules/authentication/data/repository_impl/auth.dart';
 import 'modules/authentication/data/sources/auth_firebase_service.dart';
 import 'modules/authentication/domain/repository/auth.dart';
@@ -20,6 +13,13 @@ import 'modules/home_page/data/repositories_impl/category_impl.dart';
 import 'modules/home_page/data/sources/category_firebase_services.dart';
 import 'modules/home_page/domain/repositories/category.dart';
 import 'modules/home_page/domain/use_cases/get_categories.dart';
+import 'utilities/color.dart';
+import 'utilities/connectivity.dart';
+import 'utilities/date_format.dart';
+import 'utilities/device_info.dart';
+import 'utilities/navigation.dart';
+import 'utilities/platform.dart';
+import 'utilities/preferences.dart';
 
 GetIt sl = GetIt.I;
 

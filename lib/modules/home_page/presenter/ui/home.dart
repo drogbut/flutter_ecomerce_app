@@ -4,6 +4,7 @@ import '../../../../ui/my_appbar/platform_back_button.dart';
 import 'categories.dart';
 import 'header.dart';
 import 'search.dart';
+import 'top_selling.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,6 +20,7 @@ class HomePage extends StatelessWidget {
             const Header().withPadding(8.verticalPadding),
             const SearchField().withPadding(8.verticalPadding),
             const Categories().withPadding(8.verticalPadding),
+            const TopSelling().withPadding(8.verticalPadding),
           ],
         ).withPadding(16.horizontalPadding),
       ),

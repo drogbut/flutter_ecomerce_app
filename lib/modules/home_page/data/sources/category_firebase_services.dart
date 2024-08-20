@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 
-import '../models/category_item.dart';
-import '../models/category_model.dart';
+import '../models/category/category_item.dart';
+import '../models/category/category_model.dart';
 
 abstract class CategoryFirebaseService {
   Future<Either> getCategories();

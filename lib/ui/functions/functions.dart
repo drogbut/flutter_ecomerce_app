@@ -8,10 +8,10 @@ import 'package:geolocator/geolocator.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
 import '../../core/extensions/context.dart';
-import '../../core/utilities/dialog.dart';
-import '../../core/utilities/navigation.dart';
-import '../../core/utilities/platform.dart';
 import '../../locator.dart';
+import '../../utilities/dialog.dart';
+import '../../utilities/navigation.dart';
+import '../../utilities/platform.dart';
 
 UtilityPlatform platformUtil = sl.get<UtilityPlatform>();
 
@@ -33,13 +33,11 @@ UtilityPlatform platformUtil = sl.get<UtilityPlatform>();
   );
 }*/
 
-KeyboardActionsConfig buildKeyboardActionsConfigDoneButtonIOS(
-    List<FocusNode> focusNodes) {
+KeyboardActionsConfig buildKeyboardActionsConfigDoneButtonIOS(List<FocusNode> focusNodes) {
   return KeyboardActionsConfig(
     keyboardActionsPlatform: KeyboardActionsPlatform.IOS,
     nextFocus: false,
-    keyboardBarColor:
-        _currentCtx.theme.scaffoldBackgroundColor.withOpacity(0.7),
+    keyboardBarColor: _currentCtx.theme.scaffoldBackgroundColor.withOpacity(0.7),
     actions: List.generate(focusNodes.length, (index) {
       return KeyboardActionsItem(
         focusNode: focusNodes[index],
@@ -202,8 +200,7 @@ KeyboardActionsConfig buildKeyboardActionsConfigDoneButtonIOS(
   return authenticated != null && authenticated;
 }*/
 
-Future<String> getUniqueId(DeviceInfoPlugin deviceInfoPlugin,
-    {AndroidId? androidIdPluginMock}) async {
+Future<String> getUniqueId(DeviceInfoPlugin deviceInfoPlugin, {AndroidId? androidIdPluginMock}) async {
   if (platformUtil.isNotWebAndIsAndroid) {
     AndroidId androidIdPlugin;
     if (androidIdPluginMock == null) {
@@ -253,8 +250,7 @@ Future<Position?> determineGeoPosition() async {
       return null;
     }
 
-    return await Geolocator.getCurrentPosition(
-        timeLimit: const Duration(seconds: 1, microseconds: 500));
+    return await Geolocator.getCurrentPosition(timeLimit: const Duration(seconds: 1, microseconds: 500));
   } catch (error) {
     return null;
   }
@@ -268,8 +264,7 @@ TextStyle getCustomTextStyleMuted({FontWeight? fontWeight, double? fontSize}) {
   );
 }
 
-WidgetStateProperty<Color?>? dataRowMaterialStatePropertyFirst(
-    [double amount = .05]) {
+WidgetStateProperty<Color?>? dataRowMaterialStatePropertyFirst([double amount = .05]) {
   Color? color = _currentCtx.theme.cardColor;
 
   return WidgetStateProperty.resolveWith((states) {
@@ -290,8 +285,7 @@ WidgetStateProperty<Color?>? dataRowMaterialStatePropertyFirst(
   });
 }
 
-WidgetStateProperty<Color?>? dataRowMaterialStatePropertySecond(
-    [double amount = .1]) {
+WidgetStateProperty<Color?>? dataRowMaterialStatePropertySecond([double amount = .1]) {
   Color? color = _currentCtx.theme.cardColor;
 
   return WidgetStateProperty.resolveWith((states) {
@@ -341,17 +335,14 @@ Color? dataRowTextColor({bool selected = false}) {
   return null;
 }
 
-String checkDoubleNo(
-    String value, int digitBeforeDot, String dot, int digitAfterdot) {
+String checkDoubleNo(String value, int digitBeforeDot, String dot, int digitAfterdot) {
   if (!value.contains(dot) && value.contains(',')) {
     value = value.replaceAll(RegExp(','), dot);
   }
 
-  value =
-      value.replaceAll(RegExp('[^0-9.]'), '').replaceAll(RegExp('\\.+'), '.');
+  value = value.replaceAll(RegExp('[^0-9.]'), '').replaceAll(RegExp('\\.+'), '.');
 
-  if (value.length == (digitBeforeDot + digitAfterdot) &&
-      !value.contains(dot)) {
+  if (value.length == (digitBeforeDot + digitAfterdot) && !value.contains(dot)) {
     String val1 = value.substring(0, digitBeforeDot);
     String val2 = value.substring(digitBeforeDot);
 
@@ -379,8 +370,7 @@ String checkDoubleNoOnBlur(
     }
 
     String vDot = dot == '.' ? '\\.' : dot;
-    String regExpStr =
-        '^(([0-9]{1,${digitBeforeDot.toString()}})(($vDot)?([0-9]{0,${digitAfterDot.toString()}}))?)\$';
+    String regExpStr = '^(([0-9]{1,${digitBeforeDot.toString()}})(($vDot)?([0-9]{0,${digitAfterDot.toString()}}))?)\$';
     RegExp varExpr = RegExp(regExpStr);
 
     String tempValue = value;
@@ -399,15 +389,12 @@ String checkDoubleNoOnBlur(
 
       value = signs[0] + dot + signs[1];
     } else {
-      val1 = value.substring(
-          0, value.length <= digitBeforeDot ? value.length : digitBeforeDot);
+      val1 = value.substring(0, value.length <= digitBeforeDot ? value.length : digitBeforeDot);
 
       if (valLen > digitBeforeDot) {
         val2 = value.substring(
           digitBeforeDot,
-          valLen < (digitBeforeDot + digitAfterDot)
-              ? valLen
-              : (digitBeforeDot + digitAfterDot),
+          valLen < (digitBeforeDot + digitAfterDot) ? valLen : (digitBeforeDot + digitAfterDot),
         );
       }
 
@@ -428,9 +415,7 @@ String checkDoubleNoOnBlur(
           _currentCtx,
           _currentCtx.translate.sample,
         );
-      } else if (signs[1] != '' &&
-          signs[1].length < digitAfterDot &&
-          int.parse((signs[1])).isNaN) {
+      } else if (signs[1] != '' && signs[1].length < digitAfterDot && int.parse((signs[1])).isNaN) {
         showMaterialErrorDialog(
           _currentCtx,
           _currentCtx.translate.sample,
@@ -439,8 +424,7 @@ String checkDoubleNoOnBlur(
     }
 
     if (maxNr > 0 && double.parse(value) > maxNr) {
-      showMaterialErrorDialog(_currentCtx,
-          inpNrGrMaxNr.replaceAll('-nr-', maxNr.toStringAsFixed(2)));
+      showMaterialErrorDialog(_currentCtx, inpNrGrMaxNr.replaceAll('-nr-', maxNr.toStringAsFixed(2)));
     }
   }
 
@@ -593,9 +577,7 @@ BoxShadow getFlashBoxShadow() {
 }
 
 Color getFlashShadowColor() {
-  return _currentCtx.theme.brightness == Brightness.dark
-      ? Colors.black
-      : const Color.fromRGBO(36, 36, 36, 0.15);
+  return _currentCtx.theme.brightness == Brightness.dark ? Colors.black : const Color.fromRGBO(36, 36, 36, 0.15);
 }
 
 FaIcon getCustomControlWidgetDropdownIcon() {
@@ -620,5 +602,4 @@ TextStyle getCustomControlWidgetStyle() {
   );
 }
 
-BuildContext get _currentCtx =>
-    sl.get<UtilityNavigation>().navigatorKey.currentContext!;
+BuildContext get _currentCtx => sl.get<UtilityNavigation>().navigatorKey.currentContext!;

@@ -3,8 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../core/extensions/context.dart';
 import '../../core/extensions/widget.dart';
-import '../../core/utilities/platform.dart';
 import '../../locator.dart';
+import '../../utilities/platform.dart';
 
 class MyAppBarBackButton extends StatelessWidget
     implements PreferredSizeWidget {

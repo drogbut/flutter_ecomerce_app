@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'app.dart';
 import 'firebase_options.dart';
 import 'locator.dart';
-import 'utilities/preferences.dart';
+import 'utilities/local_storage/preferences.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

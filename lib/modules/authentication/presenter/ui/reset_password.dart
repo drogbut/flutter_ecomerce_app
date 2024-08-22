@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../core/constants/my_styles.dart';
+import '../../../../core/constants/sizes.dart';
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../routing/navigator.dart';
-import '../../../../ui/buttons/primary.dart';
-import '../../../../ui/text/title_text.dart';
+import '../../../../widgets/buttons/primary.dart';
+import '../../../../widgets/text/title_text.dart';
 import '../../../splash/domain/app_vectors.dart';
 import 'sign_in.dart';
 
@@ -21,12 +21,12 @@ class ResetPasswordPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             SvgPicture.asset(AppVectors.emailSending),
-            MyStyles.mediumSpacingBetweenField.sbh,
+            DSizes.ms.sbh,
             MyTitle(
               textAlign: TextAlign.center,
               context.translate.resetPasswordMessage,
             ),
-            MyStyles.mediumSpacingBetweenField.sbh,
+            DSizes.ms.sbh,
             MyPrimaryButton(
               width: double.maxFinite,
               title: context.translate.btnReturnToLogin,

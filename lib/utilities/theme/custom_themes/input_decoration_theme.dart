@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/constants/my_styles.dart';
+import '../../../core/constants/sizes.dart';
 
 class DInputDecorationTheme {
   DInputDecorationTheme._();
@@ -10,7 +10,7 @@ class DInputDecorationTheme {
     filled: true,
     border: OutlineInputBorder(
       borderSide: BorderSide.none,
-      borderRadius: BorderRadius.circular(MyStyles.smallBorderRadius),
+      borderRadius: BorderRadius.circular(DSizes.smallBorderRadius),
     ),
   );
 
@@ -19,7 +19,7 @@ class DInputDecorationTheme {
     filled: true,
     border: OutlineInputBorder(
       borderSide: BorderSide.none,
-      borderRadius: BorderRadius.circular(MyStyles.smallBorderRadius),
+      borderRadius: BorderRadius.circular(DSizes.smallBorderRadius),
     ),
   );
 }

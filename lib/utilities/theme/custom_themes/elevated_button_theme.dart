@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/constants/my_styles.dart';
+import '../../../core/constants/sizes.dart';
 import '../../../core/extensions/widget.dart';
 
 class DElevatedButtonTheme {
@@ -10,7 +10,7 @@ class DElevatedButtonTheme {
   static ElevatedButtonThemeData light = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       padding: (h: 50, v: 16).symmetricPadding,
-      elevation: MyStyles.zero,
+      elevation: DSizes.zero,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(100),
       ),
@@ -21,7 +21,7 @@ class DElevatedButtonTheme {
   static ElevatedButtonThemeData dark = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       padding: (h: 50, v: 16).symmetricPadding,
-      elevation: MyStyles.zero,
+      elevation: DSizes.zero,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(100),
       ),

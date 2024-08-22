@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 
 import '../../core/extensions/date_time.dart';
 import '../../locator.dart';
-import '../../utilities/platform.dart';
+import '../../utilities/device/platform.dart';
 
 typedef CellWeekTapCallback<T extends Object?> = void Function(DateTime date);
 

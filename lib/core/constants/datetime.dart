@@ -1,4 +1,4 @@
-import '../enums/date_time.dart';
+import 'enums.dart';
 
 class MyDateTime {
   MyDateTime._();

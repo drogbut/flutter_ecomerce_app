@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/constants/my_colors.dart';
+import '../../core/constants/colors.dart';
 import 'custom_themes/_custom_theme.dart';
 
 class DTheme {
@@ -25,8 +25,8 @@ class DTheme {
     useMaterial3: true,
     fontFamily: 'Poppins',
     colorScheme: DColorSchemeTheme.dark,
-    scaffoldBackgroundColor: MyColors.darkBackground,
-    primaryColor: MyColors.lightPrimary,
+    scaffoldBackgroundColor: DColors.dark,
+    primaryColor: DColors.primary,
     textTheme: DTextTheme.dark,
     appBarTheme: DAppBarTheme.dark,
     elevatedButtonTheme: DElevatedButtonTheme.dark,

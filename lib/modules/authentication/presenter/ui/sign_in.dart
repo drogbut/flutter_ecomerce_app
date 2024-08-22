@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../commons/providers/button/button_state_cubit.dart';
-import '../../../../core/constants/my_styles.dart';
+import '../../../../core/constants/sizes.dart';
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../routing/navigator.dart';
-import '../../../../ui/buttons/primary.dart';
-import '../../../../ui/fields/primary.dart';
-import '../../../../ui/my_appbar/platform_back_button.dart';
-import '../../../../ui/text/my_rich_text.dart';
-import '../../../../ui/text/title_text.dart';
+import '../../../../widgets/buttons/primary.dart';
+import '../../../../widgets/fields/primary.dart';
+import '../../../../widgets/my_appbar/platform_back_button.dart';
+import '../../../../widgets/text/my_rich_text.dart';
+import '../../../../widgets/text/title_text.dart';
 import '../../../home_page/presenter/ui/home.dart';
 import '../../domain/entities/user_sign_in_request.dart';
 import '../../domain/use_cases/sign_in.dart';
@@ -44,17 +44,17 @@ class SignInPage extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               MyTitle(context.translate.signIn),
-              MyStyles.mediumSpacingBetweenField.sbh,
+              DSizes.ms.sbh,
               MyPrimaryTextField(
                 controller: _emailCon,
                 hintText: context.translate.enterEmail,
               ),
-              MyStyles.mediumSpacingBetweenField.sbh,
+              DSizes.ms.sbh,
               MyPrimaryTextField(
                 controller: _passwordCon,
                 hintText: context.translate.enterPassword,
               ),
-              MyStyles.mediumSpacingBetweenField.sbh,
+              DSizes.ms.sbh,
               SizedBox(
                 width: double.maxFinite,
                 child: BlocBuilder<ButtonStateCubit, ButtonState>(
@@ -75,7 +75,7 @@ class SignInPage extends StatelessWidget {
                   },
                 ),
               ),
-              MyStyles.mediumSpacingBetweenField.sbh,
+              DSizes.ms.sbh,
               MyRichText(
                 firstText: context.translate.doYouHaveAnAccount,
                 secondText: context.translate.createOne,

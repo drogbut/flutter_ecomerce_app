@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../core/constants/my_styles.dart';
+import '../../../../../core/constants/sizes.dart';
 import '../../../../../core/extensions/context.dart';
-import '../../../../../ui/indicators/loading_indicator.dart';
 import '../../../../../utilities/dialog.dart';
+import '../../../../../widgets/indicators/loading_indicator.dart';
 import '../../providers/gender_and_age_provider/age_selection_cubit.dart';
 import '../../providers/gender_and_age_provider/display_age_cubit.dart';
 import '../../providers/gender_and_age_provider/display_age_state.dart';
@@ -20,7 +20,7 @@ class AgeRangeButton extends StatelessWidget {
         return ListTile(
           tileColor: context.colorScheme.primaryContainer.withOpacity(0.2),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(MyStyles.xLargeBorderRadius),
+            borderRadius: BorderRadius.circular(DSizes.xLargeBorderRadius),
           ),
           leading: Text(selectedAge),
           trailing: const Icon(Icons.keyboard_arrow_down),

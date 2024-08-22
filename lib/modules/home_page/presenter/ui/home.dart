@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../core/extensions/widget.dart';
-import '../../../../ui/my_appbar/platform_back_button.dart';
+import '../../../../widgets/my_appbar/platform_back_button.dart';
 import 'categories.dart';
 import 'header.dart';
 import 'search.dart';

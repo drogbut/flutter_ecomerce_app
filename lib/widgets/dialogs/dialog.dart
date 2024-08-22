@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../ui/gesture_detector/gesture_detector_user_activity.dart';
 import '../core/extensions/context.dart';
 import '../core/extensions/widget.dart';
+import '../widgets/gesture_detector/gesture_detector_user_activity.dart';
 
 Future showMaterialInformationDialog(
   BuildContext context,

@@ -1,10 +1,17 @@
 import 'dart:ui';
 
-class MyStyles {
-  MyStyles._();
+class DSizes {
+  DSizes._();
 
   /// STANDARD
   static const double zero = 0.0;
+
+  /// Padding and Marging sizes
+  static const double xs = 4.0;
+  static const double sm = 8.0;
+  static const double ms = 16.0;
+  static const double lg = 24.0;
+  static const double xl = 32.0;
 
   /// FONT SIZE
   static const double displayLarge = 96.0;
@@ -45,11 +52,6 @@ class MyStyles {
   /// Default button font size
   static const double bodySmallSpacing = 0.4;
   static const double labelSmallSpacing = 1.5;
-
-  /// Spacing and Padding
-  static const double smallSpacingBetweenField = 10;
-  static const double mediumSpacingBetweenField = 20;
-  static const double largeSpacingBetweenField = 40;
 
   /// RADIUS
   static const double smallBorderRadius = 4.0;

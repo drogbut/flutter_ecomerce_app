@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../commons/providers/button/button_state_cubit.dart';
-import '../../../../core/constants/my_styles.dart';
+import '../../../../core/constants/sizes.dart';
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../routing/navigator.dart';
-import '../../../../ui/buttons/primary.dart';
-import '../../../../ui/fields/primary.dart';
-import '../../../../ui/my_appbar/platform_back_button.dart';
-import '../../../../ui/text/title_text.dart';
+import '../../../../widgets/buttons/primary.dart';
+import '../../../../widgets/fields/primary.dart';
+import '../../../../widgets/my_appbar/platform_back_button.dart';
+import '../../../../widgets/text/title_text.dart';
 import '../../domain/use_cases/reset_password.dart';
 import 'reset_password.dart';
 
@@ -39,12 +39,12 @@ class ForgotPasswordPage extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               MyTitle(context.translate.forgotPassword),
-              MyStyles.mediumSpacingBetweenField.sbh,
+              DSizes.ms.sbh,
               MyPrimaryTextField(
                 controller: _emailCon,
                 hintText: context.translate.enterEmail,
               ),
-              MyStyles.mediumSpacingBetweenField.sbh,
+              DSizes.ms.sbh,
               BlocBuilder<ButtonStateCubit, ButtonState>(
                 builder: (context, state) {
                   return MyPrimaryButton(

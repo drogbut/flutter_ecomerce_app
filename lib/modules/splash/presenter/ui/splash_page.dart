@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../core/constants/my_colors.dart';
+import '../../../../core/constants/colors.dart';
 import '../../../../routing/navigator.dart';
 import '../../../authentication/presenter/ui/sign_in.dart';
 import '../../../home_page/presenter/ui/home.dart';
@@ -25,7 +25,7 @@ class SplashPage extends StatelessWidget {
         }
       },
       child: Scaffold(
-        backgroundColor: MyColors.lightPrimary,
+        backgroundColor: DColors.primary,
         body: Center(
           child: SvgPicture.asset(
             AppVectors.appLogo,

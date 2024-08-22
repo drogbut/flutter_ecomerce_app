@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../ui/my_icons/circle_icon.dart';
-
+import '../../../../../widgets/my_icons/circle_icon.dart';
 
 class CircularImageIcon extends StatelessWidget {
   final String? imagePath;
@@ -19,9 +18,9 @@ class CircularImageIcon extends StatelessWidget {
                 height: size,
                 fit: BoxFit.cover,
               )
-            : MyCircleIcon(iconData: Icons.person, onPressed: (){},)
-      );
-    
+            : MyCircleIcon(
+                iconData: Icons.person,
+                onPressed: () {},
+              ));
   }
 }
-

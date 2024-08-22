@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/extensions/context.dart';
 import '../../../../../core/extensions/widget.dart';
-import '../../../../../ui/buttons/primary.dart';
+import '../../../../../widgets/buttons/primary.dart';
 import '../../providers/gender_and_age_provider/gender_selection_cubit.dart';
 
 class GenderContainer extends StatelessWidget {

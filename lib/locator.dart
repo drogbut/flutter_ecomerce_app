@@ -13,11 +13,11 @@ import 'modules/home_page/data/repositories_impl/category_impl.dart';
 import 'modules/home_page/data/sources/category_firebase_services.dart';
 import 'modules/home_page/domain/repositories/category.dart';
 import 'modules/home_page/domain/use_cases/get_categories.dart';
-import 'utilities/color.dart';
-import 'utilities/connectivity.dart';
+import 'utilities/color/color.dart';
+import 'utilities/device/connectivity.dart';
 import 'utilities/device/device_info.dart';
 import 'utilities/device/platform.dart';
-import 'utilities/formatters/date_format.dart';
+import 'utilities/formatter/date_format.dart';
 import 'utilities/local_storage/preferences.dart';
 import 'utilities/navigation.dart';
 

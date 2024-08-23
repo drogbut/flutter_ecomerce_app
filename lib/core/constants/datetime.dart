@@ -1,7 +1,7 @@
 import 'enums.dart';
 
-class MyDateTime {
-  MyDateTime._();
+class DDateTime {
+  DDateTime._();
 
   /// Standard cases
   static const int dayPerJanuary = 31;

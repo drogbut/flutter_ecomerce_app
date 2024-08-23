@@ -10,8 +10,8 @@ import 'package:keyboard_actions/keyboard_actions.dart';
 import '../../core/extensions/context.dart';
 import '../../locator.dart';
 import '../../utilities/device/platform.dart';
-import '../../utilities/dialog.dart';
 import '../../utilities/navigation.dart';
+import '../dialogs/dialog.dart';
 
 UtilityPlatform platformUtil = sl.get<UtilityPlatform>();
 

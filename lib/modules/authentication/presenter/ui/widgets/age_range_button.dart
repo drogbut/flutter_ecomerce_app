@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/constants/sizes.dart';
 import '../../../../../core/extensions/context.dart';
-import '../../../../../utilities/dialog.dart';
+import '../../../../../widgets/dialogs/dialog.dart';
 import '../../../../../widgets/indicators/loading_indicator.dart';
 import '../../providers/gender_and_age_provider/age_selection_cubit.dart';
 import '../../providers/gender_and_age_provider/display_age_cubit.dart';

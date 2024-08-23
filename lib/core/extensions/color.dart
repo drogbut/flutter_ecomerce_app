@@ -3,18 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 /// Import the core Flutter material library for building UI components
-///
-/// '''
-/// (1) // Creates a bright pink color
-/// Color myColor = HexColor.fromHex('#FF00FF').withOpacity(0.9);
-///
-/// (2) // hexCode will be "#0000FF"
-/// Color myColor = Colors.blue;
-/// String hexCode = myColor.toHex();
-///
-/// (3) // complementaryColor will be "#FF0000" (red)
-/// Color myColor = Colors.green;
-/// Color complementaryColor = myColor.complementary;
 extension ExtensionColor on Color {
   /// Static method to convert a hex string to a Color object
   static Color fromHex(String hexString) {
@@ -32,10 +20,10 @@ extension ExtensionColor on Color {
 
   /// Method to convert a Color object back to a hex string representation
   String toHex({bool leadingHashSign = true}) => '${leadingHashSign ? '#' : ''}'
-        '${alpha.toRadixString(16).padLeft(2, '0')}'
-        '${red.toRadixString(16).padLeft(2, '0')}'
-        '${green.toRadixString(16).padLeft(2, '0')}'
-        '${blue.toRadixString(16).padLeft(2, '0')}';
+      '${alpha.toRadixString(16).padLeft(2, '0')}'
+      '${red.toRadixString(16).padLeft(2, '0')}'
+      '${green.toRadixString(16).padLeft(2, '0')}'
+      '${blue.toRadixString(16).padLeft(2, '0')}';
 
   /// Method to get the complementary color of the current Color object
   Color get complementary {
@@ -46,13 +34,13 @@ extension ExtensionColor on Color {
     return Color(int.parse('0xFF$newRed$newGreen$newBlue'));
   }
 
-  static Color randomColor(){
+  static Color randomColor() {
     final random = Random();
-      return Color.fromARGB(
-        255,
-        random.nextInt(256),
-        random.nextInt(256),
-        random.nextInt(256),
-      );
+    return Color.fromARGB(
+      255,
+      random.nextInt(256),
+      random.nextInt(256),
+      random.nextInt(256),
+    );
   }
 }

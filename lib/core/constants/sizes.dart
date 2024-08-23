@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
 class DSizes {
   DSizes._();
@@ -6,7 +6,7 @@ class DSizes {
   /// STANDARD
   static const double zero = 0.0;
 
-  /// Padding and Marging sizes
+  /// Padding and Margin sizes
   static const double xs = 4.0;
   static const double sm = 8.0;
   static const double ms = 16.0;
@@ -26,12 +26,13 @@ class DSizes {
   static const double buttonWidth = 120.0;
   static const double buttonElevation = 4.0;
 
-  /// Appbar Height
-  static const double appBarHeight = 4.0;
+  /// Scaffold sizes
+  static const double appBarHeight = kToolbarHeight;
+  static const double bottomNavigationHeight = kBottomNavigationBarHeight;
 
-  /// Default Spaccing between sections
-  static const double defaultSpace = 24.0;
-  static const double spaceBtwItems = 16.0;
+  /// Default Spacing between sections
+  static const double defaultSpace = 16.0;
+  static const double spaceBtwItems = 4.0;
   static const double spaceBtwSections = 32.0;
 
   /// FONT SIZE
@@ -55,5 +56,5 @@ class DSizes {
 
   /// Input field
   static const double inputFieldRadius = 16.0;
-  static const double spaceBtwInputfields = 24.0;
+  static const double spaceBtwInputFields = 24.0;
 }

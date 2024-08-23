@@ -9,7 +9,7 @@ class DColors {
   static const Color accent = Color(0xFF006A60);
 
   /// Text Colors
-  static const Color textPrimary = Color(0xFFFFFFFF);
+  static const Color textPrimary = Color(0xff8E6CEF);
   static const Color textSecondary = Color(0xFF4FFBE6);
   static const Color textWhite = Color(0xFF05203c);
 
@@ -32,7 +32,7 @@ class DColors {
   static const Color borderSecondary = Color(0xFF7A757F);
 
   /// Errors and validation colors
-  static const Color error = Color(0xFF2E3132);
+  static const Color error = Color(0xFF410002);
   static const Color success = Color(0xFFCFBDFF);
   static const Color warning = Color(0xFF05203c);
   static const Color info = Color(0xFF6D23F9);

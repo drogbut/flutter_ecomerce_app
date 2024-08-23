@@ -8,6 +8,34 @@
   "@language": {
     "description": "The current language"
   },
+  "onboardingTitle1": "Choose your product",
+  "@onboardingTitle1": {
+    "description": "Choose your product"
+  },
+  "onboardingTitle2": "Select payment method",
+  "@onboardingTitle2": {
+    "description": "Select payment method"
+  },
+  "onboardingTitle3": "Deliver at your door step",
+  "@onboardingTitle3": {
+    "description": "Deliver at your door step"
+  },
+  "onboardingSubTitle1": "Welcome to the word... ",
+  "@onboardingSubTitle1": {
+    "description": "Welcome to the word..."
+  },
+  "onboardingSubTitle2": "For seamless transaction...",
+  "@onboardingSubTitle2": {
+    "description": "For seamless transaction..."
+  },
+  "onboardingSubTitle3": "From our doorstep to your...",
+  "@onboardingSubTitle3": {
+    "description": "From our doorstep to your..."
+  },
+  "btnSkip": "Skip",
+  "@btnSkip": {
+    "description": "Skip"
+  },
   "okay": "Okay",
   "@okay": {
     "description": "Okay"
@@ -100,5 +128,6 @@
   "@resetPasswordMessage": {
     "description": "We send you an Email to reset your password"
   }
+
 
 }

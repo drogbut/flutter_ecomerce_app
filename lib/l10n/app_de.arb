@@ -1,6 +1,13 @@
 {
   "appName": "Aufbau der Flutter-Ordner",
   "language": "Deutsch",
+  "onboardingTitle1": "Wählen Sie Ihr Produkt",
+  "onboardingTitle2": "Zahlungsmethode auswählen",
+  "onboardingTitle3": "Lieferung nach Hause",
+  "onboardingSubTitle1": "Willkommen in der Welt ...",
+  "onboardingSubTitle2": "Für eine reibungslose Transaktion...",
+  "onboardingSubTitle3": "Von unserer Haustür bis zu Ihrem",
+  "btnSkip": "Springen",
   "okay": "Okay",
   "done": "Fertig",
   "sample": "Beispiel",

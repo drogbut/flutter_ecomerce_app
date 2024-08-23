@@ -18,7 +18,7 @@ class ThemeCubit extends Cubit<ThemeMode> {
     } else if (theme == 'System') {
       emit(ThemeMode.system);
     } else if (theme == '') {
-      emit(ThemeMode.dark);
+      emit(ThemeMode.light);
     }
   }
 

@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../locator.dart';
-import '../../../authentication/data/sources/auth_firebase_service.dart';
+import '../../../../../locator.dart';
+import '../../../data/sources/auth_firebase_service.dart';
 import 'splash_state.dart';
 
 class SplashCubit extends Cubit<SplashState> {

@@ -7,7 +7,7 @@ import '../../../../core/extensions/widget.dart';
 import '../../../../routing/navigator.dart';
 import '../../../../widgets/buttons/primary.dart';
 import '../../../../widgets/text/title_text.dart';
-import '../../../splash/domain/app_vectors.dart';
+import '../../onboarding/domain/app_vectors.dart';
 import 'sign_in.dart';
 
 class ResetPasswordPage extends StatelessWidget {

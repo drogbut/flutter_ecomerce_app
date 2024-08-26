@@ -64,6 +64,7 @@ dependencies:
   # Package that provides a set of animated page indicators with a variety of effects.
   smooth_page_indicator: ^1.2.0+3
   get: ^4.6.6
+  iconsax: ^0.0.8
 
 
 

@@ -32,7 +32,7 @@ class DSizes {
 
   /// Default Spacing between sections
   static const double defaultSpace = 16.0;
-  static const double spaceBtwItems = 4.0;
+  static const double spaceBtwItems = 8.0;
   static const double spaceBtwSections = 32.0;
 
   /// FONT SIZE

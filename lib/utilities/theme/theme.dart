@@ -17,6 +17,7 @@ class DTheme {
     textTheme: DTextTheme.light,
     appBarTheme: DAppBarTheme.light,
     elevatedButtonTheme: DElevatedButtonTheme.light,
+    textButtonTheme: DTextButtonTheme.light,
     inputDecorationTheme: DInputDecorationTheme.light,
   );
 
@@ -30,6 +31,7 @@ class DTheme {
     textTheme: DTextTheme.dark,
     appBarTheme: DAppBarTheme.dark,
     elevatedButtonTheme: DElevatedButtonTheme.dark,
+    textButtonTheme: DTextButtonTheme.dark,
     inputDecorationTheme: DInputDecorationTheme.dark,
   );
 }

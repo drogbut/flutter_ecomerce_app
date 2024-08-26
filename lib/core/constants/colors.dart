@@ -4,23 +4,23 @@ class DColors {
   DColors._();
 
   /// App Basics Colors
-  static const Color primary = Color(0xff8E6CEF);
-  static const Color secondary = Color(0xFFFFFFFF);
-  static const Color accent = Color(0xFF006A60);
+  static const Color primary = Color(0xFF4b68ff);
+  static const Color secondary = Color(0xFFFFE24B);
+  static const Color accent = Color(0xFFb0c7ff);
 
   /// Text Colors
-  static const Color textPrimary = Color(0xff8E6CEF);
-  static const Color textSecondary = Color(0xFF4FFBE6);
-  static const Color textWhite = Color(0xFF05203c);
+  static const Color textPrimary = Color(0xFF333333);
+  static const Color textSecondary = Color(0xFF6C7570);
+  static const Color textWhite = Colors.white;
 
   /// Background colors
-  static const Color light = Color(0xFF006874);
-  static const Color dark = Color(0xff1D182A);
-  static const Color primaryBackground = Color(0xff1D182A);
+  static const Color light = Color(0xFFF6F6F6);
+  static const Color dark = Color(0xFF272727);
+  static const Color primaryBackground = Color(0xFFF3F5FF);
 
   /// Background container colors
-  static const Color lightContainer = Color(0xFF001F24);
-  static const Color darkContainer = Color(0xFFFFFFFF);
+  static const Color lightContainer = Color(0xFFF6F6F6);
+  static const Color darkContainer = Color(0x1AFFFFFF);
 
   /// buttons colors
   static const Color buttonPrimary = Color(0xFFFFFFFF);

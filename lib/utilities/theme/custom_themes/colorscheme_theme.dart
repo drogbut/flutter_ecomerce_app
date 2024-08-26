@@ -8,9 +8,9 @@ class DColorSchemeTheme {
   /// LIGHT
   static ColorScheme light = const ColorScheme.light(
     brightness: Brightness.light,
-    primary: DColors.secondary,
+    primary: DColors.primary,
     //onPrimary: DColors.secondary,
-    // secondary: DColors.darkSecondary,
+    secondary: DColors.secondary,
     // onSecondary: DColors.darkOnSecondary,
     // error: DColors.darkError,
     // onError: DColors.darkOnError,

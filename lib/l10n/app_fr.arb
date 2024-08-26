@@ -1,6 +1,13 @@
 {
   "appName": "Structure des dossiers Flutter",
   "language": "Français",
+  "onboardingTitle1": "Choisissez votre produit",
+  "onboardingTitle2": "Sélectionner le mode de paiement",
+  "onboardingTitle3": "Livraison à domicile",
+  "onboardingSubTitle1": "Bienvenue dans un monde de choix illimités - votre produit préféré vous attend !",
+  "onboardingSubTitle2": "Pour une transaction transparente, choisissez votre mode de paiement - votre confort, notre priorité !",
+  "onboardingSubTitle3": "De notre porte à la vôtre - livraison rapide, sécurisée et sans contact",
+  "btnSkip": "Sauter",
   "okay": "Okay",
   "done": "terminee",
   "sample": "exemple",

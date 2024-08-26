@@ -3,6 +3,12 @@ class Assets {
   Assets._();
 
   static const String imagesImages = 'assets/images/images.png';
+  static const String onboardingImagesSammyLineManAndDogDelivering =
+      'assets/images/onboarding_images/sammy_line-man_and_dog_delivering.gif';
+  static const String onboardingImagesSammyLineWomanInShoppingCart =
+      'assets/images/onboarding_images/sammy_line_woman_in_shopping_cart.gif';
+  static const String onboardingImagesSammyLineWomanOnSkateboard =
+      'assets/images/onboarding_images/sammy_line-woman-on_skateboard.gif';
   static const String poppinsOFL = 'assets/fonts/Poppins/OFL.txt';
   static const String poppinsPoppinsBlack = 'assets/fonts/Poppins/Poppins-Black.ttf';
   static const String poppinsPoppinsBlackItalic = 'assets/fonts/Poppins/Poppins-BlackItalic.ttf';

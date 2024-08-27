@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../widgets/my_icons/circle_icon.dart';
+import '../../../../../widgets/icons/circle_icon.dart';
 
 class CircularImageIcon extends StatelessWidget {
   final String? imagePath;

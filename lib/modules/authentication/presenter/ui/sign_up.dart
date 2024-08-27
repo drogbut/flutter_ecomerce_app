@@ -33,29 +33,29 @@ class SignupPage extends StatelessWidget {
           children: [
             MyTitle(context.translate.createAccount),
             DSizes.ms.sbh,
-            MyPrimaryTextField(
+            TPrimaryTextField(
               controller: _firstNameCon,
-              hintText: context.translate.firstname,
+              label: context.translate.firstname,
             ),
             DSizes.ms.sbh,
-            MyPrimaryTextField(
+            TPrimaryTextField(
               controller: _lastNameCon,
-              hintText: context.translate.lastname,
+              label: context.translate.lastname,
             ),
             DSizes.ms.sbh,
-            MyPrimaryTextField(
+            TPrimaryTextField(
               controller: _emailCon,
-              hintText: context.translate.enterEmail,
+              label: context.translate.enterEmail,
             ),
             DSizes.ms.sbh,
-            MyPrimaryTextField(
+            TPrimaryTextField(
               controller: _passwordCon,
-              hintText: context.translate.enterPassword,
+              label: context.translate.enterPassword,
             ),
             DSizes.ms.sbh,
             SizedBox(
               width: double.maxFinite,
-              child: MyPrimaryButton(
+              child: TPrimaryButton(
                 title: context.translate.btnContinue,
                 onPressed: () => AppNavigator.push(
                     context,

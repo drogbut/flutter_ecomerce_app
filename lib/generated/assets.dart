@@ -2,7 +2,9 @@
 class Assets {
   Assets._();
 
-  static const String imagesImages = 'assets/images/images.png';
+  static const String appLogosDarkLogo = 'assets/images/app_logos/dark_logo.png';
+  static const String appLogosFacebookLogo = 'assets/images/app_logos/facebook_Logo.png';
+  static const String appLogosGoogleLogo = 'assets/images/app_logos/google_logo.png';
   static const String onboardingImagesSammyLineManAndDogDelivering =
       'assets/images/onboarding_images/sammy_line-man_and_dog_delivering.gif';
   static const String onboardingImagesSammyLineWomanInShoppingCart =

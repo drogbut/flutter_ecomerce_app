@@ -90,6 +90,7 @@ flutter:
     - assets/vectors/
     - assets/images/
     - assets/images/onboarding_images/
+    - assets/images/app_logos/
 
   fonts:
     - family: Poppins

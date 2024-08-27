@@ -41,8 +41,7 @@ extension SpaceExt on num {
   EdgeInsets get verticalPadding => EdgeInsets.symmetric(vertical: toDouble());
 
   /// Returns EdgeInsets with horizontal padding.
-  EdgeInsets get horizontalPadding =>
-      EdgeInsets.symmetric(horizontal: toDouble());
+  EdgeInsets get horizontalPadding => EdgeInsets.symmetric(horizontal: toDouble());
 
   /// Returns EdgeInsets with left padding.
   EdgeInsets get leftPadding => EdgeInsets.only(left: toDouble());
@@ -62,54 +61,46 @@ extension PadExt on ({num h, num v}) {
   /// Returns EdgeInsets with symmetric padding.
   ///
   /// ex: ..withPadding((h:16, v:10).symmetricPadding)
-  EdgeInsets get symmetricPadding =>
-      EdgeInsets.symmetric(horizontal: h.toDouble(), vertical: v.toDouble());
+  EdgeInsets get symmetricPadding => EdgeInsets.symmetric(horizontal: h.toDouble(), vertical: v.toDouble());
 }
 
 /// An extension on a record with padding for two sides.
 extension PadExtTwoSides on (num, num) {
   /// Returns EdgeInsets with top and bottom padding.
-  EdgeInsets get topBottomPadding =>
-      EdgeInsets.only(top: $1.toDouble(), bottom: $2.toDouble());
+  EdgeInsets get topBottomPadding => EdgeInsets.only(top: $1.toDouble(), bottom: $2.toDouble());
 
   /// Returns EdgeInsets with left and right padding.
-  EdgeInsets get leftRightPadding =>
-      EdgeInsets.only(left: $1.toDouble(), right: $2.toDouble());
+  EdgeInsets get leftRightPadding => EdgeInsets.only(left: $1.toDouble(), right: $2.toDouble());
 
   /// Returns EdgeInsets with top and left padding.
-  EdgeInsets get topLeftPadding =>
-      EdgeInsets.only(top: $1.toDouble(), left: $2.toDouble());
+  EdgeInsets get topLeftPadding => EdgeInsets.only(top: $1.toDouble(), left: $2.toDouble());
 
   /// Returns EdgeInsets with top and right padding.
-  EdgeInsets get topRightPadding =>
-      EdgeInsets.only(top: $1.toDouble(), right: $2.toDouble());
+  EdgeInsets get topRightPadding => EdgeInsets.only(top: $1.toDouble(), right: $2.toDouble());
 
   /// Returns EdgeInsets with bottom and left padding.
-  EdgeInsets get bottomLeftPadding =>
-      EdgeInsets.only(bottom: $1.toDouble(), left: $2.toDouble());
+  EdgeInsets get bottomLeftPadding => EdgeInsets.only(bottom: $1.toDouble(), left: $2.toDouble());
 
   /// Returns EdgeInsets with bottom and right padding.
-  EdgeInsets get bottomRightPadding =>
-      EdgeInsets.only(bottom: $1.toDouble(), right: $2.toDouble());
+  EdgeInsets get bottomRightPadding => EdgeInsets.only(bottom: $1.toDouble(), right: $2.toDouble());
 }
 
 /// An extension on a record with padding for three sides.
 extension PadExtThreeSides on (num, num, num) {
   /// Returns EdgeInsets with left, top, and right padding.
-  EdgeInsets get leftTopRightPadding => EdgeInsets.only(
-      left: $1.toDouble(), top: $2.toDouble(), right: $3.toDouble());
+  EdgeInsets get leftTopRightPadding => EdgeInsets.only(left: $1.toDouble(), top: $2.toDouble(), right: $3.toDouble());
 
   /// Returns EdgeInsets with left, top, and bottom padding.
-  EdgeInsets get leftTopBottomPadding => EdgeInsets.only(
-      left: $1.toDouble(), top: $2.toDouble(), bottom: $3.toDouble());
+  EdgeInsets get leftTopBottomPadding =>
+      EdgeInsets.only(left: $1.toDouble(), top: $2.toDouble(), bottom: $3.toDouble());
 
   /// Returns EdgeInsets with left, right, and bottom padding.
-  EdgeInsets get leftRightBottomPadding => EdgeInsets.only(
-      left: $1.toDouble(), right: $2.toDouble(), bottom: $3.toDouble());
+  EdgeInsets get leftRightBottomPadding =>
+      EdgeInsets.only(left: $1.toDouble(), right: $2.toDouble(), bottom: $3.toDouble());
 
   /// Returns EdgeInsets with top, right, and bottom padding.
-  EdgeInsets get topRightBottomPadding => EdgeInsets.only(
-      top: $1.toDouble(), right: $2.toDouble(), bottom: $3.toDouble());
+  EdgeInsets get topRightBottomPadding =>
+      EdgeInsets.only(top: $1.toDouble(), right: $2.toDouble(), bottom: $3.toDouble());
 }
 
 /// An extension on a record with padding for all four sides.
@@ -126,8 +117,7 @@ extension PadLtrbExt on (num, num, num, num) {
 /// An extension on a record with width and height.
 extension SizeExt on (num?, num?) {
   /// Returns a SizedBox with specified width and height, or a shrinked SizedBox if both are zero.
-  SizedBox get pwh =>
-      ($1 == $2 && $1 == 0) ? const SizedBox.shrink() : ($1, $2)._pwh;
+  SizedBox get pwh => ($1 == $2 && $1 == 0) ? const SizedBox.shrink() : ($1, $2)._pwh;
 
   /// Returns a SizedBox with specified width and height.
   SizedBox get _pwh => SizedBox(

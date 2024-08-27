@@ -17,7 +17,7 @@ class GenderContainer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Expanded(
-              child: MyPrimaryButton(
+              child: TPrimaryButton(
                 backgroundColor:
                     (state == 1) ? context.colorScheme.primary : context.colorScheme.primaryContainer.withOpacity(0.2),
                 title: context.translate.men,
@@ -26,7 +26,7 @@ class GenderContainer extends StatelessWidget {
             ),
             10.sbs,
             Expanded(
-              child: MyPrimaryButton(
+              child: TPrimaryButton(
                 backgroundColor:
                     (state == 2) ? context.colorScheme.primary : context.colorScheme.primaryContainer.withOpacity(0.2),
                 title: context.translate.women,

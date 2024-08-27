@@ -1,6 +1,9 @@
 {
   "appName": "Structure des dossiers Flutter",
   "language": "Français",
+
+
+
   "onboardingTitle1": "Choisissez votre produit",
   "onboardingTitle2": "Sélectionner le mode de paiement",
   "onboardingTitle3": "Livraison à domicile",
@@ -8,17 +11,25 @@
   "onboardingSubTitle2": "Pour une transaction transparente, choisissez votre mode de paiement - votre confort, notre priorité !",
   "onboardingSubTitle3": "De notre porte à la vôtre - livraison rapide, sécurisée et sans contact",
   "btnSkip": "Sauter",
+
+
+
+  "loginTitle": "Bienvenue à nouveau,",
+  "loginSubTitle": "Découvrez des choix limités et des commodités inégalées.",
+  "enterEmail": "Entrez votre e-mail",
+  "enterPassword": "Entrer votre mot de passe",
+  "rememberMe": "Se souvenir de moi",
+  "forgotPassword": "Mot de passe oublié ?",
+  "signIn": "Se connecter",
+  "createOne": "Créer un compte",
+  "or": "Ou connectez-vous avec",
+
   "okay": "Okay",
   "done": "terminee",
   "sample": "exemple",
   "doYouHaveAnAccount": "Avez-vous un compte ?",
-  "createOne": "Créer un compte",
-  "signIn": "Se connecter",
-  "enterEmail": "Entrez votre e-mail",
   "btnContinue": "Continuer",
-  "forgotPassword": "Mot de passe oublié ?",
   "reset": "Réinitialiser",
-  "enterPassword": "Entrer votre mot de passe",
   "createAccount": "Créer un compte",
   "firstname": "Prénom",
   "lastname": "Nom",

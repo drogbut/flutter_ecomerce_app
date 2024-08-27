@@ -16,13 +16,16 @@ class OnboardingNextButton extends StatelessWidget {
     return Positioned(
       bottom: DSizes.bottomNavigationHeight,
       right: DSizes.zero,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          shape: const CircleBorder(),
-          backgroundColor: context.isDarkMode ? DColors.primary : DColors.dark,
+      child: SizedBox(
+        width: 100,
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            shape: const CircleBorder(),
+            backgroundColor: context.isDarkMode ? DColors.primary : DColors.dark,
+          ),
+          child: const Icon(Iconsax.arrow_right_3),
+          onPressed: () => controller.nextPage(),
         ),
-        child: const Icon(Iconsax.arrow_right_3),
-        onPressed: () => controller.nextPage(),
       ),
     );
   }

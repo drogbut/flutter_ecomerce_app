@@ -9,8 +9,7 @@ class DInputDecorationTheme {
   static InputDecorationTheme light = InputDecorationTheme(
     filled: true,
     border: OutlineInputBorder(
-      borderSide: BorderSide.none,
-      borderRadius: BorderRadius.circular(DSizes.smallBorderRadius),
+      borderRadius: BorderRadius.circular(DSizes.inputFieldRadius),
     ),
   );
 
@@ -18,8 +17,7 @@ class DInputDecorationTheme {
   static InputDecorationTheme dark = InputDecorationTheme(
     filled: true,
     border: OutlineInputBorder(
-      borderSide: BorderSide.none,
-      borderRadius: BorderRadius.circular(DSizes.smallBorderRadius),
+      borderRadius: BorderRadius.circular(DSizes.inputFieldRadius),
     ),
   );
 }

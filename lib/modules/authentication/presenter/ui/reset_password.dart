@@ -27,7 +27,7 @@ class ResetPasswordPage extends StatelessWidget {
               context.translate.resetPasswordMessage,
             ),
             DSizes.ms.sbh,
-            MyPrimaryButton(
+            TPrimaryButton(
               width: double.maxFinite,
               title: context.translate.btnReturnToLogin,
               onPressed: () => AppNavigator.push(context, SignInPage()),

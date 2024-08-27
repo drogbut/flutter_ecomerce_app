@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../presenter/ui/sign_in.dart';
+
 class OnboardingController extends GetxController {
   static OnboardingController get instance => Get.find();
 
@@ -20,7 +22,7 @@ class OnboardingController extends GetxController {
   /// update current index and jump to the next page
   void nextPage() {
     if (currentPageIndex.value == 2) {
-      //get.to(LoginScreen())
+      Get.to(SignInPage());
     } else {
       var page = currentPageIndex.value + 1;
       pageController.animateToPage(

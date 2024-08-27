@@ -67,7 +67,7 @@ class GenderAndAgePage extends StatelessWidget {
                     }
 
                     return Builder(builder: (context) {
-                      return MyPrimaryButton(
+                      return TPrimaryButton(
                         width: context.screenWidth,
                         title: context.translate.btnFinish,
                         onPressed: () {

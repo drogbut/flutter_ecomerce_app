@@ -1,6 +1,9 @@
 {
   "appName": "Aufbau der Flutter-Ordner",
   "language": "Deutsch",
+
+
+
   "onboardingTitle1": "Wählen Sie Ihr Produkt",
   "onboardingTitle2": "Zahlungsmethode auswählen",
   "onboardingTitle3": "Lieferung nach Hause",
@@ -8,15 +11,23 @@
   "onboardingSubTitle2": "Für eine nahtlose Transaktion wählen Sie Ihren Zahlungsweg - Ihre Bequemlichkeit, unsere Priorität!",
   "onboardingSubTitle3": "Von unserer Haustür zu Ihrer - schnelle, sichere und kontaktlose Lieferung",
   "btnSkip": "Springen",
+
+
+
+  "loginTitle": "Willkommen zurück,",
+  "loginSubTitle": "Entdecken Sie begrenzte Auswahlmöglichkeiten und unübertroffene Annehmlichkeiten.",
+  "enterEmail": "E-Mail eingeben",
+  "rememberMe": "Sich an mich erinnern",
+  "forgotPassword": "Passwort vergessen?",
+  "signIn": "Anmelden",
+  "createOne": "Ein Konto erstellen",
+  "or": "Oder loggen Sie sich ein mit",
+
   "okay": "Okay",
   "done": "Fertig",
   "sample": "Beispiel",
   "doYouHaveAnAccount": "Haben Sie ein Konto?",
-  "createOne": "Ein Konto erstellen",
-  "signIn": "Anmelden",
-  "enterEmail": "E-Mail eingeben",
   "btnContinue": "Weiter",
-  "forgotPassword": "Passwort vergessen?",
   "reset": "Zurücksetzen",
   "enterPassword": "Password eingeben",
   "createAccount": "Konto erstellen",

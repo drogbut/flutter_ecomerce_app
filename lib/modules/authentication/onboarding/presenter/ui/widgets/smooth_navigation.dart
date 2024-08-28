@@ -13,8 +13,8 @@ class OnboardingSmoothNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: DSizes.bottomNavigationHeight + 25,
-      left: DSizes.defaultSpace,
+      bottom: TSizes.bottomNavigationHeight + 25,
+      left: TSizes.defaultSpace,
       child: SmoothPageIndicator(
         controller: controller.pageController,
         count: 3,

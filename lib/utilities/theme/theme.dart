@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../core/constants/colors.dart';
 import 'custom_themes/_custom_theme.dart';
+import 'custom_themes/outline_button_theme.dart';
 
 class DTheme {
   DTheme._();
@@ -19,6 +20,7 @@ class DTheme {
     elevatedButtonTheme: DElevatedButtonTheme.light,
     textButtonTheme: DTextButtonTheme.light,
     inputDecorationTheme: DInputDecorationTheme.light,
+    outlinedButtonTheme: DOutlinedButtonTheme.light,
   );
 
   /// DARK THEME
@@ -33,5 +35,6 @@ class DTheme {
     elevatedButtonTheme: DElevatedButtonTheme.dark,
     textButtonTheme: DTextButtonTheme.dark,
     inputDecorationTheme: DInputDecorationTheme.dark,
+    outlinedButtonTheme: DOutlinedButtonTheme.dark,
   );
 }

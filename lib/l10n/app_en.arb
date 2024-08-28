@@ -1,5 +1,5 @@
-{
 
+{
   "appName": "Flutter folders Structure",
   "@appName": {
     "description": "The flutter folders structure"
@@ -8,6 +8,9 @@
   "@language": {
     "description": "The current language"
   },
+
+
+
   "onboardingTitle1": "Choose your product",
   "@onboardingTitle1": {
     "description": "Choose your product"
@@ -36,6 +39,44 @@
   "@btnSkip": {
     "description": "Skip"
   },
+
+
+
+  "loginTitle": "Welcome back,",
+  "@loginTitle": {
+    "description": "Welcome back,"
+  },
+  "loginSubTitle": "Discover limited choices and unmatched conveniences.",
+  "@loginSubTitle": {
+    "description": "Welcome"
+  },
+  "enterEmail": "Email Address",
+  "@enterEmail": {
+    "description": "Email Address"
+  },
+  "enterPassword": "Password",
+  "@enterPassword": {
+    "description": "Password"
+  },
+  "rememberMe": "Remember me",
+  "@rememberMe": {
+    "description": "Remember me"
+  },
+  "signIn": "Sign in",
+  "@signIn": {
+    "description": "Sign in"
+  },
+  "doYouHaveAnAccount": "Create a Account",
+  "@doYouHaveAnAccount": {
+    "description": "Create a Account"
+  },
+  "or": "Or sign in with",
+  "@or": {
+    "description": "Or sign in with"
+  },
+
+
+
   "okay": "Okay",
   "@okay": {
     "description": "Okay"
@@ -48,10 +89,7 @@
   "@sample": {
     "description": "Sample"
   },
-  "doYouHaveAnAccount": "Don't have an account?",
-  "@doYouHaveAnAccount": {
-    "description": "Don't have an account?"
-  },
+
   "createOne": "Create one",
   "@createOne": {
     "description": "Create one"
@@ -68,14 +106,8 @@
   "@lastname": {
     "description": "Lastname"
   },
-  "signIn": "Sign in",
-  "@signIn": {
-    "description": "Sign in"
-  },
-  "enterEmail": "Email Address",
-  "@enterEmail": {
-    "description": "Email Address"
-  },
+
+
   "btnContinue": "Continue",
   "@btnContinue": {
     "description": "Continue"
@@ -88,10 +120,7 @@
   "@reset": {
     "description": "Reset"
   },
-  "enterPassword": "Password",
-  "@enterPassword": {
-    "description": "Password"
-  },
+
   "tellUsAboutYouSelf": "Tell us about yourself",
   "@tellUsAboutYouSelf": {
     "description": "Tell us about yourself"

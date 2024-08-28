@@ -1,22 +1,31 @@
 import 'package:flutter/material.dart';
 
-class MyPrimaryTextField extends StatelessWidget {
-  final TextEditingController? controller;
-  final String? hintText;
+import '../../core/constants/sizes.dart';
+import '../../core/extensions/widget.dart';
 
-  const MyPrimaryTextField({
+class TPrimaryTextField extends StatelessWidget {
+  final TextEditingController? controller;
+  final String? label;
+  final IconData? prefixIcon;
+  final Widget? suffixIcon;
+
+  const TPrimaryTextField({
     this.controller,
-    this.hintText,
+    this.label,
+    this.prefixIcon,
+    this.suffixIcon,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       controller: controller,
       decoration: InputDecoration(
-        hintText: hintText,
+        prefixIcon: Icon(prefixIcon),
+        label: Text(label ?? ''),
+        suffixIcon: suffixIcon,
       ),
-    );
+    ).withPadding(TSizes.spaceBtwInputFields.bottomPadding);
   }
 }

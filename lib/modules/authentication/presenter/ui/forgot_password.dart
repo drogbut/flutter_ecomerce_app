@@ -39,15 +39,15 @@ class ForgotPasswordPage extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               MyTitle(context.translate.forgotPassword),
-              DSizes.ms.sbh,
-              MyPrimaryTextField(
+              TSizes.ms.sbh,
+              TPrimaryTextField(
                 controller: _emailCon,
-                hintText: context.translate.enterEmail,
+                label: context.translate.enterEmail,
               ),
-              DSizes.ms.sbh,
+              TSizes.ms.sbh,
               BlocBuilder<ButtonStateCubit, ButtonState>(
                 builder: (context, state) {
-                  return MyPrimaryButton(
+                  return TPrimaryButton(
                     width: double.maxFinite,
                     title: context.translate.btnContinue,
                     onPressed: () {

@@ -25,17 +25,17 @@ class OnboardingScreen extends StatelessWidget {
             onPageChanged: controller.updatePageIndicator,
             children: [
               OnboardingPage(
-                image: DImages.onboarding1,
+                image: TImages.onboarding1,
                 title: context.translate.onboardingTitle1,
                 subTitle: context.translate.onboardingSubTitle1,
               ),
               OnboardingPage(
-                image: DImages.onboarding2,
+                image: TImages.onboarding2,
                 title: context.translate.onboardingTitle2,
                 subTitle: context.translate.onboardingSubTitle2,
               ),
               OnboardingPage(
-                image: DImages.onboarding3,
+                image: TImages.onboarding3,
                 title: context.translate.onboardingTitle3,
                 subTitle: context.translate.onboardingSubTitle3,
               ),

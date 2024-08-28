@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DSizes {
-  DSizes._();
+class TSizes {
+  TSizes._();
 
   /// STANDARD
   static const double zero = 0.0;
@@ -31,8 +31,8 @@ class DSizes {
   static const double bottomNavigationHeight = kBottomNavigationBarHeight;
 
   /// Default Spacing between sections
-  static const double defaultSpace = 16.0;
-  static const double spaceBtwItems = 8.0;
+  static const double defaultSpace = 24.0;
+  static const double spaceBtwItems = 16.0;
   static const double spaceBtwSections = 32.0;
 
   /// FONT SIZE
@@ -55,6 +55,6 @@ class DSizes {
   static const double xLargeBorderRadius = 24.0;
 
   /// Input field
-  static const double inputFieldRadius = 16.0;
-  static const double spaceBtwInputFields = 24.0;
+  static const double inputFieldRadius = 12.0;
+  static const double spaceBtwInputFields = 16.0;
 }

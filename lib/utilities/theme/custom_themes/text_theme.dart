@@ -7,11 +7,17 @@ class DTextTheme {
 
   /// LIGHT
   static TextTheme light = TextTheme(
-    labelLarge: const TextStyle().copyWith(fontSize: DSizes.labelLarge),
+    headlineLarge: const TextStyle().copyWith(fontWeight: FontWeight.bold),
+    headlineMedium: const TextStyle().copyWith(fontWeight: FontWeight.bold),
+    headlineSmall: const TextStyle().copyWith(fontWeight: FontWeight.bold),
+    labelLarge: const TextStyle().copyWith(fontSize: TSizes.labelLarge),
   );
 
   /// DARK
   static TextTheme dark = TextTheme(
-    labelLarge: const TextStyle().copyWith(fontSize: DSizes.labelLarge),
+    headlineLarge: const TextStyle().copyWith(fontWeight: FontWeight.bold),
+    headlineMedium: const TextStyle().copyWith(fontWeight: FontWeight.bold),
+    headlineSmall: const TextStyle().copyWith(fontWeight: FontWeight.bold),
+    labelLarge: const TextStyle().copyWith(fontSize: TSizes.labelLarge),
   );
 }

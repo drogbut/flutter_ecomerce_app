@@ -8,12 +8,12 @@ class DAppBarTheme {
   /// LIGHT
   static AppBarTheme light = const AppBarTheme(
     color: Colors.transparent,
-    elevation: DSizes.zero,
+    elevation: TSizes.zero,
   );
 
   /// DARK
   static AppBarTheme dark = const AppBarTheme(
     color: Colors.transparent,
-    elevation: DSizes.zero,
+    elevation: TSizes.zero,
   );
 }

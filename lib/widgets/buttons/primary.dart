@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MyPrimaryButton extends StatelessWidget {
+class TPrimaryButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final String title;
   final double? width;
@@ -8,7 +8,7 @@ class MyPrimaryButton extends StatelessWidget {
   final Color? textButtonColor;
   final Color? backgroundColor;
 
-  const MyPrimaryButton({
+  const TPrimaryButton({
     required this.title,
     required this.onPressed,
     this.width,
@@ -24,8 +24,6 @@ class MyPrimaryButton extends StatelessWidget {
       width: width,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          foregroundColor: textButtonColor,
-          backgroundColor: backgroundColor,
           minimumSize: Size.fromHeight(height ?? 50),
         ),
         onPressed: onPressed,

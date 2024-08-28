@@ -10,7 +10,7 @@ class DTextButtonTheme {
   static TextButtonThemeData light = TextButtonThemeData(
     style: TextButton.styleFrom(
       foregroundColor: DColors.primary,
-      elevation: DSizes.zero,
+      elevation: TSizes.zero,
     ),
   );
 
@@ -18,7 +18,7 @@ class DTextButtonTheme {
   static TextButtonThemeData dark = TextButtonThemeData(
     style: TextButton.styleFrom(
       foregroundColor: Colors.white,
-      elevation: DSizes.zero,
+      elevation: TSizes.zero,
     ),
   );
 }

@@ -26,10 +26,10 @@ class OnboardingPage extends StatelessWidget {
             image: AssetImage(image),
           ),
           Text(title, style: context.textTheme.headlineMedium, textAlign: TextAlign.center),
-          DSizes.defaultSpace.sbs,
+          TSizes.defaultSpace.sbs,
           Text(subTitle, textAlign: TextAlign.center),
         ],
-      ).withPadding(DSizes.defaultSpace.horizontalPadding),
+      ).withPadding(TSizes.defaultSpace.horizontalPadding),
     );
   }
 }

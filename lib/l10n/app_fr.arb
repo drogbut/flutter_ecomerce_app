@@ -2,8 +2,6 @@
   "appName": "Structure des dossiers Flutter",
   "language": "Français",
 
-
-
   "onboardingTitle1": "Choisissez votre produit",
   "onboardingTitle2": "Sélectionner le mode de paiement",
   "onboardingTitle3": "Livraison à domicile",
@@ -11,8 +9,6 @@
   "onboardingSubTitle2": "Pour une transaction transparente, choisissez votre mode de paiement - votre confort, notre priorité !",
   "onboardingSubTitle3": "De notre porte à la vôtre - livraison rapide, sécurisée et sans contact",
   "btnSkip": "Sauter",
-
-
 
   "loginTitle": "Bienvenue à nouveau,",
   "loginSubTitle": "Découvrez des choix limités et des commodités inégalées.",
@@ -22,7 +18,26 @@
   "forgotPassword": "Mot de passe oublié ?",
   "signIn": "Se connecter",
   "createOne": "Créer un compte",
-  "or": "Ou connectez-vous avec",
+  "orSignInWith": "Ou connectez-vous avec",
+
+  "createAAccount": "Créez votre compte",
+  "firstname": "Prénom",
+  "lastname": "Nom",
+  "username": "Nom d'utilisateur",
+  "phoneNumber": "Numéro de téléphone",
+  "iAgreeTo": "J'accepte de",
+  "privatePolice": "police de confidentialité",
+  "abvAnd": "et",
+  "abvOr": "ou",
+  "termsOfUse": "conditions d'utilisation",
+  "createAccount": "Créer un compte",
+  "orSignUpWith": "Ou inscrivez-vous avec",
+
+
+
+
+
+
 
   "okay": "Okay",
   "done": "terminee",
@@ -30,9 +45,7 @@
   "doYouHaveAnAccount": "Avez-vous un compte ?",
   "btnContinue": "Continuer",
   "reset": "Réinitialiser",
-  "createAccount": "Créer un compte",
-  "firstname": "Prénom",
-  "lastname": "Nom",
+
   "tellUsAboutYouSelf": "Parlez-nous de vous",
   "whoDoYouShopFor": "Pour qui faites-vous vos achats ?",
   "men": "Hommes",

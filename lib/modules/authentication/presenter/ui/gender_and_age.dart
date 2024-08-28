@@ -7,7 +7,7 @@ import '../../../../core/extensions/widget.dart';
 import '../../../../widgets/buttons/primary.dart';
 import '../../../../widgets/indicators/loading_indicator.dart';
 import '../../../../widgets/my_appbar/platform_back_button.dart';
-import '../../../../widgets/text/title_text.dart';
+import '../../../../widgets/text/title.dart';
 import '../../domain/entities/user_signup_request.dart';
 import '../../domain/use_cases/signup.dart';
 import '../providers/gender_and_age_provider/age_selection_cubit.dart';
@@ -50,7 +50,7 @@ class GenderAndAgePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    MyTitle(context.translate.tellUsAboutYouSelf).withPadding(40.bottomPadding),
+                    TTitleText(context.translate.tellUsAboutYouSelf).withPadding(40.bottomPadding),
                     Text(context.translate.whoDoYouShopFor).withPadding(10.bottomPadding),
                     const GenderContainer().withPadding(40.bottomPadding),
                     Text(context.translate.howOldAreYou).withPadding(10.bottomPadding),

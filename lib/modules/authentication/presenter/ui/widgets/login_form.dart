@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../core/constants/sizes.dart';
@@ -9,6 +10,7 @@ import '../../../../../widgets/buttons/secondary.dart';
 import '../../../../../widgets/buttons/tertiary.dart';
 import '../../../../../widgets/checkbox_and_radio/checkbox.dart';
 import '../../../../../widgets/fields/primary.dart';
+import '../sign_up.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
@@ -57,7 +59,7 @@ class LoginForm extends StatelessWidget {
         ///  Register button
         TSecondaryButton(
           title: context.translate.doYouHaveAnAccount,
-          onPressed: () {},
+          onPressed: () => Get.to(() => SignupScreen()),
         ),
       ],
     );

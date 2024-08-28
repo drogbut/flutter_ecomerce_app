@@ -2,8 +2,6 @@
   "appName": "Aufbau der Flutter-Ordner",
   "language": "Deutsch",
 
-
-
   "onboardingTitle1": "Wählen Sie Ihr Produkt",
   "onboardingTitle2": "Zahlungsmethode auswählen",
   "onboardingTitle3": "Lieferung nach Hause",
@@ -12,8 +10,6 @@
   "onboardingSubTitle3": "Von unserer Haustür zu Ihrer - schnelle, sichere und kontaktlose Lieferung",
   "btnSkip": "Springen",
 
-
-
   "loginTitle": "Willkommen zurück,",
   "loginSubTitle": "Entdecken Sie begrenzte Auswahlmöglichkeiten und unübertroffene Annehmlichkeiten.",
   "enterEmail": "E-Mail eingeben",
@@ -21,7 +17,21 @@
   "forgotPassword": "Passwort vergessen?",
   "signIn": "Anmelden",
   "createOne": "Ein Konto erstellen",
-  "or": "Oder loggen Sie sich ein mit",
+  "orSignInWith": "Oder loggen Sie sich ein mit",
+  "createAAccount": "Erstellen Sie Ihr Konto",
+  "firstname": "Vorname",
+  "lastname": "Nachname",
+  "username": "Benutzername",
+  "phoneNumber": "Telefonnummer",
+  "iAgreeTo": "Ich stimme zu",
+  "privatePolice": "Datenschutz",
+  "abvAnd": "und",
+  "abvOr": "oder",
+  "termsOfUse": "Benutzungsbedingungen",
+  "createAccount": "Konto erstellen",
+  "orSignUpWith": "Oder melden Sie sich an mit",
+
+
 
   "okay": "Okay",
   "done": "Fertig",
@@ -30,9 +40,8 @@
   "btnContinue": "Weiter",
   "reset": "Zurücksetzen",
   "enterPassword": "Password eingeben",
-  "createAccount": "Konto erstellen",
-  "firstname": "Vorname",
-  "lastname": "Nachname",
+
+
   "tellUsAboutYouSelf": "Erzählen Sie uns von sich",
   "whoDoYouShopFor": "Für wen kaufen Sie ein?",
   "men": "Herren",

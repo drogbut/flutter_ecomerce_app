@@ -6,7 +6,7 @@ import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../routing/navigator.dart';
 import '../../../../widgets/buttons/primary.dart';
-import '../../../../widgets/text/title_text.dart';
+import '../../../../widgets/text/title.dart';
 import '../../onboarding/domain/app_vectors.dart';
 import 'sign_in.dart';
 
@@ -22,7 +22,7 @@ class ResetPasswordPage extends StatelessWidget {
           children: [
             SvgPicture.asset(AppVectors.emailSending),
             TSizes.ms.sbh,
-            MyTitle(
+            TTitleText(
               textAlign: TextAlign.center,
               context.translate.resetPasswordMessage,
             ),

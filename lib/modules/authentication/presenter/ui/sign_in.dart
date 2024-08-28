@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../../../../commons/style/spacing_style.dart';
+import '../../../../core/constants/images_string.dart';
 import '../../../../core/constants/sizes.dart';
+import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
-import 'widgets/divider.dart';
-import 'widgets/footer.dart';
-import 'widgets/form.dart';
+import '../../../../widgets/dividers/form_divider.dart';
+import '../../../../widgets/icons/image_circular.dart';
 import 'widgets/header.dart';
+import 'widgets/login_form.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -28,10 +30,27 @@ class SignInPage extends StatelessWidget {
               const LoginForm().withPadding(TSizes.spaceBtwSections.bottomPadding),
 
               /// Divider
-              const LoginDivider().withPadding(TSizes.spaceBtwSections.bottomPadding),
+              TFormDivider(
+                label: context.translate.orSignInWith,
+              ).withPadding(TSizes.spaceBtwSections.bottomPadding),
 
               /// Footer
-              const LoginFooter().withPadding(TSizes.spaceBtwSections.bottomPadding),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  /// google
+                  TImageCircularIcon(
+                    imagePath: TImages.google,
+                    onPressed: () {},
+                  ).withPadding(TSizes.spaceBtwItems.rightPadding),
+
+                  /// facebook
+                  TImageCircularIcon(
+                    imagePath: TImages.facebook,
+                    onPressed: () {},
+                  ),
+                ],
+              ).withPadding(TSizes.spaceBtwSections.bottomPadding),
             ],
           ),
         ),

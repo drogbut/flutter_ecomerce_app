@@ -12,9 +12,13 @@ class OnboardingSkip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: DSizes.appBarHeight,
-      right: DSizes.defaultSpace,
+      top: TSizes.appBarHeight,
+      right: TSizes.defaultSpace,
       child: TextButton(
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.zero,
+          alignment: AlignmentDirectional.centerEnd,
+        ),
         onPressed: () => controller.skipPage(),
         child: Text(context.translate.btnSkip),
       ),

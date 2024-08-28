@@ -22,16 +22,16 @@ class SignInPage extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               /// Header - logo, title and sub-title
-              const LoginHeader().withPadding(DSizes.spaceBtwSections.bottomPadding),
+              const LoginHeader().withPadding(TSizes.spaceBtwSections.bottomPadding),
 
               /// Form
-              const LoginForm().withPadding(DSizes.spaceBtwSections.bottomPadding),
+              const LoginForm().withPadding(TSizes.spaceBtwSections.bottomPadding),
 
               /// Divider
-              const LoginDivider().withPadding(DSizes.spaceBtwSections.bottomPadding),
+              const LoginDivider().withPadding(TSizes.spaceBtwSections.bottomPadding),
 
               /// Footer
-              const LoginFooter().withPadding(DSizes.spaceBtwSections.bottomPadding),
+              const LoginFooter().withPadding(TSizes.spaceBtwSections.bottomPadding),
             ],
           ),
         ),

@@ -13,9 +13,9 @@ class DElevatedButtonTheme {
       foregroundColor: Colors.white,
       backgroundColor: DColors.primary,
       padding: (h: 50, v: 16).symmetricPadding,
-      elevation: DSizes.zero,
+      elevation: TSizes.zero,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(DSizes.buttonRadius),
+        borderRadius: BorderRadius.circular(TSizes.buttonRadius),
       ),
     ),
   );
@@ -26,10 +26,10 @@ class DElevatedButtonTheme {
       foregroundColor: Colors.white,
       backgroundColor: DColors.primary,
       padding: (h: 50, v: 16).symmetricPadding,
-      elevation: DSizes.zero,
+      elevation: TSizes.zero,
       minimumSize: const Size.fromHeight(50),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(DSizes.buttonRadius),
+        borderRadius: BorderRadius.circular(TSizes.buttonRadius),
       ),
     ),
   );

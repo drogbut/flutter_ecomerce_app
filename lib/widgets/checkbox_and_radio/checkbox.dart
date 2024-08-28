@@ -19,7 +19,7 @@ class TCheckBoxListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListTileTheme(
-        horizontalTitleGap: DSizes.xs,
+        horizontalTitleGap: TSizes.xs,
         child: CheckboxListTile(
           value: value,
           contentPadding: EdgeInsets.zero,

@@ -4,6 +4,8 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../../../core/constants/colors.dart';
 import '../../../../../../core/constants/sizes.dart';
+import '../../../../../../core/extensions/widget.dart';
+import '../../../../../../widgets/icons/circular.dart';
 import '../../providers/onboarding_controller.dart';
 
 class OnboardingNextButton extends StatelessWidget {
@@ -14,19 +16,14 @@ class OnboardingNextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: DSizes.bottomNavigationHeight,
-      right: DSizes.zero,
-      child: SizedBox(
-        width: 100,
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            shape: const CircleBorder(),
-            backgroundColor: context.isDarkMode ? DColors.primary : DColors.dark,
-          ),
-          child: const Icon(Iconsax.arrow_right_3),
-          onPressed: () => controller.nextPage(),
-        ),
-      ),
+      bottom: TSizes.bottomNavigationHeight,
+      right: TSizes.zero,
+      child: TCircularIcon(
+        iconData: Iconsax.arrow_right_3,
+        iconColor: context.isDarkMode ? DColors.primary : Colors.white,
+        backgroundColor: context.isDarkMode ? DColors.primary : DColors.dark,
+        onPressed: () => controller.nextPage(),
+      ).withPadding(TSizes.defaultSpace.rightPadding),
     );
   }
 }

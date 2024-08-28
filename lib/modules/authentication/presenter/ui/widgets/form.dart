@@ -46,13 +46,13 @@ class LoginForm extends StatelessWidget {
               onPressed: () {},
             ),
           ],
-        ).withPadding(DSizes.spaceBtwItems.bottomPadding),
+        ).withPadding(TSizes.spaceBtwItems.bottomPadding),
 
         /// SignIn button
         TPrimaryButton(
           title: context.translate.signIn,
           onPressed: () {},
-        ).withPadding(DSizes.spaceBtwItems.bottomPadding),
+        ).withPadding(TSizes.spaceBtwItems.bottomPadding),
 
         ///  Register button
         TSecondaryButton(

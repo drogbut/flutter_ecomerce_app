@@ -11,7 +11,7 @@ class TImages {
   static const String google = 'assets/images/app_logos/google_logo.png';
 
   /// Onboarding images
-  static const String onboarding1 = 'assets/images/onboarding_images/sammy_line_woman_in_shopping_cart.gif';
-  static const String onboarding2 = 'assets/images/onboarding_images/sammy_line-man_and_dog_delivering.gif';
-  static const String onboarding3 = 'assets/images/onboarding_images/sammy_line-woman-on_skateboard.gif';
+  static const String onboarding1 = 'assets/images/onboarding_images/sammy_line-woman-on_skateboard.gif';
+  static const String onboarding2 = 'assets/images/onboarding_images/sammy_line_woman_in_shopping_cart.gif';
+  static const String onboarding3 = 'assets/images/onboarding_images/sammy_line-man_and_dog_delivering.gif';
 }

@@ -32,27 +32,27 @@ class SignupPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             MyTitle(context.translate.createAccount),
-            DSizes.ms.sbh,
+            TSizes.ms.sbh,
             TPrimaryTextField(
               controller: _firstNameCon,
               label: context.translate.firstname,
             ),
-            DSizes.ms.sbh,
+            TSizes.ms.sbh,
             TPrimaryTextField(
               controller: _lastNameCon,
               label: context.translate.lastname,
             ),
-            DSizes.ms.sbh,
+            TSizes.ms.sbh,
             TPrimaryTextField(
               controller: _emailCon,
               label: context.translate.enterEmail,
             ),
-            DSizes.ms.sbh,
+            TSizes.ms.sbh,
             TPrimaryTextField(
               controller: _passwordCon,
               label: context.translate.enterPassword,
             ),
-            DSizes.ms.sbh,
+            TSizes.ms.sbh,
             SizedBox(
               width: double.maxFinite,
               child: TPrimaryButton(
@@ -68,7 +68,7 @@ class SignupPage extends StatelessWidget {
                     )),
               ),
             ),
-            DSizes.ms.sbh,
+            TSizes.ms.sbh,
             MyRichText(
               firstText: '${context.translate.forgotPassword}?',
               secondText: context.translate.reset,

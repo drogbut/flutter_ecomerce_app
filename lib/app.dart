@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 
 import 'l10n/l10n.dart';
 import 'l10n/local_provider.dart';
-import 'modules/authentication/onboarding/presenter/providers/splash_cubit.dart';
 import 'modules/authentication/onboarding/presenter/ui/onboarding_screen.dart';
 import 'theme/theme_provider.dart';
 import 'utilities/theme/theme.dart';
@@ -22,7 +21,6 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => SplashCubit()..appStarted()),
         BlocProvider(create: (context) => ThemeCubit()),
         BlocProvider(create: (context) => LocaleCubit()),
       ],

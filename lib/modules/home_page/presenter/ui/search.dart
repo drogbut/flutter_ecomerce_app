@@ -10,8 +10,8 @@ class SearchField extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
           contentPadding: const EdgeInsets.all(12),
-          focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(DSizes.buttonRadius)),
-          enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(DSizes.buttonRadius)),
+          focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(TSizes.buttonRadius)),
+          enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(TSizes.buttonRadius)),
           prefixIcon: const Icon(Icons.search),
           hintText: 'search'),
     );

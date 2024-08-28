@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DSizes {
-  DSizes._();
+class TSizes {
+  TSizes._();
 
   /// STANDARD
   static const double zero = 0.0;

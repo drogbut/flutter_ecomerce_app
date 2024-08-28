@@ -26,6 +26,6 @@ class TPrimaryTextField extends StatelessWidget {
         label: Text(label ?? ''),
         suffixIcon: suffixIcon,
       ),
-    ).withPadding(DSizes.spaceBtwInputFields.bottomPadding);
+    ).withPadding(TSizes.spaceBtwInputFields.bottomPadding);
   }
 }

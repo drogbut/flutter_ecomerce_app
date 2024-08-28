@@ -11,9 +11,9 @@ class DOutlinedButtonTheme {
     style: OutlinedButton.styleFrom(
       foregroundColor: Colors.black,
       padding: (h: 50, v: 16).symmetricPadding,
-      elevation: DSizes.zero,
+      elevation: TSizes.zero,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(DSizes.buttonRadius),
+        borderRadius: BorderRadius.circular(TSizes.buttonRadius),
       ),
     ),
   );
@@ -23,9 +23,9 @@ class DOutlinedButtonTheme {
     style: OutlinedButton.styleFrom(
       foregroundColor: Colors.white,
       padding: (h: 50, v: 16).symmetricPadding,
-      elevation: DSizes.zero,
+      elevation: TSizes.zero,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(DSizes.buttonRadius),
+        borderRadius: BorderRadius.circular(TSizes.buttonRadius),
       ),
     ),
   );

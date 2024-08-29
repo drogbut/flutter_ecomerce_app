@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../core/constants/sizes.dart';
@@ -7,6 +8,7 @@ import '../../../../../core/extensions/widget.dart';
 import '../../../../../widgets/buttons/primary.dart';
 import '../../../../../widgets/fields/primary.dart';
 import '../../../../../widgets/text/rich_text.dart';
+import '../verification.dart';
 
 class RegisterForm extends StatelessWidget {
   const RegisterForm({super.key});
@@ -88,7 +90,7 @@ class RegisterForm extends StatelessWidget {
         /// Create account button
         TPrimaryButton(
           title: context.translate.createAccount,
-          onPressed: () {},
+          onPressed: () => Get.to(() => const VerificationScreen()),
         ).withPadding(TSizes.spaceBtwInputFields.topPadding),
       ],
     );

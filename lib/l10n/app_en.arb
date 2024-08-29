@@ -119,6 +119,35 @@
   "@orSignUpWith": {
     "description": "Or signup with"
   },
+  "confirmEmail": "Verifier your Email address",
+  "@confirmEmail": {
+    "description": "Verifier your Email address"
+  },
+  "confirmEmailSubTitle": "Congratulation! Your account awaits: verifier your Email to start shopping and experiences",
+  "@confirmEmailSubTitle": {
+    "description": "Congratulation! Your account awaits: verifier your Email to start shopping and experiences"
+  },
+  "emailNotReceivedMessage": "Didn't receive your Email? Check your span or resent it.",
+  "@emailNotReceivedMessage": {
+    "description": "Didn't receive your Email? Check your span or resent it."
+  },
+  "btnContinue": "Continue",
+  "@btnContinue": {
+    "description": "Continue"
+  },
+  "resendEmail": "Resend Email",
+  "@resendEmail": {
+    "description": "Resend Email"
+  },
+  "yourAccountCreatedTitle": "Your account successfully created!",
+  "@yourAccountCreatedTitle": {
+    "description": "Your account successfully created!"
+  },
+  "yourAccountCreatedSubTitle": "Welcome to you ultimated shopping destination. Your account is created. unleash the joy of seamless online shopping!",
+  "@yourAccountCreatedSubTitle": {
+    "description": "Welcome to you ultimated shopping destination. Your account is created. unleash the joy of seamless online shopping!"
+  },
+
 
 
 
@@ -136,25 +165,10 @@
   "@sample": {
     "description": "Sample"
   },
-
-
-
-
-
-
-  "btnContinue": "Continue",
-  "@btnContinue": {
-    "description": "Continue"
-  },
   "forgotPassword": "Forgot password",
   "@forgotPassword": {
     "description": "Forgot password?"
   },
-  "reset": "Reset",
-  "@reset": {
-    "description": "Reset"
-  },
-
   "tellUsAboutYouSelf": "Tell us about yourself",
   "@tellUsAboutYouSelf": {
     "description": "Tell us about yourself"

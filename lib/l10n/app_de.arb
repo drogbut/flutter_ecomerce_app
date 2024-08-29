@@ -31,17 +31,23 @@
   "createAccount": "Konto erstellen",
   "orSignUpWith": "Oder melden Sie sich an mit",
 
+  "confirmEmail": "Überprüfen Sie Ihre E-Mail-Adresse",
+  "confirmEmailSubTitle": "Herzlichen Glückwunsch! Ihr Konto wartet: Überprüfen Sie Ihre E-Mail, um mit dem Einkaufen und Experimentieren zu beginnen.",
+  "emailNotReceivedMessage": "Sie haben Ihre E-Mail nicht erhalten? Überprüfen Sie Ihre Reichweite oder senden Sie sie zurück.",
+  "btnContinue": "Weiter",
+  "resendEmail": "Mail erneut senden",
+  "yourAccountCreatedTitle": "Ihr Konto wurde erfolgreich erstellt!",
+  "yourAccountCreatedSubTitle": "Willkommen bei Ihrem ultimativen Einkaufsziel. Ihr Konto ist erstellt. Entfesseln Sie die Freude am nahtlosen Online-Shopping!",
+
+
+
 
 
   "okay": "Okay",
   "done": "Fertig",
   "sample": "Beispiel",
   "doYouHaveAnAccount": "Haben Sie ein Konto?",
-  "btnContinue": "Weiter",
-  "reset": "Zurücksetzen",
   "enterPassword": "Password eingeben",
-
-
   "tellUsAboutYouSelf": "Erzählen Sie uns von sich",
   "whoDoYouShopFor": "Für wen kaufen Sie ein?",
   "men": "Herren",

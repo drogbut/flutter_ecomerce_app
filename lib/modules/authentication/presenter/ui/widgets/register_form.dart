@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../../core/constants/images_string.dart';
 import '../../../../../core/constants/sizes.dart';
 import '../../../../../core/extensions/context.dart';
 import '../../../../../core/extensions/widget.dart';
 import '../../../../../widgets/buttons/primary.dart';
 import '../../../../../widgets/fields/primary.dart';
+import '../../../../../widgets/success_screens/success.dart';
 import '../../../../../widgets/text/rich_text.dart';
+import '../sign_in.dart';
 import '../verification.dart';
 
 class RegisterForm extends StatelessWidget {
@@ -90,7 +93,23 @@ class RegisterForm extends StatelessWidget {
         /// Create account button
         TPrimaryButton(
           title: context.translate.createAccount,
-          onPressed: () => Get.to(() => const VerificationScreen()),
+          onPressed: () => Get.to(
+            () => VerificationScreen(
+              image: TImages.deliveryEmail1,
+              title: context.translate.confirmEmail,
+              subtitle: context.translate.confirmEmailSubTitle,
+              email: 'support@dreamteam.com',
+              continueButtonTitle: context.translate.btnContinue,
+              onContinuePressed: () => Get.to(
+                () => SuccessScreen(
+                  image: TImages.successIllustration,
+                  title: context.translate.yourAccountCreatedTitle,
+                  subTitle: context.translate.yourAccountCreatedSubTitle,
+                  onPressed: () => Get.offAll(() => const SignInPage()),
+                ),
+              ),
+            ),
+          ),
         ).withPadding(TSizes.spaceBtwInputFields.topPadding),
       ],
     );

@@ -1,68 +1,68 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 
-import '../../../../commons/providers/button/button_state_cubit.dart';
+import '../../../../core/constants/images_string.dart';
 import '../../../../core/constants/sizes.dart';
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
-import '../../../../routing/navigator.dart';
 import '../../../../widgets/buttons/primary.dart';
 import '../../../../widgets/fields/primary.dart';
-import '../../../../widgets/my_appbar/platform_back_button.dart';
+import '../../../../widgets/success_screens/success.dart';
 import '../../../../widgets/text/title.dart';
-import '../../domain/use_cases/reset_password.dart';
-import 'reset_password.dart';
+import 'sign_in.dart';
+import 'verification.dart';
 
-class ForgotPasswordPage extends StatelessWidget {
-  final TextEditingController _emailCon = TextEditingController();
-
-  ForgotPasswordPage({super.key});
+class ForgotPasswordScreen extends StatelessWidget {
+  const ForgotPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const MyAppBarBackButton(),
-      body: BlocProvider(
-        create: (context) => ButtonStateCubit(),
-        child: BlocListener<ButtonStateCubit, ButtonState>(
-          listener: (context, state) {
-            if (state is ButtonFailureState) {
-              var snackBar = SnackBar(content: Text(state.errorMessage), behavior: SnackBarBehavior.floating);
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
-            }
-            if (state is ButtonSuccessState) {
-              AppNavigator.push(context, const ResetPasswordPage());
-            }
-          },
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              TTitleText(context.translate.forgotPassword),
-              TSizes.ms.sbh,
-              TPrimaryTextField(
-                controller: _emailCon,
-                label: context.translate.enterEmail,
+      appBar: AppBar(),
+      body: Padding(
+        padding: TSizes.defaultSpace.allPadding,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            /// title and sub-title
+            TTitleText(
+              context.translate.forgotPasswordTitle,
+            ).withPadding(TSizes.spaceBtwItems.bottomPadding),
+            Text(
+              context.translate.forgotPasswordSubtitle,
+            ).withPadding(TSizes.spaceBtwSections.bottomPadding),
+
+            /// E-mail
+            TPrimaryTextField(
+              prefixIcon: Iconsax.direct_right,
+              label: context.translate.enterEmail,
+            ),
+
+            /// Submit button
+            TPrimaryButton(
+              title: context.translate.submit,
+              onPressed: () => Get.offAll(
+                () => VerificationScreen(
+                  image: TImages.deliveryEmail2,
+                  title: context.translate.passwordResetEmailSend,
+                  subtitle: context.translate.passwordResetEmailSendSubtitle,
+                  email: 'your_e_mail@test.com',
+                  continueButtonTitle: context.translate.done,
+                  onContinuePressed: () => Get.to(
+                    () => SuccessScreen(
+                      image: TImages.successIllustration,
+                      title: context.translate.yourAccountCreatedTitle,
+                      subTitle: context.translate.yourAccountCreatedSubTitle,
+                      onPressed: () => Get.offAll(() => const SignInPage()),
+                    ),
+                  ),
+                ),
               ),
-              TSizes.ms.sbh,
-              BlocBuilder<ButtonStateCubit, ButtonState>(
-                builder: (context, state) {
-                  return TPrimaryButton(
-                    width: double.maxFinite,
-                    title: context.translate.btnContinue,
-                    onPressed: () {
-                      context.read<ButtonStateCubit>().execute(
-                            usecase: ResetPasswordUseCase(),
-                            params: _emailCon.text,
-                          );
-                    },
-                  );
-                },
-              ),
-            ],
-          ),
+            ).withPadding(TSizes.spaceBtwInputFields.topPadding),
+          ],
         ),
-      ).withPadding((h: 16, v: 10).symmetricPadding),
+      ),
     );
   }
 }

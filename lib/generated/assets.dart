@@ -5,14 +5,14 @@ class Assets {
   static const String appLogosDarkLogo = 'assets/images/app_logos/dark_logo.png';
   static const String appLogosFacebookLogo = 'assets/images/app_logos/facebook_Logo.png';
   static const String appLogosGoogleLogo = 'assets/images/app_logos/google_logo.png';
-  static const String onboardingImagesManDeliberyPackageToWoman =
-      'assets/images/onboarding_images/man_delivery_package_to_woman.png';
-  static const String onboardingImagesSammyLineManAndDogDelivering =
-      'assets/images/onboarding_images/sammy_line-man_and_dog_delivering.gif';
-  static const String onboardingImagesSammyLineWomanInShoppingCart =
-      'assets/images/onboarding_images/sammy_line_woman_in_shopping_cart.gif';
-  static const String onboardingImagesSammyLineWomanOnSkateboard =
-      'assets/images/onboarding_images/sammy_line-woman-on_skateboard.gif';
+  static const String onboardingImagesManDeliveryPackageToWoman = 'assets/images/onboarding_images/delivery_woman.png';
+  static const String onboardingImagesSammyEmail2 = 'assets/images/onboarding_images/delivery_email2.png';
+  static const String onboardingImagesSammyEmailReceveived = 'assets/images/onboarding_images/delivery_email1.png';
+  static const String onboardingImagesSammyLineManAndDogDelivering = 'assets/images/onboarding_images/onboarding3.gif';
+  static const String onboardingImagesSammyLineWomanInShoppingCart = 'assets/images/onboarding_images/onboarding2.gif';
+  static const String onboardingImagesSammyLineWomanOnSkateboard = 'assets/images/onboarding_images/onboarding1.gif';
+  static const String onboardingImagesSammyVectorIllustration =
+      'assets/images/onboarding_images/success_illustration2.png';
   static const String poppinsOFL = 'assets/fonts/Poppins/OFL.txt';
   static const String poppinsPoppinsBlack = 'assets/fonts/Poppins/Poppins-Black.ttf';
   static const String poppinsPoppinsBlackItalic = 'assets/fonts/Poppins/Poppins-BlackItalic.ttf';

@@ -10,12 +10,15 @@ class TImages {
   static const String facebook = 'assets/images/app_logos/facebook_Logo.png';
   static const String google = 'assets/images/app_logos/google_logo.png';
 
-  /// Onboarding images
-  static const String onboarding1 = 'assets/images/onboarding_images/sammy_line-woman-on_skateboard.gif';
-  static const String onboarding2 = 'assets/images/onboarding_images/sammy_line_woman_in_shopping_cart.gif';
-  static const String onboarding3 = 'assets/images/onboarding_images/sammy_line-man_and_dog_delivering.gif';
+  /// Onboarding images - GIF
+  static const String onboarding1 = 'assets/images/onboarding_images/onboarding1.gif';
+  static const String onboarding2 = 'assets/images/onboarding_images/onboarding2.gif';
+  static const String onboarding3 = 'assets/images/onboarding_images/onboarding3.gif';
 
   /// PNG
-  static const String deliveryWoman = 'assets/images/onboarding_images/man_delivery_package_to_woman.png';
-  static const String staticSuccessIllustration = 'assets/images/onboarding_images/man_delivery_package_to_woman.png';
+  static const String deliveryWoman = 'assets/images/onboarding_images/delivery_woman.png';
+  static const String successIllustration = 'assets/images/onboarding_images/delivery_woman.png';
+  static const String deliveryEmail1 = 'assets/images/onboarding_images/delivery_email1.png';
+  static const String deliveryEmail2 = 'assets/images/onboarding_images/delivery_email2.png';
+  static const String successIllustration2 = 'assets/images/onboarding_images/success_illustration2.png';
 }

@@ -41,6 +41,11 @@
   "yourAccountCreatedTitle": "Votre compte a été créé avec succès !",
   "yourAccountCreatedSubTitle": "Bienvenue dans votre destination shopping ultime. Votre compte est créé. Découvrez les joies du shopping en ligne en toute transparence !",
 
+  "forgotPasswordTitle": "Mot de passe oublié ?",
+  "forgotPasswordSubtitle": "Ne vous inquiétez pas, il arrive aussi que l'on oublie. Saisissez votre adresse électronique et nous vous enverrons le lien de réinitialisation.",
+  "submit": "Envoyer",
+  "passwordResetEmailSendSubtitle": "La sécurité de votre compte est notre priorité ! Nous vous avons envoyé un lien de sécurité pour changer votre mot de passe en toute sécurité et protéger votre compte.",
+  "done": "terminee",
 
 
 
@@ -50,7 +55,7 @@
 
 
   "okay": "Okay",
-  "done": "terminee",
+
   "sample": "exemple",
   "doYouHaveAnAccount": "Avez-vous un compte ?",
   "tellUsAboutYouSelf": "Parlez-nous de vous",

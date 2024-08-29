@@ -3,19 +3,29 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../commons/style/spacing_style.dart';
-import '../../../../core/constants/images_string.dart';
 import '../../../../core/constants/sizes.dart';
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../widgets/buttons/primary.dart';
 import '../../../../widgets/buttons/tertiary.dart';
 import '../../../../widgets/icons/circular.dart';
-import '../../../../widgets/success_screens/success_screen.dart';
 import '../../../../widgets/text/title.dart';
 import 'sign_in.dart';
 
 class VerificationScreen extends StatelessWidget {
-  const VerificationScreen({super.key});
+  final String image, title, subtitle, email, continueButtonTitle;
+  final VoidCallback? onContinuePressed, onResetPressed;
+
+  const VerificationScreen({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.subtitle,
+    required this.email,
+    required this.continueButtonTitle,
+    this.onContinuePressed,
+    this.onResetPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,35 +42,28 @@ class VerificationScreen extends StatelessWidget {
               /// Image
               Image(
                 width: context.screenWidth * 0.6,
-                image: const AssetImage(TImages.deliveryWoman),
+                image: AssetImage(image),
               ).withPadding(TSizes.spaceBtwSections.bottomPadding),
 
               /// title and sub-title
               TTitleText(
-                context.translate.confirmEmail,
+                title,
                 textAlign: TextAlign.center,
               ).withPadding(TSizes.spaceBtwItems.bottomPadding),
               Text(
                 textAlign: TextAlign.center,
-                'support@dreamteam.com',
+                email,
                 style: Theme.of(context).textTheme.labelMedium,
-              ).withPadding(TSizes.spaceBtwSections.bottomPadding),
+              ).withPadding(TSizes.spaceBtwItems.bottomPadding),
               Text(
                 textAlign: TextAlign.center,
-                context.translate.confirmEmailSubTitle,
+                subtitle,
               ).withPadding(TSizes.spaceBtwSections.bottomPadding),
 
               /// Continue button
               TPrimaryButton(
-                title: context.translate.btnContinue,
-                onPressed: () => Get.to(
-                  () => SuccessScreen(
-                    image: TImages.staticSuccessIllustration,
-                    title: context.translate.yourAccountCreatedTitle,
-                    subTitle: context.translate.yourAccountCreatedSubTitle,
-                    onPressed: () => Get.to(() => const SignInPage()),
-                  ),
-                ),
+                title: continueButtonTitle,
+                onPressed: onContinuePressed,
               ).withPadding(TSizes.spaceBtwInputFields.topPadding),
 
               /// Resend email button

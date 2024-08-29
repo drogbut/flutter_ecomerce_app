@@ -6,12 +6,12 @@ import '../../core/extensions/context.dart';
 class TCheckBoxListTile extends StatelessWidget {
   final bool? value;
   final Function(bool?)? onChanged;
-  final String? title;
+  final String title;
 
   const TCheckBoxListTile({
     required this.value,
     required this.onChanged,
-    this.title,
+    required this.title,
     super.key,
   });
 
@@ -23,7 +23,7 @@ class TCheckBoxListTile extends StatelessWidget {
         child: CheckboxListTile(
           value: value,
           contentPadding: EdgeInsets.zero,
-          title: Text(title ?? '', style: context.textTheme.bodyMedium),
+          title: Text(title, style: context.textTheme.bodyMedium),
           controlAffinity: ListTileControlAffinity.leading,
           onChanged: onChanged,
         ),

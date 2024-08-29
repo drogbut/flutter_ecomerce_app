@@ -9,8 +9,6 @@
     "description": "The current language"
   },
 
-
-
   "onboardingTitle1": "Choose your product",
   "@onboardingTitle1": {
     "description": "Choose your product"
@@ -40,8 +38,6 @@
     "description": "Skip"
   },
 
-
-
   "loginTitle": "Welcome back,",
   "@loginTitle": {
     "description": "Welcome back,"
@@ -70,10 +66,90 @@
   "@doYouHaveAnAccount": {
     "description": "Create a Account"
   },
-  "or": "Or sign in with",
-  "@or": {
+  "orSignInWith": "Or sign in with",
+  "@orSignInWith": {
     "description": "Or sign in with"
   },
+
+  "createAAccount": "Let's create your account",
+  "@createAAccount": {
+    "description": "Let's create your account"
+  },
+  "firstname": "First Name",
+  "@firstname": {
+    "description": "First Name"
+  },
+  "lastname": "Last Name",
+  "@lastname": {
+    "description": "Last Name"
+  },
+  "username": "username",
+  "@username": {
+    "description": "username"
+  },
+  "phoneNumber": "Phone number",
+  "@phoneNumber": {
+    "description": "Phone number"
+  },
+  "iAgreeTo": "I agree to",
+  "@iAgreeTo": {
+    "description": "I agree to"
+  },
+  "privatePolice": "privacy police",
+  "@privatePolice": {
+    "description": "privacy police"
+  },
+  "abvAnd": "and",
+  "@abvAnd": {
+    "description": "and"
+  },
+  "abvOr": "or",
+  "@abvOr": {
+    "description": "or"
+  },
+  "termsOfUse": "terms of use",
+  "@termsOfUse": {
+    "description": "terms of use"
+  },
+  "createAccount": "Create account",
+  "@createAccount": {
+    "description": "Create account"
+  },
+  "orSignUpWith": "Or signup with",
+  "@orSignUpWith": {
+    "description": "Or signup with"
+  },
+  "confirmEmail": "Verifier your Email address",
+  "@confirmEmail": {
+    "description": "Verifier your Email address"
+  },
+  "confirmEmailSubTitle": "Congratulation! Your account awaits: verifier your Email to start shopping and experiences",
+  "@confirmEmailSubTitle": {
+    "description": "Congratulation! Your account awaits: verifier your Email to start shopping and experiences"
+  },
+  "emailNotReceivedMessage": "Didn't receive your Email? Check your span or resent it.",
+  "@emailNotReceivedMessage": {
+    "description": "Didn't receive your Email? Check your span or resent it."
+  },
+  "btnContinue": "Continue",
+  "@btnContinue": {
+    "description": "Continue"
+  },
+  "resendEmail": "Resend Email",
+  "@resendEmail": {
+    "description": "Resend Email"
+  },
+  "yourAccountCreatedTitle": "Your account successfully created!",
+  "@yourAccountCreatedTitle": {
+    "description": "Your account successfully created!"
+  },
+  "yourAccountCreatedSubTitle": "Welcome to you ultimated shopping destination. Your account is created. unleash the joy of seamless online shopping!",
+  "@yourAccountCreatedSubTitle": {
+    "description": "Welcome to you ultimated shopping destination. Your account is created. unleash the joy of seamless online shopping!"
+  },
+
+
+
 
 
 
@@ -89,38 +165,10 @@
   "@sample": {
     "description": "Sample"
   },
-
-  "createOne": "Create one",
-  "@createOne": {
-    "description": "Create one"
-  },
-  "createAccount": "Create Account",
-  "@createAccount": {
-    "description": "Create Account"
-  },
-  "firstname": "Firstname",
-  "@firstname": {
-    "description": "Firstname"
-  },
-  "lastname": "Lastname",
-  "@lastname": {
-    "description": "Lastname"
-  },
-
-
-  "btnContinue": "Continue",
-  "@btnContinue": {
-    "description": "Continue"
-  },
   "forgotPassword": "Forgot password",
   "@forgotPassword": {
     "description": "Forgot password?"
   },
-  "reset": "Reset",
-  "@reset": {
-    "description": "Reset"
-  },
-
   "tellUsAboutYouSelf": "Tell us about yourself",
   "@tellUsAboutYouSelf": {
     "description": "Tell us about yourself"

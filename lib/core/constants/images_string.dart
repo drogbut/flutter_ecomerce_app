@@ -14,4 +14,8 @@ class TImages {
   static const String onboarding1 = 'assets/images/onboarding_images/sammy_line-woman-on_skateboard.gif';
   static const String onboarding2 = 'assets/images/onboarding_images/sammy_line_woman_in_shopping_cart.gif';
   static const String onboarding3 = 'assets/images/onboarding_images/sammy_line-man_and_dog_delivering.gif';
+
+  /// PNG
+  static const String deliveryWoman = 'assets/images/onboarding_images/man_delivery_package_to_woman.png';
+  static const String staticSuccessIllustration = 'assets/images/onboarding_images/man_delivery_package_to_woman.png';
 }

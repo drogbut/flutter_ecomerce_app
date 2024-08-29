@@ -7,9 +7,9 @@ class TImageCircularIcon extends StatelessWidget {
   final Function()? onPressed;
 
   const TImageCircularIcon({
-    super.key,
     required this.imagePath,
-    this.onPressed,
+    required this.onPressed,
+    super.key,
   });
 
   @override

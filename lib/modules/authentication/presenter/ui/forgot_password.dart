@@ -9,7 +9,7 @@ import '../../../../routing/navigator.dart';
 import '../../../../widgets/buttons/primary.dart';
 import '../../../../widgets/fields/primary.dart';
 import '../../../../widgets/my_appbar/platform_back_button.dart';
-import '../../../../widgets/text/title_text.dart';
+import '../../../../widgets/text/title.dart';
 import '../../domain/use_cases/reset_password.dart';
 import 'reset_password.dart';
 
@@ -38,7 +38,7 @@ class ForgotPasswordPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              MyTitle(context.translate.forgotPassword),
+              TTitleText(context.translate.forgotPassword),
               TSizes.ms.sbh,
               TPrimaryTextField(
                 controller: _emailCon,

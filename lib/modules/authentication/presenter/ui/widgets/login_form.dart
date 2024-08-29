@@ -10,6 +10,7 @@ import '../../../../../widgets/buttons/secondary.dart';
 import '../../../../../widgets/buttons/tertiary.dart';
 import '../../../../../widgets/checkbox_and_radio/checkbox.dart';
 import '../../../../../widgets/fields/primary.dart';
+import '../forgot_password.dart';
 import '../sign_up.dart';
 
 class LoginForm extends StatelessWidget {
@@ -45,7 +46,7 @@ class LoginForm extends StatelessWidget {
             /// Forgot password
             TTertiaryButton(
               title: '${context.translate.forgotPassword} ?',
-              onPressed: () {},
+              onPressed: () => Get.to(() => const ForgotPasswordScreen()),
             ),
           ],
         ).withPadding(TSizes.spaceBtwItems.bottomPadding),

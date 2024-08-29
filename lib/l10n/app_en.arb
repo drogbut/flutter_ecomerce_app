@@ -58,6 +58,10 @@
   "@rememberMe": {
     "description": "Remember me"
   },
+  "forgotPassword": "Forget password ?",
+  "@forgotPassword": {
+    "description": "Forget password ?"
+  },
   "signIn": "Sign in",
   "@signIn": {
     "description": "Sign in"
@@ -148,8 +152,30 @@
     "description": "Welcome to you ultimated shopping destination. Your account is created. unleash the joy of seamless online shopping!"
   },
 
-
-
+  "forgotPasswordTitle": "Forget password",
+  "@forgotPasswordTitle": {
+    "description": "Forget password"
+  },
+  "forgotPasswordSubtitle": "Don't worry sometimes people can forget too. Enter your email and we will send you the reset link",
+  "@forgotPasswordSubtitle": {
+    "description": "Forget password"
+  },
+  "submit": "Submit",
+  "@submit": {
+    "description": "Submit"
+  },
+  "passwordResetEmailSend": "Password reset Email send",
+  "@passwordResetEmailSend": {
+    "description": "Password reset Email send"
+  },
+  "passwordResetEmailSendSubtitle": "Your account security is our priority! We#ve send you a security link to safely change your password and keep your account protected.",
+  "@passwordResetEmailSendSubtitle": {
+    "description": "Your account security is our priority! We#ve send you a security link to safely change your password and keep your account protected."
+  },
+  "done": "Done",
+  "@done": {
+    "description": "Done"
+  },
 
 
 
@@ -157,18 +183,11 @@
   "@okay": {
     "description": "Okay"
   },
-  "done": "Done",
-  "@done": {
-    "description": "Done"
-  },
   "sample": "sample",
   "@sample": {
     "description": "Sample"
   },
-  "forgotPassword": "Forgot password",
-  "@forgotPassword": {
-    "description": "Forgot password?"
-  },
+
   "tellUsAboutYouSelf": "Tell us about yourself",
   "@tellUsAboutYouSelf": {
     "description": "Tell us about yourself"

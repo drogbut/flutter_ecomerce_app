@@ -39,12 +39,16 @@
   "yourAccountCreatedTitle": "Ihr Konto wurde erfolgreich erstellt!",
   "yourAccountCreatedSubTitle": "Willkommen bei Ihrem ultimativen Einkaufsziel. Ihr Konto ist erstellt. Entfesseln Sie die Freude am nahtlosen Online-Shopping!",
 
-
+  "forgotPasswordTitle": "Passwort vergessen?",
+  "forgotPasswordSubtitle": "Keine Sorge, es kommt auch vor, dass man etwas vergisst. Geben Sie Ihre E-Mail-Adresse ein und wir schicken Ihnen den Link zum Zurücksetzen.",
+  "submit": "Senden",
+  "passwordResetEmailSendSubtitle": "Die Sicherheit Ihres Kontos ist unsere Priorität! Wir haben Ihnen einen Sicherheitslink geschickt, mit dem Sie Ihr Passwort sicher ändern und Ihr Konto schützen können.",
+  "done": "Fertig",
 
 
 
   "okay": "Okay",
-  "done": "Fertig",
+
   "sample": "Beispiel",
   "doYouHaveAnAccount": "Haben Sie ein Konto?",
   "enterPassword": "Password eingeben",

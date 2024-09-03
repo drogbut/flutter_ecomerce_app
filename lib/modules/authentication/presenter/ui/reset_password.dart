@@ -30,7 +30,7 @@ class ResetPasswordPage extends StatelessWidget {
             TPrimaryButton(
               width: double.maxFinite,
               title: context.translate.btnReturnToLogin,
-              onPressed: () => AppNavigator.push(context, SignInPage()),
+              onPressed: () => AppNavigator.push(context, const SignInPage()),
             ),
           ],
         ).withPadding((h: 16, v: 10).symmetricPadding),

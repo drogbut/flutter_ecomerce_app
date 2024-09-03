@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../providers/gender_and_age_provider/age_selection_cubit.dart';
+import '../../controllers/gender_and_age_provider/age_selection_cubit.dart';
 
 class AgeContainer extends StatelessWidget {
   final List<QueryDocumentSnapshot<Map<String, dynamic>>> ages;

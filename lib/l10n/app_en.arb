@@ -152,6 +152,7 @@
     "description": "Welcome to you ultimated shopping destination. Your account is created. unleash the joy of seamless online shopping!"
   },
 
+
   "forgotPasswordTitle": "Forget password",
   "@forgotPasswordTitle": {
     "description": "Forget password"
@@ -177,6 +178,23 @@
     "description": "Done"
   },
 
+
+  "home": "Home",
+  "@home": {
+    "description": "Home"
+  },
+  "store": "Store",
+  "@store": {
+    "description": "Store"
+  },
+  "favorite": "Favorite",
+  "@favorite": {
+    "description": "Favorite"
+  },
+  "profile": "Profile",
+  "@profile": {
+    "description": "Profile"
+  },
 
 
   "okay": "Okay",

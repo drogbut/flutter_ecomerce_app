@@ -45,6 +45,12 @@
   "passwordResetEmailSendSubtitle": "Die Sicherheit Ihres Kontos ist unsere Priorität! Wir haben Ihnen einen Sicherheitslink geschickt, mit dem Sie Ihr Passwort sicher ändern und Ihr Konto schützen können.",
   "done": "Fertig",
 
+  "home": "Start",
+  "store": "Warenkorb",
+  "favorite": "Favoriten",
+  "profile": "Profil",
+
+
 
 
   "okay": "Okay",

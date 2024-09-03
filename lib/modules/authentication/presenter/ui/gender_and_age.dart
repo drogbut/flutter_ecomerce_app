@@ -10,9 +10,9 @@ import '../../../../widgets/my_appbar/platform_back_button.dart';
 import '../../../../widgets/text/title.dart';
 import '../../domain/entities/user_signup_request.dart';
 import '../../domain/use_cases/signup.dart';
-import '../providers/gender_and_age_provider/age_selection_cubit.dart';
-import '../providers/gender_and_age_provider/display_age_cubit.dart';
-import '../providers/gender_and_age_provider/gender_selection_cubit.dart';
+import '../controllers/gender_and_age_provider/age_selection_cubit.dart';
+import '../controllers/gender_and_age_provider/display_age_cubit.dart';
+import '../controllers/gender_and_age_provider/gender_selection_cubit.dart';
 import 'widgets/age_range_button.dart';
 import 'widgets/gender_container.dart';
 

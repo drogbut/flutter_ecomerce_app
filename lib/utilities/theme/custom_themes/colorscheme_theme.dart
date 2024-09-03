@@ -24,7 +24,7 @@ class DColorSchemeTheme {
   static ColorScheme dark = const ColorScheme.dark(
     brightness: Brightness.dark,
     primary: DColors.primary,
-    // onPrimary: DColors.darkOnPrimary,
+    //onPrimary: DColors.primary,
     secondary: DColors.secondary,
     // onSecondary: DColors.darkOnSecondary,
     error: DColors.error,

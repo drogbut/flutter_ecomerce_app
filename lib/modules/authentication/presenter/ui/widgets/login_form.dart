@@ -10,6 +10,7 @@ import '../../../../../widgets/buttons/secondary.dart';
 import '../../../../../widgets/buttons/tertiary.dart';
 import '../../../../../widgets/checkbox_and_radio/checkbox.dart';
 import '../../../../../widgets/fields/primary.dart';
+import '../../../../shop/presenter/ui/bottom_navigation.dart';
 import '../forgot_password.dart';
 import '../sign_up.dart';
 
@@ -53,14 +54,15 @@ class LoginForm extends StatelessWidget {
 
         /// SignIn button
         TPrimaryButton(
-          title: context.translate.signIn,
-          onPressed: () {},
-        ).withPadding(TSizes.spaceBtwItems.bottomPadding),
+            title: context.translate.signIn,
+            onPressed: () => Get.offAll(
+                  () => const BottomNavigationMenu(),
+                )).withPadding(TSizes.spaceBtwItems.bottomPadding),
 
         ///  Register button
         TSecondaryButton(
           title: context.translate.doYouHaveAnAccount,
-          onPressed: () => Get.to(() => SignupScreen()),
+          onPressed: () => Get.to(() => const SignupScreen()),
         ),
       ],
     );

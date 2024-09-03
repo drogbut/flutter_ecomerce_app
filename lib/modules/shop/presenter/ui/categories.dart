@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../widgets/indicators/loading_indicator.dart';
-import '../providers/categories/category_cubit.dart';
-import '../providers/categories/category_state.dart';
+import '../controllers/categories/category_cubit.dart';
+import '../controllers/categories/category_state.dart';
 import 'widgets/categories_item.dart';
 
 class Categories extends StatelessWidget {

@@ -6,9 +6,9 @@ import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../widgets/icons/circular.dart';
 import '../../../../widgets/indicators/loading_indicator.dart';
+import '../controllers/user_info/user_info_cubit.dart';
+import '../controllers/user_info/user_info_state.dart';
 import '../extensions/to_gender.dart';
-import '../providers/user_info/user_info_cubit.dart';
-import '../providers/user_info/user_info_state.dart';
 import 'widgets/circular_image_icon.dart';
 
 class Header extends StatelessWidget {

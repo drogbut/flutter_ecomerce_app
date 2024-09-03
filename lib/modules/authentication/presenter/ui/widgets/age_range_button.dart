@@ -5,9 +5,9 @@ import '../../../../../core/constants/sizes.dart';
 import '../../../../../core/extensions/context.dart';
 import '../../../../../widgets/dialogs/dialog.dart';
 import '../../../../../widgets/indicators/loading_indicator.dart';
-import '../../providers/gender_and_age_provider/age_selection_cubit.dart';
-import '../../providers/gender_and_age_provider/display_age_cubit.dart';
-import '../../providers/gender_and_age_provider/display_age_state.dart';
+import '../../controllers/gender_and_age_provider/age_selection_cubit.dart';
+import '../../controllers/gender_and_age_provider/display_age_cubit.dart';
+import '../../controllers/gender_and_age_provider/display_age_state.dart';
 import 'age_container.dart';
 
 class AgeRangeButton extends StatelessWidget {

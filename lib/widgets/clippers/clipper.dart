@@ -8,8 +8,10 @@ import 'header.dart';
 class TClipperWidget extends StatelessWidget {
   final Color? color;
   final double? height;
+  final Widget child;
 
   const TClipperWidget({
+    required this.child,
     this.color = DColors.primary,
     this.height = 400,
     super.key,
@@ -19,7 +21,7 @@ class TClipperWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipPath(
       clipper: TFooterContainer(),
-      child: THeaderContainer(color: color, height: height),
+      child: THeaderContainer(color: color, height: height, child: child),
     );
   }
 }

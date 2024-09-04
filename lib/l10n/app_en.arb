@@ -197,6 +197,19 @@
   },
 
 
+  "homeAppBarTitle": "Good day for shopping",
+  "@homeAppBarTitle": {
+    "description": "Good day for shopping"
+  },
+
+
+
+
+
+
+
+
+
   "okay": "Okay",
   "@okay": {
     "description": "Okay"

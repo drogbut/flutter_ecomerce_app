@@ -4,9 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../commons/providers/button/button_state_cubit.dart';
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
+import '../../../../widgets/appbar/appbar.dart';
 import '../../../../widgets/buttons/primary.dart';
 import '../../../../widgets/indicators/loading_indicator.dart';
-import '../../../../widgets/my_appbar/platform_back_button.dart';
 import '../../../../widgets/text/title.dart';
 import '../../domain/entities/user_signup_request.dart';
 import '../../domain/use_cases/signup.dart';
@@ -24,7 +24,7 @@ class GenderAndAgePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const MyAppBarBackButton(),
+      appBar: const TAppBar(),
       body: MultiBlocProvider(
         providers: [
           BlocProvider(create: (context) => AgeSelectionCubit()),

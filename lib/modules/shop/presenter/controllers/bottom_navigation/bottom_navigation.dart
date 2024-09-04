@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../ui/home.dart';
+import '../../ui/home/home.dart';
 
 class BottomNavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;

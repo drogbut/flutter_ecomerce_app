@@ -5,11 +5,13 @@ import '../../core/extensions/context.dart';
 class TTitleText extends StatelessWidget {
   final String title;
   final TextAlign? textAlign;
+  final Color? color;
 
   const TTitleText(
     this.title, {
-    super.key,
     this.textAlign,
+    this.color,
+    super.key,
   });
 
   @override
@@ -17,8 +19,10 @@ class TTitleText extends StatelessWidget {
     return Text(
       title,
       textAlign: textAlign,
+      maxLines: 1,
+      overflow: TextOverflow.ellipsis,
       style: context.textTheme.headlineSmall?.copyWith(
-        fontWeight: FontWeight.bold,
+        color: color,
       ),
     );
   }

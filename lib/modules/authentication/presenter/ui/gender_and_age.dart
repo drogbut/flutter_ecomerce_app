@@ -7,7 +7,7 @@ import '../../../../core/extensions/widget.dart';
 import '../../../../widgets/appbar/appbar.dart';
 import '../../../../widgets/buttons/primary.dart';
 import '../../../../widgets/indicators/loading_indicator.dart';
-import '../../../../widgets/text/title.dart';
+import '../../../../widgets/texts/title.dart';
 import '../../domain/entities/user_signup_request.dart';
 import '../../domain/use_cases/signup.dart';
 import '../controllers/gender_and_age_provider/age_selection_cubit.dart';

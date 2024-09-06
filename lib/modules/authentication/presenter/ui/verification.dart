@@ -9,7 +9,7 @@ import '../../../../core/extensions/widget.dart';
 import '../../../../widgets/buttons/primary.dart';
 import '../../../../widgets/buttons/tertiary.dart';
 import '../../../../widgets/icons/circular.dart';
-import '../../../../widgets/text/title.dart';
+import '../../../../widgets/texts/title.dart';
 import 'sign_in.dart';
 
 class VerificationScreen extends StatelessWidget {

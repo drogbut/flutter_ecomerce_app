@@ -6,7 +6,7 @@ import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../widgets/dividers/form_divider.dart';
 import '../../../../widgets/icons/image_circular.dart';
-import '../../../../widgets/text/title.dart';
+import '../../../../widgets/texts/title.dart';
 import 'widgets/register_form.dart';
 
 class SignupScreen extends StatelessWidget {

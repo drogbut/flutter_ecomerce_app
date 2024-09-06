@@ -5,8 +5,8 @@ import '../../../../../core/extensions/context.dart';
 import '../../../../../widgets/appbar/appbar.dart';
 import '../../../../../widgets/icons/cart_counter.dart';
 
-class THomeAppBar extends StatelessWidget {
-  const THomeAppBar({
+class HomeHeader extends StatelessWidget {
+  const HomeHeader({
     super.key,
   });
 

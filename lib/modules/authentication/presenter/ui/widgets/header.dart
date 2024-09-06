@@ -21,7 +21,7 @@ class LoginHeader extends StatelessWidget {
             colorBlendMode: context.isDarkMode ? BlendMode.darken : BlendMode.lighten,
             image: const AssetImage(
               TImages.lightLogo,
-            )).withPadding(TSizes.ms.bottomPadding),
+            )).withPadding(TSizes.md.bottomPadding),
         Text(context.translate.loginTitle, style: Theme.of(context).textTheme.headlineSmall)
             .withPadding(TSizes.sm.bottomPadding),
         Text(context.translate.loginSubTitle).withPadding(TSizes.sm.bottomPadding),

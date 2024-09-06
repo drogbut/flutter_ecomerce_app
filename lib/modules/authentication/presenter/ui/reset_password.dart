@@ -21,12 +21,12 @@ class ResetPasswordPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             SvgPicture.asset(AppVectors.emailSending),
-            TSizes.ms.sbh,
+            TSizes.md.sbh,
             TTitleText(
               textAlign: TextAlign.center,
               context.translate.resetPasswordMessage,
             ),
-            TSizes.ms.sbh,
+            TSizes.md.sbh,
             TPrimaryButton(
               width: double.maxFinite,
               title: context.translate.btnReturnToLogin,

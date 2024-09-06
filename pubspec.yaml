@@ -65,6 +65,7 @@ dependencies:
   smooth_page_indicator: ^1.2.0+3
   get: ^4.6.6
   iconsax: ^0.0.8
+  carousel_slider: ^5.0.0
 
 
 

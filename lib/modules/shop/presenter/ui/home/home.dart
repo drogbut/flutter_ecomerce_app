@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/constants/images_string.dart';
 import '../../../../../core/constants/sizes.dart';
 import '../../../../../core/extensions/context.dart';
 import '../../../../../core/extensions/widget.dart';
+import '../../../../../widgets/carousel/carousel.dart';
 import '../../../../../widgets/clippers/clipper.dart';
 import '../../../../../widgets/search_bar/search.dart';
 import 'categories.dart';
@@ -40,7 +42,12 @@ class HomePage extends StatelessWidget {
                 ),
               ),
 
-              // const TopSelling().withPadding(8.verticalPadding),
+              /// Carousel Slider
+              const TCarousel(banners: [
+                TImages.deliveryEmail1,
+                TImages.deliveryEmail2,
+                TImages.deliveryWoman,
+              ]),
             ],
           ),
         ),

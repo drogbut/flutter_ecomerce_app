@@ -25,8 +25,10 @@ class THeaderContainer extends StatelessWidget {
         child: Stack(
           children: [
             /// background custom shape
-            Positioned(top: -150, right: -250, child: TClipOval(backgroundColor: DColors.textWhite.withOpacity(0.1))),
-            Positioned(top: 100, right: -300, child: TClipOval(backgroundColor: DColors.textWhite.withOpacity(0.1))),
+            Positioned(
+                top: -150, right: -250, child: TCircularContainer(backgroundColor: DColors.textWhite.withOpacity(0.1))),
+            Positioned(
+                top: 100, right: -300, child: TCircularContainer(backgroundColor: DColors.textWhite.withOpacity(0.1))),
             child,
           ],
         ),

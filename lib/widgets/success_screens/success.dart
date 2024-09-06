@@ -5,7 +5,7 @@ import '../../../../core/constants/sizes.dart';
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../widgets/buttons/primary.dart';
-import '../../../../widgets/text/title.dart';
+import '../../../../widgets/texts/title.dart';
 
 class SuccessScreen extends StatelessWidget {
   final String image, title, subTitle;

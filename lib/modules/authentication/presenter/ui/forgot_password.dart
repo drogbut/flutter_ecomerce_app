@@ -9,7 +9,7 @@ import '../../../../core/extensions/widget.dart';
 import '../../../../widgets/buttons/primary.dart';
 import '../../../../widgets/fields/primary.dart';
 import '../../../../widgets/success_screens/success.dart';
-import '../../../../widgets/text/title.dart';
+import '../../../../widgets/texts/title.dart';
 import 'sign_in.dart';
 import 'verification.dart';
 

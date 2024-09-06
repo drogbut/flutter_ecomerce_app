@@ -6,7 +6,7 @@ import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../routing/navigator.dart';
 import '../../../../widgets/buttons/primary.dart';
-import '../../../../widgets/text/title.dart';
+import '../../../../widgets/texts/title.dart';
 import '../../onboarding/domain/app_vectors.dart';
 import 'sign_in.dart';
 

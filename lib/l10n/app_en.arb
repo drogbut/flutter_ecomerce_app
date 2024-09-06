@@ -201,6 +201,14 @@
   "@homeAppBarTitle": {
     "description": "Good day for shopping"
   },
+  "homeSearchTitle": "Search in store",
+  "@homeSearchTitle": {
+    "description": "Search in store"
+  },
+  "homeCategoriesTitle": "Popular categories",
+  "@homeCategoriesTitle": {
+    "description": "Popular categories"
+  },
 
 
 

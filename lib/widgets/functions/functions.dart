@@ -413,12 +413,12 @@ String checkDoubleNoOnBlur(
           int.parse((signs[1])).isNaN) {
         showMaterialErrorDialog(
           _currentCtx,
-          _currentCtx.translate.sample,
+          'error',
         );
       } else if (signs[1] != '' && signs[1].length < digitAfterDot && int.parse((signs[1])).isNaN) {
         showMaterialErrorDialog(
           _currentCtx,
-          _currentCtx.translate.sample,
+          'error',
         );
       }
     }

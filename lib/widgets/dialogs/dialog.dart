@@ -32,7 +32,7 @@ Future showMaterialInformationDialog(
                 ),
               ).withPadding(10.rightPadding),
               Text(
-                title ?? context.translate.sample,
+                title!,
                 style: TextStyle(
                   color: context.colorScheme.primary,
                 ),
@@ -55,7 +55,7 @@ Future showMaterialInformationDialog(
               ),
               child: ElevatedButton(
                 child: Text(
-                  buttonTitle ?? context.translate.okay,
+                  buttonTitle!,
                   style: const TextStyle(
                     fontWeight: FontWeight.normal,
                   ),
@@ -93,7 +93,7 @@ Future showMaterialWarningDialog(BuildContext context, String description,
                 ),
               ).withPadding(10.rightPadding),
               Text(
-                title ?? context.translate.sample,
+                title!,
                 style: TextStyle(
                   color: context.colorScheme.primary,
                 ),
@@ -116,7 +116,7 @@ Future showMaterialWarningDialog(BuildContext context, String description,
               ),
               child: ElevatedButton(
                 child: Text(
-                  buttonTitle ?? context.translate.okay,
+                  buttonTitle!,
                   style: const TextStyle(
                     fontWeight: FontWeight.normal,
                   ),
@@ -154,7 +154,7 @@ Future showMaterialErrorDialog(BuildContext context, String description, {String
                 ),
               ).withPadding(10.rightPadding),
               Text(
-                title ?? context.translate.sample,
+                title!,
                 style: TextStyle(
                   color: context.colorScheme.primary,
                 ),
@@ -177,7 +177,7 @@ Future showMaterialErrorDialog(BuildContext context, String description, {String
               ),
               child: ElevatedButton(
                 child: Text(
-                  buttonTitle ?? context.translate.okay,
+                  buttonTitle!,
                   style: const TextStyle(
                     fontWeight: FontWeight.normal,
                   ),
@@ -223,7 +223,7 @@ Future showMaterialQuestionDialog(
               ),
             ).withPadding(10.rightPadding),
             Text(
-              title ?? context.translate.sample,
+              title!,
               style: TextStyle(
                 color: context.colorScheme.primary,
               ),
@@ -270,7 +270,7 @@ Future showMaterialQuestionDialog(
               ),
             ),
             child: Text(
-              secondButtonTitle ?? context.translate.sample,
+              secondButtonTitle!,
               style: const TextStyle(
                 fontWeight: FontWeight.normal,
               ),
@@ -286,7 +286,7 @@ Future showMaterialQuestionDialog(
             ),
             child: ElevatedButton(
               child: Text(
-                firstButtonTitle ?? context.translate.sample,
+                firstButtonTitle!,
                 style: const TextStyle(
                   fontWeight: FontWeight.normal,
                 ),

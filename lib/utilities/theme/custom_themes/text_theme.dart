@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/constants/sizes.dart';
-
 class DTextTheme {
   DTextTheme._();
 
@@ -10,7 +8,7 @@ class DTextTheme {
     headlineLarge: const TextStyle().copyWith(fontWeight: FontWeight.bold),
     headlineMedium: const TextStyle().copyWith(fontWeight: FontWeight.bold),
     headlineSmall: const TextStyle().copyWith(fontWeight: FontWeight.bold),
-    labelLarge: const TextStyle().copyWith(fontSize: TSizes.labelLarge),
+    //labelLarge: const TextStyle().copyWith(fontSize: TSizes.labelLarge),
   );
 
   /// DARK
@@ -18,6 +16,6 @@ class DTextTheme {
     headlineLarge: const TextStyle().copyWith(fontWeight: FontWeight.bold),
     headlineMedium: const TextStyle().copyWith(fontWeight: FontWeight.bold),
     headlineSmall: const TextStyle().copyWith(fontWeight: FontWeight.bold),
-    labelLarge: const TextStyle().copyWith(fontSize: TSizes.labelLarge),
+    //labelLarge: const TextStyle().copyWith(fontSize: TSizes.labelLarge),
   );
 }

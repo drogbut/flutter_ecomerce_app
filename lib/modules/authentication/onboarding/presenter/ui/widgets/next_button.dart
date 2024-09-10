@@ -16,12 +16,12 @@ class OnboardingNextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: TSizes.bottomNavigationHeight,
+      bottom: TSizes.appBarHeight,
       right: TSizes.zero,
       child: TCircularIcon(
         iconData: Iconsax.arrow_right_3,
-        iconColor: context.isDarkMode ? DColors.primary : Colors.white,
-        backgroundColor: context.isDarkMode ? DColors.primary : DColors.dark,
+        iconColor: context.isDarkMode ? TColors.primary : Colors.white,
+        backgroundColor: context.isDarkMode ? TColors.primary : TColors.dark,
         onPressed: () => controller.nextPage(),
       ).withPadding(TSizes.defaultSpace.rightPadding),
     );

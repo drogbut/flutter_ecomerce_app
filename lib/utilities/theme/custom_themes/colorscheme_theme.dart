@@ -8,9 +8,9 @@ class DColorSchemeTheme {
   /// LIGHT
   static ColorScheme light = const ColorScheme.light(
     brightness: Brightness.light,
-    primary: DColors.primary,
+    primary: TColors.primary,
     //onPrimary: DColors.secondary,
-    secondary: DColors.secondary,
+    secondary: TColors.accent,
     // onSecondary: DColors.darkOnSecondary,
     // error: DColors.darkError,
     // onError: DColors.darkOnError,
@@ -23,15 +23,15 @@ class DColorSchemeTheme {
   /// DARK
   static ColorScheme dark = const ColorScheme.dark(
     brightness: Brightness.dark,
-    primary: DColors.primary,
+    primary: TColors.primary,
     //onPrimary: DColors.primary,
-    secondary: DColors.secondary,
+    secondary: TColors.accent,
     // onSecondary: DColors.darkOnSecondary,
-    error: DColors.error,
+    error: TColors.error,
     // onError: DColors.darkOnError,
     // surface: DColors.darkSurface,
     // onSurface: DColors.darkOnSurface,
     // outline: DColors.darkOutline,
-    primaryContainer: DColors.darkContainer,
+    //primaryContainer: TColors.darkContainer,
   );
 }

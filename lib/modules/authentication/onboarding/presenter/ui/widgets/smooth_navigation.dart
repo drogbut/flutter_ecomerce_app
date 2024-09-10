@@ -13,12 +13,12 @@ class OnboardingSmoothNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: TSizes.bottomNavigationHeight + 25,
+      bottom: TSizes.appBarHeight + 25,
       left: TSizes.defaultSpace,
       child: SmoothPageIndicator(
         controller: controller.pageController,
         count: 3,
-        effect: ExpandingDotsEffect(activeDotColor: context.isDarkMode ? DColors.light : DColors.dark, dotHeight: 6),
+        effect: ExpandingDotsEffect(activeDotColor: context.isDarkMode ? TColors.light : TColors.dark, dotHeight: 6),
         onDotClicked: controller.dotNavigationClick,
       ),
     );

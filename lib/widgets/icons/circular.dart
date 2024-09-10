@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 
+import '../../core/constants/colors.dart';
 import '../../core/constants/sizes.dart';
 
 class TCircularIcon extends StatelessWidget {
   final VoidCallback? onPressed;
   final IconData? iconData;
-  final String? tooltip;
   final Color? iconColor;
   final Color? backgroundColor;
-  final double? iconSize;
+  final double? iconSize, radius, width, height;
 
   const TCircularIcon({
     required this.onPressed,
     required this.iconData,
-    this.tooltip,
     this.iconColor,
+    this.width,
+    this.height,
+    this.radius = 100,
     this.backgroundColor,
     this.iconSize = TSizes.iconMd,
     super.key,
@@ -23,16 +25,21 @@ class TCircularIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedBox(
+    return Container(
+      width: width,
+      height: height,
       decoration: BoxDecoration(
-        color: backgroundColor,
-        shape: BoxShape.circle,
+        borderRadius: BorderRadius.circular(radius ?? 100),
+        color: backgroundColor != null
+            ? backgroundColor!
+            : context.isDarkMode
+                ? TColors.black.withOpacity(0.8)
+                : TColors.white.withOpacity(0.8),
       ),
       child: IconButton(
-        padding: const EdgeInsets.all(8),
+        padding: EdgeInsets.zero,
         constraints: const BoxConstraints(),
-        tooltip: tooltip,
-        icon: FaIcon(iconData, color: iconColor, size: iconSize),
+        icon: Icon(iconData, color: iconColor, size: iconSize),
         onPressed: onPressed,
       ),
     );

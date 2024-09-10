@@ -9,7 +9,7 @@ class DTextButtonTheme {
   /// LIGHT
   static TextButtonThemeData light = TextButtonThemeData(
     style: TextButton.styleFrom(
-      foregroundColor: DColors.primary,
+      foregroundColor: TColors.primary,
       elevation: TSizes.zero,
     ),
   );

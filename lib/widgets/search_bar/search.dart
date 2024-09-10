@@ -25,13 +25,13 @@ class HomeSearchBar extends StatelessWidget {
           filled: showBackground ? true : false,
           fillColor: showBackground
               ? context.isDarkMode
-                  ? DColors.dark
-                  : DColors.light
+                  ? TColors.dark
+                  : TColors.light
               : Colors.transparent,
           contentPadding: const EdgeInsets.all(TSizes.spaceBtwItems),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(TSizes.buttonRadius),
-            borderSide: BorderSide(color: showBorder ? DColors.grey : Colors.transparent),
+            borderSide: BorderSide(color: showBorder ? TColors.grey : Colors.transparent),
           ),
           prefixIcon: Icon(icon),
           hintText: title),

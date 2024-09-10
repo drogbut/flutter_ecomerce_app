@@ -18,7 +18,7 @@ class HomeHeader extends StatelessWidget {
         children: [
           Text(
             context.translate.homeAppBarTitle,
-            style: context.textTheme.labelMedium?.copyWith(color: DColors.grey),
+            style: context.textTheme.labelMedium?.copyWith(color: TColors.grey),
           ),
           Text(
             'User Name',

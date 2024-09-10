@@ -44,14 +44,14 @@ class ForgotPasswordScreen extends StatelessWidget {
               title: context.translate.submit,
               onPressed: () => Get.offAll(
                 () => VerificationScreen(
-                  image: TImages.deliveryEmail2,
+                  image: TImages.deliveredEmailIllustration,
                   title: context.translate.passwordResetEmailSend,
                   subtitle: context.translate.passwordResetEmailSendSubtitle,
                   email: 'your_e_mail@test.com',
                   continueButtonTitle: context.translate.done,
                   onContinuePressed: () => Get.to(
                     () => SuccessScreen(
-                      image: TImages.successIllustration,
+                      image: TImages.staticSuccessIllustration,
                       title: context.translate.yourAccountCreatedTitle,
                       subTitle: context.translate.yourAccountCreatedSubTitle,
                       onPressed: () => Get.offAll(() => const SignInPage()),

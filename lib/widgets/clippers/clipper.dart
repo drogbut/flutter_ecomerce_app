@@ -12,7 +12,7 @@ class TClipperWidget extends StatelessWidget {
 
   const TClipperWidget({
     required this.child,
-    this.color = DColors.primary,
+    this.color = TColors.primary,
     this.height = 400,
     super.key,
   });

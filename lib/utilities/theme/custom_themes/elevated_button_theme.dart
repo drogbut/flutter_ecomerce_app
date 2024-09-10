@@ -11,7 +11,7 @@ class DElevatedButtonTheme {
   static ElevatedButtonThemeData light = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       foregroundColor: Colors.white,
-      backgroundColor: DColors.primary,
+      backgroundColor: TColors.primary,
       padding: (h: 50, v: 16).symmetricPadding,
       elevation: TSizes.zero,
       shape: RoundedRectangleBorder(
@@ -24,7 +24,7 @@ class DElevatedButtonTheme {
   static ElevatedButtonThemeData dark = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       foregroundColor: Colors.white,
-      backgroundColor: DColors.primary,
+      backgroundColor: TColors.primary,
       padding: (h: 50, v: 16).symmetricPadding,
       elevation: TSizes.zero,
       minimumSize: const Size.fromHeight(50),

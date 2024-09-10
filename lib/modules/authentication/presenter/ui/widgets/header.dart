@@ -17,7 +17,7 @@ class LoginHeader extends StatelessWidget {
       children: [
         Image(
             height: 150,
-            color: DColors.primary,
+            color: TColors.primary,
             colorBlendMode: context.isDarkMode ? BlendMode.darken : BlendMode.lighten,
             image: const AssetImage(
               TImages.lightLogo,

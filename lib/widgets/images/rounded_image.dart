@@ -5,7 +5,7 @@ import '../../core/constants/sizes.dart';
 
 class TRoundedImage extends StatelessWidget {
   final String imageUrl;
-  final double width, height, borderRadius;
+  final double? width, height, borderRadius;
   final bool isNetworkImage;
   final BoxBorder? border;
   final Color? backgroundColor;
@@ -16,13 +16,13 @@ class TRoundedImage extends StatelessWidget {
   const TRoundedImage({
     required this.imageUrl,
     this.width = 350,
-    this.height = 158,
+    this.height = TSizes.imageCarouselHeight,
     super.key,
     this.isNetworkImage = false,
     this.border,
-    this.backgroundColor = DColors.light,
+    this.backgroundColor = Colors.transparent,
     this.fit = BoxFit.contain,
-    this.padding,
+    this.padding = EdgeInsets.zero,
     this.borderRadius = TSizes.md,
     this.onPressed,
   });
@@ -36,15 +36,17 @@ class TRoundedImage extends StatelessWidget {
         height: height,
         padding: padding,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(borderRadius),
+          borderRadius: BorderRadius.circular(borderRadius!),
           color: backgroundColor,
           border: border,
         ),
         child: ClipRRect(
             borderRadius: BorderRadius.circular(TSizes.md),
-            child: Image(
-              image: isNetworkImage ? NetworkImage(imageUrl) : AssetImage(imageUrl) as ImageProvider,
-              fit: fit,
+            child: Center(
+              child: Image(
+                image: isNetworkImage ? NetworkImage(imageUrl) : AssetImage(imageUrl) as ImageProvider,
+                fit: fit,
+              ),
             )),
       ),
     );

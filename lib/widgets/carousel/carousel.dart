@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import '../../core/constants/colors.dart';
 import '../../core/constants/sizes.dart';
 import '../../core/extensions/widget.dart';
-import '../clippers/clip_oval.dart';
+import '../containers/rounded_container.dart';
 import '../images/rounded_image.dart';
 import 'controller.dart';
 
@@ -29,7 +29,11 @@ class TCarousel extends StatelessWidget {
             viewportFraction: 1,
             onPageChanged: (index, _) => controller.updatePageIndicator(index),
           ),
-          items: banners.map((url) => TRoundedImage(imageUrl: url)).toList(),
+          items: banners
+              .map(
+                (url) => TRoundedImage(imageUrl: url),
+              )
+              .toList(),
         ),
 
         /// Spacer
@@ -40,11 +44,11 @@ class TCarousel extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 for (int i = 0; i < banners.length; i++)
-                  TCircularContainer(
+                  TRoundedContainer(
                     width: 20,
                     height: 4,
-                    backgroundColor: controller.currentPageIndex.value == i ? DColors.primary : DColors.grey,
-                    margin: TSizes.xs,
+                    backgroundColor: controller.currentPageIndex.value == i ? TColors.primary : TColors.grey,
+                    margin: const EdgeInsets.all(TSizes.xs),
                   )
               ],
             ))

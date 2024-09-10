@@ -95,14 +95,14 @@ class RegisterForm extends StatelessWidget {
           title: context.translate.createAccount,
           onPressed: () => Get.to(
             () => VerificationScreen(
-              image: TImages.deliveryEmail1,
+              image: TImages.deliveredEmailIllustration,
               title: context.translate.confirmEmail,
               subtitle: context.translate.confirmEmailSubTitle,
               email: 'support@dreamteam.com',
               continueButtonTitle: context.translate.btnContinue,
               onContinuePressed: () => Get.to(
                 () => SuccessScreen(
-                  image: TImages.successIllustration,
+                  image: TImages.staticSuccessIllustration,
                   title: context.translate.yourAccountCreatedTitle,
                   subTitle: context.translate.yourAccountCreatedSubTitle,
                   onPressed: () => Get.offAll(() => const SignInPage()),

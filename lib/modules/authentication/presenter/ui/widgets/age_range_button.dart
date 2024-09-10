@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../core/constants/sizes.dart';
 import '../../../../../core/extensions/context.dart';
 import '../../../../../widgets/dialogs/dialog.dart';
 import '../../../../../widgets/indicators/loading_indicator.dart';
@@ -20,7 +19,7 @@ class AgeRangeButton extends StatelessWidget {
         return ListTile(
           tileColor: context.colorScheme.primaryContainer.withOpacity(0.2),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(TSizes.xLargeBorderRadius),
+            borderRadius: BorderRadius.circular(10),
           ),
           leading: Text(selectedAge),
           trailing: const Icon(Icons.keyboard_arrow_down),

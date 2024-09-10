@@ -16,7 +16,7 @@ class TFormDivider extends StatelessWidget {
         /// Left
         Flexible(
           child: Divider(
-            color: context.isDarkMode ? DColors.darkGrey : DColors.grey,
+            color: context.isDarkMode ? TColors.darkGrey : TColors.grey,
             thickness: 0.5,
             indent: 5,
             endIndent: 60,
@@ -29,7 +29,7 @@ class TFormDivider extends StatelessWidget {
         /// Right
         Flexible(
           child: Divider(
-              color: context.isDarkMode ? DColors.darkGrey : DColors.grey, thickness: 0.5, indent: 60, endIndent: 5),
+              color: context.isDarkMode ? TColors.darkGrey : TColors.grey, thickness: 0.5, indent: 60, endIndent: 5),
         ),
       ],
     );

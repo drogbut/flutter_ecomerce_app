@@ -83,7 +83,9 @@ flutter:
   #--------------- LOCAL ASSETS ------------------#
   assets:
     - assets/fonts/
-    - assets/vectors/
+    - assets/icons/brands/
+    - assets/icons/categories/
+    - assets/icons/payment_methods/
     - assets/images/animations/
     - assets/images/app_logos/
     - assets/images/banners/
@@ -93,6 +95,7 @@ flutter:
     - assets/images/products/
     - assets/images/app_logos/
     - assets/logos/
+    - assets/vectors/
 
   #--------------- LOCAL FONTS ------------------#
   fonts:

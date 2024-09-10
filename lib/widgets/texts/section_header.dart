@@ -26,7 +26,7 @@ class TSectionHeader extends StatelessWidget {
           title,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: context.textTheme.headlineSmall?.copyWith(color: textColor),
+          style: context.textTheme.headlineSmall?.copyWith(color: textColor, fontSize: 16),
         ),
         if (showActionButton)
           TextButton(

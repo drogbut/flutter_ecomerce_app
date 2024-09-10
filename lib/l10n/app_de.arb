@@ -1,7 +1,7 @@
 {
+  "locale": "Deutsch",
   "appName": "Aufbau der Flutter-Ordner",
   "language": "Deutsch",
-
   "onboardingTitle1": "Wählen Sie Ihr Produkt",
   "onboardingTitle2": "Zahlungsmethode auswählen",
   "onboardingTitle3": "Lieferung nach Hause",
@@ -9,7 +9,6 @@
   "onboardingSubTitle2": "Für eine nahtlose Transaktion wählen Sie Ihren Zahlungsweg - Ihre Bequemlichkeit, unsere Priorität!",
   "onboardingSubTitle3": "Von unserer Haustür zu Ihrer - schnelle, sichere und kontaktlose Lieferung",
   "btnSkip": "Springen",
-
   "loginTitle": "Willkommen zurück,",
   "loginSubTitle": "Entdecken Sie begrenzte Auswahlmöglichkeiten und unübertroffene Annehmlichkeiten.",
   "enterEmail": "E-Mail eingeben",
@@ -30,7 +29,6 @@
   "termsOfUse": "Benutzungsbedingungen",
   "createAccount": "Konto erstellen",
   "orSignUpWith": "Oder melden Sie sich an mit",
-
   "confirmEmail": "Überprüfen Sie Ihre E-Mail-Adresse",
   "confirmEmailSubTitle": "Herzlichen Glückwunsch! Ihr Konto wartet: Überprüfen Sie Ihre E-Mail, um mit dem Einkaufen und Experimentieren zu beginnen.",
   "emailNotReceivedMessage": "Sie haben Ihre E-Mail nicht erhalten? Überprüfen Sie Ihre Reichweite oder senden Sie sie zurück.",
@@ -38,40 +36,19 @@
   "resendEmail": "Mail erneut senden",
   "yourAccountCreatedTitle": "Ihr Konto wurde erfolgreich erstellt!",
   "yourAccountCreatedSubTitle": "Willkommen bei Ihrem ultimativen Einkaufsziel. Ihr Konto ist erstellt. Entfesseln Sie die Freude am nahtlosen Online-Shopping!",
-
   "forgotPasswordTitle": "Passwort vergessen?",
   "forgotPasswordSubtitle": "Keine Sorge, es kommt auch vor, dass man etwas vergisst. Geben Sie Ihre E-Mail-Adresse ein und wir schicken Ihnen den Link zum Zurücksetzen.",
   "submit": "Senden",
   "passwordResetEmailSendSubtitle": "Die Sicherheit Ihres Kontos ist unsere Priorität! Wir haben Ihnen einen Sicherheitslink geschickt, mit dem Sie Ihr Passwort sicher ändern und Ihr Konto schützen können.",
   "done": "Fertig",
-
   "home": "Start",
   "store": "Warenkorb",
   "favorite": "Favoriten",
   "profile": "Profil",
-
   "homeAppBarTitle": "Guter Tag zum Einkaufen",
   "homeSearchTitle": "Im laden suchen",
   "homeCategoriesTitle": "Beliebte Kategorien",
-
-
-
-
-
-
-  "okay": "Okay",
-
-  "sample": "Beispiel",
-  "doYouHaveAnAccount": "Haben Sie ein Konto?",
-  "enterPassword": "Password eingeben",
-  "tellUsAboutYouSelf": "Erzählen Sie uns von sich",
-  "whoDoYouShopFor": "Für wen kaufen Sie ein?",
-  "men": "Herren",
-  "women": "Damen",
-  "howOldAreYou": "Wie alt sind Sie?",
-  "ageRange": "Altersspanne",
-  "btnFinish": "Fertig",
-  "btnReturnToLogin": "Zurück zum Login",
-  "resetPasswordMessage": "Wir senden Ihnen eine E-Mail, damit Sie Ihr Passwort wiederherstellen können."
-
+  "storeTitle": "Laden",
+  "storeSearchTitle": "Suche im Laden",
+  "storeFeaturedBrandsTitle": "Hervorgehobene Marken"
 }

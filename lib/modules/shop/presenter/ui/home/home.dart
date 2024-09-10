@@ -9,6 +9,7 @@ import '../../../../../widgets/clippers/clipper.dart';
 import '../../../../../widgets/gridviews/grid_view.dart';
 import '../../../../../widgets/products/vertical.dart';
 import '../../../../../widgets/search_bar/search.dart';
+import '../../../../../widgets/texts/section_header.dart';
 import 'categories.dart';
 import 'header.dart';
 
@@ -31,7 +32,7 @@ class HomePage extends StatelessWidget {
                     const HomeHeader().withPadding((h: TSizes.sm, v: TSizes.spaceBtwSections).symmetricPadding),
 
                     /// Search bar
-                    HomeSearchBar(
+                    TSearchBar(
                       title: context.translate.homeSearchTitle,
                       showBorder: false,
                     ).withPadding(TSizes.defaultSpace.horizontalPadding),
@@ -51,6 +52,13 @@ class HomePage extends StatelessWidget {
                   TImages.promoBanner2,
                   TImages.promoBanner3,
                 ],
+              ).withPadding(TSizes.defaultSpace.horizontalPadding),
+
+              /// Header populat
+              TSectionHeader(
+                title: context.translate.homeCategoriesTitle,
+                showActionButton: true,
+                onPressed: () {},
               ).withPadding(TSizes.defaultSpace.horizontalPadding),
 
               /// Popular products

@@ -1,7 +1,7 @@
 {
+  "locale": "Français",
   "appName": "Structure des dossiers Flutter",
   "language": "Français",
-
   "onboardingTitle1": "Choisissez votre produit",
   "onboardingTitle2": "Sélectionner le mode de paiement",
   "onboardingTitle3": "Livraison à domicile",
@@ -9,7 +9,6 @@
   "onboardingSubTitle2": "Pour une transaction transparente, choisissez votre mode de paiement - votre confort, notre priorité !",
   "onboardingSubTitle3": "De notre porte à la vôtre - livraison rapide, sécurisée et sans contact",
   "btnSkip": "Sauter",
-
   "loginTitle": "Bienvenue à nouveau,",
   "loginSubTitle": "Découvrez des choix limités et des commodités inégalées.",
   "enterEmail": "Entrez votre e-mail",
@@ -19,7 +18,6 @@
   "signIn": "Se connecter",
   "createOne": "Créer un compte",
   "orSignInWith": "Ou connectez-vous avec",
-
   "createAAccount": "Créez votre compte",
   "firstname": "Prénom",
   "lastname": "Nom",
@@ -32,7 +30,6 @@
   "termsOfUse": "conditions d'utilisation",
   "createAccount": "Créer un compte",
   "orSignUpWith": "Ou inscrivez-vous avec",
-
   "confirmEmail": "Vérifier votre adresse e-mail",
   "confirmEmailSubTitle": "Félicitations ! Votre compte attend : vérifiez votre Email pour commencer à faire des achats et des expériences.",
   "emailNotReceivedMessage": "Vous n'avez pas reçu votre e-mail ? Vérifiez votre portée ou renvoyez-le.",
@@ -40,42 +37,19 @@
   "resendEmail": "Renvoyer le mail",
   "yourAccountCreatedTitle": "Votre compte a été créé avec succès !",
   "yourAccountCreatedSubTitle": "Bienvenue dans votre destination shopping ultime. Votre compte est créé. Découvrez les joies du shopping en ligne en toute transparence !",
-
   "forgotPasswordTitle": "Mot de passe oublié ?",
   "forgotPasswordSubtitle": "Ne vous inquiétez pas, il arrive aussi que l'on oublie. Saisissez votre adresse électronique et nous vous enverrons le lien de réinitialisation.",
   "submit": "Envoyer",
   "passwordResetEmailSendSubtitle": "La sécurité de votre compte est notre priorité ! Nous vous avons envoyé un lien de sécurité pour changer votre mot de passe en toute sécurité et protéger votre compte.",
   "done": "terminee",
-
   "home": "Accueil",
   "store": "Magasin",
   "favorite": "Favoris",
   "profile": "Profil",
-
   "homeAppBarTitle": "Bonne journée pour le shopping",
   "homeSearchTitle": "Recherche en magasin",
   "homeCategoriesTitle": "Catégories populaires",
-
-
-
-
-
-
-
-
-
-
-  "okay": "Okay",
-
-  "sample": "exemple",
-  "doYouHaveAnAccount": "Avez-vous un compte ?",
-  "tellUsAboutYouSelf": "Parlez-nous de vous",
-  "whoDoYouShopFor": "Pour qui faites-vous vos achats ?",
-  "men": "Hommes",
-  "women": "Femmes",
-  "howOldAreYou": "Quel âge avez-vous ?",
-  "ageRange": "Tranche d'âge",
-  "btnFinish": "Terminé",
-  "btnReturnToLogin": "Retour à la connexion",
-  "resetPasswordMessage": "Nous vous avons envoyé un e-mail pour réinitialiser votre mot de passe."
+  "storeTitle": "Boutique",
+  "storeSearchTitle": "Recherche en magasin",
+  "storeFeaturedBrandsTitle": "Marques en vedette"
 }

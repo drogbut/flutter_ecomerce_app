@@ -5,12 +5,12 @@ import 'package:iconsax/iconsax.dart';
 import '../../core/constants/colors.dart';
 import '../../core/constants/sizes.dart';
 
-class HomeSearchBar extends StatelessWidget {
+class TSearchBar extends StatelessWidget {
   final String title;
   final IconData? icon;
   final bool showBackground, showBorder;
 
-  const HomeSearchBar({
+  const TSearchBar({
     super.key,
     required this.title,
     this.icon = Iconsax.search_normal,

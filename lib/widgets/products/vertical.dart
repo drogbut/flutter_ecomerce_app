@@ -9,7 +9,8 @@ import '../../core/constants/sizes.dart';
 import '../../core/extensions/widget.dart';
 import '../containers/rounded_container.dart';
 import '../icons/circular.dart';
-import '../images/rounded_image.dart';
+import '../images/rounded.dart';
+import '../texts/brand_title_with_verify_icon.dart';
 import 'widgets/price.dart';
 import 'widgets/title.dart';
 
@@ -86,20 +87,8 @@ class TProductCardVertical extends StatelessWidget {
                     title: 'Greeen Nike Air Shop',
                     isSmallSize: true,
                   ).withPadding(TSizes.xs.topPadding),
-                  Row(
-                    children: [
-                      /// Subtitle
-                      Text(
-                        'Nike',
-                        style: context.textTheme.labelMedium?.copyWith(color: TColors.darkGrey),
-                      ).withPadding(TSizes.xs.rightPadding),
-                      const Icon(
-                        Iconsax.verify5,
-                        size: TSizes.iconXs,
-                        color: TColors.primary,
-                      )
-                    ],
-                  ),
+
+                  const TBrandtitleWithVerifyIcon(title: 'Nike'),
 
                   /// space
                   const Spacer(),
@@ -133,7 +122,7 @@ class TProductCardVertical extends StatelessWidget {
                     ],
                   ),
                 ],
-              ),
+              ).withPadding(TSizes.sm.leftPadding),
             ),
           ],
         ),

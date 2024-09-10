@@ -6,7 +6,7 @@ import '../../core/constants/colors.dart';
 import '../../core/constants/sizes.dart';
 import '../../core/extensions/widget.dart';
 import '../containers/rounded_container.dart';
-import '../images/rounded_image.dart';
+import '../images/rounded.dart';
 import 'controller.dart';
 
 class TCarousel extends StatelessWidget {

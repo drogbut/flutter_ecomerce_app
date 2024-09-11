@@ -5,15 +5,13 @@ import 'footer.dart';
 import 'header.dart';
 
 /// The custom clipper design screen
-class TClipperWidget extends StatelessWidget {
+class TPrimaryHeaderContainer extends StatelessWidget {
   final Color? color;
-  final double? height;
   final Widget child;
 
-  const TClipperWidget({
+  const TPrimaryHeaderContainer({
     required this.child,
     this.color = TColors.primary,
-    this.height = 400,
     super.key,
   });
 
@@ -21,7 +19,7 @@ class TClipperWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipPath(
       clipper: TFooterContainer(),
-      child: THeaderContainer(color: color, height: height, child: child),
+      child: THeaderContainer(color: color, child: child),
     );
   }
 }

@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             children: [
               /// Background clipper widget
-              TClipperWidget(
+              TPrimaryHeaderContainer(
                 child: Column(
                   children: [
                     /// Header

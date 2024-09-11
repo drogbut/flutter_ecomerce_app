@@ -6,6 +6,7 @@ import '../../../../../core/extensions/widget.dart';
 import '../../../../../widgets/appbar/appbar.dart';
 import '../../../../../widgets/icons/cart_counter.dart';
 import '../../../../../widgets/texts/title.dart';
+import 'category_tab.dart';
 import 'featured_brands.dart';
 
 class StorePage extends StatelessWidget {
@@ -21,18 +22,26 @@ class StorePage extends StatelessWidget {
         ],
       ),
       body: NestedScrollView(
-        headerSliverBuilder: (_, innerBoxIsScrolled) {
-          return [
-            /// Featured brands section
-            const StoreFeaturedBrands()
-          ];
-        },
-        body: ListView(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          children: const [],
-        ),
-      ),
+          headerSliverBuilder: (_, innerBoxIsScrolled) {
+            return [
+              /// Featured brands section
+              const StoreFeaturedBrands()
+            ];
+          },
+          body: const DefaultTabController(
+            length: 5,
+            child: TabBarView(
+              children: [
+                TCategoryTab(),
+                TCategoryTab(),
+                TCategoryTab(),
+                TCategoryTab(),
+                TCategoryTab(),
+
+                /// Products
+              ],
+            ),
+          )),
     );
   }
 }

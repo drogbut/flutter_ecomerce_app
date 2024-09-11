@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:get/get.dart';
 
 import '../../modules/responsive/domain/breakpoints.dart';
 import '../../modules/responsive/domain/device.dart';
+import '../constants/colors.dart';
 
 /// An extension on the BuildContext class providing easy access to various
 /// commonly used properties and methods.
@@ -87,4 +89,11 @@ extension ContextExt on BuildContext {
   bool get is4k => deviceType == DeviceScreenType.largeDesktop;
 
   bool get isPhoneOrSmaller => isPhone || isWearable;
+
+  /// context colors
+  Color get blackOrWhite => isDarkMode ? TColors.black : TColors.white;
+  Color get whiteOrBlack => isDarkMode ? TColors.white : TColors.black;
+  Color get whiteOrPrimary => isDarkMode ? TColors.white : TColors.primary;
+  Color get darkgreyOrLight => isDarkMode ? TColors.darkGrey : TColors.light;
+  //Color get blackWhiteContext => isDarkMode ? TColors.black : TColors.white;
 }

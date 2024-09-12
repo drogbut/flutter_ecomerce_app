@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../core/constants/colors.dart';
 import '../../../../../core/constants/images_string.dart';
 import '../../../../../widgets/images/circular.dart';
 import '../../../../../widgets/texts/title.dart';
+import '../profile.dart';
 
 class TUserProfileCard extends StatelessWidget {
   const TUserProfileCard({super.key});
@@ -21,11 +23,9 @@ class TUserProfileCard extends StatelessWidget {
       title: const TTitleText('max Mustermann'),
       subtitle: const Text('max.musterman@gmail.com'),
       trailing: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Iconsax.edit,
-            color: TColors.white,
-          )),
+        icon: const Icon(Iconsax.edit, color: TColors.white),
+        onPressed: () => Get.off(const TProfilePage()),
+      ),
     );
   }
 }

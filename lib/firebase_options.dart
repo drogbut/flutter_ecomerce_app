@@ -63,6 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '813626309566',
     projectId: 'flutter-folders-struture',
     storageBucket: 'flutter-folders-struture.appspot.com',
+    iosClientId: '813626309566-jpaoo30u8sdb89tvsqinhmec8i4d0urs.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterFoldersStructure',
   );
 
@@ -72,6 +73,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '813626309566',
     projectId: 'flutter-folders-struture',
     storageBucket: 'flutter-folders-struture.appspot.com',
+    iosClientId: '813626309566-jpaoo30u8sdb89tvsqinhmec8i4d0urs.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterFoldersStructure',
   );
 
@@ -83,4 +85,5 @@ class DefaultFirebaseOptions {
     authDomain: 'flutter-folders-struture.firebaseapp.com',
     storageBucket: 'flutter-folders-struture.appspot.com',
   );
+
 }

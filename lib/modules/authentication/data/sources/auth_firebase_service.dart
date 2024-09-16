@@ -2,12 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-import '../../domain/entities/user_sign_in_request.dart';
-import '../../domain/entities/user_signup_request.dart';
-
 abstract class AuthFirebaseService {
-  Future<Either> signup(UserSignUpRequest user);
-  Future<Either> signIn(UserSignInRequest user);
   Future<Either> resetPassword(String email);
   Future<Either> getAges();
   Future<Either> isLogin();
@@ -15,27 +10,8 @@ abstract class AuthFirebaseService {
 }
 
 class AuthFirebaseServiceImpl extends AuthFirebaseService {
-  @override
-  Future<Either<String, dynamic>> signup(UserSignUpRequest user) async {
+  Future<Either<String, dynamic>> signup(User user) async {
     try {
-      final userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: user.email,
-        password: user.password,
-      );
-
-      FirebaseFirestore.instance
-          .collection('Users')
-          .doc(
-            userCredential.user!.uid,
-          )
-          .set({
-        'firstName': user.firstName,
-        'lastName': user.lastName,
-        'email': user.email,
-        'gender': user.gender,
-        'age': user.age,
-      });
-
       return const Right('Signup was successful');
     } on FirebaseException catch (e) {
       if (e.code == 'weak-password') {
@@ -52,14 +28,8 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
     }
   }
 
-  @override
-  Future<Either> signIn(UserSignInRequest user) async {
+  Future<Either> signIn(User user) async {
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: user.email,
-        password: user.password,
-      );
-
       return const Right('Login was successful');
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {

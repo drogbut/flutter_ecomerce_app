@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 
 import 'l10n/l10n.dart';
 import 'l10n/local_provider.dart';
-import 'modules/authentication/onboarding/presenter/ui/onboarding_screen.dart';
 import 'theme/theme_provider.dart';
 import 'utilities/theme/theme.dart';
+import 'widgets/indicators/loading_indicator.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
@@ -37,7 +37,7 @@ class _AppState extends State<App> {
                 themeMode: themeMode,
                 theme: DTheme.lightTheme,
                 darkTheme: DTheme.darkTheme,
-                home: const OnboardingScreen(),
+                home: const LoadingIndicator(),
               );
             },
           );

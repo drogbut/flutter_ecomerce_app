@@ -32,7 +32,9 @@ class VerificationScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        actions: [TCircularIcon(onPressed: () => Get.offAll(() => const SignInPage()), iconData: CupertinoIcons.clear)],
+        actions: [
+          TCircularIcon(onPressed: () => Get.offAll(() => const LoginScreen()), iconData: CupertinoIcons.clear)
+        ],
       ),
       body: SingleChildScrollView(
         child: Padding(

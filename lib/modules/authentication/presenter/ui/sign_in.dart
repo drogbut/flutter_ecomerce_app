@@ -10,8 +10,8 @@ import '../../../../widgets/icons/image_circular.dart';
 import 'widgets/header.dart';
 import 'widgets/login_form.dart';
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

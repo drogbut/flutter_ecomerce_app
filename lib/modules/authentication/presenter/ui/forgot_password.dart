@@ -54,7 +54,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                       image: TImages.staticSuccessIllustration,
                       title: context.translate.yourAccountCreatedTitle,
                       subTitle: context.translate.yourAccountCreatedSubTitle,
-                      onPressed: () => Get.offAll(() => const SignInPage()),
+                      onPressed: () => Get.offAll(() => const LoginScreen()),
                     ),
                   ),
                 ),

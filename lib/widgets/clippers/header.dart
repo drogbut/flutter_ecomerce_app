@@ -11,7 +11,7 @@ class THeaderContainer extends StatelessWidget {
 
   const THeaderContainer({
     super.key,
-    required this.color,
+    this.color = TColors.primary,
     required this.child,
   });
 

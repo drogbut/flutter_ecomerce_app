@@ -12,7 +12,7 @@ import '../../../../../widgets/checkbox_and_radio/checkbox.dart';
 import '../../../../../widgets/fields/primary.dart';
 import '../../../../shop/presenter/ui/bottom_navigation.dart';
 import '../forgot_password.dart';
-import '../sign_up.dart';
+import '../register.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
@@ -53,11 +53,8 @@ class LoginForm extends StatelessWidget {
         ).withPadding(TSizes.spaceBtwItems.bottomPadding),
 
         /// SignIn button
-        TPrimaryButton(
-            title: context.translate.signIn,
-            onPressed: () => Get.offAll(
-                  () => const BottomNavigationMenu(),
-                )).withPadding(TSizes.spaceBtwItems.bottomPadding),
+        TPrimaryButton(title: context.translate.signIn, onPressed: () => Get.offAll(() => const BottomNavigationMenu()))
+            .withPadding(TSizes.spaceBtwItems.bottomPadding),
 
         ///  Register button
         TSecondaryButton(

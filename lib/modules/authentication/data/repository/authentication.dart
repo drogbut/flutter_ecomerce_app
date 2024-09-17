@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 import '../../onboarding/presenter/ui/onboarding_screen.dart';
-import '../../presenter/ui/sign_in.dart';
+import '../../presenter/ui/login.dart';
 
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
@@ -22,6 +22,8 @@ class AuthenticationRepository extends GetxController {
   void screenRedirect() async {
     deviceStorage.writeIfNull('IsFirsttime', true);
 
-    deviceStorage.read('IsFirsttime') != true ? Get.offAll(const LoginScreen()) : Get.offAll(const OnboardingScreen());
+    deviceStorage.read('IsFirsttime') != true
+        ? Get.offAll(() => const LoginScreen())
+        : Get.offAll(() => const OnboardingScreen());
   }
 }

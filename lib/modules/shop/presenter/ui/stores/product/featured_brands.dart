@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/constants/sizes.dart';
-import '../../../../../core/extensions/context.dart';
-import '../../../../../core/extensions/widget.dart';
-import '../../../../../widgets/appbar/tabbar.dart';
-import '../../../../../widgets/gridviews/grid_view.dart';
-import '../../../../../widgets/products/brand_card.dart';
-import '../../../../../widgets/search_bar/search.dart';
-import '../../../../../widgets/texts/section_header.dart';
+import '../../../../../../core/constants/sizes.dart';
+import '../../../../../../core/extensions/context.dart';
+import '../../../../../../core/extensions/widget.dart';
+import '../../../../../../widgets/appbar/tabbar.dart';
+import '../../../../../../widgets/gridviews/grid_view.dart';
+import '../../../../../../widgets/products/brand_card.dart';
+import '../../../../../../widgets/search_bar/search.dart';
+import '../../../../../../widgets/texts/section_header.dart';
 
 class StoreFeaturedBrands extends StatelessWidget {
   const StoreFeaturedBrands({super.key});

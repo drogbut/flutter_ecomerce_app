@@ -20,7 +20,7 @@ class SettingsPage extends StatelessWidget {
         child: Column(
           children: [
             /// -- header
-            const TPrimaryHeaderContainer(
+            const TCurvedEdgeWidget(
               child: Column(
                 children: [
                   /// -- Settings appbar

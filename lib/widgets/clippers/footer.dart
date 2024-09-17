@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// The footer part of clipper widget
-class TFooterContainer extends CustomClipper<Path> {
+class TCustomCurvedEdge extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     var path = Path();

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../core/constants/colors.dart';
 import 'custom_themes/_custom_theme.dart';
-import 'custom_themes/outline_button_theme.dart';
 
 class DTheme {
   DTheme._();
@@ -12,15 +11,18 @@ class DTheme {
     useMaterial3: true,
     fontFamily: 'Poppins',
     colorScheme: DColorSchemeTheme.light,
-    //scaffoldBackgroundColor: MyColors.darkBackground,
-    //primaryColor: MyColors.lightPrimary,
-
-    textTheme: DTextTheme.light,
-    appBarTheme: DAppBarTheme.light,
-    elevatedButtonTheme: DElevatedButtonTheme.light,
-    textButtonTheme: DTextButtonTheme.light,
-    inputDecorationTheme: DInputDecorationTheme.light,
-    outlinedButtonTheme: DOutlinedButtonTheme.light,
+    disabledColor: TColors.grey,
+    brightness: Brightness.light,
+    primaryColor: TColors.primary,
+    textTheme: TTextTheme.lightTextTheme,
+    chipTheme: TChipTheme.lightChipTheme,
+    scaffoldBackgroundColor: TColors.white,
+    appBarTheme: TAppBarTheme.lightAppBarTheme,
+    checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
+    bottomSheetTheme: TBottomSheetTheme.lightBottomSheetTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
+    outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
+    inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
   );
 
   /// DARK THEME
@@ -28,13 +30,17 @@ class DTheme {
     useMaterial3: true,
     fontFamily: 'Poppins',
     colorScheme: DColorSchemeTheme.dark,
-    scaffoldBackgroundColor: TColors.dark,
+    disabledColor: TColors.grey,
+    brightness: Brightness.dark,
     primaryColor: TColors.primary,
-    textTheme: DTextTheme.dark,
-    appBarTheme: DAppBarTheme.dark,
-    elevatedButtonTheme: DElevatedButtonTheme.dark,
-    textButtonTheme: DTextButtonTheme.dark,
-    inputDecorationTheme: DInputDecorationTheme.dark,
-    outlinedButtonTheme: DOutlinedButtonTheme.dark,
+    textTheme: TTextTheme.darkTextTheme,
+    chipTheme: TChipTheme.darkChipTheme,
+    scaffoldBackgroundColor: TColors.black,
+    appBarTheme: TAppBarTheme.darkAppBarTheme,
+    checkboxTheme: TCheckboxTheme.darkCheckboxTheme,
+    bottomSheetTheme: TBottomSheetTheme.darkBottomSheetTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
+    outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
+    inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
   );
 }

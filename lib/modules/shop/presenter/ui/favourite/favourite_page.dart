@@ -20,7 +20,7 @@ class WhishlistPage extends StatelessWidget {
       appBar: TAppBar(
         title: const TTitleText('Whishlist'),
         actions: [
-          TCircularIcon(iconData: Iconsax.add, onPressed: () => Get.to(const HomePage()))
+          TCircularIcon(iconData: Iconsax.add, onPressed: () => Get.to(() => const HomePage()))
               .withPadding(TSizes.defaultSpace.rightPadding),
         ],
       ),

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/constants/sizes.dart';
-import '../../../../../core/extensions/context.dart';
-import '../../../../../core/extensions/widget.dart';
-import '../../../../../widgets/appbar/appbar.dart';
-import '../../../../../widgets/icons/cart_counter.dart';
-import '../../../../../widgets/texts/title.dart';
+import '../../../../../../core/constants/sizes.dart';
+import '../../../../../../core/extensions/context.dart';
+import '../../../../../../core/extensions/widget.dart';
+import '../../../../../../widgets/appbar/appbar.dart';
+import '../../../../../../widgets/icons/cart_counter.dart';
+import '../../../../../../widgets/texts/title.dart';
 import 'category_tab.dart';
 import 'featured_brands.dart';
 
-class StorePage extends StatelessWidget {
-  const StorePage({super.key});
+class StoreProductScreen extends StatelessWidget {
+  const StoreProductScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

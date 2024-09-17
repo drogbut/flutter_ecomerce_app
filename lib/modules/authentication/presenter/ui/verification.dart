@@ -10,7 +10,7 @@ import '../../../../widgets/buttons/primary.dart';
 import '../../../../widgets/buttons/tertiary.dart';
 import '../../../../widgets/icons/circular.dart';
 import '../../../../widgets/texts/title.dart';
-import 'sign_in.dart';
+import 'login.dart';
 
 class VerificationScreen extends StatelessWidget {
   final String image, title, subtitle, email, continueButtonTitle;

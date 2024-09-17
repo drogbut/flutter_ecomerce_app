@@ -4,11 +4,11 @@ import '../../../core/constants/colors.dart';
 import '../../../core/constants/sizes.dart';
 import '../../../core/extensions/widget.dart';
 
-class DElevatedButtonTheme {
-  DElevatedButtonTheme._();
+class TElevatedButtonTheme {
+  TElevatedButtonTheme._();
 
   /// LIGHT
-  static ElevatedButtonThemeData light = ElevatedButtonThemeData(
+  static ElevatedButtonThemeData lightElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       foregroundColor: Colors.white,
       backgroundColor: TColors.primary,
@@ -21,7 +21,7 @@ class DElevatedButtonTheme {
   );
 
   /// DARK
-  static ElevatedButtonThemeData dark = ElevatedButtonThemeData(
+  static ElevatedButtonThemeData darkElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       foregroundColor: Colors.white,
       backgroundColor: TColors.primary,

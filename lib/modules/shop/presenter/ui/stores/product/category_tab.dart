@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/constants/images_string.dart';
-import '../../../../../core/constants/sizes.dart';
-import '../../../../../core/extensions/widget.dart';
-import '../../../../../widgets/gridviews/grid_view.dart';
-import '../../../../../widgets/products/brand_showcase.dart';
-import '../../../../../widgets/products/vertical.dart';
-import '../../../../../widgets/texts/section_header.dart';
+import '../../../../../../core/constants/images_string.dart';
+import '../../../../../../core/constants/sizes.dart';
+import '../../../../../../core/extensions/widget.dart';
+import '../../../../../../widgets/gridviews/grid_view.dart';
+import '../../../../../../widgets/products/brand_showcase.dart';
+import '../../../../../../widgets/products/vertical.dart';
+import '../../../../../../widgets/texts/section_header.dart';
 
 class TCategoryTab extends StatelessWidget {
   const TCategoryTab({super.key});
@@ -45,7 +45,10 @@ class TCategoryTab extends StatelessWidget {
               ).withPadding(TSizes.spaceBtwItems.bottomPadding),
 
               /// -- Products gridview
-              TGridView(itemBuilder: (_, index) => const TProductCardVertical(), itemCount: 4)
+              TGridView(
+                itemBuilder: (_, index) => const TProductCardVertical(),
+                itemCount: 4,
+              )
             ],
           ),
         ),

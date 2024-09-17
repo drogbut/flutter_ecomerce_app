@@ -10,7 +10,7 @@ import '../../../../../widgets/buttons/primary.dart';
 import '../../../../../widgets/fields/primary.dart';
 import '../../../../../widgets/success_screens/success.dart';
 import '../../../../../widgets/texts/rich_text.dart';
-import '../sign_in.dart';
+import '../login.dart';
 import '../verification.dart';
 
 class RegisterForm extends StatelessWidget {

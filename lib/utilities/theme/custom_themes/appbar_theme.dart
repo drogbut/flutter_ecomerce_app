@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../../core/constants/sizes.dart';
 
-class DAppBarTheme {
-  DAppBarTheme._();
+class TAppBarTheme {
+  TAppBarTheme._();
 
   /// LIGHT
-  static AppBarTheme light = const AppBarTheme(
+  static AppBarTheme lightAppBarTheme = const AppBarTheme(
     elevation: TSizes.zero,
     centerTitle: false,
     scrolledUnderElevation: TSizes.zero,
@@ -18,7 +18,7 @@ class DAppBarTheme {
   );
 
   /// DARK
-  static AppBarTheme dark = const AppBarTheme(
+  static AppBarTheme darkAppBarTheme = const AppBarTheme(
     elevation: TSizes.zero,
     centerTitle: false,
     scrolledUnderElevation: TSizes.zero,

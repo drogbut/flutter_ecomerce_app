@@ -5,6 +5,7 @@ export 'chip_theme.dart';
 export 'colorscheme_theme.dart';
 export 'elevated_button_theme.dart';
 export 'input_decoration_theme.dart';
+export 'navigation_theme.dart';
 export 'outlined_button_theme.dart';
 export 'text_button_theme.dart';
 export 'text_field_theme.dart';

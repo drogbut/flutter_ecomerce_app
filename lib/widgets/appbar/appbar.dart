@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../core/constants/sizes.dart';
+import '../../core/extensions/context.dart';
 import '../../locator.dart';
 import '../../utilities/device/platform.dart';
 
@@ -33,7 +34,11 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       automaticallyImplyLeading: false,
       leading: showBackIcon
-          ? IconButton(icon: getIcon(), onPressed: () => Get.back())
+          ? IconButton(
+              icon: getIcon(),
+              color: context.whiteOrBlack,
+              onPressed: () => Get.back(),
+            )
           : leadingIcon != null
               ? IconButton(icon: Icon(leadingIcon), onPressed: leadingOnPressed)
               : null,

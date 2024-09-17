@@ -5,11 +5,11 @@ import 'footer.dart';
 import 'header.dart';
 
 /// The custom clipper design screen
-class TPrimaryHeaderContainer extends StatelessWidget {
+class TCurvedEdgeWidget extends StatelessWidget {
   final Color? color;
   final Widget child;
 
-  const TPrimaryHeaderContainer({
+  const TCurvedEdgeWidget({
     required this.child,
     this.color = TColors.primary,
     super.key,
@@ -18,7 +18,7 @@ class TPrimaryHeaderContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipPath(
-      clipper: TFooterContainer(),
+      clipper: TCustomCurvedEdge(),
       child: THeaderContainer(color: color, child: child),
     );
   }

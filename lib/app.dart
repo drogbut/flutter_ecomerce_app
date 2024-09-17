@@ -7,7 +7,7 @@ import 'l10n/l10n.dart';
 import 'l10n/local_provider.dart';
 import 'theme/theme_provider.dart';
 import 'utilities/theme/theme.dart';
-import 'widgets/indicators/loading_indicator.dart';
+import 'widgets/loaders/loading_indicator.dart';
 
 class App extends StatefulWidget {
   const App({super.key});

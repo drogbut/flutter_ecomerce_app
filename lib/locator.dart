@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 
-import 'modules/authentication/data/sources/auth_firebase_service.dart';
+import 'modules/authentication/models/sources/auth_firebase_service.dart';
 
 import 'modules/shop/data/sources/category_firebase_services.dart';
 import 'modules/shop/domain/use_cases/get_categories.dart';

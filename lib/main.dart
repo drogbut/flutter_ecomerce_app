@@ -7,7 +7,7 @@ import 'package:get_storage/get_storage.dart';
 import 'app.dart';
 import 'firebase_options.dart';
 import 'locator.dart';
-import 'modules/authentication/data/repository/authentication.dart';
+import 'modules/authentication/models/repository/authentication.dart';
 import 'utilities/local_storage/preferences.dart';
 
 Future<void> main() async {

@@ -10,6 +10,7 @@ class TPrimaryTextField extends StatelessWidget {
   final Widget? suffixIcon;
   final bool expands;
   final bool isObscureText;
+  final String? Function(String?)? validator;
 
   const TPrimaryTextField({
     this.controller,
@@ -18,6 +19,7 @@ class TPrimaryTextField extends StatelessWidget {
     this.suffixIcon,
     this.expands = false,
     this.isObscureText = false,
+    this.validator,
     super.key,
   });
 
@@ -25,6 +27,7 @@ class TPrimaryTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      validator: validator,
       expands: expands,
       obscureText: isObscureText,
       decoration: InputDecoration(

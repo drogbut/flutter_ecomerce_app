@@ -1,7 +1,5 @@
 import 'package:get_it/get_it.dart';
 
-import 'modules/authentication/data/sources/auth_firebase_service.dart';
-
 import 'modules/shop/data/sources/category_firebase_services.dart';
 import 'modules/shop/domain/use_cases/get_categories.dart';
 import 'utilities/color/color.dart';
@@ -24,7 +22,6 @@ Future<void> setupLocator() async {
   sl.registerLazySingleton(() => UtilityPlatform());
 
   // Services
-  sl.registerSingleton<AuthFirebaseService>(AuthFirebaseServiceImpl());
   sl.registerSingleton<CategoryFirebaseService>(CategoryFirebaseServiceImpl());
 
   // (2) categories

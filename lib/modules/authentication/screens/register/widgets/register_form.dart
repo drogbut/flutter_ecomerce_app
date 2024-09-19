@@ -42,7 +42,7 @@ class RegisterForm extends StatelessWidget {
               /// Last
               Expanded(
                 child: TPrimaryTextField(
-                  controller: controller.lasttName,
+                  controller: controller.lastName,
                   validator: (value) => TValidator.emptyText('Last name', value),
                   prefixIcon: Iconsax.user,
                   label: context.translate.lastname,
@@ -76,14 +76,19 @@ class RegisterForm extends StatelessWidget {
           ).withPadding(TSizes.spaceBtwInputFields.bottomPadding),
 
           /// Password
-          TPrimaryTextField(
-            controller: controller.password,
-            validator: (value) => TValidator.validatePassword(value),
-            isObscureText: true,
-            prefixIcon: Iconsax.password_check,
-            label: context.translate.enterPassword,
-            suffixIcon: const Icon(Iconsax.eye_slash),
-          ).withPadding(TSizes.spaceBtwInputFields.bottomPadding),
+          Obx(
+            () => TPrimaryTextField(
+              controller: controller.password,
+              validator: (value) => TValidator.validatePassword(value),
+              isObscureText: controller.hidePassword.value,
+              prefixIcon: Iconsax.password_check,
+              label: context.translate.enterPassword,
+              suffixIcon: IconButton(
+                onPressed: () => controller.hidePassword.value = !controller.hidePassword.value,
+                icon: Icon(controller.hidePassword.value ? Iconsax.eye_slash : Iconsax.eye),
+              ),
+            ).withPadding(TSizes.spaceBtwInputFields.bottomPadding),
+          ),
 
           /// privacy policy & terms of use
           Row(
@@ -91,7 +96,12 @@ class RegisterForm extends StatelessWidget {
               SizedBox(
                 width: 24,
                 height: 24,
-                child: Checkbox(value: true, onChanged: (value) {}),
+                child: Obx(
+                  () => Checkbox(
+                    value: controller.privacyPolicy.value,
+                    onChanged: (value) => controller.privacyPolicy.value = !controller.privacyPolicy.value,
+                  ),
+                ),
               ).withPadding(TSizes.sm.rightPadding),
               MyRichText(
                 firstText: context.translate.iAgreeTo,

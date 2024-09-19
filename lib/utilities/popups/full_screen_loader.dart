@@ -19,11 +19,13 @@ class TFullScreenLoader {
           color: context.darkOrWhite,
           width: double.infinity,
           height: double.infinity,
-          child: Column(
-            children: [
-              const SizedBox(height: 250),
-              TAnimationLoaderWidget(text: text, animation: animation),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const SizedBox(height: 250),
+                TAnimationLoaderWidget(text: text, animation: animation),
+              ],
+            ),
           ),
         ),
       ),

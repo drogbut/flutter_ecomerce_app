@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../../core/extensions/context.dart';
+import '../../core/extensions/widget.dart';
 
 class TSectionHeader extends StatelessWidget {
   final String title, buttonTitle;
   final Color? textColor;
   final VoidCallback? onPressed;
   final bool showActionButton;
+  final Widget? actionButton;
 
   const TSectionHeader({
     required this.title,
@@ -14,6 +16,7 @@ class TSectionHeader extends StatelessWidget {
     this.buttonTitle = 'View all',
     this.onPressed,
     this.showActionButton = false,
+    this.actionButton,
     super.key,
   });
 
@@ -28,11 +31,12 @@ class TSectionHeader extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
           style: context.textTheme.headlineSmall?.copyWith(color: textColor, fontSize: 16),
         ),
-        if (showActionButton)
-          TextButton(
-            onPressed: onPressed,
-            child: Text(buttonTitle),
-          )
+        (showActionButton)
+            ? TextButton(
+                onPressed: onPressed,
+                child: Text(buttonTitle),
+              )
+            : actionButton ?? 0.sbs,
       ],
     );
   }

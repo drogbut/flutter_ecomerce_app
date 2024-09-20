@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 
 import '../../../../../../core/constants/sizes.dart';
@@ -6,6 +8,7 @@ import '../../../../../../core/extensions/widget.dart';
 import '../../../../../../widgets/buttons/primary.dart';
 import '../../../../../../widgets/products/bottom_add_to_card.dart';
 import '../../../../../../widgets/texts/section_header.dart';
+import '../../reviews/product_detail/product_reviews_screen.dart';
 import 'widgets/meta_data.dart';
 import 'widgets/product_attributes.dart';
 import 'widgets/product_image_slider.dart';
@@ -57,7 +60,10 @@ class StoreProductDetailScreen extends StatelessWidget {
                   TSizes.spaceBtwItems.sbs,
                   TSectionHeader(
                     title: 'Reviews (199)',
-                    showActionButton: true,
+                    actionButton: IconButton(
+                      onPressed: () => Get.to(() => const StoreProductReviewsScreen()),
+                      icon: const Icon(Icons.navigate_next),
+                    ),
                     onPressed: () {},
                   ),
                   TSizes.spaceBtwSections.sbs,

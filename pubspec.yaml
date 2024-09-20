@@ -67,6 +67,7 @@ dependencies:
   freezed: ^2.5.2
   freezed_annotation: ^2.4.4
   json_annotation: ^4.9.0
+  flutter_rating_bar: ^4.0.1
   
   
  
@@ -100,7 +101,7 @@ flutter:
     - assets/images/content/
     - assets/images/on_boarding_images/
     - assets/images/products/
-    - assets/images/products/
+    - assets/images/reviews/
     - assets/images/app_logos/
     - assets/logos/
     - assets/vectors/

@@ -1,28 +1,28 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-import '../../../../commons/style/spacing_style.dart';
-import '../../../../core/constants/sizes.dart';
-import '../../../../core/extensions/context.dart';
-import '../../../../core/extensions/widget.dart';
-import '../../../../widgets/buttons/primary.dart';
-import '../../../../widgets/buttons/tertiary.dart';
-import '../../../../widgets/icons/circular.dart';
-import '../../../../widgets/texts/title.dart';
-import '../login/login.dart';
+import '../../commons/style/spacing_style.dart';
+import '../../core/constants/sizes.dart';
+import '../../core/extensions/context.dart';
+import '../../core/extensions/widget.dart';
+import '../buttons/primary.dart';
+import '../buttons/tertiary.dart';
+import '../icons/circular.dart';
+import '../texts/title.dart';
 
-class VerificationScreen extends StatelessWidget {
-  final String image, title, subtitle, email, continueButtonTitle;
-  final VoidCallback? onContinuePressed, onResetPressed;
+class TVerificationScreen extends StatelessWidget {
+  final String image, title, subtitle, continueButtonTitle;
+  final String? email;
+  final VoidCallback? onClosePressed, onContinuePressed, onResetPressed;
 
-  const VerificationScreen({
+  const TVerificationScreen({
     super.key,
     required this.image,
     required this.title,
     required this.subtitle,
-    required this.email,
+    this.email,
     required this.continueButtonTitle,
+    this.onClosePressed,
     this.onContinuePressed,
     this.onResetPressed,
   });
@@ -32,9 +32,7 @@ class VerificationScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        actions: [
-          TCircularIcon(onPressed: () => Get.offAll(() => const LoginScreen()), iconData: CupertinoIcons.clear)
-        ],
+        actions: [TCircularIcon(onPressed: onClosePressed, iconData: CupertinoIcons.clear)],
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -54,7 +52,7 @@ class VerificationScreen extends StatelessWidget {
               ).withPadding(TSizes.spaceBtwItems.bottomPadding),
               Text(
                 textAlign: TextAlign.center,
-                email,
+                email ?? '',
                 style: Theme.of(context).textTheme.labelMedium,
               ).withPadding(TSizes.spaceBtwItems.bottomPadding),
               Text(
@@ -71,7 +69,6 @@ class VerificationScreen extends StatelessWidget {
               /// Resend email button
               TTertiaryButton(
                 title: context.translate.resendEmail,
-                style: Theme.of(context).textTheme.labelSmall,
                 onPressed: () {},
               ).withPadding(TSizes.spaceBtwInputFields.topPadding),
             ],

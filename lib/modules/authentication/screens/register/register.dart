@@ -4,6 +4,7 @@ import '../../../../core/constants/images_string.dart';
 import '../../../../core/constants/sizes.dart';
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
+import '../../../../widgets/appbar/appbar.dart';
 import '../../../../widgets/dividers/form_divider.dart';
 import '../../../../widgets/icons/image_circular.dart';
 import '../../../../widgets/texts/title.dart';
@@ -15,7 +16,7 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: const TAppBar(showBackIcon: true),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(TSizes.defaultSpace),

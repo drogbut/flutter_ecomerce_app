@@ -10,8 +10,8 @@ import '../../../../widgets/buttons/primary.dart';
 import '../../../../widgets/fields/primary.dart';
 import '../../../../widgets/success_screens/success.dart';
 import '../../../../widgets/texts/title.dart';
+import '../../../../widgets/verification_screens/verification.dart';
 import '../login/login.dart';
-import '../widgets/verification.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   const ForgotPasswordScreen({super.key});
@@ -43,7 +43,7 @@ class ForgotPasswordScreen extends StatelessWidget {
             TPrimaryButton(
               title: context.translate.submit,
               onPressed: () => Get.offAll(
-                () => VerificationScreen(
+                () => TVerificationScreen(
                   image: TImages.deliveredEmailIllustration,
                   title: context.translate.passwordResetEmailSend,
                   subtitle: context.translate.passwordResetEmailSendSubtitle,

@@ -9,7 +9,7 @@ import '../../../../../utilities/validators/validator.dart';
 import '../../../../../widgets/buttons/primary.dart';
 import '../../../../../widgets/fields/primary.dart';
 import '../../../../../widgets/texts/rich_text.dart';
-import '../../../controllers/register_controller.dart';
+import '../../../controllers/signup/register_controller.dart';
 
 class RegisterForm extends StatelessWidget {
   const RegisterForm({super.key});

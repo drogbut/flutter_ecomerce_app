@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../../core/constants/colors.dart';
 import '../../../../../core/constants/sizes.dart';
+import '../../../../../core/extensions/context.dart';
 import '../../../../../core/extensions/widget.dart';
 import '../../../../../widgets/icons/circular.dart';
-import '../../../controllers/onboarding_controller.dart';
+import '../../../controllers/onboarding/onboarding_controller.dart';
 
 class OnboardingNextButton extends StatelessWidget {
   final OnboardingController controller;
@@ -20,8 +19,8 @@ class OnboardingNextButton extends StatelessWidget {
       right: TSizes.zero,
       child: TCircularIcon(
         iconData: Iconsax.arrow_right_3,
-        iconColor: context.isDarkMode ? TColors.primary : Colors.white,
-        backgroundColor: context.isDarkMode ? TColors.primary : TColors.dark,
+        iconColor: context.whiteOrPrimary,
+        backgroundColor: context.primaryOrDark,
         onPressed: () => controller.nextPage(),
       ).withPadding(TSizes.defaultSpace.rightPadding),
     );

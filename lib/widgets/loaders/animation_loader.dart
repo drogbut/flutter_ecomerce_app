@@ -38,10 +38,7 @@ class TAnimationLoaderWidget extends StatelessWidget {
           if (showAction)
             SizedBox(
               width: 250,
-              child: TSecondaryButton(
-                title: actionText!,
-                onPressed: onActionPrssed,
-              ),
+              child: TSecondaryButton(title: actionText!, onPressed: onActionPrssed),
             ),
         ],
       ),

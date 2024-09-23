@@ -3,9 +3,10 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';
 
 import 'bindings/general_bindings.dart';
+import 'core/constants/colors.dart';
 import 'l10n/l10n.dart';
 import 'utilities/theme/theme.dart';
-import 'widgets/loaders/loading_indicator.dart';
+import 'widgets/loaders/circular_loader.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
@@ -22,11 +23,11 @@ class _AppState extends State<App> {
       debugShowCheckedModeBanner: false,
       supportedLocales: L10n.all,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       theme: DTheme.lightTheme,
       darkTheme: DTheme.darkTheme,
       initialBinding: GeneralBindings(),
-      home: const Scaffold(body: LoadingIndicator()),
+      home: const Scaffold(backgroundColor: TColors.primary, body: TCircularLoader()),
     );
   }
 }

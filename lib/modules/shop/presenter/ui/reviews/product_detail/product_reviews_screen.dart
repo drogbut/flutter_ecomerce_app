@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/src/extensions/context_extensions.dart';
-import 'package:iconsax/iconsax.dart';
 
 import '../../../../../../core/constants/sizes.dart';
 import '../../../../../../core/extensions/widget.dart';
 import '../../../../../../widgets/appbar/appbar.dart';
-import '../../../../../../widgets/list_tiles/settings_menu.dart';
+import '../../../../../../widgets/products/ratings/raitingbar_indicator.dart';
 import '../../../../../../widgets/products/widgets/user_reviews_card.dart';
 import '../../../../../../widgets/texts/title.dart';
 import 'widgets/overral_product_ratting.dart';
-import '../../../../../../widgets/products/ratings/raitingbar_indicator.dart';
 
 class StoreProductReviewsScreen extends StatelessWidget {
   const StoreProductReviewsScreen({super.key});

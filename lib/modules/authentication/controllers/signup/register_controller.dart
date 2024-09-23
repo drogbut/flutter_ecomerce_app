@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../core/constants/images_string.dart';
-import '../../../utilities/helpers/network_manager.dart';
-import '../../../utilities/popups/full_screen_loader.dart';
-import '../../../utilities/popups/loaders.dart';
-import '../data/repository/auth_repository.dart';
-import '../data/repository/user_repository.dart';
-import '../models/user/user.dart';
-import '../screens/widgets/verification.dart';
+import '../../../../utilities/helpers/network_manager.dart';
+import '../../../../utilities/popups/full_screen_loader.dart';
+import '../../../../utilities/popups/loaders.dart';
+import '../../data/repository/auth_repository.dart';
+import '../../data/repository/user_repository.dart';
+import '../../models/user/user.dart';
+import '../../screens/register/widgets/verification_email_screen.dart';
 
 class RegisterController extends GetxController {
   static RegisterController get instance => Get.find();
@@ -28,32 +27,35 @@ class RegisterController extends GetxController {
   ///====================== Signup =====================================
   Future<void> signup() async {
     try {
-      /// Start loading
-      TFullScreenLoader.openLoadingDialog('We are processing your information...', TImages.animalIcon);
-
       /// Check internet connectivity
       final isConnected = await NetworkManager.instance.isConnected();
       if (!isConnected) return;
 
-      /// Check privacy policy --> make it before form validation check
-      if (!privacyPolicy.value) {
-        TLoaders.warningSnackbar(
-            title: 'Accept pravicy policy',
-            message:
-                'in order to create account, you must you must to read and accept the privacy policy and terms of conditions.');
+      /// Check form validation
+      if (!registerFormKey.currentState!.validate()) {
+        /// Show an error message if the form is invalid
+        TLoaders.errorSnackbar(title: 'Error', message: 'Please fill in all required fields');
         return;
       }
 
-      /// Check form validation
-      if (!registerFormKey.currentState!.validate()) return;
+      /// Check privacy policy
+      if (!privacyPolicy.value) {
+        TLoaders.warningSnackbar(
+            title: 'Accept privacy policy',
+            message: 'In order to create an account, you must accept the privacy policy and terms of conditions.');
+        return;
+      }
 
-      /// Register user in firebase auth & Save user data in firebase
+      /// Start loading
+      // TFullScreenLoader.openLoadingDialog('We are processing your information...', TImages.animalIcon);
+
+      /// Register user in Firebase Auth & Save user data in Firebase
       final userCredential = await authRepository.registerWithEmailAndPassword(
         email: email.text.trim(),
         password: password.text.trim(),
       );
 
-      /// Save authentication user data in firebase
+      /// Save user data
       final userModel = UserModel(
         id: userCredential.user!.uid,
         firstName: firstName.text.trim(),
@@ -71,24 +73,15 @@ class RegisterController extends GetxController {
       /// Remove loader
       TFullScreenLoader.stopLoading();
 
-      /// Show success message
+      /// Success message
       TLoaders.successSnackbar(
-          title: 'Congratulations', message: 'your account has been created! Verify email to continue.');
+          title: 'Congratulations', message: 'Your account has been created! Verify email to continue.');
 
       /// Move to verify email screen
-      Get.to(() => VerificationScreen(
-            image: TImages.onBoardingImage1,
-            title: 'Verify your Emial Adress!',
-            subtitle: 'subititle',
-            email: email.text,
-            continueButtonTitle: 'continue',
-          ));
+      Get.to(() => VerificationEmailScreen(email: email.text.trim()));
     } catch (e) {
-      /// show some generics erros for the user
+      /// Show generic error
       TLoaders.errorSnackbar(title: 'Register error', message: e.toString());
-    } finally {
-      /// Remove loader
-      TLoaders.stopLoading();
     }
   }
 }

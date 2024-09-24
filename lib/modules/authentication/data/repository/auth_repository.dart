@@ -4,11 +4,11 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
+import '../../../../navigation_menu.dart';
 import '../../../../utilities/exceptions/firebase_auth_exceptions.dart';
 import '../../../../utilities/exceptions/firebase_exceptions.dart';
 import '../../../../utilities/exceptions/format_exceptions.dart';
 import '../../../../utilities/exceptions/platform_exceptions.dart';
-import '../../../shop/presenter/ui/bottom_navigation.dart';
 import '../../screens/login/login.dart';
 import '../../screens/onboarding/onboarding_screen.dart';
 import '../../screens/register/widgets/verification_email_screen.dart';
@@ -39,7 +39,7 @@ class AuthenticationRepository extends GetxController {
       /// If User exist, check if he is verified
       if (user.emailVerified) {
         /// Navigate to home screen
-        Get.offAll(() => const BottomNavigationMenu());
+        Get.offAll(() => const TNavigationMenu());
       } else {
         /// Navigate to verified email screen
         Get.offAll(() => VerificationEmailScreen(email: _auth.currentUser?.email ?? ''));

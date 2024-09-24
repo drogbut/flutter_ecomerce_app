@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../core/extensions/context.dart';
-import '../controllers/bottom_navigation/bottom_navigation.dart';
+import 'core/extensions/context.dart';
+import 'modules/shop/presenter/controllers/bottom_navigation/bottom_navigation.dart';
 
-class BottomNavigationMenu extends StatelessWidget {
-  const BottomNavigationMenu({super.key});
+class TNavigationMenu extends StatelessWidget {
+  const TNavigationMenu({super.key});
 
   @override
   Widget build(BuildContext context) {

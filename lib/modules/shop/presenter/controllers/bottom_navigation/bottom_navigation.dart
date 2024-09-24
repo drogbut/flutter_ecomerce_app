@@ -8,5 +8,10 @@ import '../../ui/stores/product/product_screen.dart';
 class BottomNavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
-  final screens = [const HomePage(), const StoreProductScreen(), const WhishlistPage(), const SettingsPage()];
+  final screens = [
+    const HomePage(),
+    const StoreProductScreen(),
+    const WhishlistPage(),
+    const SettingsPage(),
+  ];
 }

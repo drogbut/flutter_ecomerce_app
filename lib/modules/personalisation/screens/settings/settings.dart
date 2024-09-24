@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../core/constants/sizes.dart';
@@ -8,6 +9,7 @@ import '../../../../widgets/buttons/secondary.dart';
 import '../../../../widgets/clippers/clipper.dart';
 import '../../../../widgets/list_tiles/settings_menu.dart';
 import '../../../../widgets/texts/section_header.dart';
+import '../address/address.dar.dart';
 import 'widgets/user_profile_card.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -41,8 +43,12 @@ class SettingsPage extends StatelessWidget {
                   const TSectionHeader(title: 'Account setttings').withPadding(TSizes.spaceBtwItems.bottomPadding),
 
                   /// -- Account settings
-                  const TSettingsMenuTile(
-                      iconData: Iconsax.safe_home, title: 'My Addresse', subTitle: 'Ste Shopping delivery adresse'),
+                  TSettingsMenuTile(
+                    iconData: Iconsax.safe_home,
+                    title: 'My Address',
+                    subTitle: 'Ste Shopping delivery address',
+                    onTap: () => Get.to(() => const UserAddressScreen()),
+                  ),
                   const TSettingsMenuTile(
                       iconData: Iconsax.shopping_cart, title: 'My Addresse', subTitle: 'Ste Shopping delivery adresse'),
                   const TSettingsMenuTile(

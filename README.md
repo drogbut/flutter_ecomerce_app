@@ -2,14 +2,57 @@
 
 ## Features:
 
-* [Flutter Clean Architecture by Reso Coder](https://resocoder.com/flutter-clean-architecture-tdd/)
-* [Multilingual Support by PodCoder](https://www.youtube.com/watch?v=WrqH5fF2ZuY&list=PLtuW0sh7ZGJFrd4FYRk0PJf0qHF-q96MQ&index=4)
-* Dependency Injection
-* App Theme with material design 3
-* Responsive App - mobile first as approach 
-* [Firebase setup with CLI](https://firebase.flutter.dev/docs/cli/)
-* Firebase Authentication - splash_screen, sign_in, sign_up, forgot_password and gender_and_age
-* [Cloud Firestore](https://firebase.flutter.dev/docs/firestore/)
+### Professional App configurations
+* Create new project & setup the folders structure - feature first approach
+* Light & dark mode setup include Buttons, textfileds, appBar and more.
+* Create Helper functions,  utilities and constantes classes
+
+### LOGIN / REGISTER UI/UX
+* Native Splash Screen
+* Onboarding Screens
+* Register Screen with Email Verification and Success Screen
+* Login Screen
+* Forget Password & reset Password
+
+### E-COMMERCE APP DESIGN
+* Bottom Navigation
+* Curved Design Challenge with Backend
+* Custom AppBar
+* Search Widgets & Scrolling Categories
+* Banners with Sliders
+* Product Design & Grid Layout
+* Tab Layout, AppBar, Search & featured Brands
+* TabBar Categories Contents
+* Whislist Screen
+* Settings Screens
+* Profile Screen
+* Product Details - Images & Text
+* Product Details - Attributes & Variations
+* Ratings & Reviews
+* Adresses
+* Cards
+* Checkout
+* Orders Screen
+* Sub-categories with Horizontal Scroll
+* View All Products
+* View All Brands & Brand Specific Products
+
+### LOGIN BACKEND - FIREBASE AUTHENTICATION
+* Firebase Setup
+* onboarding with single Timer appearance (Local Storage)
+* Register User & Email Verification (Email and Pasword - Store data in Firebase)
+* Login Using Email & Password
+* GOOGLE SIGN-IN
+* FACEBOOK SIGN-IN
+* Forget Password & reset Password
+
+### E-COMMERCE APP BACKEND 
+* Fetch Categories
+* Fetch Brands
+* Fetch products (Create Stream to reduce Reads and Writes on Firestore)
+* Add, Remove Whislist items of each user
+* Add to Card (From product card, Single & varaition product from Product Details)
+* Ceckout & Creat Ordres
 
 ### Folder Structure
 Here is the folder structure we have been using in this project
@@ -20,69 +63,62 @@ flutter-app/
 |- assets/
 |   |- fonts
 |   |- icons
+|     |- brands
+|     |- categories
+|     |- payment_methods
 |   |- images
-|   |- sounds
+|     |- animations
+|     |- app_logos
+|     |- banners
+|     |- contents
+|     |- onboarding_images
+|     |- products
+|     |- reviews
+|   |- Logos
 |   |- vectors
 |- build
 |- ios
 |- lib/
-|   |- core/
-|   |   |- constants/
-|   |   |   |- colors.dart
-|   |   |   |- dates.dart
-|   |   |   |- styles.dart
-|   |   |- enums/
-|   |   |   |- datetime.dart
-|   |   |   |- module.dart
-|   |   |   |- pages.dart
-|   |   |- erros/
-|   |   |   |- exceptions.dart
-|   |   |   |- failures.dart
-|   |   |- extensions/
-|   |   |   |- bool.dart
-|   |   |   |- color.dart
-|   |   |   |- context.dart
-|   |   |   |- date_time.dart
-|   |   |   |- string.dart
-|   |   |   |- widget.dart
-|   |   |- routing
-|   |   |   |- app_router.dart
-|   |   |- themes/
-|   |   |   |- dark/
-|   |   |   |   |- dark.dart
-|   |   |   |   |- hight_contrast.dart
-|   |   |   |- light/
-|   |   |   |   |- light.dart
-|   |   |   |   |- hight_contrast.dart
 |   |- modules/
 |   |   |- authentication/
 |   |   |   |- data/  
 |   |   |   |- domain/
 |   |   |   |   |- constants
 |   |   |   |   |- enums
-|   |   |   |- presenter/
-|   |   |   |   |- providers
-|   |   |   |   |- ui
-|   |   |   |   |   |- enter_password.dart
-|   |   |   |   |   |- forgot_password.dart
-|   |   |   |   |   |- sign_in.dart
-|   |   |   |   |   |- sign_up.dart
-|   |   |   |   |   |- splash.dart
-|   |   |- responsive
-|   |   |   |   |- domain
-|   |   |   |   |   |- breakpoints.dart
-|   |   |   |   |   |- device.dart
-|   |   |   |   |   |- sizing_info.dart
-|   |   |   |   |- presenter
-|   |   |   |   |   |- context.dart
-|   |   |   |   |   |- responsive_builder.dart
-|   |   |   |   |   |- responsive_view.dart
+|   |   |   |- screens/
+|   |   |   |   |- forget_password
+|   |   |   |   |   |- forget_password.dart
+|   |   |   |   |- login
+|   |   |   |   |   |- widgets
+|   |   |   |   |   |- login.dart
+|   |   |   |   |- onboarding
+|   |   |   |   |   |- widgets
+|   |   |   |   |   |- onboarding.dart
+|   |   |   |   |- register
+|   |   |   |   |   |- widgets
+|   |   |   |   |   |- register.dart
+|   |- utilities 
+|   |   |- colors
+|   |   |- device
+|   |   |- Exceptions
+|   |   |- formatters
+|   |   |- helpers
+|   |   |- http
+|   |   |- local_storage
+|   |   |- Logging
+|   |   |- popups
+|   |   |- themes
+|   |   |- validators
 |   |- ui
 |   |   |- appbar
 |   |   |- buttons
-|   |   |- fileds
-|   |   |- icons
-|   |   |- text
+|   |   |- cards
+|   |   |- carousels
+|   |   |- ckeckbox_and-radio
+|   |   |- chips
+|   |   |- ...
+|   |- app.dart
+|   |- firebase_options.dart
 |   |- main.dart
 |- test
 ```

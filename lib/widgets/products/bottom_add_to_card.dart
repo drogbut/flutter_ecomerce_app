@@ -4,9 +4,7 @@ import 'package:iconsax/iconsax.dart';
 import '../../core/constants/colors.dart';
 import '../../core/constants/sizes.dart';
 import '../../core/extensions/context.dart';
-import '../../core/extensions/widget.dart';
-import '../icons/circular.dart';
-import '../texts/title.dart';
+import 'cards/Add_and_remove_products.dart';
 
 class TBottomAddToCard extends StatelessWidget {
   const TBottomAddToCard({super.key});
@@ -25,32 +23,10 @@ class TBottomAddToCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           /// PlusMinus card
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              /// Minus icon
-              TCircularIcon(
-                width: 40,
-                height: 40,
-                onPressed: () {},
-                iconData: Iconsax.minus,
-                iconColor: Colors.white,
-                backgroundColor: TColors.darkGrey,
-              ),
-
-              /// Counter
-              const TTitleText('2').withPadding(TSizes.sm.horizontalPadding),
-
-              /// Plus icon
-              TCircularIcon(
-                width: 40,
-                height: 40,
-                onPressed: () {},
-                iconData: Iconsax.add,
-                iconColor: Colors.white,
-                backgroundColor: TColors.black,
-              ),
-            ],
+          TAddAndRemoveProducts(
+            counter: '2',
+            onMinusPressed: () {},
+            onPlusPressed: () {},
           ),
 
           /// bag icon

@@ -8,6 +8,7 @@ class TSettingsMenuTile extends StatelessWidget {
   final String subTitle;
   final IconData? iconData;
   final Widget? trailing;
+  final VoidCallback? onTap;
 
   const TSettingsMenuTile({
     super.key,
@@ -15,12 +16,14 @@ class TSettingsMenuTile extends StatelessWidget {
     required this.subTitle,
     this.iconData,
     this.trailing,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       dense: true,
+      onTap: onTap,
       leading: Icon(
         iconData,
         size: 28,

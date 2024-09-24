@@ -5,12 +5,12 @@ import 'package:iconsax/iconsax.dart';
 import '../../../../../core/constants/sizes.dart';
 import '../../../../../core/extensions/context.dart';
 import '../../../../../core/extensions/widget.dart';
+import '../../../../../navigation_menu.dart';
 import '../../../../../widgets/buttons/primary.dart';
 import '../../../../../widgets/buttons/secondary.dart';
 import '../../../../../widgets/buttons/tertiary.dart';
 import '../../../../../widgets/checkbox_and_radio/checkbox.dart';
 import '../../../../../widgets/fields/primary.dart';
-import '../../../../shop/presenter/ui/bottom_navigation.dart';
 import '../../forgot_password/forgot_password.dart';
 import '../../register/register.dart';
 
@@ -53,7 +53,7 @@ class LoginForm extends StatelessWidget {
         ).withPadding(TSizes.spaceBtwItems.bottomPadding),
 
         /// SignIn button
-        TPrimaryButton(title: context.translate.signIn, onPressed: () => Get.offAll(() => const BottomNavigationMenu()))
+        TPrimaryButton(title: context.translate.signIn, onPressed: () => Get.offAll(() => const TNavigationMenu()))
             .withPadding(TSizes.spaceBtwItems.bottomPadding),
 
         ///  Register button

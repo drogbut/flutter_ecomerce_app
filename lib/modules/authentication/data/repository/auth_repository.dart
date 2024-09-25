@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 import '../../../../navigation_menu.dart';
 import '../../../../utilities/exceptions/firebase_auth_exceptions.dart';
@@ -89,6 +90,36 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
+  /// ============ [FirebaseAuthentication] - GOOGLE =======================
+  Future<UserCredential> signInWithGoogle() async {
+    try {
+      // Trigger the authentication flow
+      GoogleSignInAccount? userAccount = await GoogleSignIn().signIn();
+
+      // obtain the auth detail from the request
+      GoogleSignInAuthentication? googleAuth = await userAccount?.authentication;
+
+      // create a new google credential
+      OAuthCredential credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth?.accessToken,
+        idToken: googleAuth?.idToken,
+      );
+
+      //Once signed in, return credential
+      return _auth.signInWithCredential(credential);
+    } on FirebaseAuthException catch (e) {
+      throw TFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const TFormatException();
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went Wrong. Please try again';
+    }
+  }
+
   /// ============= [FirebaseAuthentication] - Email verification ==========
   Future<void> sendEmailVerification({required}) async {
     try {
@@ -109,6 +140,7 @@ class AuthenticationRepository extends GetxController {
   /// ============= [LogoutUser] - valid for any authentication ===========
   Future<void> logout({required}) async {
     try {
+      await GoogleSignIn().signOut();
       await _auth.signOut();
 
       /// Redirect to login screen

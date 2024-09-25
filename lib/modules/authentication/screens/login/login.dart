@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../commons/style/spacing_style.dart';
 import '../../../../core/constants/images_string.dart';
@@ -7,6 +8,7 @@ import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../widgets/dividers/form_divider.dart';
 import '../../../../widgets/icons/image_circular.dart';
+import '../../controllers/sign_in/login_controller.dart';
 import 'widgets/header.dart';
 import 'widgets/login_form.dart';
 
@@ -15,6 +17,8 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LoginController());
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
@@ -41,7 +45,7 @@ class LoginScreen extends StatelessWidget {
                   /// google
                   TImageCircularIcon(
                     imagePath: TImages.google,
-                    onPressed: () {},
+                    onPressed: () => controller.googleSignIn(),
                   ).withPadding(TSizes.spaceBtwItems.rightPadding),
 
                   /// facebook

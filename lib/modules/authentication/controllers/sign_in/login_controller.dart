@@ -5,11 +5,13 @@ import 'package:get_storage/get_storage.dart';
 import '../../../../utilities/helpers/network_manager.dart';
 import '../../../../utilities/popups/full_screen_loader.dart';
 import '../../../../utilities/popups/loaders.dart';
+import '../../../personalisation/controllers/user_controller.dart';
 import '../../data/repository/auth_repository.dart';
 
 class LoginController extends GetxController {
   static LoginController get instance => Get.find();
   final authRepository = AuthenticationRepository.instance;
+  final userController = Get.put(UserController());
 
   ///================ variables ========================================
   RxBool rememberMe = false.obs;
@@ -26,7 +28,7 @@ class LoginController extends GetxController {
     super.onInit();
   }
 
-  ///================ methods ========================================
+  ///================ Email & Pwd Sign_in ====================================
   Future<void> signInWithEmailAndPassword() async {
     try {
       /// Start loading
@@ -65,6 +67,38 @@ class LoginController extends GetxController {
       /// Redirect
       authRepository.screenRedirect();
     } catch (e) {
+      /// Show generic error
+      TLoaders.errorSnackbar(title: 'Register error', message: e.toString());
+    }
+  }
+
+  ///================ GOOGLE SIGN IN ========================================
+  Future<void> googleSignIn() async {
+    try {
+      /// Start loading
+      //TFullScreenLoader.openLoadingDialog('Login you in...', TImages.verifyIllustration);
+
+      /// Check internet connectivity
+      final isConnected = await NetworkManager.instance.isConnected();
+      if (!isConnected) {
+        TFullScreenLoader.stopLoading();
+        return;
+      }
+
+      /// Login user using google
+      final credential = await authRepository.signInWithGoogle();
+
+      /// Save user data
+      await userController.saveUserRecord(credential);
+
+      /// Remove loader
+      //TFullScreenLoader.stopLoading();
+
+      /// Redirect
+      authRepository.screenRedirect();
+    } catch (e) {
+      /// Remove loader
+      //TFullScreenLoader.stopLoading();
       /// Show generic error
       TLoaders.errorSnackbar(title: 'Register error', message: e.toString());
     }

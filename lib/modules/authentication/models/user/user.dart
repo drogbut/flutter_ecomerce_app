@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+
 import '../../../../utilities/formatter/formatter.dart';
 
 part 'user.freezed.dart';
@@ -6,7 +7,7 @@ part 'user.g.dart';
 
 @freezed
 class UserModel with _$UserModel {
-  const UserModel._(); // Constructor privé requis par Freezed
+  const UserModel._();
 
   const factory UserModel({
     required String id,
@@ -14,7 +15,6 @@ class UserModel with _$UserModel {
     required String lastName,
     required String userName,
     required String email,
-    required String password,
     required String phoneNumber,
     required String profilePicture,
   }) = _UserModel;
@@ -30,7 +30,14 @@ class UserModel with _$UserModel {
 
   /// Static function to create an empty user
   static UserModel empty() => const UserModel(
-      id: '', firstName: '', lastName: '', userName: '', email: '', password: '', phoneNumber: '', profilePicture: '');
+        id: '',
+        firstName: '',
+        lastName: '',
+        userName: '',
+        email: '',
+        phoneNumber: '',
+        profilePicture: '',
+      );
 
   factory UserModel.fromJson(Map<String, Object?> json) => _$UserModelFromJson(json);
 }

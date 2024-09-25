@@ -65,7 +65,6 @@ class RegisterController extends GetxController {
         lastName: lastName.text.trim(),
         userName: userName.text.trim(),
         email: email.text.trim(),
-        password: password.text.trim(),
         phoneNumber: phone.text.trim(),
         profilePicture: '',
       );

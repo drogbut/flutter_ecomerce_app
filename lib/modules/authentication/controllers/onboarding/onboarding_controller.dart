@@ -24,7 +24,7 @@ class OnboardingController extends GetxController {
   void nextPage() {
     if (currentPageIndex.value == 2) {
       final deviceStorage = GetStorage();
-      deviceStorage.write('IsFirsttime', false);
+      deviceStorage.write('IsFirstTime', false);
       Get.offAll(() => const LoginScreen());
     } else {
       var page = currentPageIndex.value + 1;

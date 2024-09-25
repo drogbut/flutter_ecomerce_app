@@ -10,7 +10,7 @@ class TAnimationLoaderWidget extends StatelessWidget {
   final String text, animation;
   final bool showAction;
   final String? actionText;
-  final VoidCallback? onActionPrssed;
+  final VoidCallback? onActionPressed;
 
   const TAnimationLoaderWidget({
     super.key,
@@ -18,7 +18,7 @@ class TAnimationLoaderWidget extends StatelessWidget {
     required this.animation,
     this.showAction = false,
     this.actionText,
-    this.onActionPrssed,
+    this.onActionPressed,
   });
 
   @override
@@ -38,7 +38,7 @@ class TAnimationLoaderWidget extends StatelessWidget {
           if (showAction)
             SizedBox(
               width: 250,
-              child: TSecondaryButton(title: actionText!, onPressed: onActionPrssed),
+              child: TSecondaryButton(title: actionText!, onPressed: onActionPressed),
             ),
         ],
       ),

@@ -8,13 +8,16 @@ import '../../widgets/loaders/animation_loader.dart';
 class TFullScreenLoader {
   /// Open a full screen dialof with the giving text and animation
   static void openLoadingDialog(String text, String animation) {
-    final context = Get.overlayContext!;
+    final context = Get.overlayContext;
+    if (context == null) {
+      return; // Or handle this error as you wish
+    }
 
     showDialog(
       context: context,
       barrierDismissible: false,
       builder: (_) => PopScope(
-        canPop: false, // Disable poping with the back button
+        canPop: false, // Disable popping with the back button
         child: Container(
           color: context.darkOrWhite,
           width: double.infinity,
@@ -34,6 +37,10 @@ class TFullScreenLoader {
 
   /// stop the current open loading dialog.
   static void stopLoading() {
-    Navigator.of(Get.overlayContext!).pop();
+    final context = Get.overlayContext;
+    if (context == null) {
+      return; // Or handle this error as you wish
+    }
+    Navigator.of(context).pop();
   }
 }

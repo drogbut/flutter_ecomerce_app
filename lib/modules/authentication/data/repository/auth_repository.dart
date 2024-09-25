@@ -30,34 +30,49 @@ class AuthenticationRepository extends GetxController {
     screenRedirect();
   }
 
-  /// Function to show the relevant screen
+  /// ================= Function to show the relevant screen ===================
   void screenRedirect() async {
     final user = _auth.currentUser;
 
-    /// Check if the user doesn't exit
+    // Check if the user doesn't exit
     if (user != null) {
-      /// If User exist, check if he is verified
+      // If User exist, check if he is verified
       if (user.emailVerified) {
-        /// Navigate to home screen
+        // Navigate to home screen
         Get.offAll(() => const TNavigationMenu());
       } else {
-        /// Navigate to verified email screen
+        // Navigate to verified email screen
         Get.offAll(() => VerificationEmailScreen(email: _auth.currentUser?.email ?? ''));
       }
     } else {
-      /// Local storage
-      deviceStorage.writeIfNull('IsFirsttime', true);
+      // Local storage
+      deviceStorage.writeIfNull('IsFirstTime', true);
 
-      /// Check if it's the first time to launch the app
-      deviceStorage.read('IsFirsttime') != true
+      // Check if it's the first time to launch the app
+      deviceStorage.read('IsFirstTime') != true
           ? Get.offAll(() => const LoginScreen())
           : Get.offAll(() => const OnboardingScreen());
     }
   }
 
-  /// [FirebaseAuthentication] - Sign-in
+  /// ============ [FirebaseAuthentication] - Sign-in ========================
+  Future<UserCredential> loginWithEmailAndPassword({required String email, required String password}) async {
+    try {
+      return await _auth.signInWithEmailAndPassword(email: email, password: password);
+    } on FirebaseAuthException catch (e) {
+      throw TFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const TFormatException();
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went Wrong. Please try again';
+    }
+  }
 
-  /// [FirebaseAuthentication] - Register
+  /// ============ [FirebaseAuthentication] - Register =======================
   Future<UserCredential> registerWithEmailAndPassword({required String email, required String password}) async {
     try {
       return await _auth.createUserWithEmailAndPassword(email: email, password: password);
@@ -74,7 +89,7 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
-  /// [FirebaseAuthentication] - Email verification
+  /// ============= [FirebaseAuthentication] - Email verification ==========
   Future<void> sendEmailVerification({required}) async {
     try {
       return await _auth.currentUser?.sendEmailVerification();
@@ -91,7 +106,7 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
-  /// [LogoutUser] - valid for any authentication.
+  /// ============= [LogoutUser] - valid for any authentication ===========
   Future<void> logout({required}) async {
     try {
       await _auth.signOut();

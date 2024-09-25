@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../core/constants/colors.dart';
 import '../../../../core/constants/sizes.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../widgets/appbar/appbar.dart';
@@ -9,6 +10,7 @@ import '../../../../widgets/buttons/secondary.dart';
 import '../../../../widgets/clippers/clipper.dart';
 import '../../../../widgets/list_tiles/settings_menu.dart';
 import '../../../../widgets/texts/section_header.dart';
+import '../../../authentication/data/repository/auth_repository.dart';
 import '../address/address.dar.dart';
 import 'widgets/user_profile_card.dart';
 
@@ -89,8 +91,12 @@ class SettingsPage extends StatelessWidget {
                     trailing: Switch.adaptive(value: false, onChanged: (value) {}),
                   ),
 
-                  TSecondaryButton(title: 'Logout', onPressed: () {})
-                      .withPadding(TSizes.spaceBtwSections.verticalPadding),
+                  TSecondaryButton(
+                    borderColor: TColors.error,
+                    title: 'Logout',
+                    textStyle: context.textTheme.titleMedium?.copyWith(color: TColors.error),
+                    onPressed: () => AuthenticationRepository.instance.logout(),
+                  ).withPadding(TSizes.spaceBtwSections.verticalPadding),
                 ],
               ),
             )

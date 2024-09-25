@@ -29,7 +29,10 @@ class RegisterController extends GetxController {
     try {
       /// Check internet connectivity
       final isConnected = await NetworkManager.instance.isConnected();
-      if (!isConnected) return;
+      if (!isConnected) {
+        TFullScreenLoader.stopLoading();
+        return;
+      }
 
       /// Check form validation
       if (!registerFormKey.currentState!.validate()) {
@@ -68,7 +71,7 @@ class RegisterController extends GetxController {
       );
 
       final userRepository = Get.put(UserRepository());
-      await userRepository.saveUserrecord(user: userModel);
+      await userRepository.saveUserRecord(user: userModel);
 
       /// Remove loader
       TFullScreenLoader.stopLoading();

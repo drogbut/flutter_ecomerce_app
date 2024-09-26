@@ -7,6 +7,9 @@ class TPrimaryButton extends StatelessWidget {
   final double? height;
   final Color? textButtonColor;
   final Color? backgroundColor;
+  final BorderSide? side;
+  final TextOverflow? textOverflow;
+  final EdgeInsetsGeometry? padding;
 
   const TPrimaryButton({
     required this.title,
@@ -15,6 +18,9 @@ class TPrimaryButton extends StatelessWidget {
     this.height,
     this.textButtonColor,
     this.backgroundColor,
+    this.side,
+    this.textOverflow = TextOverflow.clip,
+    this.padding,
     super.key,
   });
 
@@ -24,10 +30,14 @@ class TPrimaryButton extends StatelessWidget {
       width: width,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          padding: padding,
           minimumSize: Size.fromHeight(height ?? 50),
+          backgroundColor: backgroundColor,
+          foregroundColor: textButtonColor,
+          side: side,
         ),
         onPressed: onPressed,
-        child: Text(title),
+        child: Text(title, overflow: textOverflow),
       ),
     );
   }

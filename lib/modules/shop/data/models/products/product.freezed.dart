@@ -33,8 +33,12 @@ mixin _$ProductModel {
   int get salesNumber => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
 
+  /// Serializes this ProductModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProductModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ProductModelCopyWith<ProductModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -70,6 +74,8 @@ class _$ProductModelCopyWithImpl<$Res, $Val extends ProductModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ProductModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -165,6 +171,8 @@ class __$$ProductModelImplCopyWithImpl<$Res>
       _$ProductModelImpl _value, $Res Function(_$ProductModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProductModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -322,7 +330,7 @@ class _$ProductModelImpl implements _ProductModel {
             (identical(other.title, title) || other.title == title));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -338,7 +346,9 @@ class _$ProductModelImpl implements _ProductModel {
       salesNumber,
       title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProductModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ProductModelImplCopyWith<_$ProductModelImpl> get copyWith =>
@@ -393,8 +403,11 @@ abstract class _ProductModel implements ProductModel {
   int get salesNumber;
   @override
   String get title;
+
+  /// Create a copy of ProductModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ProductModelImplCopyWith<_$ProductModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

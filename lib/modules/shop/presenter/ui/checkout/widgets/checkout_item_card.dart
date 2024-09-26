@@ -10,20 +10,17 @@ import '../../../../../../widgets/products/widgets/price.dart';
 import '../../../../../../widgets/products/widgets/title.dart';
 import '../../../../../../widgets/texts/brand_title_with_verify_icon.dart';
 
-class ItemCard extends StatelessWidget {
+class CheckoutItemCard extends StatelessWidget {
   final bool shwAddAndRemoveButtons;
 
-  const ItemCard({
-    this.shwAddAndRemoveButtons = true,
-    super.key,
-  });
+  const CheckoutItemCard({this.shwAddAndRemoveButtons = true, super.key});
 
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
       shrinkWrap: true,
       separatorBuilder: (_, index) => TSizes.spaceBtwItems.sbs,
-      itemCount: 10,
+      itemCount: 2,
       itemBuilder: (_, index) => Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

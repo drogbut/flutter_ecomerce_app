@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../core/extensions/context.dart';
 
 class TProductPriceText extends StatelessWidget {
@@ -7,14 +8,14 @@ class TProductPriceText extends StatelessWidget {
   final TextAlign? textAlign;
   final Color? color;
   final bool isLarge, lineThrough;
-  final int maxlines;
+  final int maxLines;
 
   const TProductPriceText({
     required this.price,
     this.currentSign = '\$',
     this.textAlign = TextAlign.left,
     this.isLarge = false,
-    this.maxlines = 1,
+    this.maxLines = 1,
     this.lineThrough = false,
     this.color,
     super.key,
@@ -25,7 +26,7 @@ class TProductPriceText extends StatelessWidget {
     return Text(
       '$currentSign$price',
       textAlign: textAlign,
-      maxLines: maxlines,
+      maxLines: maxLines,
       overflow: TextOverflow.ellipsis,
       style: isLarge
           ? context.textTheme.headlineMedium?.apply(

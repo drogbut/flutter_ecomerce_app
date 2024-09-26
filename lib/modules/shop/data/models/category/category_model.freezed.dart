@@ -22,8 +22,12 @@ CategoryModel _$CategoryModelFromJson(Map<String, dynamic> json) {
 mixin _$CategoryModel {
   List<CategoryItem>? get categories => throw _privateConstructorUsedError;
 
+  /// Serializes this CategoryModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CategoryModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CategoryModelCopyWith<CategoryModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$CategoryModelCopyWithImpl<$Res, $Val extends CategoryModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CategoryModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$CategoryModelImplCopyWithImpl<$Res>
       _$CategoryModelImpl _value, $Res Function(_$CategoryModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CategoryModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,12 +135,14 @@ class _$CategoryModelImpl implements _CategoryModel {
                 .equals(other._categories, _categories));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_categories));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CategoryModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CategoryModelImplCopyWith<_$CategoryModelImpl> get copyWith =>
@@ -155,8 +165,11 @@ abstract class _CategoryModel implements CategoryModel {
 
   @override
   List<CategoryItem>? get categories;
+
+  /// Create a copy of CategoryModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CategoryModelImplCopyWith<_$CategoryModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

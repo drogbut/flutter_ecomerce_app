@@ -23,8 +23,12 @@ mixin _$ProductColorModel {
   String get title => throw _privateConstructorUsedError;
   String get hexCode => throw _privateConstructorUsedError;
 
+  /// Serializes this ProductColorModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProductColorModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ProductColorModelCopyWith<ProductColorModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$ProductColorModelCopyWithImpl<$Res, $Val extends ProductColorModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ProductColorModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$ProductColorModelImplCopyWithImpl<$Res>
       $Res Function(_$ProductColorModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProductColorModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,11 +140,13 @@ class _$ProductColorModelImpl implements _ProductColorModel {
             (identical(other.hexCode, hexCode) || other.hexCode == hexCode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, title, hexCode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProductColorModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ProductColorModelImplCopyWith<_$ProductColorModelImpl> get copyWith =>
@@ -163,8 +173,11 @@ abstract class _ProductColorModel implements ProductColorModel {
   String get title;
   @override
   String get hexCode;
+
+  /// Create a copy of ProductColorModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ProductColorModelImplCopyWith<_$ProductColorModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

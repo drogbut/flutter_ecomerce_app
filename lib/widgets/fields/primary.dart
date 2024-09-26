@@ -11,6 +11,7 @@ class TPrimaryTextField extends StatelessWidget {
   final bool expands;
   final bool isObscureText;
   final String? Function(String?)? validator;
+  final InputBorder? border;
 
   const TPrimaryTextField({
     this.controller,
@@ -20,6 +21,7 @@ class TPrimaryTextField extends StatelessWidget {
     this.expands = false,
     this.isObscureText = false,
     this.validator,
+    this.border,
     super.key,
   });
 
@@ -34,6 +36,7 @@ class TPrimaryTextField extends StatelessWidget {
         prefixIcon: Icon(prefixIcon),
         labelText: label,
         suffixIcon: suffixIcon,
+        border: border,
       ),
     ).withPadding(TSizes.spaceBtwInputFields.bottomPadding);
   }

@@ -24,8 +24,12 @@ mixin _$CategoryItem {
   String? get title => throw _privateConstructorUsedError;
   String? get imagePfad => throw _privateConstructorUsedError;
 
+  /// Serializes this CategoryItem to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CategoryItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CategoryItemCopyWith<CategoryItem> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$CategoryItemCopyWithImpl<$Res, $Val extends CategoryItem>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CategoryItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$CategoryItemImplCopyWithImpl<$Res>
       _$CategoryItemImpl _value, $Res Function(_$CategoryItemImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CategoryItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -148,11 +156,13 @@ class _$CategoryItemImpl implements _CategoryItem {
                 other.imagePfad == imagePfad));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, title, imagePfad);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CategoryItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CategoryItemImplCopyWith<_$CategoryItemImpl> get copyWith =>
@@ -181,8 +191,11 @@ abstract class _CategoryItem implements CategoryItem {
   String? get title;
   @override
   String? get imagePfad;
+
+  /// Create a copy of CategoryItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CategoryItemImplCopyWith<_$CategoryItemImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

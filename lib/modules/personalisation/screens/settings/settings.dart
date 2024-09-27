@@ -11,6 +11,7 @@ import '../../../../widgets/clippers/clipper.dart';
 import '../../../../widgets/list_tiles/settings_menu.dart';
 import '../../../../widgets/texts/section_header.dart';
 import '../../../authentication/data/repository/auth_repository.dart';
+import '../../../shop/presenter/ui/orders/orders_screen.dart';
 import '../address/address.dar.dart';
 import 'widgets/user_profile_card.dart';
 
@@ -51,8 +52,12 @@ class SettingsPage extends StatelessWidget {
                     subTitle: 'Ste Shopping delivery address',
                     onTap: () => Get.to(() => const UserAddressScreen()),
                   ),
-                  const TSettingsMenuTile(
-                      iconData: Iconsax.shopping_cart, title: 'My Addresse', subTitle: 'Ste Shopping delivery adresse'),
+                  TSettingsMenuTile(
+                    iconData: Iconsax.shopping_cart,
+                    title: 'My Orders',
+                    subTitle: 'All my products list',
+                    onTap: () => Get.to(() => const TOrdersScreen()),
+                  ),
                   const TSettingsMenuTile(
                       iconData: Iconsax.bag_tick, title: 'My Addresse', subTitle: 'Ste Shopping delivery adresse'),
                   const TSettingsMenuTile(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../core/constants/images_string.dart';
 import '../../../../../core/constants/sizes.dart';
@@ -12,6 +13,7 @@ import '../../../../../widgets/search_bar/search.dart';
 import '../../../../../widgets/texts/section_header.dart';
 import 'categories.dart';
 import 'header.dart';
+import 'view_all_products.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -58,7 +60,7 @@ class HomePage extends StatelessWidget {
               TSectionHeader(
                 title: context.translate.homeCategoriesTitle,
                 showActionButton: true,
-                onPressed: () {},
+                onPressed: () => Get.to(() => const TViewAllProductsScreen()),
               ).withPadding(TSizes.defaultSpace.horizontalPadding),
 
               /// Popular products

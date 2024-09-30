@@ -8,7 +8,7 @@ import '../../../../../navigation_menu.dart';
 import '../../../../../widgets/appbar/appbar.dart';
 import '../../../../../widgets/gridviews/grid_view.dart';
 import '../../../../../widgets/icons/circular.dart';
-import '../../../../../widgets/products/vertical.dart';
+import '../../../../../widgets/products/cards/product_card_vertical.dart';
 import '../../../../../widgets/texts/title.dart';
 
 class WhishlistPage extends StatelessWidget {

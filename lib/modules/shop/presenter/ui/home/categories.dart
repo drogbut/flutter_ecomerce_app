@@ -6,6 +6,7 @@ import '../../../../../core/extensions/context.dart';
 import '../../../../../core/extensions/widget.dart';
 import '../../../../../widgets/cards/vertical_image_card.dart';
 import '../../../../../widgets/texts/section_header.dart';
+import 'sub_categories.dart';
 
 class HomeCategories extends StatelessWidget {
   const HomeCategories({super.key});
@@ -31,7 +32,7 @@ class HomeCategories extends StatelessWidget {
               return TVerticalImageCard(
                 imageUrl: null,
                 itemTitle: 'title',
-                onTap: () {},
+                onTap: () => Get.to(() => const HomeSubCategories()),
               );
             },
             separatorBuilder: (_, index) => TSizes.spaceBtwItems.sbs,

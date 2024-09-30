@@ -34,9 +34,9 @@ class CircularImageIcon extends StatelessWidget {
                 fit: BoxFit.cover,
                 color: context.isDarkMode ? TColors.black : TColors.light,
               )
-            : TCircularIcon(
+            : const TCircularIcon(
                 iconData: Icons.shopping_bag,
-                onPressed: () {},
+                onPressed: null,
               ));
   }
 }

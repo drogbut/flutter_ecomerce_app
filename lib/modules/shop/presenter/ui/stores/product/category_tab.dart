@@ -5,7 +5,7 @@ import '../../../../../../core/constants/sizes.dart';
 import '../../../../../../core/extensions/widget.dart';
 import '../../../../../../widgets/gridviews/grid_view.dart';
 import '../../../../../../widgets/products/brand_showcase.dart';
-import '../../../../../../widgets/products/vertical.dart';
+import '../../../../../../widgets/products/cards/product_card_vertical.dart';
 import '../../../../../../widgets/texts/section_header.dart';
 
 class TCategoryTab extends StatelessWidget {

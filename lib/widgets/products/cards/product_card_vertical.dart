@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../commons/style/shadow.dart';
-import '../../core/constants/colors.dart';
-import '../../core/constants/images_string.dart';
-import '../../core/constants/sizes.dart';
-import '../../core/extensions/widget.dart';
-import '../../modules/shop/presenter/ui/stores/product_detail/product_detail_screen.dart';
-import '../containers/rounded_container.dart';
-import '../icons/circular.dart';
-import '../images/rounded.dart';
-import '../texts/brand_title_with_verify_icon.dart';
-import 'widgets/price.dart';
-import 'widgets/title.dart';
+import '../../../commons/style/shadow.dart';
+import '../../../core/constants/colors.dart';
+import '../../../core/constants/images_string.dart';
+import '../../../core/constants/sizes.dart';
+import '../../../core/extensions/widget.dart';
+import '../../../modules/shop/presenter/ui/stores/product_detail/product_detail_screen.dart';
+import '../../containers/rounded_container.dart';
+import '../../icons/circular.dart';
+import '../../images/rounded.dart';
+import '../../texts/brand_title_with_verify_icon.dart';
+import '../widgets/price.dart';
+import '../widgets/title.dart';
 
 class TProductCardVertical extends StatelessWidget {
   final VoidCallback? onPressed;

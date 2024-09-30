@@ -29,10 +29,12 @@ class TProductPriceText extends StatelessWidget {
       maxLines: maxLines,
       overflow: TextOverflow.ellipsis,
       style: isLarge
-          ? context.textTheme.headlineMedium?.apply(
+          ? context.textTheme.headlineMedium?.copyWith(
+              fontWeight: FontWeight.bold,
               decoration: lineThrough ? TextDecoration.lineThrough : null,
             )
-          : context.textTheme.titleMedium?.apply(
+          : context.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.bold,
               decoration: lineThrough ? TextDecoration.lineThrough : null,
             ),
     );

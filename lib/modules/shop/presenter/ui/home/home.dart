@@ -7,7 +7,7 @@ import '../../../../../core/extensions/widget.dart';
 import '../../../../../widgets/carousel/carousel.dart';
 import '../../../../../widgets/clippers/clipper.dart';
 import '../../../../../widgets/gridviews/grid_view.dart';
-import '../../../../../widgets/products/vertical.dart';
+import '../../../../../widgets/products/cards/product_card_vertical.dart';
 import '../../../../../widgets/search_bar/search.dart';
 import '../../../../../widgets/texts/section_header.dart';
 import 'categories.dart';
@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
                 ],
               ).withPadding(TSizes.defaultSpace.horizontalPadding),
 
-              /// Header populat
+              /// Header popular
               TSectionHeader(
                 title: context.translate.homeCategoriesTitle,
                 showActionButton: true,

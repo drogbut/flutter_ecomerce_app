@@ -62,7 +62,7 @@ class LoginController extends GetxController {
       );
 
       /// Remove loader
-      //TFullScreenLoader.stopLoading();
+      TFullScreenLoader.stopLoading();
 
       /// Redirect
       authRepository.screenRedirect();

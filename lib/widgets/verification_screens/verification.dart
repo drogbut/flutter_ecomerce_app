@@ -20,8 +20,8 @@ class TVerificationScreen extends StatelessWidget {
     required this.image,
     required this.title,
     required this.subtitle,
-    this.email,
     required this.continueButtonTitle,
+    this.email,
     this.onClosePressed,
     this.onContinuePressed,
     this.onResetPressed,
@@ -69,7 +69,7 @@ class TVerificationScreen extends StatelessWidget {
               /// Resend email button
               TTertiaryButton(
                 title: context.translate.resendEmail,
-                onPressed: () {},
+                onPressed: onResetPressed,
               ).withPadding(TSizes.spaceBtwInputFields.topPadding),
             ],
           ),

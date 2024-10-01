@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../core/constants/images_string.dart';
 import '../../../../core/constants/sizes.dart';
 import '../../../../core/extensions/context.dart';
 import '../../../../core/extensions/widget.dart';
+import '../../../../utilities/validators/validator.dart';
 import '../../../../widgets/buttons/primary.dart';
 import '../../../../widgets/fields/primary.dart';
-import '../../../../widgets/success_screens/success.dart';
 import '../../../../widgets/texts/title.dart';
-import '../../../../widgets/verification_screens/verification.dart';
-import '../login/login.dart';
+import '../../controllers/forget_password/forget_password_controller.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   const ForgotPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(ForgetPasswordController());
+
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
@@ -34,31 +34,20 @@ class ForgotPasswordScreen extends StatelessWidget {
             ).withPadding(TSizes.spaceBtwSections.bottomPadding),
 
             /// E-mail
-            TPrimaryTextField(
-              prefixIcon: Iconsax.direct_right,
-              label: context.translate.enterEmail,
+            Form(
+              key: controller.forgetPasswordFormKey,
+              child: TPrimaryTextField(
+                controller: controller.email,
+                validator: (value) => TValidator.validateEmail(value),
+                prefixIcon: Iconsax.direct_right,
+                label: context.translate.enterEmail,
+              ),
             ),
 
             /// Submit button
             TPrimaryButton(
               title: context.translate.submit,
-              onPressed: () => Get.offAll(
-                () => TVerificationScreen(
-                  image: TImages.deliveredEmailIllustration,
-                  title: context.translate.passwordResetEmailSend,
-                  subtitle: context.translate.passwordResetEmailSendSubtitle,
-                  email: 'your_e_mail@test.com',
-                  continueButtonTitle: context.translate.done,
-                  onContinuePressed: () => Get.to(
-                    () => SuccessScreen(
-                      image: TImages.staticSuccessIllustration,
-                      title: context.translate.yourAccountCreatedTitle,
-                      subTitle: context.translate.yourAccountCreatedSubTitle,
-                      onPressed: () => Get.offAll(() => const LoginScreen()),
-                    ),
-                  ),
-                ),
-              ),
+              onPressed: () => controller.sendPasswordResetEmail(),
             ).withPadding(TSizes.spaceBtwInputFields.topPadding),
           ],
         ),

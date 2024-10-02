@@ -9,6 +9,7 @@ import '../../data/repository/auth_repository.dart';
 import '../../screens/forgot_password/reset_password_screen.dart';
 
 class ForgetPasswordController extends GetxController {
+  /// controller needs instance & repository
   static ForgetPasswordController get instance => Get.find();
   final authRepository = AuthenticationRepository.instance;
 

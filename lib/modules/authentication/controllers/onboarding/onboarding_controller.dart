@@ -5,6 +5,7 @@ import 'package:get_storage/get_storage.dart';
 import '../../screens/login/login.dart';
 
 class OnboardingController extends GetxController {
+  /// controller needs instance & repository (optional)
   static OnboardingController get instance => Get.find();
 
   /// variables

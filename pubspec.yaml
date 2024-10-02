@@ -42,9 +42,10 @@ dependencies:
   carousel_slider: ^5.0.0
   readmore: ^3.0.0
 
-  # Oders
+  # Others
   shared_preferences: ^2.3.2
   package_info_plus: ^8.0.2
+  shimmer: ^3.0.0
   
   device_info_plus: ^9.1.2
   font_awesome_flutter: ^10.7.0
@@ -69,6 +70,7 @@ dependencies:
   freezed_annotation: ^2.4.4
   json_annotation: ^4.9.0
   flutter_rating_bar: ^4.0.1
+
 
   
   

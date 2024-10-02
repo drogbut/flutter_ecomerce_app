@@ -6,6 +6,7 @@ import '../../../../../core/constants/colors.dart';
 import '../../../../../core/constants/images_string.dart';
 import '../../../../../widgets/images/circular.dart';
 import '../../../../../widgets/texts/title.dart';
+import '../../../controllers/user_controller.dart';
 import '../profile.dart';
 
 class TUserProfileCard extends StatelessWidget {
@@ -13,6 +14,8 @@ class TUserProfileCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = UserController.instance;
+
     return ListTile(
       leading: const TCircularImage(
         width: 50,
@@ -20,8 +23,8 @@ class TUserProfileCard extends StatelessWidget {
         padding: 0.0,
         imagePath: TImages.user,
       ),
-      title: const TTitleText('max Mustermann'),
-      subtitle: const Text('max.musterman@gmail.com'),
+      title: TTitleText(controller.userModel.value.fullName),
+      subtitle: Text(controller.userModel.value.email),
       trailing: IconButton(
         icon: const Icon(Iconsax.edit, color: TColors.white),
         onPressed: () => Get.off(const TProfilePage()),

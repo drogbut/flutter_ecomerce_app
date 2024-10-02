@@ -96,6 +96,7 @@ extension ContextExt on BuildContext {
   Color get whiteOrPrimary => isDarkMode ? TColors.white : TColors.primary;
   Color get darkgreyOrLight => isDarkMode ? TColors.darkGrey : TColors.light;
   Color get darkgreyOrGrey => isDarkMode ? TColors.darkGrey : TColors.grey;
+  Color get darkgreyOrWhite => isDarkMode ? TColors.darkGrey : TColors.white;
   Color get darkOrWhite => isDarkMode ? TColors.dark : TColors.white;
   Color get primaryOrDark => isDarkMode ? TColors.primary : TColors.dark;
   Color get lightOrWhite => isDarkMode ? TColors.light : TColors.white;

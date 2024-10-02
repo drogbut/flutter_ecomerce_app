@@ -9,8 +9,10 @@ import '../../../personalisation/controllers/user_controller.dart';
 import '../../data/repository/auth_repository.dart';
 
 class LoginController extends GetxController {
+  /// controller needs instance & repository
   static LoginController get instance => Get.find();
   final authRepository = AuthenticationRepository.instance;
+
   final userController = Get.put(UserController());
 
   ///================ variables ========================================

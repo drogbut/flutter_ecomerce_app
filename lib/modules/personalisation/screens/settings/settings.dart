@@ -12,14 +12,17 @@ import '../../../../widgets/list_tiles/settings_menu.dart';
 import '../../../../widgets/texts/section_header.dart';
 import '../../../authentication/data/repository/auth_repository.dart';
 import '../../../shop/presenter/ui/orders/orders_screen.dart';
-import '../address/address.dar.dart';
-import 'widgets/user_profile_card.dart';
+import '../../controllers/user_controller.dart';
+import '../address/address.dart';
+import '../profile/widgets/user_profile_card.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(UserController());
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(

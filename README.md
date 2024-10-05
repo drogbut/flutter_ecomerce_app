@@ -1,9 +1,8 @@
 # E-commerce App - Clean architecture
 The eCommerce Flutter App is a mobile solution that allows users to browse, search, and purchase products online. It is built using the Flutter framework and connects to a backend API for managing products, users, and orders. The goal is to provide an intuitive and responsive user interface while offering seamless payment and delivery management.
 
-## Key Features
-
-### Professional App configurations
+## FRONTEND FEATURES
+### APP CONFIGURATIONS
 * Create new project & setup the folders structure - feature first approach
 * Light & dark mode setup include Buttons, textfileds, appBar and more.
 * Create Helper functions,  utilities and constantes classes
@@ -38,6 +37,7 @@ The eCommerce Flutter App is a mobile solution that allows users to browse, sear
 * View All Products
 * View All Brands & Brand Specific Products
 
+## BACKEND FEATURES
 ### LOGIN BACKEND - FIREBASE AUTHENTICATION
 * Firebase Setup
 * onboarding with single Timer appearance (Local Storage)

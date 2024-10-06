@@ -7,7 +7,7 @@ The eCommerce Flutter App is a mobile solution that allows users to browse, sear
 * Light & dark mode setup include Buttons, textfileds, appBar and more.
 * Create Helper functions,  utilities and constantes classes
 
-### LOGIN / REGISTER UI/UX
+### LOGIN / REGISTER 
 * Native Splash Screen
 * Onboarding Screens
 * Register Screen with Email Verification and Success Screen
@@ -38,7 +38,7 @@ The eCommerce Flutter App is a mobile solution that allows users to browse, sear
 * View All Brands & Brand Specific Products
 
 ## BACKEND FEATURES
-### LOGIN BACKEND - FIREBASE AUTHENTICATION
+### LOGIN - FIREBASE AUTHENTICATION
 * Firebase Setup
 * onboarding with single Timer appearance (Local Storage)
 * Register User & Email Verification (Email and Pasword - Store data in Firebase)
@@ -47,7 +47,7 @@ The eCommerce Flutter App is a mobile solution that allows users to browse, sear
 * FACEBOOK SIGN-IN
 * Forget Password & reset Password
 
-### E-COMMERCE APP BACKEND 
+### E-COMMERCE APP  
 * Fetch Categories
 * Fetch Brands
 * Fetch products (Create Stream to reduce Reads and Writes on Firestore)
@@ -55,7 +55,7 @@ The eCommerce Flutter App is a mobile solution that allows users to browse, sear
 * Add to Card (From product card, Single & varaition product from Product Details)
 * Ceckout & Creat Ordres
 
-## Technologies Used
+## TECHNOLIES USED 
 * Flutter: Cross-platform development framework.
 * Dart: Programming language used with Flutter.
 * Firebase: Backend service for authentication, database (Firestore), and push notifications.
@@ -63,13 +63,13 @@ The eCommerce Flutter App is a mobile solution that allows users to browse, sear
 * Stripe / PayPal API: Integrated payment solutions for secure transactions.
 * REST API: For communication between the app and the backend server.
 
-## Requirements
+## REQUIREMENTS 
 * Flutter SDK: Version 3.0+ (ensure compatibility with your Flutter version)
 * Android Studio or Visual Studio Code: Code editors with Flutter and Dart extensions.
 * Firebase Account: Required for managing authentication and push notifications.
 * Stripe or PayPal Developer Account: For handling payments.
 
-## Installation
+## INSTALLATION 
 
 1. Clone the repository:
 ```

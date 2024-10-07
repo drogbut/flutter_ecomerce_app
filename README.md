@@ -55,6 +55,20 @@ The eCommerce Flutter App is a mobile solution that allows users to browse, sear
 * Add to Card (From product card, Single & varaition product from Product Details)
 * Ceckout & Creat Ordres
 
+## TESTING FEATURES
+*
+*
+*
+*
+*
+
+## CI/CD FEATURES
+*
+*
+*
+*
+*
+
 ## TECHNOLIES USED 
 * Flutter: Cross-platform development framework.
 * Dart: Programming language used with Flutter.

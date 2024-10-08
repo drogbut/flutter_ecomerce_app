@@ -8,7 +8,7 @@ The eCommerce Flutter App is a mobile solution that allows users to browse, sear
 * Create Helper functions,  utilities and constantes classes
 
 ### LOGIN / REGISTER 
-* Native Splash Screen
+* Launcher Icon & Splash Screen
 * Onboarding Screens
 * Register Screen with Email Verification and Success Screen
 * Login Screen

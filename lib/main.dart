@@ -6,9 +6,7 @@ import 'package:get_storage/get_storage.dart';
 
 import 'app.dart';
 import 'firebase_options.dart';
-import 'locator.dart';
 import 'modules/authentication/data/repository/auth_repository.dart';
-import 'utilities/local_storage/preferences.dart';
 
 Future<void> main() async {
   /// Add widget binding
@@ -26,10 +24,6 @@ Future<void> main() async {
   /// Init authentication
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform)
       .then((FirebaseApp value) => Get.put(AuthenticationRepository()));
-
-  await setupLocator();
-
-  await sl.get<UtilityPreferences>().init();
 
   runApp(const App());
 }

@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../../../core/constants/sizes.dart';
 import '../../../core/extensions/widget.dart';
@@ -22,13 +25,15 @@ class UserController extends GetxController {
   final _authRepository = AuthenticationRepository.instance;
 
   ///================ Variables ===========================================
-
+  Rx<UserModel> userModel = UserModel.empty().obs;
   Rx<bool> isProfileLoaded = false.obs;
   RxBool hidePassword = true.obs;
-  Rx<UserModel> userModel = UserModel.empty().obs;
   final verifyEmail = TextEditingController();
   final verifyPassword = TextEditingController();
   GlobalKey<FormState> reAuthFormKey = GlobalKey<FormState>();
+
+  late File _profileImage;
+  late ImagePicker _picker;
 
   @override
   void onInit() {
@@ -68,6 +73,7 @@ class UserController extends GetxController {
         );
 
         // save user data
+
         await userRepository.saveUserRecord(user: userModel);
       }
     } catch (e) {
@@ -157,6 +163,39 @@ class UserController extends GetxController {
     } catch (e) {
       TFullScreenLoader.stopLoading();
       TLoaders.errorSnackbar(title: 'Oh! snap', message: e.toString());
+    }
+  }
+
+  /// Store & Download user image from firebase storage
+  Future<void> uploadUserprofileImage() async {
+    try {
+      // Start of upload
+      isProfileLoaded.value = true;
+
+      // Pick the image from device
+      final deviceImage =
+          await ImagePicker().pickImage(source: ImageSource.gallery, maxHeight: 512, maxWidth: 512, imageQuality: 70);
+
+      // store & Download in firebase storage
+      if (deviceImage != null) {
+        final imageUrl =
+            await userRepository.uploadImage(path: 'Users/Images/Profile/', deviceSelectedImage: deviceImage);
+
+        // Update user record image
+        Map<String, dynamic> json = {'profilePicture': imageUrl};
+        await userRepository.updateSingleField(json: json);
+
+        // Update the observable `userModel` with the new data
+        userModel.value = userModel.value.copyWith(profilePicture: imageUrl);
+
+        // Success message
+        TLoaders.successSnackbar(title: 'Congratulations', message: 'your profile image has been updated !');
+      }
+    } catch (e) {
+      TLoaders.errorSnackbar(title: 'Oh! snap', message: e.toString());
+    } finally {
+      // End of upload
+      isProfileLoaded.value = false;
     }
   }
 }

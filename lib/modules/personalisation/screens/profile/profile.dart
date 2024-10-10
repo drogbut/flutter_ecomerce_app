@@ -2,18 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../core/constants/colors.dart';
 import '../../../../core/constants/sizes.dart';
 import '../../../../core/extensions/widget.dart';
 import '../../../../widgets/appbar/appbar.dart';
 import '../../../../widgets/buttons/tertiary.dart';
-import '../../../../widgets/icons/circular.dart';
 import '../../../../widgets/list_tiles/profile_menu.dart';
-import '../../../../widgets/loaders/shimmer_effects.dart';
 import '../../../../widgets/texts/section_header.dart';
 import '../../../../widgets/texts/title.dart';
 import '../../controllers/user_controller.dart';
-import 'widgets/change_name.dart';
+import 'widgets/profile_picture.dart';
 
 class TProfilePage extends StatelessWidget {
   const TProfilePage({super.key});
@@ -23,39 +20,16 @@ class TProfilePage extends StatelessWidget {
     final controller = Get.put(UserController());
 
     return Scaffold(
-      appBar: const TAppBar(
-        showBackIcon: true,
-        title: TTitleText('Profile'),
-      ),
+      appBar: const TAppBar(showBackIcon: true, title: TTitleText('Profile')),
+
+      /// -- body
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
-              /// -- Header
-              Column(
-                children: [
-                  TCircularIcon(
-                    backgroundColor: TColors.dark.withOpacity(0.2),
-                    onPressed: () {},
-                    iconData: Iconsax.user,
-                    width: 80,
-                    height: 80,
-                    iconSize: 36,
-                  ),
-                  Obx(
-                    () {
-                      if (controller.isProfileLoaded.value) {
-                        return const TShimmerEffects(width: 80, height: 15);
-                      }
-                      return TTertiaryButton(
-                        title: controller.userModel.value.fullName,
-                        onPressed: () => Get.to(() => const ChangeNameScreen()),
-                      );
-                    },
-                  )
-                ],
-              ),
+              /// -- profile picture
+              ProfilePicture(controller: controller),
 
               /// -- Break
               const Divider().withPadding(TSizes.spaceBtwItems.verticalPadding),

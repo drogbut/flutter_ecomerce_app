@@ -18,6 +18,7 @@ class TUserProfileCard extends StatelessWidget {
 
     return ListTile(
       leading: const TCircularImage(
+        backgroundColor: Colors.transparent,
         width: 50,
         height: 50,
         padding: 0.0,
@@ -27,7 +28,7 @@ class TUserProfileCard extends StatelessWidget {
       subtitle: Text(controller.userModel.value.email),
       trailing: IconButton(
         icon: const Icon(Iconsax.edit, color: TColors.white),
-        onPressed: () => Get.off(const TProfilePage()),
+        onPressed: () => Get.to(const TProfilePage()),
       ),
     );
   }

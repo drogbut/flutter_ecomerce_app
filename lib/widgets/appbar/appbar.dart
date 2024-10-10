@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -6,8 +8,6 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../core/constants/sizes.dart';
 import '../../core/extensions/context.dart';
-import '../../locator.dart';
-import '../../utilities/device/platform.dart';
 
 class TAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool showBackIcon;
@@ -48,8 +48,7 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   Widget getIcon() {
-    UtilityPlatform platformUtil = sl.get<UtilityPlatform>();
-    if (!platformUtil.isIOS) {
+    if (!Platform.isIOS) {
       return const FaIcon(Iconsax.arrow_left);
     }
 

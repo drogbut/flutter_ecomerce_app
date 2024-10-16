@@ -4,8 +4,10 @@ import 'package:get/get.dart';
 import '../../../../../core/constants/sizes.dart';
 import '../../../../../core/extensions/context.dart';
 import '../../../../../core/extensions/widget.dart';
-import '../../../../../widgets/cards/vertical_image_card.dart';
+import '../../../../../widgets/cards/vertical_image_text.dart';
 import '../../../../../widgets/texts/section_header.dart';
+import '../../controllers/categories/categories_controller.dart';
+import 'categories_shimmer.dart';
 import 'sub_categories.dart';
 
 class HomeCategories extends StatelessWidget {
@@ -13,6 +15,8 @@ class HomeCategories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(CategoriesController());
+
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -22,21 +26,43 @@ class HomeCategories extends StatelessWidget {
           textColor: context.isDarkMode ? Colors.black : Colors.white,
         ).withPadding(TSizes.spaceBtwItems.bottomPadding),
 
-        /// categories
-        SizedBox(
-          height: 100,
-          child: ListView.separated(
-            itemCount: 10,
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (_, index) {
-              return TVerticalImageCard(
-                imageUrl: null,
-                itemTitle: 'title',
-                onTap: () => Get.to(() => const HomeSubCategories()),
+        /// popular categories
+        Obx(
+          () {
+            // Loading state
+            if (controller.isLoading.value) return TCategoriesShimmer();
+
+            // Error state
+            if (controller.featuredCategories.isEmpty) {
+              return Center(
+                child: Text(
+                  'No data found!',
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white),
+                ),
               );
-            },
-            separatorBuilder: (_, index) => TSizes.spaceBtwItems.sbs,
-          ),
+            }
+
+            // Loaded state
+            return SizedBox(
+              height: 110,
+              child: ListView.separated(
+                itemCount: controller.featuredCategories.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (_, index) {
+                  final category = controller.featuredCategories[index];
+
+                  return TVerticalImageText(
+                    image: category.image,
+                    title: category.name,
+                    onTap: () => Get.to(
+                      () => const HomeSubCategories(),
+                    ),
+                  );
+                },
+                separatorBuilder: (_, index) => TSizes.spaceBtwItems.sbs,
+              ),
+            );
+          },
         ),
       ],
     );

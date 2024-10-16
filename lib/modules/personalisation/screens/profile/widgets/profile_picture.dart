@@ -31,7 +31,7 @@ class ProfilePicture extends StatelessWidget {
                         backgroundColor: Colors.transparent,
                         width: 80,
                         height: 80,
-                        imagePath: image,
+                        image: image,
                         isNetworkImage: networkImage.isNotEmpty,
                       ),
               ),

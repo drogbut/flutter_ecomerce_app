@@ -22,7 +22,7 @@ class TUserProfileCard extends StatelessWidget {
         width: 50,
         height: 50,
         padding: 0.0,
-        imagePath: TImages.user,
+        image: TImages.user,
       ),
       title: TTitleText(controller.userModel.value.fullName),
       subtitle: Text(controller.userModel.value.email),

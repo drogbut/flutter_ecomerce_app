@@ -64,7 +64,7 @@ class TMetaData extends StatelessWidget {
               width: 32,
               height: 32,
               overlayColor: context.whiteOrBlack,
-              imagePath: TImages.shoeIcon,
+              image: TImages.shoeIcon,
             ),
             const TBrandtitleWithVerifyIcon(title: 'Nike'),
           ],

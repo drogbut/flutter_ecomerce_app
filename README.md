@@ -4,11 +4,12 @@ The eCommerce Flutter App is a mobile solution that allows users to browse, sear
 ## FRONTEND FEATURES
 ### APP CONFIGURATIONS
 * Create new project & setup the folders structure - feature first approach
-* Light & dark mode setup include Buttons, textfileds, appBar and more.
-* Create Helper functions,  utilities and constantes classes
+* Light & dark mode setup include Buttons, TextFields, appBar and more.
+* Create Helper functions,  utilities and constants classes
+* 
 
 ### LOGIN / REGISTER 
-* Launcher Icon & Splash Screen
+* App Icons & Splash Screens - Android, iOS & Web
 * Onboarding Screens
 * Register Screen with Email Verification and Success Screen
 * Login Screen
@@ -63,7 +64,7 @@ The eCommerce Flutter App is a mobile solution that allows users to browse, sear
 *
 
 ## CI/CD FEATURES
-*
+* Launcher Icons & Splash Screens - Android, iOS & Web
 *
 *
 *

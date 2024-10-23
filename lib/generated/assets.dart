@@ -64,8 +64,8 @@ class Assets {
   static const String contentUser = 'assets/images/content/user.png';
   static const String logosFacebookIcon = 'assets/logos/facebook-icon.png';
   static const String logosGoogleIcon = 'assets/logos/google-icon.png';
-  static const String logosTStoreSplashLogoBlack = 'assets/logos/t-store-splash-logo-black.png';
-  static const String logosTStoreSplashLogoWhite = 'assets/logos/t-store-splash-logo-white.png';
+  static const String logosYannStoreDarkLogo = 'assets/logos/yann_store_dark_logo.png';
+  static const String logosYannStoreLightLogo = 'assets/logos/yann_store_light_logo.png';
   static const String onBoardingImagesDeliveryEmail1 = 'assets/images/on_boarding_images/delivery_email1.png';
   static const String onBoardingImagesDeliveryEmail2 = 'assets/images/on_boarding_images/delivery_email2.png';
   static const String onBoardingImagesDeliveryWoman = 'assets/images/on_boarding_images/delivery_woman.png';
@@ -138,7 +138,7 @@ class Assets {
   static const String productsIphone8MobileDualSide = 'assets/images/products/iphone8_mobile_dual_side.png';
   static const String productsIphone8MobileFront = 'assets/images/products/iphone8_mobile_front.png';
   static const String productsKitchenCounter = 'assets/images/products/kitchen_counter.png';
-  static const String productsKitchenDining = 'assets/images/products/kitchen_dining table.png';
+  static const String productsKitchenDiningtable = 'assets/images/products/kitchen_dining table.png';
   static const String productsKitchenRefrigerator = 'assets/images/products/kitchen_refrigerator.png';
   static const String productsLeatherJacket1 = 'assets/images/products/leather_jacket_1.png';
   static const String productsLeatherJacket2 = 'assets/images/products/leather_jacket_2.png';

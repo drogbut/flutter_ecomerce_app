@@ -1,13 +1,13 @@
 flutter_native_splash:
   color: "#FFFFFF"
   color_dark: "#272727"
-  image: "assets/images/dark_logo.png"
-  image_dark: "assets/images/dark_logo.png"
+  image: "assets/logos/yann_store_light_logo.png"
+  image_dark: "assets/logos/yann_store_dark_logo.png"
 
   android_12: 
     color: "#FFFFFF"
     color_dark: "#272727"
-    image: "assets/images/dark_logo.png"
-    image_dark: "assets/images/dark_logo.png"
+    image: "assets/logos/yann_store_light_logo.png"
+    image_dark: "assets/logos/yann_store_dark_logo.png"
 
   web: false

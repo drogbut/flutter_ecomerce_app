@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../core/constants/images_string.dart';
-import '../../../core/constants/sizes.dart';
-import '../../../core/extensions/context.dart';
-import '../../../core/extensions/widget.dart';
-import '../../../widgets/carousel/carousel.dart';
-import '../../../widgets/clippers/clipper.dart';
-import '../../../widgets/gridviews/grid_view.dart';
-import '../../../widgets/products/cards/product_card_vertical.dart';
-import '../../../widgets/search_bar/search.dart';
-import '../../../widgets/texts/section_header.dart';
-import 'categories.dart';
-import 'header.dart';
-import 'view_all_products.dart';
+import '../../../../../core/constants/images_string.dart';
+import '../../../../../core/constants/sizes.dart';
+import '../../../../../core/extensions/context.dart';
+import '../../../../../core/extensions/widget.dart';
+import '../../../../../widgets/carousel/carousel.dart';
+import '../../../../../widgets/clippers/clipper.dart';
+import '../../../../../widgets/gridviews/grid_view.dart';
+import '../../../../../widgets/products/cards/product_card_vertical.dart';
+import '../../../../../widgets/search_bar/search.dart';
+import '../../../../../widgets/texts/section_header.dart';
+import 'widgets/categories.dart';
+import 'widgets/header.dart';
+import 'widgets/view_all_products.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
                     ).withPadding(TSizes.defaultSpace.horizontalPadding),
 
                     /// Categories
-                    const HomeCategories().withPadding((TSizes.defaultSpace, TSizes.defaultSpace).topLeftPadding),
+                    const THomeCategories().withPadding((TSizes.defaultSpace, TSizes.defaultSpace).topLeftPadding),
 
                     /// Articles
                   ],

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/constants/images_string.dart';
-import '../../../core/constants/sizes.dart';
-import '../../../core/extensions/widget.dart';
-import '../../../widgets/appbar/appbar.dart';
-import '../../../widgets/images/rounded.dart';
-import '../../../widgets/products/cards/product_card_horizontal.dart';
-import '../../../widgets/texts/section_header.dart';
-import '../../../widgets/texts/title.dart';
+import '../../../../../../core/constants/images_string.dart';
+import '../../../../../../core/constants/sizes.dart';
+import '../../../../../../core/extensions/widget.dart';
+import '../../../../../../widgets/appbar/appbar.dart';
+import '../../../../../../widgets/images/rounded.dart';
+import '../../../../../../widgets/products/cards/product_card_horizontal.dart';
+import '../../../../../../widgets/texts/section_header.dart';
+import '../../../../../../widgets/texts/title.dart';
 
 class HomeSubCategories extends StatelessWidget {
   const HomeSubCategories({super.key});

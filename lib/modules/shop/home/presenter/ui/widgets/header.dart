@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../core/constants/colors.dart';
-import '../../../core/extensions/context.dart';
-import '../../../widgets/appbar/appbar.dart';
-import '../../../widgets/icons/cart_counter.dart';
-import '../../../widgets/loaders/shimmer_effects.dart';
-import '../../authentication/personalisation/controllers/user_controller.dart';
-import '../shopping_cart/shopping_card.dart';
+import '../../../../../../core/constants/colors.dart';
+import '../../../../../../core/extensions/context.dart';
+import '../../../../../../widgets/appbar/appbar.dart';
+import '../../../../../../widgets/icons/cart_counter.dart';
+import '../../../../../../widgets/loaders/shimmer_effects.dart';
+import '../../../../../authentication/personalisation/controllers/user_controller.dart';
+import '../../../../shopping_cart/shopping_card.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({

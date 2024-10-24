@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../core/constants/sizes.dart';
-import '../../../core/extensions/context.dart';
-import '../../../core/extensions/widget.dart';
-import '../../../widgets/appbar/appbar.dart';
-import '../../../widgets/gridviews/grid_view.dart';
-import '../../../widgets/products/cards/product_card_vertical.dart';
-import '../../../widgets/texts/title.dart';
+import '../../../../../../core/constants/sizes.dart';
+import '../../../../../../core/extensions/context.dart';
+import '../../../../../../core/extensions/widget.dart';
+import '../../../../../../widgets/appbar/appbar.dart';
+import '../../../../../../widgets/gridviews/grid_view.dart';
+import '../../../../../../widgets/products/cards/product_card_vertical.dart';
+import '../../../../../../widgets/texts/title.dart';
 
 class TViewAllProductsScreen extends StatelessWidget {
   const TViewAllProductsScreen({super.key});

@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import 'core/extensions/context.dart';
-import 'modules/shop/presenter/controllers/bottom_navigation/bottom_navigation.dart';
+import 'modules/shop/bottom_navigation.dart';
 
 class TNavigationMenu extends StatelessWidget {
   const TNavigationMenu({super.key});

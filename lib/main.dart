@@ -6,7 +6,7 @@ import 'package:get_storage/get_storage.dart';
 
 import 'app.dart';
 import 'firebase_options.dart';
-import 'modules/authentication/data/repository/auth_repository.dart';
+import 'modules/authentication/sign_up/data/repository/auth_repository.dart';
 
 Future<void> main() async {
   /// Add widget binding

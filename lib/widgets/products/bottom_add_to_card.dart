@@ -4,7 +4,7 @@ import 'package:iconsax/iconsax.dart';
 import '../../core/constants/colors.dart';
 import '../../core/constants/sizes.dart';
 import '../../core/extensions/context.dart';
-import 'cards/Add_and_remove_products.dart';
+import 'cards/add_and_remove_products.dart';
 
 class TBottomAddToCard extends StatelessWidget {
   const TBottomAddToCard({super.key});

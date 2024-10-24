@@ -7,7 +7,7 @@ import '../../../core/constants/images_string.dart';
 import '../../../core/constants/sizes.dart';
 import '../../../core/extensions/context.dart';
 import '../../../core/extensions/widget.dart';
-import '../../../modules/shop/presenter/ui/stores/product_detail/product_detail_screen.dart';
+import '../../../modules/shop/stores/product_detail/product_detail_screen.dart';
 import '../../containers/rounded_container.dart';
 import '../../icons/circular.dart';
 import '../../images/rounded.dart';

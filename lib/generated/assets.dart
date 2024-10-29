@@ -62,10 +62,10 @@ class Assets {
   static const String categoriesIcons8TailorsDummy64 = 'assets/icons/categories/icons8-tailors-dummy-64.png';
   static const String categoriesIcons8WoodenToyCar50 = 'assets/icons/categories/icons8-wooden-toy-car-50.png';
   static const String contentUser = 'assets/images/content/user.png';
+  static const String logosDtShopDark = 'assets/logos/dt_shop_dark.png';
+  static const String logosDtShopLight = 'assets/logos/dt_shop_light.png';
   static const String logosFacebookIcon = 'assets/logos/facebook-icon.png';
   static const String logosGoogleIcon = 'assets/logos/google-icon.png';
-  static const String logosYannStoreDarkLogo = 'assets/logos/yann_store_dark_logo.png';
-  static const String logosYannStoreLightLogo = 'assets/logos/yann_store_light_logo.png';
   static const String onBoardingImagesDeliveryEmail1 = 'assets/images/on_boarding_images/delivery_email1.png';
   static const String onBoardingImagesDeliveryEmail2 = 'assets/images/on_boarding_images/delivery_email2.png';
   static const String onBoardingImagesDeliveryWoman = 'assets/images/on_boarding_images/delivery_woman.png';

@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -32,14 +31,17 @@ class THomeCategories extends StatelessWidget {
           /// loading
           if (controller.isLoading.value) return TCategoryShimmer();
 
-          /// Empty list
+          /// Empty filter list
           if (controller.featuredCategories.isEmpty) {
             return Center(
-                child: Text('No data Found!',
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white)));
+              child: Text(
+                'No data Found!',
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white),
+              ),
+            );
           }
 
-          /// Leoded
+          /// Loaded
           return SizedBox(
             height: 100,
             child: ListView.separated(
@@ -50,7 +52,7 @@ class THomeCategories extends StatelessWidget {
 
                 return TVerticalImageCard(
                   imageUrl: category.image,
-                  itemTitle: category.name,
+                  itemTitle: category.name ?? '',
                   onTap: () => Get.to(() => const HomeSubCategories()),
                 );
               },

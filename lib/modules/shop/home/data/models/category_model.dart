@@ -8,31 +8,31 @@ part 'category_model.g.dart';
 class CategoryModel with _$CategoryModel {
   const factory CategoryModel({
     required String id,
-    required String name,
-    required String image,
-    required String parentId,
+    String? name,
+    String? image,
+    String? parentId,
     required bool isFeatured,
   }) = _CategoryModel;
 
-  // Constructeur vide
+  // Empty constructor
   factory CategoryModel.empty() => const CategoryModel(
         id: '',
         name: '',
         image: '',
-        parentId: '',
+        parentId: null,
         isFeatured: false,
       );
 
-  // Factory pour créer un modèle à partir d'un DocumentSnapshot<Map<String, dynamic>>
+  // Factory to create a template from a DocumentSnapshot<Map<String, dynamic>>.
   factory CategoryModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> snapshot) {
     final data = snapshot.data();
-    // Si les données ne sont pas nulles, crée la catégorie, sinon retourne une catégorie vide
+
     if (data != null) {
       return CategoryModel(
         id: snapshot.id,
         name: data['name'] ?? '',
         image: data['image'] ?? '',
-        parentId: data['parentId'] ?? '',
+        parentId: data['parentId'],
         isFeatured: data['isFeatured'] ?? false,
       );
     } else {
@@ -40,6 +40,6 @@ class CategoryModel with _$CategoryModel {
     }
   }
 
-  // Génération des fonctions pour la sérialisation
+  // Generating functions for serialization
   factory CategoryModel.fromJson(Map<String, dynamic> json) => _$CategoryModelFromJson(json);
 }

@@ -21,9 +21,9 @@ CategoryModel _$CategoryModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CategoryModel {
   String get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String get image => throw _privateConstructorUsedError;
-  String get parentId => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  String? get image => throw _privateConstructorUsedError;
+  String? get parentId => throw _privateConstructorUsedError;
   bool get isFeatured => throw _privateConstructorUsedError;
 
   /// Serializes this CategoryModel to a JSON map.
@@ -43,7 +43,11 @@ abstract class $CategoryModelCopyWith<$Res> {
       _$CategoryModelCopyWithImpl<$Res, CategoryModel>;
   @useResult
   $Res call(
-      {String id, String name, String image, String parentId, bool isFeatured});
+      {String id,
+      String? name,
+      String? image,
+      String? parentId,
+      bool isFeatured});
 }
 
 /// @nodoc
@@ -62,9 +66,9 @@ class _$CategoryModelCopyWithImpl<$Res, $Val extends CategoryModel>
   @override
   $Res call({
     Object? id = null,
-    Object? name = null,
-    Object? image = null,
-    Object? parentId = null,
+    Object? name = freezed,
+    Object? image = freezed,
+    Object? parentId = freezed,
     Object? isFeatured = null,
   }) {
     return _then(_value.copyWith(
@@ -72,18 +76,18 @@ class _$CategoryModelCopyWithImpl<$Res, $Val extends CategoryModel>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      name: null == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      image: null == image
+              as String?,
+      image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as String,
-      parentId: null == parentId
+              as String?,
+      parentId: freezed == parentId
           ? _value.parentId
           : parentId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       isFeatured: null == isFeatured
           ? _value.isFeatured
           : isFeatured // ignore: cast_nullable_to_non_nullable
@@ -101,7 +105,11 @@ abstract class _$$CategoryModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String id, String name, String image, String parentId, bool isFeatured});
+      {String id,
+      String? name,
+      String? image,
+      String? parentId,
+      bool isFeatured});
 }
 
 /// @nodoc
@@ -118,9 +126,9 @@ class __$$CategoryModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? name = null,
-    Object? image = null,
-    Object? parentId = null,
+    Object? name = freezed,
+    Object? image = freezed,
+    Object? parentId = freezed,
     Object? isFeatured = null,
   }) {
     return _then(_$CategoryModelImpl(
@@ -128,18 +136,18 @@ class __$$CategoryModelImplCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      name: null == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      image: null == image
+              as String?,
+      image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as String,
-      parentId: null == parentId
+              as String?,
+      parentId: freezed == parentId
           ? _value.parentId
           : parentId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       isFeatured: null == isFeatured
           ? _value.isFeatured
           : isFeatured // ignore: cast_nullable_to_non_nullable
@@ -153,9 +161,9 @@ class __$$CategoryModelImplCopyWithImpl<$Res>
 class _$CategoryModelImpl implements _CategoryModel {
   const _$CategoryModelImpl(
       {required this.id,
-      required this.name,
-      required this.image,
-      required this.parentId,
+      this.name,
+      this.image,
+      this.parentId,
       required this.isFeatured});
 
   factory _$CategoryModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -164,11 +172,11 @@ class _$CategoryModelImpl implements _CategoryModel {
   @override
   final String id;
   @override
-  final String name;
+  final String? name;
   @override
-  final String image;
+  final String? image;
   @override
-  final String parentId;
+  final String? parentId;
   @override
   final bool isFeatured;
 
@@ -215,9 +223,9 @@ class _$CategoryModelImpl implements _CategoryModel {
 abstract class _CategoryModel implements CategoryModel {
   const factory _CategoryModel(
       {required final String id,
-      required final String name,
-      required final String image,
-      required final String parentId,
+      final String? name,
+      final String? image,
+      final String? parentId,
       required final bool isFeatured}) = _$CategoryModelImpl;
 
   factory _CategoryModel.fromJson(Map<String, dynamic> json) =
@@ -226,11 +234,11 @@ abstract class _CategoryModel implements CategoryModel {
   @override
   String get id;
   @override
-  String get name;
+  String? get name;
   @override
-  String get image;
+  String? get image;
   @override
-  String get parentId;
+  String? get parentId;
   @override
   bool get isFeatured;
 

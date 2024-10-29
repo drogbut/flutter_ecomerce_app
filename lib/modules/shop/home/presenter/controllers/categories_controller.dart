@@ -32,12 +32,12 @@ class CategoriesController extends GetxController {
       allCategories.assignAll(categories);
 
       //  Filter featured categories
-      final list = featuredCategories
-          .assignAll(allCategories.where((category) => category.isFeatured && category.parentId.isEmpty));
-
-      print('hello first ${featuredCategories.first.name}');
+      featuredCategories.assignAll(allCategories
+          .where((category) => category.isFeatured && (category.parentId == null || category.parentId == ''))
+          .take(8)
+          .toList());
     } catch (e) {
-      TLoaders.errorSnackbar(title: 'oh snap', message: e.toString());
+      TLoaders.errorSnackbar(title: 'Error to fetch categories', message: e.toString());
     } finally {
       isLoading.value = false;
     }

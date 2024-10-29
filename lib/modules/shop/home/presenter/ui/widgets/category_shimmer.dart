@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../core/constants/sizes.dart';
 import '../../../../../../core/extensions/widget.dart';
-import '../../../../../../widgets/cards/vertical_image_card.dart';
 import '../../../../../../widgets/loaders/shimmer_effects.dart';
 
 class TCategoryShimmer extends StatelessWidget {

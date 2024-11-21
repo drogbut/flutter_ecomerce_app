@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../../core/constants/images_string.dart';
 import '../../../../../utilities/helpers/network_manager.dart';
 import '../../../../../utilities/popups/full_screen_loader.dart';
 import '../../../../../utilities/popups/loaders.dart';
@@ -50,7 +51,7 @@ class RegisterController extends GetxController {
       }
 
       /// Start loading
-      // TFullScreenLoader.openLoadingDialog('We are processing your information...', TImages.animalIcon);
+      TFullScreenLoader.openLoadingDialog('We are processing your information...', TImages.docerAnimation);
 
       /// Register user in Firebase Auth & Save user data in Firebase
       final userCredential = await authRepository.registerWithEmailAndPassword(

@@ -16,20 +16,22 @@ class OnboardingImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Image(
-            width: context.screenWidth * 0.8,
-            height: context.screenWidth * 0.6,
-            image: AssetImage(image),
-          ),
-          Text(title, style: context.textTheme.headlineMedium, textAlign: TextAlign.center),
-          TSizes.defaultSpace.sbs,
-          Text(subTitle, textAlign: TextAlign.center),
-        ],
-      ).withPadding(TSizes.defaultSpace.horizontalPadding),
+    return SingleChildScrollView(
+      child: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image(
+              width: context.screenWidth * 0.8,
+              height: context.screenWidth * 0.6,
+              image: AssetImage(image),
+            ),
+            Text(title, style: context.textTheme.headlineMedium, textAlign: TextAlign.center),
+            TSizes.defaultSpace.sbs,
+            Text(subTitle, textAlign: TextAlign.center),
+          ],
+        ).withPadding(TSizes.defaultSpace.horizontalPadding),
+      ),
     );
   }
 }

@@ -1,0 +1,1 @@
+/Users/montcho/StudioProjects/flutter_folders_structure/build/app/intermediates/cxx/Debug/6y25701h/obj/x86_64

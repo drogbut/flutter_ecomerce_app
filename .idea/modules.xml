@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/flutter_folders_structure.iml" filepath="$PROJECT_DIR$/flutter_folders_structure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/flutter_folders_structure.iml" filepath="$PROJECT_DIR$/.idea/flutter_folders_structure.iml" />
       <module fileurl="file://$PROJECT_DIR$/android/flutter_folders_structure_android.iml" filepath="$PROJECT_DIR$/android/flutter_folders_structure_android.iml" />
     </modules>
   </component>

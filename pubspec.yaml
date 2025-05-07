@@ -53,7 +53,7 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   shared_preferences: ^2.3.2
   font_awesome_flutter: ^10.7.0
-  flutter_launcher_icons: ^0.14.1
+
 
 #============== DEV PACKAGES ============================================#
 dev_dependencies:
@@ -63,6 +63,7 @@ dev_dependencies:
   flutter_lints: ^5.0.0
   build_runner: ^2.4.13
   json_serializable: ^6.8.0
+  flutter_launcher_icons: ^0.14.3
 
 # The following section is specific to Flutter packages.
 flutter:
@@ -74,6 +75,7 @@ flutter:
     - assets/fonts/
     - assets/icons/brands/
     - assets/icons/categories/
+    - assets/icons/launcher/
     - assets/icons/payment_methods/
     - assets/images/animations/
     - assets/images/app_logos/

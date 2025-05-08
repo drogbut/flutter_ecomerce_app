@@ -1,32 +1,25 @@
 # flutter pub run flutter_launcher_icons
 flutter_launcher_icons:
-  image_path: "assets/logos/dt_shop_light.png"
+    ios: true
+    android: true
+    image_path_ios: "assets/icons/launcher/common/app_icon_1024x1024.png"
+    image_path_ios_dark_transparent: "assets/icons/launcher/common/app_icon_transparent_1024x1024.png"
+    image_path_android: "assets/icons/launcher/android/app_icon_android_1024x1024.png"
+    adaptive_icon_background: "assets/icons/launcher/android/app_icon_background_1024x1024.png"
+    adaptive_icon_foreground: "assets/icons/launcher/android/app_icon_foreground_1024x1024.png"
+    adaptive_icon_foreground_inset: 16
+    adaptive_icon_monochrome: "assets/icons/launcher/common/ic_launcher_monochrome_432x432.png" # only available for Android 13 devices and above
+    remove_alpha_ios: true
 
-  android: "launcher_icon"
-  # image_path_android: "assets/icon/icon.png"
-  min_sdk_android: 21 # android min sdk min:16, default 21
-  # adaptive_icon_background: "assets/icon/background.png"
-  # adaptive_icon_foreground: "assets/icon/foreground.png"
-  # adaptive_icon_monochrome: "assets/icon/monochrome.png"
+    web:
+      generate: true
+      image_path: "assets/icons/launcher/common/app_icon_1024x1024.png"
 
-  ios: true
-  # image_path_ios: "assets/icon/icon.png"
-  remove_alpha_channel_ios: true
-  # image_path_ios_dark_transparent: "assets/icon/icon_dark.png"
-  # image_path_ios_tinted_grayscale: "assets/icon/icon_tinted.png"
-  # desaturate_tinted_to_grayscale_ios: true
-
-  web:
-    generate: true
-    image_path: "assets/logos/dt_shop_light.png"
-    background_color: "#hexcode"
-    theme_color: "#hexcode"
-
-  windows:
-    generate: true
-    image_path: "assets/logos/dt_shop_light.png"
+    windows:
+      generate: true
+      image_path: "assets/icons/launcher/common/app_icon_1024x1024.png"
     icon_size: 48 # min:48, max:256, default: 48
 
-  macos:
-    generate: true
-    image_path: "assets/logos/dt_shop_light.png"
+    macos:
+      generate: true
+      image_path: "assets/icons/launcher/common/app_icon_1024x1024.png"

@@ -27,8 +27,10 @@ jobs:
 
       - name: Enable web support
         run: flutter config --enable-web
-      - name: analyse flutter
-        run: flutter analyse
+        
+      - name: Analyze code
+        run: flutter analyze
+        
       - name: Run unit tests with coverage
         run: flutter test --coverage
 
@@ -63,10 +65,13 @@ jobs:
     name: Build Android APK
 
     steps:
+      - name: Checkout code
       - uses: actions/checkout@v4
 
-      uses: subosito/flutter-action@v2.14.0
-        channel: stable
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2.14.0
+        with:
+          channel: stable
 
       - name: Install dependencies
         run: flutter pub get
@@ -86,8 +91,10 @@ jobs:
     name: Build iOS (macOS runner)
 
     steps:
+      - name: Checkout code
       - uses: actions/checkout@v4
 
+      - name: Set up Flutter
       - uses: subosito/flutter-action@v2.14.0
         with:
           channel: stable

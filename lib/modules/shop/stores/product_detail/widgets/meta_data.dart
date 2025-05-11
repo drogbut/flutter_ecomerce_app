@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/constants/colors.dart';
 import '../../../../../core/constants/images_string.dart';
 import '../../../../../core/constants/sizes.dart';
+import '../../../../../core/extensions/color.dart';
 import '../../../../../core/extensions/context.dart';
 import '../../../../../core/extensions/widget.dart';
 import '../../../../../widgets/containers/rounded_container.dart';
@@ -24,7 +25,7 @@ class TMetaData extends StatelessWidget {
             /// Sale
             TRoundedContainer(
               radius: TSizes.sm,
-              backgroundColor: TColors.secondary.withOpacity(0.8),
+              backgroundColor: TColors.secondary.withOpacityPercent(0.8),
               padding: const EdgeInsets.symmetric(horizontal: TSizes.sm, vertical: TSizes.xs),
               child: Text(
                 '25%',

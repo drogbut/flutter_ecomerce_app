@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../../../core/extensions/color.dart';
 class DNavigationBarTheme {
   DNavigationBarTheme._();
 
@@ -8,7 +8,7 @@ class DNavigationBarTheme {
     height: 80,
     elevation: 0,
     backgroundColor: Colors.white,
-    indicatorColor: Colors.black.withOpacity(0.1),
+    indicatorColor: Colors.black.withOpacityPercent(0.1),
     shadowColor: Colors.white,
     surfaceTintColor: Colors.white,
   );
@@ -18,6 +18,6 @@ class DNavigationBarTheme {
     height: 80,
     elevation: 0,
     backgroundColor: Colors.black,
-    indicatorColor: Colors.white.withOpacity(0.1),
+    indicatorColor: Colors.white.withOpacityPercent(0.1),
   );
 }

@@ -2,25 +2,46 @@ name: Flutter Full CI/CD
 
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
   pull_request:
-    branches: [main]
+    branches: [main, develop]
 
 jobs:
+
+  # 🔍 JOB D'ANALYSE DE CODE
+  analyze-code:
+    runs-on: ubuntu-latest
+    name: Analyze Flutter Code
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2.14.0
+        with:
+          channel: stable
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Run flutter analyze
+        run: flutter analyze
 
   # ✅ TESTS UBUNTU (unitaires + web)
   ubuntu-tests:
     runs-on: ubuntu-latest
     name: Tests & Coverage (Ubuntu)
+    needs: analyze-code
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Set up Flutter
-        uses: subosito/flutter-action@v2
+        uses: subosito/flutter-action@v2.14.0
         with:
-          flutter-version: '3.13.0'
+          channel: stable
 
       - name: Install dependencies
         run: flutter pub get
@@ -31,42 +52,20 @@ jobs:
       - name: Run unit tests with coverage
         run: flutter test --coverage
 
-      #- name: Install lcov and generate HTML report
-      #  run: |
-      #    sudo apt-get install lcov
-      #    genhtml coverage/lcov.info -o coverage/html
-
-      #- name: Upload coverage HTML
-      #  uses: actions/upload-artifact@v4
-      #  with:
-      #    name: coverage-html
-      #    path: coverage/html
-
-      #- name: Upload lcov file
-      #  uses: actions/upload-artifact@v4
-      #  with:
-      #    name: lcov-info
-      #    path: coverage/lcov.info
-
-      #- name: Run integration tests (web)
-      #  run: |
-      #    flutter build web
-      #    flutter drive \
-      #      --driver=test_driver/integration_test.dart \
-      #      --target=integration_test/app_test.dart \
-      #      -d web-server
-
   # 📱 BUILD ANDROID
   android:
     runs-on: ubuntu-latest
     name: Build Android APK
+    needs: analyze-code
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - uses: subosito/flutter-action@v2
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2.14.0
         with:
-          flutter-version: '3.13.0'
+          channel: stable
 
       - name: Install dependencies
         run: flutter pub get
@@ -84,13 +83,16 @@ jobs:
   ios:
     runs-on: macos-latest
     name: Build iOS (macOS runner)
+    needs: analyze-code
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - uses: subosito/flutter-action@v2
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2.14.0
         with:
-          flutter-version: '3.13.0'
+          channel: stable
 
       - name: Install dependencies
         run: flutter pub get

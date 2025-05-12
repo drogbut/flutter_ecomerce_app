@@ -3,6 +3,7 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../../core/constants/colors.dart';
 import '../../../../../core/constants/sizes.dart';
+import '../../../../../core/extensions/color.dart';
 import '../../../../../core/extensions/context.dart';
 import '../../../../../core/extensions/widget.dart';
 import '../../../../../widgets/containers/rounded_container.dart';
@@ -17,7 +18,7 @@ class TSingleAddress extends StatelessWidget {
       padding: TSizes.sm.allPadding,
       showBorder: true,
       width: double.infinity,
-      backgroundColor: isSelectedAddress ? TColors.primary.withOpacity(0.5) : Colors.transparent,
+      backgroundColor: isSelectedAddress ? TColors.primary.withOpacityPercent(0.5) : Colors.transparent,
       borderColor: isSelectedAddress ? Colors.transparent : context.darkgreyOrGrey,
       margin: TSizes.spaceBtwItems.bottomPadding,
       child: Stack(

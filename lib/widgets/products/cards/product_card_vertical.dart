@@ -6,6 +6,7 @@ import '../../../commons/style/shadow.dart';
 import '../../../core/constants/colors.dart';
 import '../../../core/constants/images_string.dart';
 import '../../../core/constants/sizes.dart';
+import '../../../core/extensions/color.dart';
 import '../../../core/extensions/widget.dart';
 import '../../../modules/shop/stores/product_detail/product_detail_screen.dart';
 import '../../containers/rounded_container.dart';
@@ -58,7 +59,7 @@ class TProductCardVertical extends StatelessWidget {
                     top: 12,
                     child: TRoundedContainer(
                       radius: TSizes.sm,
-                      backgroundColor: TColors.secondary.withOpacity(0.8),
+                      backgroundColor: TColors.secondary.withOpacityPercent(0.8),
                       padding: (h: TSizes.sm, v: TSizes.xs).symmetricPadding,
                       child: Text('25%', style: context.textTheme.labelLarge?.apply(color: TColors.black)),
                     ),

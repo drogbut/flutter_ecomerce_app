@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../core/constants/colors.dart';
 import '../../core/constants/sizes.dart';
+import '../../core/extensions/color.dart';
 
 class TCircularIcon extends StatelessWidget {
   final VoidCallback? onPressed;
@@ -33,8 +34,8 @@ class TCircularIcon extends StatelessWidget {
         color: backgroundColor != null
             ? backgroundColor!
             : context.isDarkMode
-                ? TColors.black.withOpacity(0.8)
-                : TColors.white.withOpacity(0.8),
+                ? TColors.black.withOpacityPercent(0.8)
+                : TColors.white.withOpacityPercent(0.8),
       ),
       child: IconButton(
         alignment: Alignment.center,

@@ -3,6 +3,7 @@ import 'package:get/get_utils/src/extensions/context_extensions.dart';
 
 import '../../../core/constants/colors.dart';
 import '../../../core/constants/sizes.dart';
+import '../../../core/extensions/color.dart';
 import '../../../core/extensions/context.dart';
 import '../../../core/extensions/widget.dart';
 import '../../buttons/primary.dart';
@@ -39,9 +40,9 @@ class TPromoteCoupon extends StatelessWidget {
           TPrimaryButton(
             width: 80,
             padding: TSizes.sm.horizontalPadding,
-            backgroundColor: Colors.grey.withOpacity(0.2),
-            textButtonColor: context.isDarkMode ? TColors.white.withOpacity(0.5) : TColors.dark.withOpacity(0.5),
-            side: BorderSide(color: Colors.grey.withOpacity(0.2)),
+            backgroundColor: Colors.grey.withOpacityPercent(0.2),
+            textButtonColor: context.isDarkMode ? TColors.white.withOpacityPercent(0.5) : TColors.dark.withOpacityPercent(0.5),
+            side: BorderSide(color: Colors.grey.withOpacityPercent(0.2)),
             title: 'Apply',
             onPressed: () {},
           )

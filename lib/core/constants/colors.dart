@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../../core/extensions/color.dart';
 class TColors {
   /// App theme colors
   static const Color primary = Color(0xFF4b68ff);
@@ -18,7 +18,7 @@ class TColors {
 
   /// Background Container colors
   static const Color lightContainer = Color(0xFFF6F6F6);
-  static Color darkContainer = TColors.white.withOpacity(0.1);
+  static Color darkContainer = TColors.white.withOpacityPercent(0.1);
 
   /// Button colors
   static const Color buttonPrimary = Color(0xFF4b68ff);
@@ -49,7 +49,7 @@ class TColors {
   static MaterialColor createMaterialColor(Color color) {
     List strengths = <double>[.05];
     final swatch = <int, Color>{};
-    final int r = color.red, g = color.green, b = color.blue;
+    final int r = color.redInt(), g = color.greenInt(), b = color.blueInt();
 
     for (int i = 1; i < 10; i++) {
       strengths.add(0.1 * i);
@@ -63,6 +63,6 @@ class TColors {
         1,
       );
     }
-    return MaterialColor(color.value, swatch);
+    return MaterialColor(color.toARGB32(), swatch);
   }
 }

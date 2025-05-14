@@ -18,7 +18,7 @@ Future<void> main() async {
   /// Init payment method
 
   /// Await Native splash
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   /// Initialize firebase
   /// Init authentication

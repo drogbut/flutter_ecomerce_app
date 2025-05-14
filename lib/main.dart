@@ -18,7 +18,7 @@ Future<void> main() async {
   /// Init payment method
 
   /// Await Native splash
-  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   /// Initialize firebase
   /// Init authentication
@@ -26,4 +26,7 @@ Future<void> main() async {
       .then((FirebaseApp value) => Get.put(AuthenticationRepository()));
 
   runApp(const App());
+
+  /// Whenever your initialization is completed, remove the splash screen
+  FlutterNativeSplash.remove();
 }

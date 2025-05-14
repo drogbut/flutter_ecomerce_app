@@ -1,13 +1,21 @@
+# Flutter Native Splash configuration
 flutter_native_splash:
   color: "#FFFFFF"
-  color_dark: "#272727"
-  image: "assets/logos/dt_shop_light.png"
-  image_dark: "assets/logos/dt_shop_dark.png"
+  color_android: "#ffffff"
+  color_dark_android: "#121212"
+  color_ios: "#ffffff"
+  color_dark_ios: "#121212"
+  color_web: "#ffffff"
+  color_dark_web: "#121212"
+  image: "assets/icons/launcher/android/app_icon_foreground_1024x1024.png"
+  # image_dark: "assets/logos/dt_shop_dark.png"
 
   android_12: 
     color: "#FFFFFF"
-    color_dark: "#272727"
-    image: "assets/logos/dt_shop_light.png"
-    image_dark: "assets/logos/dt_shop_dark.png"
+    icon_background_color: "#FFFFFF"
+    color_dark: "#121212"
+    icon_background_color_dark: "#121212"
+    image: "assets/icons/launcher/android/app_icon_foreground_1024x1024.png"
+    # image_dark: "assets/logos/dt_shop_dark.png"
 
-  web: false
+  # web: false

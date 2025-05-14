@@ -107,13 +107,13 @@ flutter pub get
 
 5. Auto generate files
 ```
-flutter packages pub run build_runner build --delete-conflicting-outputs
+dart run build_runner build --delete-conflicting-outputs
 ```
 
 or watch command in order to keep the source code synced automatically:
 
 ```
-flutter packages pub run build_runner watch
+dart run build_runner watch
 ```
 
 6. Hide Generated Files

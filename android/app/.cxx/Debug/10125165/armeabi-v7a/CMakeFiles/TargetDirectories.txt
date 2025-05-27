@@ -1,0 +1,2 @@
+/media/foko-herman/project/flutter_ecomerce_app/android/app/.cxx/Debug/10125165/armeabi-v7a/CMakeFiles/edit_cache.dir
+/media/foko-herman/project/flutter_ecomerce_app/android/app/.cxx/Debug/10125165/armeabi-v7a/CMakeFiles/rebuild_cache.dir

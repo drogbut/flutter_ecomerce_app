@@ -1,0 +1,406 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AndroidLayouts\">\n    <shared>\n      <config />\n    </shared>\n  </component>\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"NONE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"c0affda8-3a82-48f9-b8f5-a2d29be43d55\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/caches/deviceStreaming.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/caches/deviceStreaming.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@1x.png\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@2x.png\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@1x.png\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@2x.png\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@1x.png\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@2x.png\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png\" beforeDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ClangdSettings\">\n    <option name=\"formatViaClangd\" value=\"false\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;drogbut&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/drogbut/flutter_ecomerce_app.git&quot;,\n    &quot;accountId&quot;: &quot;14d52c85-8aa0-4da6-be6c-d7dc834a21eb&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;customColor&quot;: &quot;&quot;,\n  &quot;associatedIndex&quot;: 5\n}</component>\n  <component name=\"ProjectId\" id=\"2wPCfIPr8TWp4QNVmvnMS6XFkRc\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,\n    &quot;ResourceManagerPrefKey.ResourceType&quot;: &quot;DRAWABLE&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,\n    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,\n    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,\n    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;prod/01__add__launcher__icons&quot;,\n    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/montcho/StudioProjects/flutter_folders_structure/assets/icons/launcher/common&quot;,\n    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,\n    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/assets/icons/launcher/common\" />\n      <recent name=\"$PROJECT_DIR$/assets/icons/launcher_icons/android\" />\n      <recent name=\"$PROJECT_DIR$/assets/icons/launcher_icons/common\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"main.dart\" type=\"FlutterRunConfigurationType\" factoryName=\"Flutter\">\n      <option name=\"filePath\" value=\"$PROJECT_DIR$/lib/main.dart\" />\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"c0affda8-3a82-48f9-b8f5-a2d29be43d55\" name=\"Changes\" comment=\"\" />\n      <created>1745933923725</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1745933923725</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/.idea/workspace.xml	(date 1746972627836)
+@@ -9,20 +9,29 @@
+     <option name="autoReloadType" value="NONE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="c0affda8-3a82-48f9-b8f5-a2d29be43d55" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
++    <list default="true" id="c0affda8-3a82-48f9-b8f5-a2d29be43d55" name="Changes" comment="renamed the nameclass">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/commons/style/shadow.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/commons/style/shadow.dart" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/core/constants/colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/constants/colors.dart" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/core/extensions/color.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/extensions/color.dart" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/modules/authentication/personalisation/address/widgets/single_address.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/authentication/personalisation/address/widgets/single_address.dart" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/modules/shop/stores/product_detail/widgets/meta_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/shop/stores/product_detail/widgets/meta_data.dart" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/utilities/theme/custom_themes/chip_theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utilities/theme/custom_themes/chip_theme.dart" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/utilities/theme/custom_themes/navigation_theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utilities/theme/custom_themes/navigation_theme.dart" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/utilities/theme/custom_themes/text_field_theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utilities/theme/custom_themes/text_field_theme.dart" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/utilities/theme/custom_themes/text_theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utilities/theme/custom_themes/text_theme.dart" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/widgets/clippers/header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/clippers/header.dart" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/widgets/containers/header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/containers/header.dart" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/widgets/icons/circular.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/icons/circular.dart" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/widgets/products/cards/coupon.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/products/cards/coupon.dart" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/widgets/products/cards/product_card_horizontal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/products/cards/product_card_horizontal.dart" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/widgets/products/cards/product_card_vertical.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/products/cards/product_card_vertical.dart" afterDir="false" />
++    </list>
++    <list id="a932b90f-1276-441a-8c1d-9d1465ac4ff6" name="no change" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@1x.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@2x.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@1x.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@2x.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@1x.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@2x.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -33,6 +42,11 @@
+     <option name="formatViaClangd" value="false" />
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="main" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="GitHubPullRequestSearchHistory">{
+@@ -47,6 +61,20 @@
+     &quot;accountId&quot;: &quot;14d52c85-8aa0-4da6-be6c-d7dc834a21eb&quot;
+   }
+ }</component>
++  <component name="LineStatusTrackerManager">
++    <file path="$PROJECT_DIR$/.idea/workspace.xml">
++      <ranges>
++        <range start1="11" end1="13" start2="11" end2="16" changelist="c0affda8-3a82-48f9-b8f5-a2d29be43d55" />
++        <range start1="14" end1="25" start2="17" end2="17" changelist="a932b90f-1276-441a-8c1d-9d1465ac4ff6" />
++        <range start1="35" end1="35" start2="27" end2="32" changelist="a932b90f-1276-441a-8c1d-9d1465ac4ff6" />
++        <range start1="61" end1="80" start2="58" end2="78" changelist="a932b90f-1276-441a-8c1d-9d1465ac4ff6" />
++        <range start1="81" end1="82" start2="79" end2="80" changelist="a932b90f-1276-441a-8c1d-9d1465ac4ff6" />
++        <range start1="99" end1="99" start2="97" end2="98" changelist="a932b90f-1276-441a-8c1d-9d1465ac4ff6" />
++        <range start1="104" end1="104" start2="103" end2="136" changelist="a932b90f-1276-441a-8c1d-9d1465ac4ff6" />
++        <range start1="116" end1="116" start2="148" end2="155" changelist="a932b90f-1276-441a-8c1d-9d1465ac4ff6" />
++      </ranges>
++    </file>
++  </component>
+   <component name="ProjectColorInfo">{
+   &quot;customColor&quot;: &quot;&quot;,
+   &quot;associatedIndex&quot;: 5
+Index: lib/utilities/theme/custom_themes/navigation_theme.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\n\nclass DNavigationBarTheme {\n  DNavigationBarTheme._();\n\n  /// LIGHT\n  static NavigationBarThemeData light = NavigationBarThemeData(\n    height: 80,\n    elevation: 0,\n    backgroundColor: Colors.white,\n    indicatorColor: Colors.black.withOpacity(0.1),\n    shadowColor: Colors.white,\n    surfaceTintColor: Colors.white,\n  );\n\n  /// DARK\n  static NavigationBarThemeData dark = NavigationBarThemeData(\n    height: 80,\n    elevation: 0,\n    backgroundColor: Colors.black,\n    indicatorColor: Colors.white.withOpacity(0.1),\n  );\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/utilities/theme/custom_themes/navigation_theme.dart b/lib/utilities/theme/custom_themes/navigation_theme.dart
+--- a/lib/utilities/theme/custom_themes/navigation_theme.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/utilities/theme/custom_themes/navigation_theme.dart	(date 1746971846288)
+@@ -8,7 +8,7 @@
+     height: 80,
+     elevation: 0,
+     backgroundColor: Colors.white,
+-    indicatorColor: Colors.black.withOpacity(0.1),
++    indicatorColor: Colors.black.withValues(alpha:26),
+     shadowColor: Colors.white,
+     surfaceTintColor: Colors.white,
+   );
+@@ -18,6 +18,6 @@
+     height: 80,
+     elevation: 0,
+     backgroundColor: Colors.black,
+-    indicatorColor: Colors.white.withOpacity(0.1),
++    indicatorColor: Colors.white.withValues(alpha:26),
+   );
+ }
+Index: lib/utilities/theme/custom_themes/chip_theme.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\n\nimport '../../../core/constants/colors.dart';\n\nclass TChipTheme {\n  TChipTheme._();\n\n  static ChipThemeData lightChipTheme = ChipThemeData(\n    disabledColor: TColors.grey.withOpacity(0.4),\n    labelStyle: const TextStyle(color: TColors.black),\n    selectedColor: TColors.primary,\n    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12),\n    checkmarkColor: TColors.white,\n  );\n\n  static ChipThemeData darkChipTheme = const ChipThemeData(\n    disabledColor: TColors.darkerGrey,\n    labelStyle: TextStyle(color: TColors.white),\n    selectedColor: TColors.primary,\n    padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 12),\n    checkmarkColor: TColors.white,\n  );\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/utilities/theme/custom_themes/chip_theme.dart b/lib/utilities/theme/custom_themes/chip_theme.dart
+--- a/lib/utilities/theme/custom_themes/chip_theme.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/utilities/theme/custom_themes/chip_theme.dart	(date 1746972057047)
+@@ -6,7 +6,7 @@
+   TChipTheme._();
+ 
+   static ChipThemeData lightChipTheme = ChipThemeData(
+-    disabledColor: TColors.grey.withOpacity(0.4),
++    disabledColor: TColors.grey.withValues(alpha: 102),
+     labelStyle: const TextStyle(color: TColors.black),
+     selectedColor: TColors.primary,
+     padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12),
+Index: lib/core/constants/colors.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\n\nclass TColors {\n  /// App theme colors\n  static const Color primary = Color(0xFF4b68ff);\n  static const Color secondary = Color(0xFFFFE24B);\n  static const Color accent = Color(0xFFb0c7ff);\n\n  /// Text colors\n  static const Color textPrimary = Color(0xFF333333);\n  static const Color textSecondary = Color(0xFF6C757D);\n  static const Color textWhite = Colors.white;\n\n  /// Background colors\n  static const Color light = Color(0xFFF6F6F6);\n  static const Color dark = Color(0xFF272727);\n  static const Color primaryBackground = Color(0xFFF3F5FF);\n\n  /// Background Container colors\n  static const Color lightContainer = Color(0xFFF6F6F6);\n  static Color darkContainer = TColors.white.withOpacity(0.1);\n\n  /// Button colors\n  static const Color buttonPrimary = Color(0xFF4b68ff);\n  static const Color buttonSecondary = Color(0xFF6C757D);\n  static const Color buttonDisabled = Color(0xFFC4C4C4);\n\n  /// Border colors\n  static const Color borderPrimary = Color(0xFFD9D9D9);\n  static const Color borderSecondary = Color(0xFFE6E6E6);\n\n  /// Error and validation colors\n  static const Color error = Color(0xFFD32F2F);\n  static const Color success = Color(0xFF388E3C);\n  static const Color warning = Color(0xFFF57C00);\n  static const Color info = Color(0xFF1976D2);\n\n  /// Neutral Shades\n  static const Color black = Color(0xFF232323);\n  static const Color darkerGrey = Color(0xFF4F4F4F);\n  static const Color darkGrey = Color(0xFF939393);\n  static const Color grey = Color(0xFFE0E0E0);\n  static const Color softGrey = Color(0xFFF4F4F4);\n  static const Color lightGrey = Color(0xFFF9F9F9);\n  static const Color white = Color(0xFFFFFFFF);\n\n  /// The PrimarySwatch was still set to a color generated by Flutter.\n  /// Since you don't have to pass a color but a material color, you need method. ou could also do this manually for all shades. I found this solution better, because we can continue to create MaterialColors with it.\n  static MaterialColor createMaterialColor(Color color) {\n    List strengths = <double>[.05];\n    final swatch = <int, Color>{};\n    final int r = color.red, g = color.green, b = color.blue;\n\n    for (int i = 1; i < 10; i++) {\n      strengths.add(0.1 * i);\n    }\n    for (var strength in strengths) {\n      final double ds = 0.5 - strength;\n      swatch[(strength * 1000).round()] = Color.fromRGBO(\n        r + ((ds < 0 ? r : (255 - r)) * ds).round(),\n        g + ((ds < 0 ? g : (255 - g)) * ds).round(),\n        b + ((ds < 0 ? b : (255 - b)) * ds).round(),\n        1,\n      );\n    }\n    return MaterialColor(color.value, swatch);\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/core/constants/colors.dart b/lib/core/constants/colors.dart
+--- a/lib/core/constants/colors.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/core/constants/colors.dart	(date 1746971846271)
+@@ -18,7 +18,7 @@
+ 
+   /// Background Container colors
+   static const Color lightContainer = Color(0xFFF6F6F6);
+-  static Color darkContainer = TColors.white.withOpacity(0.1);
++  static Color darkContainer = TColors.white.withValues(alpha:26);
+ 
+   /// Button colors
+   static const Color buttonPrimary = Color(0xFF4b68ff);
+Index: lib/modules/shop/stores/product_detail/widgets/meta_data.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\n\nimport '../../../../../core/constants/colors.dart';\nimport '../../../../../core/constants/images_string.dart';\nimport '../../../../../core/constants/sizes.dart';\nimport '../../../../../core/extensions/context.dart';\nimport '../../../../../core/extensions/widget.dart';\nimport '../../../../../widgets/containers/rounded_container.dart';\nimport '../../../../../widgets/images/circular.dart';\nimport '../../../../../widgets/products/widgets/price.dart';\nimport '../../../../../widgets/products/widgets/title.dart';\nimport '../../../../../widgets/texts/brand_title_with_verify_icon.dart';\n\nclass TMetaData extends StatelessWidget {\n  const TMetaData({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return Column(\n      crossAxisAlignment: CrossAxisAlignment.start,\n      children: [\n        Row(\n          children: [\n            /// Sale\n            TRoundedContainer(\n              radius: TSizes.sm,\n              backgroundColor: TColors.secondary.withOpacity(0.8),\n              padding: const EdgeInsets.symmetric(horizontal: TSizes.sm, vertical: TSizes.xs),\n              child: Text(\n                '25%',\n                style: context.textTheme.labelLarge?.apply(color: TColors.black),\n              ),\n            ),\n\n            TSizes.sm.sbs,\n\n            /// price\n            const TProductPriceText(price: '250', lineThrough: true),\n            TSizes.spaceBtwItems.sbs,\n            const TProductPriceText(price: '175', isLarge: true),\n          ],\n        ),\n\n        /// Title\n        TSizes.spaceBtwItems.sbs,\n        const TProductTitleText(title: 'Green Sport Nike'),\n        TSizes.sm.sbs,\n\n        /// Stock status\n        Row(\n          children: [\n            /// price\n            const TProductTitleText(title: 'Status'),\n            TSizes.spaceBtwItems.sbs,\n            Text('in stock', style: context.textTheme.titleMedium),\n          ],\n        ),\n        TSizes.spaceBtwItems.sbs,\n\n        /// Brands\n        Row(\n          children: [\n            TCircularImage(\n              width: 32,\n              height: 32,\n              overlayColor: context.whiteOrBlack,\n              imagePath: TImages.shoeIcon,\n            ),\n            const TBrandtitleWithVerifyIcon(title: 'Nike'),\n          ],\n        )\n      ],\n    );\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/modules/shop/stores/product_detail/widgets/meta_data.dart b/lib/modules/shop/stores/product_detail/widgets/meta_data.dart
+--- a/lib/modules/shop/stores/product_detail/widgets/meta_data.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/modules/shop/stores/product_detail/widgets/meta_data.dart	(date 1746971891561)
+@@ -24,7 +24,7 @@
+             /// Sale
+             TRoundedContainer(
+               radius: TSizes.sm,
+-              backgroundColor: TColors.secondary.withOpacity(0.8),
++              backgroundColor: TColors.secondary.withValues(alpha:204),
+               padding: const EdgeInsets.symmetric(horizontal: TSizes.sm, vertical: TSizes.xs),
+               child: Text(
+                 '25%',
+Index: lib/widgets/clippers/header.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\n\nimport '../../core/constants/colors.dart';\nimport '../../core/constants/sizes.dart';\nimport '../containers/rounded_container.dart';\n\n/// The header part of clipper\nclass THeaderContainer extends StatelessWidget {\n  final Color? color;\n  final Widget child;\n\n  const THeaderContainer({\n    super.key,\n    this.color = TColors.primary,\n    required this.child,\n  });\n\n  @override\n  Widget build(BuildContext context) {\n    return Container(\n      color: color,\n      child: Stack(\n        children: [\n          /// background custom shape\n          Positioned(\n              top: -150, right: -250, child: TRoundedContainer(backgroundColor: TColors.textWhite.withOpacity(0.1))),\n          Positioned(\n              top: 100, right: -300, child: TRoundedContainer(backgroundColor: TColors.textWhite.withOpacity(0.1))),\n          Column(\n            children: [\n              child,\n              const SizedBox(height: TSizes.spaceBtwSections),\n            ],\n          ),\n        ],\n      ),\n    );\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/widgets/clippers/header.dart b/lib/widgets/clippers/header.dart
+--- a/lib/widgets/clippers/header.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/widgets/clippers/header.dart	(date 1746971846278)
+@@ -23,9 +23,9 @@
+         children: [
+           /// background custom shape
+           Positioned(
+-              top: -150, right: -250, child: TRoundedContainer(backgroundColor: TColors.textWhite.withOpacity(0.1))),
++              top: -150, right: -250, child: TRoundedContainer(backgroundColor: TColors.textWhite.withValues(alpha:26))),
+           Positioned(
+-              top: 100, right: -300, child: TRoundedContainer(backgroundColor: TColors.textWhite.withOpacity(0.1))),
++              top: 100, right: -300, child: TRoundedContainer(backgroundColor: TColors.textWhite.withValues(alpha:26))),
+           Column(
+             children: [
+               child,
+Index: lib/commons/style/shadow.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\n\nimport '../../core/constants/colors.dart';\n\nclass TShadowStyle {\n  /// Vertical\n  static final verticalProductShadow = BoxShadow(\n    color: TColors.darkGrey.withOpacity(0.1),\n    spreadRadius: 7,\n    blurRadius: 50,\n    offset: const Offset(0, 2),\n  );\n\n  /// Horizontal\n  static final horizontalDragGestureRecognizer = BoxShadow(\n    color: TColors.darkGrey.withOpacity(0.1),\n    spreadRadius: 7,\n    blurRadius: 50,\n    offset: const Offset(0, 2),\n  );\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/commons/style/shadow.dart b/lib/commons/style/shadow.dart
+--- a/lib/commons/style/shadow.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/commons/style/shadow.dart	(date 1746971846284)
+@@ -5,7 +5,7 @@
+ class TShadowStyle {
+   /// Vertical
+   static final verticalProductShadow = BoxShadow(
+-    color: TColors.darkGrey.withOpacity(0.1),
++    color: TColors.darkGrey.withValues(alpha:26),
+     spreadRadius: 7,
+     blurRadius: 50,
+     offset: const Offset(0, 2),
+@@ -13,7 +13,7 @@
+ 
+   /// Horizontal
+   static final horizontalDragGestureRecognizer = BoxShadow(
+-    color: TColors.darkGrey.withOpacity(0.1),
++    color: TColors.darkGrey.withValues(alpha:26),
+     spreadRadius: 7,
+     blurRadius: 50,
+     offset: const Offset(0, 2),
+Index: lib/widgets/products/cards/product_card_vertical.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\nimport 'package:get/get.dart';\nimport 'package:iconsax/iconsax.dart';\n\nimport '../../../commons/style/shadow.dart';\nimport '../../../core/constants/colors.dart';\nimport '../../../core/constants/images_string.dart';\nimport '../../../core/constants/sizes.dart';\nimport '../../../core/extensions/widget.dart';\nimport '../../../modules/shop/stores/product_detail/product_detail_screen.dart';\nimport '../../containers/rounded_container.dart';\nimport '../../icons/circular.dart';\nimport '../../images/rounded.dart';\nimport '../../texts/brand_title_with_verify_icon.dart';\nimport '../widgets/price.dart';\nimport '../widgets/title.dart';\n\nclass TProductCardVertical extends StatelessWidget {\n  final VoidCallback? onPressed;\n  const TProductCardVertical({\n    this.onPressed,\n    super.key,\n  });\n\n  @override\n  Widget build(BuildContext context) {\n    return GestureDetector(\n      onTap: () => Get.to(() => const StoreProductDetailScreen()),\n      child: Container(\n        width: 180,\n        //height: TSizes.productItemHeight,\n        padding: 1.allPadding,\n        decoration: BoxDecoration(\n          boxShadow: [TShadowStyle.verticalProductShadow],\n          borderRadius: BorderRadius.circular(TSizes.productImageRadius),\n          color: context.isDarkMode ? TColors.darkGrey : TColors.white,\n        ),\n        child: Column(\n          mainAxisSize: MainAxisSize.min,\n          crossAxisAlignment: CrossAxisAlignment.start,\n          children: [\n            /// Thumbail, whishlist button, Discount tag\n            TRoundedContainer(\n              height: 180,\n              padding: TSizes.sm.allPadding,\n              backgroundColor: context.isDarkMode ? TColors.dark : TColors.light,\n              child: Stack(\n                children: [\n                  /// Thumbail\n                  TRoundedImage(\n                    height: 180,\n                    padding: TSizes.sm.allPadding,\n                    imageUrl: TImages.productImage1,\n                  ),\n\n                  /// Sale Tag\n                  Positioned(\n                    top: 12,\n                    child: TRoundedContainer(\n                      radius: TSizes.sm,\n                      backgroundColor: TColors.secondary.withOpacity(0.8),\n                      padding: (h: TSizes.sm, v: TSizes.xs).symmetricPadding,\n                      child: Text('25%', style: context.textTheme.labelLarge?.apply(color: TColors.black)),\n                    ),\n                  ),\n\n                  /// favorite icon buttonm\n                  Positioned(\n                    top: 0,\n                    right: 0,\n                    child: TCircularIcon(\n                      iconData: Iconsax.heart5,\n                      onPressed: () {},\n                    ),\n                  ),\n                ],\n              ),\n            ),\n\n            /// Detail\n            Expanded(\n              child: Column(\n                crossAxisAlignment: CrossAxisAlignment.start,\n                mainAxisSize: MainAxisSize.min,\n                children: [\n                  ///  title\n                  const TProductTitleText(\n                    title: 'Greeen Nike Air Shop',\n                    isSmallSize: true,\n                  ).withPadding(TSizes.xs.topPadding),\n\n                  const TBrandtitleWithVerifyIcon(title: 'Nike'),\n\n                  /// space\n                  const Spacer(),\n\n                  ///\n                  Row(\n                    mainAxisAlignment: MainAxisAlignment.spaceBetween,\n                    children: [\n                      /// Price\n                      const TProductPriceText(price: '35.5'),\n\n                      Container(\n                        decoration: const BoxDecoration(\n                          color: TColors.dark,\n                          borderRadius: BorderRadius.only(\n                            topLeft: Radius.circular(TSizes.cardRadiusMd),\n                            bottomRight: Radius.circular(TSizes.productImageRadius),\n                          ),\n                        ),\n                        child: const SizedBox(\n                          width: TSizes.iconLg * 1.2,\n                          height: TSizes.iconLg * 1.2,\n                          child: Center(\n                            child: Icon(\n                              Iconsax.add,\n                              color: TColors.white,\n                            ),\n                          ),\n                        ),\n                      )\n                    ],\n                  ),\n                ],\n              ).withPadding(TSizes.sm.leftPadding),\n            ),\n          ],\n        ),\n      ),\n    );\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/widgets/products/cards/product_card_vertical.dart b/lib/widgets/products/cards/product_card_vertical.dart
+--- a/lib/widgets/products/cards/product_card_vertical.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/widgets/products/cards/product_card_vertical.dart	(date 1746971891555)
+@@ -58,7 +58,7 @@
+                     top: 12,
+                     child: TRoundedContainer(
+                       radius: TSizes.sm,
+-                      backgroundColor: TColors.secondary.withOpacity(0.8),
++                      backgroundColor: TColors.secondary.withValues(alpha:204),
+                       padding: (h: TSizes.sm, v: TSizes.xs).symmetricPadding,
+                       child: Text('25%', style: context.textTheme.labelLarge?.apply(color: TColors.black)),
+                     ),
+Index: lib/modules/authentication/personalisation/address/widgets/single_address.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\nimport 'package:iconsax/iconsax.dart';\n\nimport '../../../../../core/constants/colors.dart';\nimport '../../../../../core/constants/sizes.dart';\nimport '../../../../../core/extensions/context.dart';\nimport '../../../../../core/extensions/widget.dart';\nimport '../../../../../widgets/containers/rounded_container.dart';\n\nclass TSingleAddress extends StatelessWidget {\n  final bool isSelectedAddress;\n  const TSingleAddress({required this.isSelectedAddress, super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return TRoundedContainer(\n      padding: TSizes.sm.allPadding,\n      showBorder: true,\n      width: double.infinity,\n      backgroundColor: isSelectedAddress ? TColors.primary.withOpacity(0.5) : Colors.transparent,\n      borderColor: isSelectedAddress ? Colors.transparent : context.darkgreyOrGrey,\n      margin: TSizes.spaceBtwItems.bottomPadding,\n      child: Stack(\n        children: [\n          /// Icon\n          Positioned(\n            top: 0,\n            right: 5,\n            child: Icon(\n              isSelectedAddress ? Iconsax.tick_circle5 : null,\n              color: isSelectedAddress ? context.darkOrWhite : null,\n            ),\n          ),\n\n          /// Infos\n          Column(\n            crossAxisAlignment: CrossAxisAlignment.start,\n            children: [\n              Text(\n                'john Doe',\n                style: context.textTheme.titleLarge,\n                maxLines: 1,\n                overflow: TextOverflow.ellipsis,\n              ),\n              TSizes.xs.sbs,\n              const Text('+49(0) 176 123123', maxLines: 1, overflow: TextOverflow.ellipsis),\n              TSizes.xs.sbs,\n              const Text('Strasse 2, 44444 Dortmund', maxLines: 1, overflow: TextOverflow.ellipsis),\n              TSizes.xs.sbs,\n              const Text('Dortmund, Germany', softWrap: true),\n              TSizes.xs.sbs,\n            ],\n          ),\n        ],\n      ),\n    );\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/modules/authentication/personalisation/address/widgets/single_address.dart b/lib/modules/authentication/personalisation/address/widgets/single_address.dart
+--- a/lib/modules/authentication/personalisation/address/widgets/single_address.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/modules/authentication/personalisation/address/widgets/single_address.dart	(date 1746971873123)
+@@ -17,7 +17,7 @@
+       padding: TSizes.sm.allPadding,
+       showBorder: true,
+       width: double.infinity,
+-      backgroundColor: isSelectedAddress ? TColors.primary.withOpacity(0.5) : Colors.transparent,
++      backgroundColor: isSelectedAddress ? TColors.primary.withValues(alpha:128) : Colors.transparent,
+       borderColor: isSelectedAddress ? Colors.transparent : context.darkgreyOrGrey,
+       margin: TSizes.spaceBtwItems.bottomPadding,
+       child: Stack(
+Index: lib/widgets/products/cards/coupon.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\nimport 'package:get/get_utils/src/extensions/context_extensions.dart';\n\nimport '../../../core/constants/colors.dart';\nimport '../../../core/constants/sizes.dart';\nimport '../../../core/extensions/context.dart';\nimport '../../../core/extensions/widget.dart';\nimport '../../buttons/primary.dart';\nimport '../../containers/rounded_container.dart';\n\nclass TPromoteCoupon extends StatelessWidget {\n  const TPromoteCoupon({\n    super.key,\n  });\n\n  @override\n  Widget build(BuildContext context) {\n    return TRoundedContainer(\n      showBorder: true,\n      backgroundColor: context.darkOrWhite,\n      padding: TSizes.sm.allPadding,\n      child: Row(\n        children: [\n          /// Text field\n          Flexible(\n            child: TextFormField(\n              decoration: const InputDecoration(\n                hintText: 'Have a promote code? Enter here',\n                border: InputBorder.none,\n                focusedBorder: InputBorder.none,\n                enabledBorder: InputBorder.none,\n                errorBorder: InputBorder.none,\n                disabledBorder: InputBorder.none,\n              ),\n            ),\n          ),\n\n          /// Button\n          TPrimaryButton(\n            width: 80,\n            padding: TSizes.sm.horizontalPadding,\n            backgroundColor: Colors.grey.withOpacity(0.2),\n            textButtonColor: context.isDarkMode ? TColors.white.withOpacity(0.5) : TColors.dark.withOpacity(0.5),\n            side: BorderSide(color: Colors.grey.withOpacity(0.2)),\n            title: 'Apply',\n            onPressed: () {},\n          )\n        ],\n      ),\n    );\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/widgets/products/cards/coupon.dart b/lib/widgets/products/cards/coupon.dart
+--- a/lib/widgets/products/cards/coupon.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/widgets/products/cards/coupon.dart	(date 1746971921234)
+@@ -39,9 +39,9 @@
+           TPrimaryButton(
+             width: 80,
+             padding: TSizes.sm.horizontalPadding,
+-            backgroundColor: Colors.grey.withOpacity(0.2),
+-            textButtonColor: context.isDarkMode ? TColors.white.withOpacity(0.5) : TColors.dark.withOpacity(0.5),
+-            side: BorderSide(color: Colors.grey.withOpacity(0.2)),
++            backgroundColor: Colors.grey.withValues(alpha:51),
++            textButtonColor: context.isDarkMode ? TColors.white.withValues(alpha:128) : TColors.dark.withValues(alpha:128),
++            side: BorderSide(color: Colors.grey.withValues(alpha:51)),
+             title: 'Apply',
+             onPressed: () {},
+           )
+Index: lib/widgets/containers/header.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\n\nimport '../../core/constants/colors.dart';\nimport 'rounded_container.dart';\n\n/// The header part of clipper\nclass THeaderContainer extends StatelessWidget {\n  final Color? color;\n  final double? height;\n  final Widget child;\n\n  const THeaderContainer({\n    super.key,\n    required this.color,\n    required this.height,\n    required this.child,\n  });\n\n  @override\n  Widget build(BuildContext context) {\n    return Container(\n      color: color,\n      child: SizedBox(\n        height: height,\n        child: Stack(\n          children: [\n            /// background custom shape\n            Positioned(\n                top: -150, right: -250, child: TRoundedContainer(backgroundColor: TColors.textWhite.withOpacity(0.1))),\n            Positioned(\n                top: 100, right: -300, child: TRoundedContainer(backgroundColor: TColors.textWhite.withOpacity(0.1))),\n            child,\n          ],\n        ),\n      ),\n    );\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/widgets/containers/header.dart b/lib/widgets/containers/header.dart
+--- a/lib/widgets/containers/header.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/widgets/containers/header.dart	(date 1746971846281)
+@@ -26,9 +26,9 @@
+           children: [
+             /// background custom shape
+             Positioned(
+-                top: -150, right: -250, child: TRoundedContainer(backgroundColor: TColors.textWhite.withOpacity(0.1))),
++                top: -150, right: -250, child: TRoundedContainer(backgroundColor: TColors.textWhite.withValues(alpha:26))),
+             Positioned(
+-                top: 100, right: -300, child: TRoundedContainer(backgroundColor: TColors.textWhite.withOpacity(0.1))),
++                top: 100, right: -300, child: TRoundedContainer(backgroundColor: TColors.textWhite.withValues(alpha:26))),
+             child,
+           ],
+         ),
+Index: lib/widgets/icons/circular.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\r\nimport 'package:get/get.dart';\r\n\r\nimport '../../core/constants/colors.dart';\r\nimport '../../core/constants/sizes.dart';\r\n\r\nclass TCircularIcon extends StatelessWidget {\r\n  final VoidCallback? onPressed;\r\n  final IconData? iconData;\r\n  final Color? iconColor;\r\n  final Color? backgroundColor;\r\n  final double? iconSize, radius, width, height;\r\n\r\n  const TCircularIcon({\r\n    required this.onPressed,\r\n    required this.iconData,\r\n    this.iconColor,\r\n    this.width,\r\n    this.height,\r\n    this.radius = 100,\r\n    this.backgroundColor,\r\n    this.iconSize = TSizes.iconMd,\r\n    super.key,\r\n  });\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container(\r\n      width: width,\r\n      height: height,\r\n      decoration: BoxDecoration(\r\n        borderRadius: BorderRadius.circular(radius ?? 100),\r\n        color: backgroundColor != null\r\n            ? backgroundColor!\r\n            : context.isDarkMode\r\n                ? TColors.black.withOpacity(0.8)\r\n                : TColors.white.withOpacity(0.8),\r\n      ),\r\n      child: IconButton(\r\n        alignment: Alignment.center,\r\n        padding: EdgeInsets.zero,\r\n        constraints: const BoxConstraints(),\r\n        icon: Icon(iconData, color: iconColor, size: iconSize),\r\n        onPressed: onPressed,\r\n      ),\r\n    );\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/widgets/icons/circular.dart b/lib/widgets/icons/circular.dart
+--- a/lib/widgets/icons/circular.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/widgets/icons/circular.dart	(date 1746971891567)
+@@ -33,8 +33,8 @@
+         color: backgroundColor != null
+             ? backgroundColor!
+             : context.isDarkMode
+-                ? TColors.black.withOpacity(0.8)
+-                : TColors.white.withOpacity(0.8),
++                ? TColors.black.withValues(alpha:204)
++                : TColors.white.withValues(alpha:204),
+       ),
+       child: IconButton(
+         alignment: Alignment.center,
+Index: lib/utilities/theme/custom_themes/text_field_theme.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\n\nimport '../../../core/constants/colors.dart';\nimport '../../../core/constants/sizes.dart';\n\nclass TTextFormFieldTheme {\n  TTextFormFieldTheme._();\n\n  static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(\n    errorMaxLines: 3,\n    prefixIconColor: TColors.darkGrey,\n    suffixIconColor: TColors.darkGrey,\n    // constraints: const BoxConstraints.expand(height: TSizes.inputFieldHeight),\n    labelStyle: const TextStyle().copyWith(fontSize: TSizes.fontSizeMd, color: TColors.black),\n    hintStyle: const TextStyle().copyWith(fontSize: TSizes.fontSizeSm, color: TColors.black),\n    errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),\n    floatingLabelStyle: const TextStyle().copyWith(color: TColors.black.withOpacity(0.8)),\n    border: const OutlineInputBorder().copyWith(\n      borderRadius: BorderRadius.circular(TSizes.inputFieldRadius),\n      borderSide: const BorderSide(width: 1, color: TColors.grey),\n    ),\n    enabledBorder: const OutlineInputBorder().copyWith(\n      borderRadius: BorderRadius.circular(TSizes.inputFieldRadius),\n      borderSide: const BorderSide(width: 1, color: TColors.grey),\n    ),\n    focusedBorder: const OutlineInputBorder().copyWith(\n      borderRadius: BorderRadius.circular(TSizes.inputFieldRadius),\n      borderSide: const BorderSide(width: 1, color: TColors.dark),\n    ),\n    errorBorder: const OutlineInputBorder().copyWith(\n      borderRadius: BorderRadius.circular(TSizes.inputFieldRadius),\n      borderSide: const BorderSide(width: 1, color: TColors.warning),\n    ),\n    focusedErrorBorder: const OutlineInputBorder().copyWith(\n      borderRadius: BorderRadius.circular(TSizes.inputFieldRadius),\n      borderSide: const BorderSide(width: 2, color: TColors.warning),\n    ),\n  );\n\n  static InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(\n    errorMaxLines: 2,\n    prefixIconColor: TColors.darkGrey,\n    suffixIconColor: TColors.darkGrey,\n    // constraints: const BoxConstraints.expand(height: TSizes.inputFieldHeight),\n    labelStyle: const TextStyle().copyWith(fontSize: TSizes.fontSizeMd, color: TColors.white),\n    hintStyle: const TextStyle().copyWith(fontSize: TSizes.fontSizeSm, color: TColors.white),\n    floatingLabelStyle: const TextStyle().copyWith(color: TColors.white.withOpacity(0.8)),\n    border: const OutlineInputBorder().copyWith(\n      borderRadius: BorderRadius.circular(TSizes.inputFieldRadius),\n      borderSide: const BorderSide(width: 1, color: TColors.darkGrey),\n    ),\n    enabledBorder: const OutlineInputBorder().copyWith(\n      borderRadius: BorderRadius.circular(TSizes.inputFieldRadius),\n      borderSide: const BorderSide(width: 1, color: TColors.darkGrey),\n    ),\n    focusedBorder: const OutlineInputBorder().copyWith(\n      borderRadius: BorderRadius.circular(TSizes.inputFieldRadius),\n      borderSide: const BorderSide(width: 1, color: TColors.white),\n    ),\n    errorBorder: const OutlineInputBorder().copyWith(\n      borderRadius: BorderRadius.circular(TSizes.inputFieldRadius),\n      borderSide: const BorderSide(width: 1, color: TColors.warning),\n    ),\n    focusedErrorBorder: const OutlineInputBorder().copyWith(\n      borderRadius: BorderRadius.circular(TSizes.inputFieldRadius),\n      borderSide: const BorderSide(width: 2, color: TColors.warning),\n    ),\n  );\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/utilities/theme/custom_themes/text_field_theme.dart b/lib/utilities/theme/custom_themes/text_field_theme.dart
+--- a/lib/utilities/theme/custom_themes/text_field_theme.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/utilities/theme/custom_themes/text_field_theme.dart	(date 1746971891552)
+@@ -14,7 +14,7 @@
+     labelStyle: const TextStyle().copyWith(fontSize: TSizes.fontSizeMd, color: TColors.black),
+     hintStyle: const TextStyle().copyWith(fontSize: TSizes.fontSizeSm, color: TColors.black),
+     errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
+-    floatingLabelStyle: const TextStyle().copyWith(color: TColors.black.withOpacity(0.8)),
++    floatingLabelStyle: const TextStyle().copyWith(color: TColors.black.withValues(alpha:204)),
+     border: const OutlineInputBorder().copyWith(
+       borderRadius: BorderRadius.circular(TSizes.inputFieldRadius),
+       borderSide: const BorderSide(width: 1, color: TColors.grey),
+@@ -44,7 +44,7 @@
+     // constraints: const BoxConstraints.expand(height: TSizes.inputFieldHeight),
+     labelStyle: const TextStyle().copyWith(fontSize: TSizes.fontSizeMd, color: TColors.white),
+     hintStyle: const TextStyle().copyWith(fontSize: TSizes.fontSizeSm, color: TColors.white),
+-    floatingLabelStyle: const TextStyle().copyWith(color: TColors.white.withOpacity(0.8)),
++    floatingLabelStyle: const TextStyle().copyWith(color: TColors.white.withValues(alpha:204)),
+     border: const OutlineInputBorder().copyWith(
+       borderRadius: BorderRadius.circular(TSizes.inputFieldRadius),
+       borderSide: const BorderSide(width: 1, color: TColors.darkGrey),
+Index: lib/utilities/theme/custom_themes/text_theme.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\n\nimport '../../../core/constants/colors.dart';\n\nclass TTextTheme {\n  TTextTheme._();\n\n  /// LIGHT\n  static TextTheme lightTextTheme = TextTheme(\n    headlineLarge: const TextStyle().copyWith(fontSize: 32.0, fontWeight: FontWeight.bold, color: TColors.dark),\n    headlineMedium: const TextStyle().copyWith(fontSize: 24.0, fontWeight: FontWeight.w600, color: TColors.dark),\n    headlineSmall: const TextStyle().copyWith(fontSize: 18.0, fontWeight: FontWeight.w600, color: TColors.dark),\n    titleLarge: const TextStyle().copyWith(fontSize: 16.0, fontWeight: FontWeight.w600, color: TColors.dark),\n    titleMedium: const TextStyle().copyWith(fontSize: 16.0, fontWeight: FontWeight.w500, color: TColors.dark),\n    titleSmall: const TextStyle().copyWith(fontSize: 16.0, fontWeight: FontWeight.w400, color: TColors.dark),\n    bodyLarge: const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.w500, color: TColors.dark),\n    bodyMedium: const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.normal, color: TColors.dark),\n    bodySmall:\n        const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.w500, color: TColors.dark.withOpacity(0.5)),\n    labelLarge: const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: TColors.dark),\n    labelMedium:\n        const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: TColors.dark.withOpacity(0.5)),\n  );\n\n  /// DARK\n  static TextTheme darkTextTheme = TextTheme(\n    headlineLarge: const TextStyle().copyWith(fontSize: 32.0, fontWeight: FontWeight.bold, color: TColors.light),\n    headlineMedium: const TextStyle().copyWith(fontSize: 24.0, fontWeight: FontWeight.w600, color: TColors.light),\n    headlineSmall: const TextStyle().copyWith(fontSize: 18.0, fontWeight: FontWeight.w600, color: TColors.light),\n    titleLarge: const TextStyle().copyWith(fontSize: 16.0, fontWeight: FontWeight.w600, color: TColors.light),\n    titleMedium: const TextStyle().copyWith(fontSize: 16.0, fontWeight: FontWeight.w500, color: TColors.light),\n    titleSmall: const TextStyle().copyWith(fontSize: 16.0, fontWeight: FontWeight.w400, color: TColors.light),\n    bodyLarge: const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.w500, color: TColors.light),\n    bodyMedium: const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.normal, color: TColors.light),\n    bodySmall:\n        const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.w500, color: TColors.light.withOpacity(0.5)),\n    labelLarge: const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: TColors.light),\n    labelMedium: const TextStyle()\n        .copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: TColors.light.withOpacity(0.5)),\n  );\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/utilities/theme/custom_themes/text_theme.dart b/lib/utilities/theme/custom_themes/text_theme.dart
+--- a/lib/utilities/theme/custom_themes/text_theme.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/utilities/theme/custom_themes/text_theme.dart	(date 1746971873129)
+@@ -16,10 +16,10 @@
+     bodyLarge: const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.w500, color: TColors.dark),
+     bodyMedium: const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.normal, color: TColors.dark),
+     bodySmall:
+-        const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.w500, color: TColors.dark.withOpacity(0.5)),
++        const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.w500, color: TColors.dark.withValues(alpha:128)),
+     labelLarge: const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: TColors.dark),
+     labelMedium:
+-        const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: TColors.dark.withOpacity(0.5)),
++        const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: TColors.dark.withValues(alpha:128)),
+   );
+ 
+   /// DARK
+@@ -33,9 +33,9 @@
+     bodyLarge: const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.w500, color: TColors.light),
+     bodyMedium: const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.normal, color: TColors.light),
+     bodySmall:
+-        const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.w500, color: TColors.light.withOpacity(0.5)),
++        const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.w500, color: TColors.light.withValues(alpha:128)),
+     labelLarge: const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: TColors.light),
+     labelMedium: const TextStyle()
+-        .copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: TColors.light.withOpacity(0.5)),
++        .copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: TColors.light.withValues(alpha:128)),
+   );
+ }
+Index: lib/widgets/products/cards/product_card_horizontal.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\nimport 'package:get/get.dart';\nimport 'package:iconsax/iconsax.dart';\n\nimport '../../../core/constants/colors.dart';\nimport '../../../core/constants/images_string.dart';\nimport '../../../core/constants/sizes.dart';\nimport '../../../core/extensions/context.dart';\nimport '../../../core/extensions/widget.dart';\nimport '../../../modules/shop/stores/product_detail/product_detail_screen.dart';\nimport '../../containers/rounded_container.dart';\nimport '../../icons/circular.dart';\nimport '../../images/rounded.dart';\nimport '../../texts/brand_title_with_verify_icon.dart';\nimport '../widgets/price.dart';\nimport '../widgets/title.dart';\n\nclass TProductCardHorizontal extends StatelessWidget {\n  final VoidCallback? onPressed;\n\n  const TProductCardHorizontal({\n    this.onPressed,\n    super.key,\n  });\n\n  @override\n  Widget build(BuildContext context) {\n    return GestureDetector(\n      onTap: () => Get.to(() => const StoreProductDetailScreen()),\n      child: Container(\n        width: 310,\n        padding: 1.allPadding,\n        decoration: BoxDecoration(\n          borderRadius: BorderRadius.circular(TSizes.productImageRadius),\n          color: context.darkgreyOrGrey,\n        ),\n        child: Row(\n          crossAxisAlignment: CrossAxisAlignment.start,\n          children: [\n            /// Thumbail, whishlist button, Discount tag\n            TRoundedContainer(\n              height: 120,\n              padding: TSizes.sm.allPadding,\n              backgroundColor: context.darkgreyOrGrey,\n              child: Stack(\n                children: [\n                  /// Thumbail\n                  TRoundedImage(\n                    height: 120,\n                    width: 120,\n                    padding: TSizes.sm.allPadding,\n                    imageUrl: TImages.productImage1,\n                  ),\n\n                  /// Sale Tag\n                  Positioned(\n                    top: 12,\n                    child: TRoundedContainer(\n                      radius: TSizes.sm,\n                      backgroundColor: TColors.secondary.withOpacity(0.8),\n                      padding: (h: TSizes.sm, v: TSizes.xs).symmetricPadding,\n                      child: Text('25%', style: Theme.of(context).textTheme.labelLarge?.apply(color: TColors.black)),\n                    ),\n                  ),\n\n                  /// favorite icon buttonm\n                  Positioned(\n                    top: 0,\n                    right: 0,\n                    child: TCircularIcon(\n                      iconColor: Colors.red,\n                      iconData: Iconsax.heart5,\n                      onPressed: () {},\n                    ),\n                  ),\n                ],\n              ),\n            ),\n\n            /// Detail\n            SizedBox(\n              width: 172,\n              child: Column(\n                crossAxisAlignment: CrossAxisAlignment.start,\n                children: [\n                  ///  title\n                  const TProductTitleText(\n                    title: 'Greeen Nike Air Shop Greeen Nike Air Shop Greeen Nike Air Shop',\n                    isSmallSize: true,\n                  ).withPadding(TSizes.xs.verticalPadding),\n\n                  const TBrandtitleWithVerifyIcon(title: 'Nike'),\n\n                  /// space\n                  const Spacer(),\n\n                  /// Price and icon\n                  Row(\n                    mainAxisAlignment: MainAxisAlignment.spaceBetween,\n                    crossAxisAlignment: CrossAxisAlignment.end,\n                    children: [\n                      /// Price\n                      const Flexible(child: TProductPriceText(price: '35.5', currentSign: '€')),\n\n                      /// Icon\n                      Container(\n                        decoration: const BoxDecoration(\n                          color: TColors.dark,\n                          borderRadius: BorderRadius.only(\n                            topLeft: Radius.circular(TSizes.cardRadiusMd),\n                            bottomRight: Radius.circular(TSizes.productImageRadius),\n                          ),\n                        ),\n                        child: const SizedBox(\n                          width: TSizes.iconLg * 1.2,\n                          height: TSizes.iconLg * 1.2,\n                          child: Center(\n                            child: Icon(\n                              Iconsax.add,\n                              color: TColors.white,\n                            ),\n                          ),\n                        ),\n                      )\n                    ],\n                  ),\n                ],\n              ).withPadding(TSizes.sm.leftPadding),\n            ),\n          ],\n        ),\n      ),\n    );\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/widgets/products/cards/product_card_horizontal.dart b/lib/widgets/products/cards/product_card_horizontal.dart
+--- a/lib/widgets/products/cards/product_card_horizontal.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/widgets/products/cards/product_card_horizontal.dart	(date 1746971891571)
+@@ -57,7 +57,7 @@
+                     top: 12,
+                     child: TRoundedContainer(
+                       radius: TSizes.sm,
+-                      backgroundColor: TColors.secondary.withOpacity(0.8),
++                      backgroundColor: TColors.secondary.withValues(alpha:204),
+                       padding: (h: TSizes.sm, v: TSizes.xs).symmetricPadding,
+                       child: Text('25%', style: Theme.of(context).textTheme.labelLarge?.apply(color: TColors.black)),
+                     ),

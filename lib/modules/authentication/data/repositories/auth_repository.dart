@@ -10,9 +10,9 @@ import '../../../../utilities/exceptions/firebase_auth_exceptions.dart';
 import '../../../../utilities/exceptions/firebase_exceptions.dart';
 import '../../../../utilities/exceptions/format_exceptions.dart';
 import '../../../../utilities/exceptions/platform_exceptions.dart';
+import '../../../app_settings/data/repository/user_repository.dart';
 import '../../presenter/login/pages/login_screen.dart';
 import '../../presenter/onboarding/pages/onboarding_screen.dart';
-import '../../../app_settings/data/repository/user_repository.dart';
 import '../../presenter/register/widgets/verification_email_screen.dart';
 
 class AuthenticationRepository extends GetxController {

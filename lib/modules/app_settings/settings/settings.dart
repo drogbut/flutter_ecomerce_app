@@ -10,8 +10,8 @@ import '../../../widgets/buttons/secondary.dart';
 import '../../../widgets/clippers/clipper.dart';
 import '../../../widgets/list_tiles/settings_menu.dart';
 import '../../../widgets/texts/section_header.dart';
-import '../../shop/orders/orders_screen.dart';
 import '../../authentication/data/repositories/auth_repository.dart';
+import '../../shop/orders/orders_screen.dart';
 import '../address/address.dart';
 import '../profile/widgets/user_profile_card.dart';
 

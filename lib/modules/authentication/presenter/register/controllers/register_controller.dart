@@ -5,8 +5,8 @@ import '../../../../../core/constants/images_string.dart';
 import '../../../../../utilities/helpers/network_manager.dart';
 import '../../../../../utilities/popups/full_screen_loader.dart';
 import '../../../../../utilities/popups/loaders.dart';
-import '../../../data/models/user/user.dart';
 import '../../../../app_settings/data/repository/user_repository.dart';
+import '../../../data/models/user/user.dart';
 import '../../../data/repositories/auth_repository.dart';
 import '../widgets/verification_email_screen.dart';
 

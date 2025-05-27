@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';
-
 import 'bindings/general_bindings.dart';
 import 'core/constants/colors.dart';
+import 'l10n/app_localizations.dart';
 import 'l10n/l10n.dart';
 import 'utilities/theme/theme.dart';
 import 'widgets/loaders/circular_loader.dart';
@@ -27,7 +26,8 @@ class _AppState extends State<App> {
       theme: DTheme.lightTheme,
       darkTheme: DTheme.darkTheme,
       initialBinding: GeneralBindings(),
-      home: const Scaffold(backgroundColor: TColors.primary, body: TCircularLoader()),
+      home: const Scaffold(
+          backgroundColor: TColors.primary, body: TCircularLoader()),
     );
   }
 }

@@ -11,9 +11,9 @@ import '../../../../../widgets/buttons/secondary.dart';
 import '../../../../../widgets/buttons/tertiary.dart';
 import '../../../../../widgets/checkbox_and_radio/checkbox.dart';
 import '../../../../../widgets/fields/primary.dart';
+import '../../forgot_password/pages/forgot_password.dart';
 import '../../register/pages/register_screen.dart';
 import '../controllers/login_controller.dart';
-import '../../forgot_password/pages/forgot_password.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});

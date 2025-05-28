@@ -1,0 +1,16 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_23\" project-jdk-name=\"Android API 35, extension level 13 Platform\" project-jdk-type=\"Android SDK\" />\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 20622e0a858fc2aba6b81d090724c334bd11e9cd)
++++ b/.idea/misc.xml	(date 1746891267352)
+@@ -1,4 +1,3 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_23" project-jdk-name="Android API 35, extension level 13 Platform" project-jdk-type="Android SDK" />
+ </project>
+\ No newline at end of file

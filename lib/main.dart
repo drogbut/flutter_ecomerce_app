@@ -6,7 +6,7 @@ import 'package:get_storage/get_storage.dart';
 
 import 'app.dart';
 import 'firebase_options.dart';
-import 'modules/authentication/sign_up/data/repository/auth_repository.dart';
+import 'modules/authentication/data/repositories/auth_repository.dart';
 
 Future<void> main() async {
   /// Add widget binding
@@ -26,4 +26,7 @@ Future<void> main() async {
       .then((FirebaseApp value) => Get.put(AuthenticationRepository()));
 
   runApp(const App());
+
+  /// Whenever your initialization is completed, remove the splash screen
+  FlutterNativeSplash.remove();
 }

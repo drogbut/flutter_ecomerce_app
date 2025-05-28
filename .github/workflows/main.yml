@@ -1,0 +1,108 @@
+name: Flutter Full CI/CD
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+
+  # 🔍 JOB D'ANALYSE DE CODE
+  analyze-code:
+    runs-on: ubuntu-latest
+    name: Analyze Flutter Code
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2.14.0
+        with:
+          channel: stable
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Run flutter analyze
+        run: flutter analyze
+
+  # ✅ TESTS UBUNTU (unitaires + web)
+  ubuntu-tests:
+    runs-on: ubuntu-latest
+    name: Tests & Coverage (Ubuntu)
+    needs: analyze-code
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2.14.0
+        with:
+          channel: stable
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Enable web support
+        run: flutter config --enable-web
+
+      #- name: Run unit tests with coverage
+      #  run: flutter test --coverage
+
+  # 📱 BUILD ANDROID
+  android:
+    runs-on: ubuntu-latest
+    name: Build Android APK
+    needs: analyze-code
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2.14.0
+        with:
+          channel: stable
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      #- name: Build APK
+      #  run: flutter build apk --release
+    #  - name: Upload APK artifact
+    #    uses: actions/upload-artifact@v4
+    #    with:
+    #      name: app-release.apk
+    #      path: build/app/outputs/flutter-apk/app-release.apk
+
+
+  # 🍏 BUILD IOS (no code signing)
+  ios:
+    runs-on: macos-latest
+    name: Build iOS (macOS runner)
+    needs: analyze-code
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2.14.0
+        with:
+          channel: stable
+
+      - name: Install dependencies
+        run: flutter pub get
+
+     # - name: Build iOS (no codesign)
+     #    run: flutter build ios --no-codesign
+
+      #- name: Upload iOS build (app folder)
+      #  uses: actions/upload-artifact@v4
+      #  with:
+      #    name: ios-app-build
+      #    path: build/ios/iphoneos
+

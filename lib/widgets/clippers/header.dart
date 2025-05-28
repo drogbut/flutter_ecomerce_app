@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../core/constants/colors.dart';
 import '../../core/constants/sizes.dart';
+import '../../core/extensions/color.dart';
 import '../containers/rounded_container.dart';
 
 /// The header part of clipper
@@ -23,9 +24,9 @@ class THeaderContainer extends StatelessWidget {
         children: [
           /// background custom shape
           Positioned(
-              top: -150, right: -250, child: TRoundedContainer(backgroundColor: TColors.textWhite.withOpacity(0.1))),
+              top: -150, right: -250, child: TRoundedContainer(backgroundColor: TColors.textWhite.withOpacityPercent(0.1))),
           Positioned(
-              top: 100, right: -300, child: TRoundedContainer(backgroundColor: TColors.textWhite.withOpacity(0.1))),
+              top: 100, right: -300, child: TRoundedContainer(backgroundColor: TColors.textWhite.withOpacityPercent(0.1))),
           Column(
             children: [
               child,

@@ -6,7 +6,7 @@ import '../../../../../../core/extensions/context.dart';
 import '../../../../../../widgets/appbar/appbar.dart';
 import '../../../../../../widgets/icons/cart_counter.dart';
 import '../../../../../../widgets/loaders/shimmer_effects.dart';
-import '../../../../../authentication/personalisation/controllers/user_controller.dart';
+import '../../../../../app_settings/controllers/user_controller.dart';
 import '../../../../shopping_cart/shopping_card.dart';
 
 class HomeHeader extends StatelessWidget {
@@ -24,7 +24,10 @@ class HomeHeader extends StatelessWidget {
         children: [
           Text(
             context.translate.homeAppBarTitle,
-            style: Theme.of(context).textTheme.labelMedium?.copyWith(color: TColors.grey),
+            style: Theme.of(context)
+                .textTheme
+                .labelMedium
+                ?.copyWith(color: TColors.grey),
           ),
           Obx(
             () {
@@ -33,7 +36,10 @@ class HomeHeader extends StatelessWidget {
               }
               return Text(
                 controller.userModel.value.fullName,
-                style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white),
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineSmall
+                    ?.copyWith(color: Colors.white),
               );
             },
           ),

@@ -1,0 +1,102 @@
+Index: test/widget_test.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// This is a basic Flutter widget test.\n//\n// To perform an interaction with a widget in your test, use the WidgetTester\n// utility in the flutter_test package. For example, you can send tap and scroll\n// gestures. You can also use WidgetTester to find child widgets in the widget\n// tree, read text, and verify that the values of widget properties are correct.\n\n\nvoid main() {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/widget_test.dart b/test/widget_test.dart
+--- a/test/widget_test.dart	(revision c607df522f981f92479362d4d69b40c0b64cdd50)
++++ b/test/widget_test.dart	(date 1748037278399)
+@@ -1,10 +1,82 @@
+-// This is a basic Flutter widget test.
+-//
+-// To perform an interaction with a widget in your test, use the WidgetTester
+-// utility in the flutter_test package. For example, you can send tap and scroll
+-// gestures. You can also use WidgetTester to find child widgets in the widget
+-// tree, read text, and verify that the values of widget properties are correct.
+-
++import 'package:flutter/material.dart';
++import 'package:flutter_folders_structure/modules/authentication/sign_up/data/repository/auth_repository.dart';
++import 'package:flutter_folders_structure/modules/authentication/sign_up/presenter/controllers/register_controller.dart';
++import 'package:flutter_folders_structure/modules/authentication/sign_up/presenter/ui/widgets/register_form.dart';
++import 'package:flutter_folders_structure/utilities/validators/validator.dart';
++import 'package:flutter_folders_structure/widgets/buttons/primary.dart';
++import 'package:flutter_folders_structure/widgets/fields/primary.dart';
++import 'package:flutter_test/flutter_test.dart';
++import 'package:get/get.dart';
++import 'package:iconsax/iconsax.dart';
+ 
+ void main() {
+-}
++  late RegisterController controller;
++  late AuthenticationRepository repository;
++  setUp(() {
++    repository = AuthenticationRepository();
++    Get.put<AuthenticationRepository>(repository);
++    controller =  RegisterController();
++    Get.put<RegisterController>(controller);
++  });
++
++  tearDown(() {
++    Get.delete<RegisterController>();
++  });
++
++  group('RegisterForm Widget Tests', () {
++    testWidgets('renders all form fields', (WidgetTester tester) async {
++      await tester.pumpWidget(const MaterialApp(home: RegisterForm()));
++
++      expect(find.byType(TPrimaryTextField), findsNWidgets(5));
++      expect(find.byType(Checkbox), findsOneWidget);
++      expect(find.byType(TPrimaryButton), findsOneWidget);
++    });
++
++    testWidgets('toggle password visibility', (WidgetTester tester) async {
++      await tester.pumpWidget(const MaterialApp(home: RegisterForm()));
++
++      final eyeButton = find.byIcon(Iconsax.eye_slash);
++      await tester.tap(eyeButton);
++      await tester.pump();
++
++      expect(controller.hidePassword.value, false);
++      expect(find.byIcon(Iconsax.eye), findsOneWidget);
++    });
++  });
++
++  group('Form Validation Tests', () {
++    test('empty first name validation', () {
++      final result = TValidator.emptyText('First name', '');
++      expect(result, equals('First name is required'));
++    });
++
++    test('valid email validation', () {
++      final result = TValidator.validateEmail('test@example.com');
++      expect(result, isNull);
++    });
++
++    test('invalid email validation', () {
++      final result = TValidator.validateEmail('invalid-email');
++      expect(result, isNotNull);
++    });
++  });
++
++  group('RegisterController Tests', () {
++    test('signup with valid form', () async {
++      controller.firstName.text = 'John';
++      controller.lastName.text = 'Doe';
++      controller.email.text = 'test@example.com';
++      controller.password.text = 'Password123!';
++
++      // Mock your signup method
++     // controller.signup = () async {
++        // Mock successful signup
++    //  };
++
++    //  await controller.signup();
++
++      // Verify signup was successful
++      // Add your verification logic here
++    });
++  });
++}
+\ No newline at end of file

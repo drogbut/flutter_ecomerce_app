@@ -1,0 +1,22 @@
+Index: lib/core/extensions/color.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'dart:math';\n\nimport 'package:flutter/material.dart';\n\n/// Import the core Flutter material library for building UI components\nextension ExtensionColor on Color {\n  /// Static method to convert a hex string to a Color object\n  static Color fromHex(String hexString) {\n    final buffer = StringBuffer();\n\n    if (hexString.length == 6 || hexString.length == 7) {\n      buffer.write('ff');\n    } else if (hexString == '0x00000000') {\n      return Colors.transparent;\n    }\n    buffer.write(hexString.replaceAll('#', ''));\n\n    return Color(int.parse(buffer.toString(), radix: 16));\n  }\n\n  /// Method to convert a Color object back to a hex string representation\n  String toHex({bool leadingHashSign = true}) => '${leadingHashSign ? '#' : ''}'\n      '${alpha.toRadixString(16).padLeft(2, '0')}'\n      '${red.toRadixString(16).padLeft(2, '0')}'\n      '${green.toRadixString(16).padLeft(2, '0')}'\n      '${blue.toRadixString(16).padLeft(2, '0')}';\n\n  /// Method to get the complementary color of the current Color object\n  Color get complementary {\n    String newRed = (red - 255).abs().toRadixString(16).padRight(2, '0');\n    String newGreen = (green - 255).abs().toRadixString(16).padRight(2, '0');\n    String newBlue = (blue - 255).abs().toRadixString(16).padRight(2, '0');\n\n    return Color(int.parse('0xFF$newRed$newGreen$newBlue'));\n  }\n\n  static Color randomColor() {\n    final random = Random();\n    return Color.fromARGB(\n      255,\n      random.nextInt(256),\n      random.nextInt(256),\n      random.nextInt(256),\n    );\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/core/extensions/color.dart b/lib/core/extensions/color.dart
+--- a/lib/core/extensions/color.dart	(revision f20b2e12d7f0d6a526f1ce1a0760dae6a9903252)
++++ b/lib/core/extensions/color.dart	(date 1746972706380)
+@@ -17,7 +17,10 @@
+ 
+     return Color(int.parse(buffer.toString(), radix: 16));
+   }
+-
++ Color withOpacity(double value){
++  assert(value >= 0.0 && value <= 1.0);
++  return withAlpha((255.0 *value).round());
++}
+   /// Method to convert a Color object back to a hex string representation
+   String toHex({bool leadingHashSign = true}) => '${leadingHashSign ? '#' : ''}'
+       '${alpha.toRadixString(16).padLeft(2, '0')}'

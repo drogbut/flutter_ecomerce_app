@@ -38,8 +38,7 @@ class RegisterController extends GetxController {
       /// Check form validation
       if (!registerFormKey.currentState!.validate()) {
         /// Show an error message if the form is invalid
-        TLoaders.errorSnackbar(
-            title: 'Error', message: 'Please fill in all required fields');
+        TLoaders.errorSnackbar(title: 'Error', message: 'Please fill in all required fields');
         return;
       }
 
@@ -47,14 +46,12 @@ class RegisterController extends GetxController {
       if (!privacyPolicy.value) {
         TLoaders.warningSnackbar(
             title: 'Accept privacy policy',
-            message:
-                'In order to create an account, you must accept the privacy policy and terms of conditions.');
+            message: 'In order to create an account, you must accept the privacy policy and terms of conditions.');
         return;
       }
 
       /// Start loading
-      TFullScreenLoader.openLoadingDialog(
-          'We are processing your information...', TImages.docerAnimation);
+      TFullScreenLoader.openLoadingDialog('We are processing your information...', TImages.docerAnimation);
 
       /// Register user in Firebase Auth & Save user data in Firebase
       final userCredential = await authRepository.registerWithEmailAndPassword(
@@ -81,8 +78,7 @@ class RegisterController extends GetxController {
 
       /// Success message
       TLoaders.successSnackbar(
-          title: 'Congratulations',
-          message: 'Your account has been created! Verify email to continue.');
+          title: 'Congratulations', message: 'Your account has been created! Verify email to continue.');
 
       /// Move to verify email screen
       Get.to(() => VerificationEmailScreen(email: email.text.trim()));

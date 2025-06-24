@@ -178,4 +178,41 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get storeFeaturedBrandsTitle => 'Marques en vedette';
+
+  @override
+  String fieldRequired(Object field) {
+    return '$field est requis.';
+  }
+
+  @override
+  String get emailRequired => 'L\'email est requis.';
+
+  @override
+  String get invalidEmail => 'Adresse email invalide.';
+
+  @override
+  String get phoneRequired => 'Le numéro de téléphone est requis.';
+
+  @override
+  String get invalidPhone =>
+      'Format de numéro de téléphone invalide (10 chiffres requis).';
+
+  @override
+  String get passwordRequired => 'Le mot de passe est requis.';
+
+  @override
+  String get passwordTooShort =>
+      'Le mot de passe doit contenir au moins 6 caractères.';
+
+  @override
+  String get passwordNeedsUppercase =>
+      'Le mot de passe doit contenir au moins une majuscule.';
+
+  @override
+  String get passwordNeedsNumber =>
+      'Le mot de passe doit contenir au moins un chiffre.';
+
+  @override
+  String get passwordNeedsSpecial =>
+      'Le mot de passe doit contenir au moins un caractère spécial.';
 }

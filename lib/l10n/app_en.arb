@@ -214,5 +214,16 @@
   "storeFeaturedBrandsTitle": "Featured brands",
   "@storeFeaturedBrandsTitle": {
     "description": "Featured brands"
-  }
+  },
+  "fieldRequired": "{field} is required.",
+    "emailRequired": "Email is required.",
+    "invalidEmail": "Invalid email address.",
+    "phoneRequired": "Phone number is required.",
+    "invalidPhone": "Invalid phone number format (10 digits required).",
+    "passwordRequired": "Password is required.",
+    "passwordTooShort": "Password must be at least 6 characters long.",
+    "passwordNeedsUppercase": "Password must contain at least one uppercase letter.",
+    "passwordNeedsNumber": "Password must contain at least one number.",
+    "passwordNeedsSpecial": "Password must contain at least one special character."
+
 }

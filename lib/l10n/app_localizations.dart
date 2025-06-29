@@ -423,6 +423,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Featured brands'**
   String get storeFeaturedBrandsTitle;
+
+  /// No description provided for @fieldRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'{field} is required.'**
+  String fieldRequired(Object field);
+
+  /// No description provided for @emailRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Email is required.'**
+  String get emailRequired;
+
+  /// No description provided for @invalidEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid email address.'**
+  String get invalidEmail;
+
+  /// No description provided for @phoneRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone number is required.'**
+  String get phoneRequired;
+
+  /// No description provided for @invalidPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid phone number format (10 digits required).'**
+  String get invalidPhone;
+
+  /// No description provided for @passwordRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Password is required.'**
+  String get passwordRequired;
+
+  /// No description provided for @passwordTooShort.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must be at least 6 characters long.'**
+  String get passwordTooShort;
+
+  /// No description provided for @passwordNeedsUppercase.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one uppercase letter.'**
+  String get passwordNeedsUppercase;
+
+  /// No description provided for @passwordNeedsNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one number.'**
+  String get passwordNeedsNumber;
+
+  /// No description provided for @passwordNeedsSpecial.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one special character.'**
+  String get passwordNeedsSpecial;
 }
 
 class _AppLocalizationsDelegate

@@ -43,8 +43,7 @@ class ChangeNameScreen extends StatelessWidget {
                     /// E-mail
                     TPrimaryTextField(
                       controller: controller.firstName,
-                      validator: (value) =>
-                          TValidator.emptyText('First name', value),
+                      validator: (value) => TValidator.emptyText(context, 'First name', value),
                       prefixIcon: Iconsax.user,
                       label: context.translate.firstname,
                     ).withPadding(TSizes.spaceBtwInputFields.bottomPadding),
@@ -52,8 +51,7 @@ class ChangeNameScreen extends StatelessWidget {
                     /// E-mail
                     TPrimaryTextField(
                       controller: controller.lastName,
-                      validator: (value) =>
-                          TValidator.emptyText('Last name', value),
+                      validator: (value) => TValidator.emptyText(context, 'Last name', value),
                       prefixIcon: Iconsax.user,
                       label: context.translate.lastname,
                     ),

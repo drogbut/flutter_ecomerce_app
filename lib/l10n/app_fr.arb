@@ -51,5 +51,16 @@
   "homeCategoriesTitle": "Catégories populaires",
   "storeTitle": "Boutique",
   "storeSearchTitle": "Recherche en magasin",
-  "storeFeaturedBrandsTitle": "Marques en vedette"
+  "storeFeaturedBrandsTitle": "Marques en vedette",
+  "fieldRequired": "{field} est requis.",
+    "emailRequired": "L'email est requis.",
+    "invalidEmail": "Adresse email invalide.",
+    "phoneRequired": "Le numéro de téléphone est requis.",
+    "invalidPhone": "Format de numéro de téléphone invalide (10 chiffres requis).",
+    "passwordRequired": "Le mot de passe est requis.",
+    "passwordTooShort": "Le mot de passe doit contenir au moins 6 caractères.",
+    "passwordNeedsUppercase": "Le mot de passe doit contenir au moins une majuscule.",
+    "passwordNeedsNumber": "Le mot de passe doit contenir au moins un chiffre.",
+    "passwordNeedsSpecial": "Le mot de passe doit contenir au moins un caractère spécial."
+
 }

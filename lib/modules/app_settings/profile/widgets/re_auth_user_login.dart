@@ -46,17 +46,13 @@ class ReAuthenticateUserLogin extends StatelessWidget {
                     Obx(
                       () => TPrimaryTextField(
                         controller: controller.verifyPassword,
-                        validator: (value) =>
-                            TValidator.emptyText('Password', value),
+                        validator: (value) => TValidator.emptyText(context, 'Password', value),
                         isObscureText: controller.hidePassword.value,
                         prefixIcon: Iconsax.password_check,
                         label: context.translate.enterPassword,
                         suffixIcon: IconButton(
-                          onPressed: () => controller.hidePassword.value =
-                              !controller.hidePassword.value,
-                          icon: Icon(controller.hidePassword.value
-                              ? Iconsax.eye_slash
-                              : Iconsax.eye),
+                          onPressed: () => controller.hidePassword.value = !controller.hidePassword.value,
+                          icon: Icon(controller.hidePassword.value ? Iconsax.eye_slash : Iconsax.eye),
                         ),
                       ).withPadding(TSizes.spaceBtwInputFields.bottomPadding),
                     ),
@@ -67,8 +63,7 @@ class ReAuthenticateUserLogin extends StatelessWidget {
               /// -- Close Account
               TPrimaryButton(
                 title: 'Save',
-                onPressed: () =>
-                    controller.reAuthenticateEmailAndPasswordUser(),
+                onPressed: () => controller.reAuthenticateEmailAndPasswordUser(),
               ),
             ],
           ),

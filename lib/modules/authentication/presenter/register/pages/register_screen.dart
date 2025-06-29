@@ -24,15 +24,19 @@ class RegisterScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               /// title
-              TTitleText(context.translate.createAccount)
-                  .withPadding(TSizes.spaceBtwSections.bottomPadding),
+              TTitleText(
+                key: Key('titleText'),
+                context.translate.createAccount,
+              ).withPadding(TSizes.spaceBtwSections.bottomPadding),
 
               /// Signup Form
-              const RegisterForm()
-                  .withPadding(TSizes.spaceBtwSections.bottomPadding),
+              const RegisterForm(
+                key: Key('fakeRegisterForm'),
+              ).withPadding(TSizes.spaceBtwSections.bottomPadding),
 
               /// Divider
               TFormDivider(
+                key: Key('dividerLine'),
                 label: context.translate.orSignUpWith,
               ).withPadding(TSizes.spaceBtwSections.bottomPadding),
 
@@ -42,12 +46,14 @@ class RegisterScreen extends StatelessWidget {
                 children: [
                   /// google
                   TImageCircularIcon(
+                    key: Key('googleIcon'),
                     imagePath: TImages.google,
                     onPressed: () {},
                   ).withPadding(TSizes.spaceBtwItems.rightPadding),
 
                   /// facebook
                   TImageCircularIcon(
+                    key: Key('facebookIcon'),
                     imagePath: TImages.facebook,
                     onPressed: () {},
                   ),

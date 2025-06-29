@@ -50,5 +50,16 @@
   "homeCategoriesTitle": "Beliebte Kategorien",
   "storeTitle": "Laden",
   "storeSearchTitle": "Suche im Laden",
-  "storeFeaturedBrandsTitle": "Hervorgehobene Marken"
+  "storeFeaturedBrandsTitle": "Hervorgehobene Marken",
+  "fieldRequired": "{field} Erfordernis.",
+    "emailRequired": "E-Mail ist erforderlich.",
+    "invalidEmail": "Ungültige E-Mail-Adresse.",
+    "phoneRequired": "Telefonnummer ist erforderlich.",
+    "invalidPhone": "Ungültiges Telefonnummernformat (10 Ziffern erforderlich).",
+    "passwordRequired": "Passwort ist erforderlich.",
+    "passwordTooShort": "Passwort muss mindestens 6 Zeichen lang sein.",
+    "passwordNeedsUppercase": "Passwort muss mindestens einen Großbuchstaben enthalten.",
+    "passwordNeedsNumber": "Passwort muss mindestens eine Zahl enthalten.",
+    "passwordNeedsSpecial": "Passwort muss mindestens ein Sonderzeichen enthalten."
+
 }

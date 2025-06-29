@@ -38,16 +38,13 @@ class LoginForm extends StatelessWidget {
           Obx(
             () => TPrimaryTextField(
               controller: controller.password,
-              validator: (value) => TValidator.emptyText('Password', value),
+              validator: (value) => TValidator.emptyText(context, 'Password', value),
               isObscureText: controller.hidePassword.value,
               prefixIcon: Iconsax.password_check,
               label: context.translate.enterPassword,
               suffixIcon: IconButton(
-                onPressed: () => controller.hidePassword.value =
-                    !controller.hidePassword.value,
-                icon: Icon(controller.hidePassword.value
-                    ? Iconsax.eye_slash
-                    : Iconsax.eye),
+                onPressed: () => controller.hidePassword.value = !controller.hidePassword.value,
+                icon: Icon(controller.hidePassword.value ? Iconsax.eye_slash : Iconsax.eye),
               ),
             ).withPadding(TSizes.spaceBtwInputFields.bottomPadding),
           ),
@@ -60,8 +57,7 @@ class LoginForm extends StatelessWidget {
                 () => TCheckBoxListTile(
                   title: context.translate.rememberMe,
                   value: controller.rememberMe.value,
-                  onChanged: (value) => controller.rememberMe.value =
-                      !controller.rememberMe.value,
+                  onChanged: (value) => controller.rememberMe.value = !controller.rememberMe.value,
                 ),
               ),
 

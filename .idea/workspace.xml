@@ -10,41 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0affda8-3a82-48f9-b8f5-a2d29be43d55" name="Changes" comment="update native splash screen">
-      <change afterPath="$PROJECT_DIR$/test/mocks_data/auth_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/mocks_data/register_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/mocks_data/user_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/modules/authentication/presenter/register/pages/register_screen_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/modules/authentication/presenter/register/widgets/register_form_beta_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/modules/authentication/presenter/register/widgets/register_form_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/utilities/network_manager_mock.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_05_2025_23_57_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_05_2025_23_57__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/flutter_folders_structure_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/flutter_folders_structure_android.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/l10n/app_de.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_de.arb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/l10n/app_en.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_en.arb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/l10n/app_fr.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_fr.arb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations_de.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations_de.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations_en.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations_en.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations_fr.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations_fr.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/modules/app_settings/profile/widgets/change_name.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/app_settings/profile/widgets/change_name.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/modules/app_settings/profile/widgets/re_auth_user_login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/app_settings/profile/widgets/re_auth_user_login.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/modules/authentication/presenter/login/widgets/login_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/authentication/presenter/login/widgets/login_form.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/modules/authentication/presenter/register/controllers/register_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/authentication/presenter/register/controllers/register_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/modules/authentication/presenter/register/pages/register_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/authentication/presenter/register/pages/register_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/modules/authentication/presenter/register/widgets/register_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/authentication/presenter/register/widgets/register_form.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utilities/validators/validator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utilities/validators/validator.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/modules/authentication/presenter/register/widgets/register_form_beta_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/modules/authentication/presenter/register/widgets/register_form_beta_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,12 +53,12 @@
       </list>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/drogbut/flutter_ecomerce_app.git&quot;,
-    &quot;accountId&quot;: &quot;14d52c85-8aa0-4da6-be6c-d7dc834a21eb&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:drogbut/flutter_ecomerce_app.git",
+    "accountId": "1c516683-a4be-4d0d-944a-559e4bc832e7"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -107,35 +74,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Flutter Test.RegisterScreen renders title, divider, and social icons.executor&quot;: &quot;Coverage&quot;,
-    &quot;Flutter Test.tests in register_form_beta_test.dart.executor&quot;: &quot;Coverage&quot;,
-    &quot;Flutter Test.tests in register_form_test.dart.executor&quot;: &quot;Coverage&quot;,
-    &quot;Flutter Test.tests in register_screen_test.dart (1).executor&quot;: &quot;Coverage&quot;,
-    &quot;Flutter Test.tests in register_screen_test.dart (2).executor&quot;: &quot;Coverage&quot;,
-    &quot;Flutter Test.tests in register_screen_test.dart.executor&quot;: &quot;Run&quot;,
-    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
-    &quot;ResourceManagerPrefKey.ResourceType&quot;: &quot;DRAWABLE&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;ScreenshotViewer.SavePath&quot;: &quot;/Users/montcho/Downloads&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;testing/add__register__widget__tests&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/montcho/StudioProjects/flutter_folders_structure/test/mocks_data&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;dart.settings&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Flutter Test.RegisterScreen renders title, divider, and social icons.executor": "Coverage",
+    "Flutter Test.tests in register_form_beta_test.dart.executor": "Coverage",
+    "Flutter Test.tests in register_form_test.dart.executor": "Coverage",
+    "Flutter Test.tests in register_screen_test.dart (1).executor": "Coverage",
+    "Flutter Test.tests in register_screen_test.dart (2).executor": "Coverage",
+    "Flutter Test.tests in register_screen_test.dart.executor": "Run",
+    "Flutter.main.dart.executor": "Run",
+    "ResourceManagerPrefKey.ResourceType": "DRAWABLE",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "ScreenshotViewer.SavePath": "/Users/montcho/Downloads",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "testing/verification__for__error__message__tests__in__register",
+    "io.flutter.reload.alreadyRun": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/montcho/StudioProjects/flutter_folders_structure/test/mocks_data",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "dart.settings",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/mocks_data" />

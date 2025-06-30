@@ -31,7 +31,8 @@ class RegisterForm extends StatelessWidget {
                 child: TPrimaryTextField(
                   key: Key('firstName'),
                   controller: controller.firstName,
-                  validator: (value) => TValidator.emptyText(context, context.translate.firstname, value),
+                  validator: (value) => TValidator.emptyText(
+                      context, context.translate.firstname, value),
                   prefixIcon: Iconsax.user,
                   label: context.translate.firstname,
                 ),
@@ -45,7 +46,8 @@ class RegisterForm extends StatelessWidget {
                 child: TPrimaryTextField(
                   key: Key('lastName'),
                   controller: controller.lastName,
-                  validator: (value) => TValidator.emptyText(context, context.translate.lastname, value),
+                  validator: (value) => TValidator.emptyText(
+                      context, context.translate.lastname, value),
                   prefixIcon: Iconsax.user,
                   label: context.translate.lastname,
                 ),
@@ -57,7 +59,8 @@ class RegisterForm extends StatelessWidget {
           TPrimaryTextField(
             key: Key('userName'),
             controller: controller.userName,
-            validator: (value) => TValidator.emptyText(context, context.translate.username, value),
+            validator: (value) => TValidator.emptyText(
+                context, context.translate.username, value),
             prefixIcon: Iconsax.user_add,
             label: context.translate.username,
           ).withPadding(TSizes.spaceBtwInputFields.bottomPadding),
@@ -66,7 +69,7 @@ class RegisterForm extends StatelessWidget {
           TPrimaryTextField(
             key: Key('email'),
             controller: controller.email,
-            validator: (value) => TValidator.validateEmail(value),
+            validator: (value) => TValidator.validateEmail(context, value),
             prefixIcon: Iconsax.direct,
             label: context.translate.enterEmail,
           ).withPadding(TSizes.spaceBtwInputFields.bottomPadding),
@@ -75,7 +78,8 @@ class RegisterForm extends StatelessWidget {
           TPrimaryTextField(
             key: Key('phone'),
             controller: controller.phone,
-            validator: (value) => TValidator.validatePhoneNumber(value),
+            validator: (value) =>
+                TValidator.validatePhoneNumber(context, value),
             prefixIcon: Iconsax.call,
             label: context.translate.phoneNumber,
           ).withPadding(TSizes.spaceBtwInputFields.bottomPadding),
@@ -85,13 +89,16 @@ class RegisterForm extends StatelessWidget {
             () => TPrimaryTextField(
               key: Key('password'),
               controller: controller.password,
-              validator: (value) => TValidator.validatePassword(value),
+              validator: (value) => TValidator.validatePassword(context, value),
               isObscureText: controller.hidePassword.value,
               prefixIcon: Iconsax.password_check,
               label: context.translate.enterPassword,
               suffixIcon: IconButton(
-                onPressed: () => controller.hidePassword.value = !controller.hidePassword.value,
-                icon: Icon(controller.hidePassword.value ? Iconsax.eye_slash : Iconsax.eye),
+                onPressed: () => controller.hidePassword.value =
+                    !controller.hidePassword.value,
+                icon: Icon(controller.hidePassword.value
+                    ? Iconsax.eye_slash
+                    : Iconsax.eye),
               ),
             ).withPadding(TSizes.spaceBtwInputFields.bottomPadding),
           ),
@@ -106,7 +113,8 @@ class RegisterForm extends StatelessWidget {
                   () => Checkbox(
                     key: Key('privacyPolicy'),
                     value: controller.privacyPolicy.value,
-                    onChanged: (value) => controller.privacyPolicy.value = !controller.privacyPolicy.value,
+                    onChanged: (value) => controller.privacyPolicy.value =
+                        !controller.privacyPolicy.value,
                   ),
                 ),
               ).withPadding(TSizes.sm.rightPadding),

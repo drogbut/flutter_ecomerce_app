@@ -49,8 +49,8 @@ jobs:
       - name: Enable web support
         run: flutter config --enable-web
 
-      #- name: Run unit tests with coverage
-      #  run: flutter test --coverage
+      - name: Run unit tests with coverage
+        run: flutter test --coverage
 
   # 📱 BUILD ANDROID
   android:

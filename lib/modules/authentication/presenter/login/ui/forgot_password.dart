@@ -38,7 +38,7 @@ class ForgotPasswordScreen extends StatelessWidget {
               key: controller.forgetPasswordFormKey,
               child: TPrimaryTextField(
                 controller: controller.email,
-                validator: (value) => TValidator.validateEmail(value),
+                validator: (value) => TValidator.validateEmail(context, value),
                 prefixIcon: Iconsax.direct_right,
                 label: context.translate.enterEmail,
               ),

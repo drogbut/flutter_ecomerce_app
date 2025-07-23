@@ -12,25 +12,25 @@ import '../../../../../mocks_data/auth_repository.mocks.dart';
 import '../../../../../mocks_data/register_controller.mocks.dart';
 
 void main() {
-  // Variables declared to store mocked instances.
+  /// Variables declared to store mocked instances.
   late MockRegisterController registerController;
   late MockAuthenticationRepository mockAuthRepository;
 
   setUp(() {
-    // Initialise GetX in test mode to avoid side effects.
+    /// Initialise GetX in test mode to avoid side effects.
     Get.testMode = true;
 
-    // Creation of mocked instances.
+    /// Creation of mocked instances.
     mockAuthRepository = MockAuthenticationRepository();
     registerController = MockRegisterController();
 
-    // Prevents errors if the widget calls onStart
+    /// Prevents errors if the widget calls onStart
     when(mockAuthRepository.onStart)
         .thenReturn(InternalFinalCallback(callback: () {}));
     when(registerController.onStart)
         .thenReturn(InternalFinalCallback(callback: () {}));
 
-    // Provides controlled values for fields used in RegisterForm.
+    /// Provides controlled values for fields used in RegisterForm.
     when(registerController.registerFormKey).thenReturn(GlobalKey<FormState>());
     when(registerController.firstName).thenReturn(TextEditingController());
     when(registerController.lastName).thenReturn(TextEditingController());
@@ -43,15 +43,15 @@ void main() {
     when(registerController.signup()).thenAnswer((_) async {
       registerController.registerFormKey.currentState?.validate();
     });
-    // Inject the mocks. RegisterForm will then be able to use them.
+    /// Inject the mocks. RegisterForm will then be able to use them.
     Get.put<RegisterController>(registerController);
     Get.put<AuthenticationRepository>(mockAuthRepository);
   });
 
-  // Clean GetX after each test to avoid conflicts between tests.
+  /// Clean GetX after each test to avoid conflicts between tests.
   tearDown(() => Get.reset());
 
-  // (1) Test for renders all fields
+  /// (1) Test for renders all fields
   testWidgets('RegisterForm renders all fields and calls signup on button tap',
       (tester) async {
     await tester.pumpWidget(
@@ -74,12 +74,12 @@ void main() {
     // await tester.tap(find.byKey(const Key('createAccountButton')));
     // await tester.pump();
 
-    // verify(registerController.signup()).called(1);
+    /// verify(registerController.signup()).called(1);
   });
   testWidgets('shows error messages for empty fields (all supported languages)',
       (WidgetTester tester) async {
     for (final localeLanguage in L10n.all) {
-      // Build the RegisterForm widget with the current locale
+      /// Build the RegisterForm widget with the current locale
       await tester.pumpWidget(
         MaterialApp(
           locale: localeLanguage,
@@ -91,11 +91,11 @@ void main() {
         ),
       );
 
-      // Simulate tapping the "Create Account" button with all fields empty
+      /// Simulate tapping the "Create Account" button with all fields empty
       await tester.tap(find.byKey(const Key('createAccountButton')));
       await tester.pumpAndSettle();
 
-      // Retrieve the BuildContext for each field to access the correct localization
+      /// Retrieve the BuildContext for each field to access the correct localization
       final emailContext = tester.element(find.byKey(const Key('email')));
       final phoneContext = tester.element(find.byKey(const Key('phone')));
       final passwordContext = tester.element(find.byKey(const Key('password')));
@@ -104,14 +104,14 @@ void main() {
       final lastNameContext = tester.element(find.byKey(const Key('lastName')));
       final userNameContext = tester.element(find.byKey(const Key('userName')));
 
-      // Get the localized strings for each field
+      /// Get the localized strings for each field
       final l10nEmail = AppLocalizations.of(emailContext)!;
       final l10nPhone = AppLocalizations.of(phoneContext)!;
       final l10nPassword = AppLocalizations.of(passwordContext)!;
       final l10nFirstName = AppLocalizations.of(firstNameContext)!;
       final l10nLastName = AppLocalizations.of(lastNameContext)!;
       final l10nUserName = AppLocalizations.of(userNameContext)!;
-      // Assert that the correct error message is shown for each field in the current language
+      /// Assert that the correct error message is shown for each field in the current language
       expect(find.text(l10nFirstName.fieldRequired(l10nFirstName.firstname)),
           findsOneWidget);
       expect(find.text(l10nLastName.fieldRequired(l10nLastName.lastname)),
@@ -122,7 +122,7 @@ void main() {
       expect(find.text(l10nPhone.phoneRequired), findsOneWidget);
       expect(find.text(l10nPassword.passwordRequired), findsOneWidget);
 
-      // Clean up the widget tree before the next locale iteration
+      /// Clean up the widget tree before the next locale iteration
       await tester.pumpWidget(Container());
     }
   });

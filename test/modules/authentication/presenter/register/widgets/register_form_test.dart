@@ -126,4 +126,164 @@ void main() {
       await tester.pumpWidget(Container());
     }
   });
+
+  /// This test verifies that the RegisterForm displays the correct error message
+  /// when the email field contains an invalid format, for all supported languages.
+  /// It enters an invalid email, submits the form, and checks the localized error message.
+  testWidgets('shows error for invalid email format (all supported languages)',
+      (WidgetTester tester) async {
+    for (final locale in L10n.all) {
+      await tester.pumpWidget(
+        MaterialApp(
+          locale: locale,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: Scaffold(body: RegisterForm()),
+        ),
+      );
+      await tester.enterText(find.byKey(const Key('email')), 'invalid-email');
+      await tester.tap(find.byKey(const Key('createAccountButton')));
+      await tester.pumpAndSettle();
+
+      final emailContext = tester.element(find.byKey(const Key('email')));
+      final l10nEmail = AppLocalizations.of(emailContext)!;
+      expect(find.text(l10nEmail.invalidEmail), findsOneWidget);
+
+      await tester.pumpWidget(Container());
+    }
+  });
+
+  /// This test verifies that the RegisterForm displays the correct error message
+  /// when the phone number field contains an invalid format, for all supported languages.
+  /// It enters an invalid phone number, submits the form, and checks the localized error message.
+  testWidgets(
+      'shows error for invalid phone number format (all supported languages)',
+      (WidgetTester tester) async {
+    for (final locale in L10n.all) {
+      await tester.pumpWidget(
+        MaterialApp(
+          locale: locale,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: Scaffold(body: RegisterForm()),
+        ),
+      );
+      await tester.enterText(find.byKey(const Key('phone')), '12345');
+      await tester.tap(find.byKey(const Key('createAccountButton')));
+      await tester.pumpAndSettle();
+
+      final phoneContext = tester.element(find.byKey(const Key('phone')));
+      final l10nPhone = AppLocalizations.of(phoneContext)!;
+      expect(find.text(l10nPhone.invalidPhone), findsOneWidget);
+
+      await tester.pumpWidget(Container());
+    }
+  });
+
+  /// This test verifies that the RegisterForm displays the correct error message
+  /// when the email field contains an invalid format, for all supported languages.
+  /// It enters an invalid email, submits the form, and checks the localized error message.
+  testWidgets('shows error for password too short (all supported languages)',
+      (WidgetTester tester) async {
+    for (final locale in L10n.all) {
+      await tester.pumpWidget(
+        MaterialApp(
+          locale: locale,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: Scaffold(body: RegisterForm()),
+        ),
+      );
+      await tester.enterText(find.byKey(const Key('password')), 'Ab1!');
+      await tester.tap(find.byKey(const Key('createAccountButton')));
+      await tester.pumpAndSettle();
+
+      final passwordContext = tester.element(find.byKey(const Key('password')));
+      final l10nPassword = AppLocalizations.of(passwordContext)!;
+      expect(find.text(l10nPassword.passwordTooShort), findsOneWidget);
+
+      await tester.pumpWidget(Container());
+    }
+  });
+
+  /// This test verifies that the RegisterForm displays the correct error message
+  /// when the password is missing an uppercase letter, for all supported languages.
+  /// It enters a password without uppercase letters, submits the form, and checks the localized error message.
+  testWidgets(
+      'shows error for password missing uppercase (all supported languages)',
+      (WidgetTester tester) async {
+    for (final locale in L10n.all) {
+      await tester.pumpWidget(
+        MaterialApp(
+          locale: locale,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: Scaffold(body: RegisterForm()),
+        ),
+      );
+      await tester.enterText(find.byKey(const Key('password')), 'abc123!');
+      await tester.tap(find.byKey(const Key('createAccountButton')));
+      await tester.pumpAndSettle();
+
+      final passwordContext = tester.element(find.byKey(const Key('password')));
+      final l10nPassword = AppLocalizations.of(passwordContext)!;
+      expect(find.text(l10nPassword.passwordNeedsUppercase), findsOneWidget);
+
+      await tester.pumpWidget(Container());
+    }
+  });
+
+  /// This test verifies that the RegisterForm displays the correct error message
+  /// when the password is missing an uppercase letter, for all supported languages.
+  /// It enters a password without uppercase letters, submits the form, and checks the localized error message.
+  testWidgets(
+      'shows error for password missing number (all supported languages)',
+      (WidgetTester tester) async {
+    for (final locale in L10n.all) {
+      await tester.pumpWidget(
+        MaterialApp(
+          locale: locale,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: Scaffold(body: RegisterForm()),
+        ),
+      );
+      await tester.enterText(find.byKey(const Key('password')), 'Abcdef!');
+      await tester.tap(find.byKey(const Key('createAccountButton')));
+      await tester.pumpAndSettle();
+
+      final passwordContext = tester.element(find.byKey(const Key('password')));
+      final l10nPassword = AppLocalizations.of(passwordContext)!;
+      expect(find.text(l10nPassword.passwordNeedsNumber), findsOneWidget);
+
+      await tester.pumpWidget(Container());
+    }
+  });
+
+  /// This test verifies that the RegisterForm displays the correct error message
+  /// when the password is missing a special character, for all supported languages.
+  /// It enters a password without special characters, submits the form, and checks the localized error message.
+  testWidgets(
+      'shows error for password missing special character (all supported languages)',
+      (WidgetTester tester) async {
+    for (final locale in L10n.all) {
+      await tester.pumpWidget(
+        MaterialApp(
+          locale: locale,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: Scaffold(body: RegisterForm()),
+        ),
+      );
+      await tester.enterText(find.byKey(const Key('password')), 'Abc1234');
+      await tester.tap(find.byKey(const Key('createAccountButton')));
+      await tester.pumpAndSettle();
+
+      final passwordContext = tester.element(find.byKey(const Key('password')));
+      final l10nPassword = AppLocalizations.of(passwordContext)!;
+      expect(find.text(l10nPassword.passwordNeedsSpecial), findsOneWidget);
+
+      await tester.pumpWidget(Container());
+    }
+  });
 }

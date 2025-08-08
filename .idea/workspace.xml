@@ -11,7 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c0affda8-3a82-48f9-b8f5-a2d29be43d55" name="Changes" comment="update native splash screen">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/modules/authentication/presenter/register/widgets/register_form_beta_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/modules/authentication/presenter/register/widgets/register_form_beta_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/authentication/data/repositories/auth_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/authentication/data/repositories/auth_repository.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,12 +56,12 @@
       </list>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:drogbut/flutter_ecomerce_app.git",
-    "accountId": "1c516683-a4be-4d0d-944a-559e4bc832e7"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:drogbut/flutter_ecomerce_app.git&quot;,
+    &quot;accountId&quot;: &quot;1c516683-a4be-4d0d-944a-559e4bc832e7&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -78,7 +81,7 @@
   "keyToString": {
     "Flutter Test.RegisterScreen renders title, divider, and social icons.executor": "Coverage",
     "Flutter Test.tests in register_form_beta_test.dart.executor": "Coverage",
-    "Flutter Test.tests in register_form_test.dart.executor": "Coverage",
+    "Flutter Test.tests in register_form_test.dart.executor": "Run",
     "Flutter Test.tests in register_screen_test.dart (1).executor": "Coverage",
     "Flutter Test.tests in register_screen_test.dart (2).executor": "Coverage",
     "Flutter Test.tests in register_screen_test.dart.executor": "Run",
@@ -92,7 +95,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "testing/verification__for__error__message__tests__in__register",
+    "git-widget-placeholder": "Bugs/remove__verfication__screen__befor__login",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/montcho/StudioProjects/flutter_folders_structure/test/mocks_data",
@@ -119,7 +122,7 @@
       <recent name="$PROJECT_DIR$/test/modules/authentication/presenter/register" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter Test.tests in register_form_test.dart">
+  <component name="RunManager" selected="Flutter.main.dart">
     <configuration name="RegisterScreen renders title, divider, and social icons" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
       <option name="testName" value="RegisterScreen renders title, divider, and social icons" />
       <option name="testFile" value="$PROJECT_DIR$/test/modules/authentication/presenter/register/pages/register_screen_test.dart" />

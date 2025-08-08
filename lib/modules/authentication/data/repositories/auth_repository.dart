@@ -13,7 +13,6 @@ import '../../../../utilities/exceptions/platform_exceptions.dart';
 import '../../../app_settings/data/repository/user_repository.dart';
 import '../../presenter/login/pages/login_screen.dart';
 import '../../presenter/onboarding/pages/onboarding_screen.dart';
-import '../../presenter/register/widgets/verification_email_screen.dart';
 
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
@@ -41,15 +40,19 @@ class AuthenticationRepository extends GetxController {
 
     // Check if the user doesn't exit
     if (user != null) {
-      // If User exist, check if he is verified
-      if (user.emailVerified) {
-        // Navigate to home screen
-        Get.offAll(() => const TNavigationMenu());
-      } else {
-        // Navigate to verified email screen
-        Get.offAll(() =>
-            VerificationEmailScreen(email: _auth.currentUser?.email ?? ''));
-      }
+      Get.offAll(() => const TNavigationMenu());
+
+      // =====> REMOVE VERIFIED E-MAIL AT THE MOMENT
+      // // If User exist, check if he is verified
+      // if (user.emailVerified) {
+      //   // Navigate to home screen
+      //   Get.offAll(() => const TNavigationMenu());
+      // }
+      // else {
+      //   // Navigate to verified email screen
+      //   Get.offAll(() =>
+      //       VerificationEmailScreen(email: _auth.currentUser?.email ?? ''));
+      // }
     } else {
       // Local storage
       deviceStorage.writeIfNull('IsFirstTime', true);
@@ -62,11 +65,9 @@ class AuthenticationRepository extends GetxController {
   }
 
   /// ============ [FirebaseAuthentication] - Sign-in ========================
-  Future<UserCredential> loginWithEmailAndPassword(
-      {required String email, required String password}) async {
+  Future<UserCredential> loginWithEmailAndPassword({required String email, required String password}) async {
     try {
-      return await _auth.signInWithEmailAndPassword(
-          email: email, password: password);
+      return await _auth.signInWithEmailAndPassword(email: email, password: password);
     } on FirebaseAuthException catch (e) {
       throw TFirebaseAuthException(e.code).message;
     } on FirebaseException catch (e) {
@@ -81,11 +82,9 @@ class AuthenticationRepository extends GetxController {
   }
 
   /// ============ [FirebaseAuthentication] - Register =======================
-  Future<UserCredential> registerWithEmailAndPassword(
-      {required String email, required String password}) async {
+  Future<UserCredential> registerWithEmailAndPassword({required String email, required String password}) async {
     try {
-      return await _auth.createUserWithEmailAndPassword(
-          email: email, password: password);
+      return await _auth.createUserWithEmailAndPassword(email: email, password: password);
     } on FirebaseAuthException catch (e) {
       throw TFirebaseAuthException(e.code).message;
     } on FirebaseException catch (e) {
@@ -123,8 +122,7 @@ class AuthenticationRepository extends GetxController {
       GoogleSignInAccount? userAccount = await GoogleSignIn().signIn();
 
       // obtain the auth detail from the request
-      GoogleSignInAuthentication? googleAuth =
-          await userAccount?.authentication;
+      GoogleSignInAuthentication? googleAuth = await userAccount?.authentication;
 
       // create a new google credential
       OAuthCredential credential = GoogleAuthProvider.credential(
@@ -186,12 +184,10 @@ class AuthenticationRepository extends GetxController {
   }
 
   /// ============ [Re-Authentication] - Sign-in ========================
-  Future<void> reAuthenticateEmailAndPasswordUser(
-      {required String email, required String password}) async {
+  Future<void> reAuthenticateEmailAndPasswordUser({required String email, required String password}) async {
     try {
       // Create a credential
-      AuthCredential credential =
-          EmailAuthProvider.credential(email: email, password: password);
+      AuthCredential credential = EmailAuthProvider.credential(email: email, password: password);
 
       // Re-authenticate
       await _auth.currentUser?.reauthenticateWithCredential(credential);
@@ -211,8 +207,7 @@ class AuthenticationRepository extends GetxController {
   /// ============= DeleteAccount ==========================================
   Future<void> deleteAccount() async {
     try {
-      await UserRepository.instance
-          .removeUserRecord(userId: _auth.currentUser!.uid);
+      await UserRepository.instance.removeUserRecord(userId: _auth.currentUser!.uid);
       await _auth.currentUser?.delete();
     } on FirebaseAuthException catch (e) {
       throw TFirebaseAuthException(e.code).message;

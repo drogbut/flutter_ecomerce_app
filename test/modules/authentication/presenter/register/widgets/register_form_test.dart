@@ -43,6 +43,7 @@ void main() {
     when(registerController.signup()).thenAnswer((_) async {
       registerController.registerFormKey.currentState?.validate();
     });
+
     /// Inject the mocks. RegisterForm will then be able to use them.
     Get.put<RegisterController>(registerController);
     Get.put<AuthenticationRepository>(mockAuthRepository);
@@ -70,12 +71,13 @@ void main() {
     expect(find.byKey(const Key('password')), findsOneWidget);
     expect(find.byKey(const Key('privacyPolicy')), findsOneWidget);
     expect(find.byKey(const Key('createAccountButton')), findsOneWidget);
-
-    // await tester.tap(find.byKey(const Key('createAccountButton')));
-    // await tester.pump();
-
-    /// verify(registerController.signup()).called(1);
   });
+
+  /// This test verifies that the RegisterForm displays the correct error messages
+  /// for all required fields when the user tries to submit the form with empty fields,
+  /// for all supported languages (English, French, German).
+  /// It builds the form for each locale, submits it with all fields empty,
+  /// and checks that the correct localized error message is shown for each field.
   testWidgets('shows error messages for empty fields (all supported languages)',
       (WidgetTester tester) async {
     for (final localeLanguage in L10n.all) {
@@ -111,6 +113,7 @@ void main() {
       final l10nFirstName = AppLocalizations.of(firstNameContext)!;
       final l10nLastName = AppLocalizations.of(lastNameContext)!;
       final l10nUserName = AppLocalizations.of(userNameContext)!;
+
       /// Assert that the correct error message is shown for each field in the current language
       expect(find.text(l10nFirstName.fieldRequired(l10nFirstName.firstname)),
           findsOneWidget);

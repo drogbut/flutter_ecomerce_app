@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../core/constants/colors.dart';
@@ -24,7 +23,7 @@ class TSearchBar extends StatelessWidget {
       decoration: InputDecoration(
           filled: showBackground ? true : false,
           fillColor: showBackground
-              ? context.isDarkMode
+              ? Theme.of(context).brightness == Brightness.dark
                   ? TColors.dark
                   : TColors.light
               : Colors.transparent,

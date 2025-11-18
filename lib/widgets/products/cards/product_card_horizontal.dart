@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../core/constants/colors.dart';
@@ -8,7 +8,7 @@ import '../../../core/constants/sizes.dart';
 import '../../../core/extensions/color.dart';
 import '../../../core/extensions/context.dart';
 import '../../../core/extensions/widget.dart';
-import '../../../modules/shop/stores/product_detail/product_detail_screen.dart';
+import '../../../routing/route_names.dart';
 import '../../containers/rounded_container.dart';
 import '../../icons/circular.dart';
 import '../../images/rounded.dart';
@@ -27,7 +27,7 @@ class TProductCardHorizontal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.to(() => const StoreProductDetailScreen()),
+      onTap: () => context.pushNamed(RouteNames.productDetail),
       child: Container(
         width: 310,
         padding: 1.allPadding,

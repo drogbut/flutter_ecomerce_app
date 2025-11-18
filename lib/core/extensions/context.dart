@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
+import '../../features/responsive/domain/breakpoints.dart';
+import '../../features/responsive/domain/device.dart';
 import '../../l10n/app_localizations.dart';
-import '../../modules/responsive/domain/breakpoints.dart';
-import '../../modules/responsive/domain/device.dart';
 import '../constants/colors.dart';
 
 /// An extension on the BuildContext class providing easy access to various
@@ -100,4 +99,16 @@ extension ContextExt on BuildContext {
   Color get darkOrWhite => isDarkMode ? TColors.dark : TColors.white;
   Color get primaryOrDark => isDarkMode ? TColors.primary : TColors.dark;
   Color get lightOrWhite => isDarkMode ? TColors.light : TColors.white;
+
+  /// Check if dark mode is enabled
+  bool get isDarkMode => theme.brightness == Brightness.dark;
+}
+
+/// Extension on String for text manipulation
+extension StringExt on String {
+  /// Capitalize first letter of the string
+  String get capitalize {
+    if (isEmpty) return this;
+    return '${this[0].toUpperCase()}${substring(1)}';
+  }
 }

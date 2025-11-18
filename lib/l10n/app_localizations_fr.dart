@@ -12,7 +12,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get locale => 'Français';
 
   @override
-  String get appName => 'Structure des dossiers Flutter';
+  String get appName => 'DREAM TEAM';
 
   @override
   String get language => 'Français';

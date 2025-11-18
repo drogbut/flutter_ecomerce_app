@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../core/constants/colors.dart';
@@ -35,7 +34,7 @@ class TCircularImage extends StatelessWidget {
       height: height,
       padding: EdgeInsets.all(padding!),
       decoration: BoxDecoration(
-        color: backgroundColor ?? (context.isDarkMode ? TColors.black : Colors.white),
+        color: backgroundColor ?? (Theme.of(context).brightness == Brightness.dark ? TColors.black : Colors.white),
       ),
       alignment: Alignment.center,
       child: isNetworkImage

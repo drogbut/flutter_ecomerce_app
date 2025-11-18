@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../core/extensions/context.dart';
 import '../../widgets/loaders/animation_loader.dart';
@@ -7,12 +6,7 @@ import '../../widgets/loaders/animation_loader.dart';
 /// A utulity class to manage a full screen loading dialog.
 class TFullScreenLoader {
   /// Open a full screen dialof with the giving text and animation
-  static void openLoadingDialog(String text, String animation) {
-    final context = Get.overlayContext;
-    if (context == null) {
-      return; // Or handle this error as you wish
-    }
-
+  static void openLoadingDialog(BuildContext context, String text, String animation) {
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -36,11 +30,7 @@ class TFullScreenLoader {
   }
 
   /// stop the current open loading dialog.
-  static void stopLoading() {
-    final context = Get.overlayContext;
-    if (context == null) {
-      return; // Or handle this error as you wish
-    }
+  static void stopLoading(BuildContext context) {
     Navigator.of(context).pop();
   }
 }

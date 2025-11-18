@@ -12,7 +12,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get locale => 'English';
 
   @override
-  String get appName => 'Flutter folders Structure';
+  String get appName => 'DREAM TEAM';
 
   @override
   String get language => 'English';

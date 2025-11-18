@@ -12,7 +12,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get locale => 'Deutsch';
 
   @override
-  String get appName => 'Aufbau der Flutter-Ordner';
+  String get appName => 'DREAM TEAM';
 
   @override
   String get language => 'Deutsch';
@@ -39,7 +39,7 @@ class AppLocalizationsDe extends AppLocalizations {
       'Von unserer Haustür zu Ihrer - schnelle, sichere und kontaktlose Lieferung';
 
   @override
-  String get btnSkip => 'Springen';
+  String get btnSkip => 'Überspringen';
 
   @override
   String get loginTitle => 'Willkommen zurück,';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../core/constants/sizes.dart';
 import '../../core/extensions/context.dart';
-import '../../modules/shop/widgets/circular_image_icon.dart';
+import '../../features/shop/widgets/circular_image_icon.dart';
 
 class TVerticalImageCard extends StatelessWidget {
   final String? imageUrl;

@@ -1,30 +1,40 @@
 import 'package:flutter/foundation.dart';
 
+/// An utility class for platform-specific operations.
 class UtilityPlatform {
-  static final UtilityPlatform _instance = UtilityPlatform._internal();
-  factory UtilityPlatform() => _instance;
+  /// Returns true if the current platform is web.
+  static bool get isWeb => kIsWeb;
 
-  UtilityPlatform._internal();
+  /// Returns true if the current platform is Android.
+  static bool get isAndroid => defaultTargetPlatform == TargetPlatform.android;
 
-  bool get isAndroid => defaultTargetPlatform == TargetPlatform.android;
+  /// Returns true if the current platform is not web but is android.
+  static bool get isNotWebAndIsAndroid => !kIsWeb && isAndroid;
 
-  bool get isNotWebAndIsAndroid => !kIsWeb && isAndroid;
+  /// Returns true if the current platform is iOS.
+  static bool get isIOS => defaultTargetPlatform == TargetPlatform.iOS;
 
-  bool get isIOS => defaultTargetPlatform == TargetPlatform.iOS;
+  /// Returns true if the current platform is not web but is iOS.
+  static bool get isNotWebAndIsIOS => !kIsWeb && isIOS;
 
-  bool get isNotWebAndIsIOS => !kIsWeb && isIOS;
+  /// Returns true if the current platform is Windows.
+  static bool get isWindows => defaultTargetPlatform == TargetPlatform.windows;
 
-  bool get isWindows => defaultTargetPlatform == TargetPlatform.windows;
+  /// Returns true if the current platform is web or is windows.
+  static bool get isWebOrIsWindows => kIsWeb || isWindows;
 
-  bool get isWebOrIsWindows => kIsWeb || isWindows;
+  /// Returns true if the current platform is not Web but is Windows.
+  static bool get isNotWebAndIsWindows => !kIsWeb && isWindows;
 
-  bool get isNotWebAndIsWindows => !kIsWeb && isWindows;
+  /// Returns true if the current platform is not Web and is not Windows.
+  static bool get isNotWebAndIsNotWindows => !kIsWeb && !isWindows;
 
-  bool get isNotWebAndIsNotWindows => !kIsWeb && !isWindows;
+  /// Returns true if the current platform is not Web or is Windows.
+  static bool get isNotWebOrIsNotWindows => !kIsWeb || !isWindows;
 
-  bool get isNotWebOrIsNotWindows => !kIsWeb || !isWindows;
+  /// Returns true if the current platform is not Windows.
+  static bool get isQrCodeScannerVisible => !isWindows;
 
-  bool get isQrCodeScannerVisible => !isWindows;
-
-  String get targetPlatformName => !kIsWeb ? defaultTargetPlatform.name : 'Web ${defaultTargetPlatform.name}';
+  /// Returns the name of the current platform.
+  static String get targetPlatformName => !kIsWeb ? defaultTargetPlatform.name : 'Web ${defaultTargetPlatform.name}';
 }

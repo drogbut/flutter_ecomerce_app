@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../core/constants/colors.dart';
@@ -26,10 +25,10 @@ class TProfileMenuTile extends StatelessWidget {
       visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
       dense: true,
       minLeadingWidth: 100,
-      leading: Text(title, style: context.textTheme.bodySmall),
+      leading: Text(title, style: Theme.of(context).textTheme.bodySmall),
       title: Text(
         subTitle,
-        style: context.textTheme.bodyMedium,
+        style: Theme.of(context).textTheme.bodyMedium,
         overflow: TextOverflow.ellipsis,
       ),
       trailing: Icon(iconData, size: 18, color: TColors.darkGrey),

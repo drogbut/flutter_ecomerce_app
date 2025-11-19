@@ -12,6 +12,7 @@ class TPrimaryTextField extends StatelessWidget {
   final bool isObscureText;
   final String? Function(String?)? validator;
   final InputBorder? border;
+  final Function(String)? onChanged;
 
   const TPrimaryTextField({
     this.controller,
@@ -22,6 +23,7 @@ class TPrimaryTextField extends StatelessWidget {
     this.isObscureText = false,
     this.validator,
     this.border,
+    this.onChanged,
     super.key,
   });
 
@@ -30,6 +32,7 @@ class TPrimaryTextField extends StatelessWidget {
     return TextFormField(
       controller: controller,
       validator: validator,
+      onChanged: onChanged,
       expands: expands,
       obscureText: isObscureText,
       decoration: InputDecoration(

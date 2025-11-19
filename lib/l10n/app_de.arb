@@ -1,6 +1,6 @@
 {
   "locale": "Deutsch",
-  "appName": "Aufbau der Flutter-Ordner",
+  "appName": "DREAM TEAM",
   "language": "Deutsch",
   "onboardingTitle1": "Wählen Sie Ihr Produkt",
   "onboardingTitle2": "Zahlungsmethode auswählen",
@@ -8,7 +8,7 @@
   "onboardingSubTitle1": "Willkommen in einer Welt der unbegrenzten Möglichkeiten - Ihr perfektes Produkt wartet auf Sie!",
   "onboardingSubTitle2": "Für eine nahtlose Transaktion wählen Sie Ihren Zahlungsweg - Ihre Bequemlichkeit, unsere Priorität!",
   "onboardingSubTitle3": "Von unserer Haustür zu Ihrer - schnelle, sichere und kontaktlose Lieferung",
-  "btnSkip": "Springen",
+  "btnSkip": "Überspringen",
   "loginTitle": "Willkommen zurück,",
   "loginSubTitle": "Entdecken Sie begrenzte Auswahlmöglichkeiten und unübertroffene Annehmlichkeiten.",
   "enterEmail": "E-Mail eingeben",
@@ -52,14 +52,13 @@
   "storeSearchTitle": "Suche im Laden",
   "storeFeaturedBrandsTitle": "Hervorgehobene Marken",
   "fieldRequired": "{field} Erfordernis.",
-    "emailRequired": "E-Mail ist erforderlich.",
-    "invalidEmail": "Ungültige E-Mail-Adresse.",
-    "phoneRequired": "Telefonnummer ist erforderlich.",
-    "invalidPhone": "Ungültiges Telefonnummernformat (10 Ziffern erforderlich).",
-    "passwordRequired": "Passwort ist erforderlich.",
-    "passwordTooShort": "Passwort muss mindestens 6 Zeichen lang sein.",
-    "passwordNeedsUppercase": "Passwort muss mindestens einen Großbuchstaben enthalten.",
-    "passwordNeedsNumber": "Passwort muss mindestens eine Zahl enthalten.",
-    "passwordNeedsSpecial": "Passwort muss mindestens ein Sonderzeichen enthalten."
-
+  "emailRequired": "E-Mail ist erforderlich.",
+  "invalidEmail": "Ungültige E-Mail-Adresse.",
+  "phoneRequired": "Telefonnummer ist erforderlich.",
+  "invalidPhone": "Ungültiges Telefonnummernformat (10 Ziffern erforderlich).",
+  "passwordRequired": "Passwort ist erforderlich.",
+  "passwordTooShort": "Passwort muss mindestens 6 Zeichen lang sein.",
+  "passwordNeedsUppercase": "Passwort muss mindestens einen Großbuchstaben enthalten.",
+  "passwordNeedsNumber": "Passwort muss mindestens eine Zahl enthalten.",
+  "passwordNeedsSpecial": "Passwort muss mindestens ein Sonderzeichen enthalten."
 }

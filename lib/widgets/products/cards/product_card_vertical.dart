@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../commons/style/shadow.dart';
@@ -8,7 +8,7 @@ import '../../../core/constants/images_string.dart';
 import '../../../core/constants/sizes.dart';
 import '../../../core/extensions/color.dart';
 import '../../../core/extensions/widget.dart';
-import '../../../modules/shop/stores/product_detail/product_detail_screen.dart';
+import '../../../routing/route_names.dart';
 import '../../containers/rounded_container.dart';
 import '../../icons/circular.dart';
 import '../../images/rounded.dart';
@@ -26,7 +26,7 @@ class TProductCardVertical extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.to(() => const StoreProductDetailScreen()),
+      onTap: () => context.pushNamed(RouteNames.productDetail),
       child: Container(
         width: 180,
         //height: TSizes.productItemHeight,
@@ -34,7 +34,7 @@ class TProductCardVertical extends StatelessWidget {
         decoration: BoxDecoration(
           boxShadow: [TShadowStyle.verticalProductShadow],
           borderRadius: BorderRadius.circular(TSizes.productImageRadius),
-          color: context.isDarkMode ? TColors.darkGrey : TColors.white,
+          color: Theme.of(context).brightness == Brightness.dark ? TColors.darkGrey : TColors.white,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -44,7 +44,7 @@ class TProductCardVertical extends StatelessWidget {
             TRoundedContainer(
               height: 180,
               padding: TSizes.sm.allPadding,
-              backgroundColor: context.isDarkMode ? TColors.dark : TColors.light,
+              backgroundColor: Theme.of(context).brightness == Brightness.dark ? TColors.dark : TColors.light,
               child: Stack(
                 children: [
                   /// Thumbail
@@ -61,7 +61,7 @@ class TProductCardVertical extends StatelessWidget {
                       radius: TSizes.sm,
                       backgroundColor: TColors.secondary.withOpacityPercent(0.8),
                       padding: (h: TSizes.sm, v: TSizes.xs).symmetricPadding,
-                      child: Text('25%', style: context.textTheme.labelLarge?.apply(color: TColors.black)),
+                      child: Text('25%', style: Theme.of(context).textTheme.labelLarge?.apply(color: TColors.black)),
                     ),
                   ),
 

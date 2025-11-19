@@ -106,10 +106,10 @@ abstract class AppLocalizations {
   /// **'English'**
   String get locale;
 
-  /// The flutter folders structure
+  /// Dream Team App
   ///
   /// In en, this message translates to:
-  /// **'Flutter folders Structure'**
+  /// **'DREAM TEAM'**
   String get appName;
 
   /// The current language

@@ -69,4 +69,7 @@ class TSizes {
 
   /// Grid view spacing
   static const double gridViewSpacing = 16.0;
+
+  /// Duration
+  static const int defaultDuration = 300;
 }

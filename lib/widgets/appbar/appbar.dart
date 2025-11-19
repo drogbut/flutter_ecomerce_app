@@ -3,13 +3,14 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../core/constants/sizes.dart';
 import '../../core/extensions/context.dart';
 
 class TAppBar extends StatelessWidget implements PreferredSizeWidget {
+  final bool? centerTitle;
   final bool showBackIcon;
   final IconData? leadingIcon;
   final VoidCallback? leadingOnPressed;
@@ -19,6 +20,7 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   const TAppBar({
     this.showBackIcon = false,
+    this.centerTitle,
     this.leadingIcon,
     this.title,
     this.actions,
@@ -33,11 +35,12 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
+      centerTitle: centerTitle,
       leading: showBackIcon
           ? IconButton(
               icon: getIcon(),
               color: context.whiteOrBlack,
-              onPressed: () => Get.back(),
+              onPressed: () => context.pop(),
             )
           : leadingIcon != null
               ? IconButton(icon: Icon(leadingIcon), onPressed: leadingOnPressed)

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../core/constants/colors.dart';
 import '../../core/constants/sizes.dart';
@@ -33,7 +32,7 @@ class TCircularIcon extends StatelessWidget {
         borderRadius: BorderRadius.circular(radius ?? 100),
         color: backgroundColor != null
             ? backgroundColor!
-            : context.isDarkMode
+            : Theme.of(context).brightness == Brightness.dark
                 ? TColors.black.withOpacityPercent(0.8)
                 : TColors.white.withOpacityPercent(0.8),
       ),

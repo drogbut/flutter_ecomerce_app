@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../core/constants/colors.dart';
 
@@ -29,10 +28,10 @@ class TSettingsMenuTile extends StatelessWidget {
         size: 28,
         color: TColors.primary,
       ),
-      title: Text(title, style: context.textTheme.titleMedium),
+      title: Text(title, style: Theme.of(context).textTheme.titleMedium),
       subtitle: Text(
         subTitle,
-        style: context.textTheme.labelMedium,
+        style: Theme.of(context).textTheme.labelMedium,
       ),
       trailing: trailing,
     );

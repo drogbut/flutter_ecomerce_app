@@ -123,6 +123,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get resendEmail => 'Renvoyer le mail';
 
   @override
+  String get search => 'Recherche';
+
+  @override
   String get yourAccountCreatedTitle => 'Votre compte a été créé avec succès !';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get done => 'terminee';
 
   @override
-  String get home => 'Accueil';
+  String get home => 'Game';
 
   @override
   String get store => 'Magasin';
@@ -159,7 +162,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get favorite => 'Favoris';
 
   @override
-  String get profile => 'Profil';
+  String get profile => 'profile';
 
   @override
   String get homeAppBarTitle => 'Bonne journée pour le shopping';
@@ -169,6 +172,9 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get homeCategoriesTitle => 'Catégories populaires';
+
+  @override
+  String get shoppingCart => 'Panier';
 
   @override
   String get storeTitle => 'Boutique';

@@ -143,6 +143,10 @@
   "@resendEmail": {
     "description": "Resend Email"
   },
+  "search": "Search",
+  "@search": {
+    "description": "Search"
+  },
   "yourAccountCreatedTitle": "Your account successfully created!",
   "@yourAccountCreatedTitle": {
     "description": "Your account successfully created!"
@@ -175,9 +179,9 @@
   "@done": {
     "description": "Done"
   },
-  "home": "Home",
+  "home": "Shop",
   "@home": {
-    "description": "Home"
+    "description": "Shop"
   },
   "store": "Store",
   "@store": {
@@ -202,6 +206,10 @@
   "homeCategoriesTitle": "Popular categories",
   "@homeCategoriesTitle": {
     "description": "Popular categories"
+  },
+  "shoppingCart": "Cart",
+  "@shoppingCart": {
+    "description": "Cart"
   },
   "storeTitle": "Store",
   "@storeTitle": {

@@ -71,14 +71,14 @@ class RegisterScreen extends StatelessWidget {
                     /// Google
                     TImageCircularIcon(
                       key: const Key('googleIcon'),
-                      imagePath: TImages.google,
+                      assetsImagePath: TImages.google,
                       onPressed: () {},
                     ).withPadding(TSizes.spaceBtwItems.rightPadding),
 
                     /// Facebook
                     TImageCircularIcon(
                       key: const Key('facebookIcon'),
-                      imagePath: TImages.facebook,
+                      assetsImagePath: TImages.facebook,
                       onPressed: () {},
                     ),
                   ],

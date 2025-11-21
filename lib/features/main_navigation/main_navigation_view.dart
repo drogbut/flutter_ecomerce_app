@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:iconsax/iconsax.dart';
 
+import '../../core/constants/images_string.dart';
 import '../../core/extensions/context.dart';
 import '../../widgets/bottom_navigation_bar/plattform_bottom_navigation_bar.dart';
 
@@ -17,9 +18,6 @@ class MainNavigationView extends StatelessWidget {
     required this.onTap,
   });
 
-  static const int favoriteIndex = 2; // ordre défini par tes items
-  static const int profileIndex = 3;
-
   @override
   Widget build(BuildContext context) {
     return PfBottomNavigationBar(
@@ -31,10 +29,11 @@ class MainNavigationView extends StatelessWidget {
 
   List<BottomNavigationBarItem> _buildNavigationItems(BuildContext context) {
     return [
-      BottomNavigationBarItem(icon: const Icon(Iconsax.home), label: context.translate.home),
-      BottomNavigationBarItem(icon: const Icon(Iconsax.shop), label: context.translate.store),
-      BottomNavigationBarItem(icon: const Icon(Iconsax.heart), label: context.translate.favorite),
-      BottomNavigationBarItem(icon: const Icon(Iconsax.user), label: context.translate.profile),
+      BottomNavigationBarItem(icon: SvgPicture.asset(TImages.homeIcon, height: 24), label: context.translate.home),
+      BottomNavigationBarItem(icon: Icon(CupertinoIcons.heart), label: context.translate.favorite),
+      BottomNavigationBarItem(icon: const Icon(CupertinoIcons.search), label: context.translate.search),
+      BottomNavigationBarItem(icon: Icon(CupertinoIcons.person), label: context.translate.profile),
+      BottomNavigationBarItem(icon: Icon(CupertinoIcons.shopping_cart), label: context.translate.shoppingCart),
     ];
   }
 }

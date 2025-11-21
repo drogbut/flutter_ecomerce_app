@@ -161,11 +161,11 @@ class AppRouter {
               StatefulShellBranch(
                 routes: [
                   GoRoute(
-                    path: AppRoutes.store,
-                    name: RouteNames.store,
+                    path: AppRoutes.favorite,
+                    name: RouteNames.favorite,
                     pageBuilder: (context, state) => RouterUtil.getPlatFormPage(
                       state: state,
-                      child: const StoreProductScreen(),
+                      child: const FavouritePage(),
                     ),
                   ),
                 ],
@@ -173,11 +173,11 @@ class AppRouter {
               StatefulShellBranch(
                 routes: [
                   GoRoute(
-                    path: AppRoutes.favorite,
-                    name: RouteNames.favorite,
+                    path: AppRoutes.store,
+                    name: RouteNames.store,
                     pageBuilder: (context, state) => RouterUtil.getPlatFormPage(
                       state: state,
-                      child: const FavouritePage(),
+                      child: const StoreProductScreen(),
                     ),
                   ),
                 ],
@@ -233,18 +233,21 @@ class AppRouter {
                   ),
                 ],
               ),
+              StatefulShellBranch(
+                routes: [
+                  GoRoute(
+                    path: AppRoutes.shoppingCart,
+                    name: RouteNames.shoppingCart,
+                    pageBuilder: (context, state) => RouterUtil.getPlatFormPage(
+                      state: state,
+                      child: const TShoppingCart(),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
 
-          // Shop routes
-          GoRoute(
-            path: AppRoutes.shoppingCart,
-            name: RouteNames.shoppingCart,
-            pageBuilder: (context, state) => RouterUtil.getPlatFormPage(
-              state: state,
-              child: const TShoppingCart(),
-            ),
-          ),
           GoRoute(
             path: AppRoutes.checkout,
             name: RouteNames.checkout,

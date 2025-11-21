@@ -316,6 +316,12 @@ abstract class AppLocalizations {
   /// **'Resend Email'**
   String get resendEmail;
 
+  /// Search
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get search;
+
   /// Your account successfully created!
   ///
   /// In en, this message translates to:
@@ -364,10 +370,10 @@ abstract class AppLocalizations {
   /// **'Done'**
   String get done;
 
-  /// Home
+  /// Shop
   ///
   /// In en, this message translates to:
-  /// **'Home'**
+  /// **'Shop'**
   String get home;
 
   /// Store
@@ -405,6 +411,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Popular categories'**
   String get homeCategoriesTitle;
+
+  /// Cart
+  ///
+  /// In en, this message translates to:
+  /// **'Cart'**
+  String get shoppingCart;
 
   /// Store
   ///

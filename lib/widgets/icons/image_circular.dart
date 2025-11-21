@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import '../../core/constants/sizes.dart';
 
 class TImageCircularIcon extends StatelessWidget {
-  final String imagePath;
+  final String assetsImagePath;
   final Function()? onPressed;
 
   const TImageCircularIcon({
-    required this.imagePath,
+    required this.assetsImagePath,
     required this.onPressed,
     super.key,
   });
@@ -24,7 +24,7 @@ class TImageCircularIcon extends StatelessWidget {
         icon: Image(
           width: TSizes.iconMd,
           height: TSizes.iconMd,
-          image: AssetImage(imagePath),
+          image: AssetImage(assetsImagePath),
         ),
       ),
     );

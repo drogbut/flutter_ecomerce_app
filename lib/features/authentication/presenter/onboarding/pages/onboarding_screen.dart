@@ -24,7 +24,8 @@ class OnboardingScreen extends StatelessWidget {
     return BlocProvider(
       create: (_) => OnboardingCubit(),
       child: BlocConsumer<OnboardingCubit, OnboardingState>(
-        listenWhen: (previous, current) => previous.completed != current.completed,
+        listenWhen: (previous, current) =>
+            previous.completed != current.completed,
         listener: (context, state) async {
           if (state.completed) {
             context.read<AuthenticationCubit>().completeOnboarding();
@@ -50,26 +51,28 @@ class OnboardingScreen extends StatelessWidget {
               ],
             ),
             body: SafeArea(
-              child: PageView(
-                controller: cubit.pageController,
-                onPageChanged: cubit.updatePageIndicator,
-                children: [
-                  OnboardingImage(
-                    image: TImages.onBoardingImage1,
-                    title: context.translate.onboardingTitle1,
-                    subTitle: context.translate.onboardingSubTitle1,
-                  ),
-                  OnboardingImage(
-                    image: TImages.onBoardingImage2,
-                    title: context.translate.onboardingTitle2,
-                    subTitle: context.translate.onboardingSubTitle2,
-                  ),
-                  OnboardingImage(
-                    image: TImages.onBoardingImage3,
-                    title: context.translate.onboardingTitle3,
-                    subTitle: context.translate.onboardingSubTitle3,
-                  ),
-                ],
+              child: Center(
+                child: PageView(
+                  controller: cubit.pageController,
+                  onPageChanged: cubit.updatePageIndicator,
+                  children: [
+                    OnboardingImage(
+                      image: TImages.onBoardingImage1,
+                      title: context.translate.onboardingTitle1,
+                      subTitle: context.translate.onboardingSubTitle1,
+                    ),
+                    OnboardingImage(
+                      image: TImages.onBoardingImage2,
+                      title: context.translate.onboardingTitle2,
+                      subTitle: context.translate.onboardingSubTitle2,
+                    ),
+                    OnboardingImage(
+                      image: TImages.onBoardingImage3,
+                      title: context.translate.onboardingTitle3,
+                      subTitle: context.translate.onboardingSubTitle3,
+                    ),
+                  ],
+                ),
               ),
             ),
             bottomNavigationBar: SafeArea(
@@ -79,7 +82,8 @@ class OnboardingScreen extends StatelessWidget {
                   children: [
                     /// Page indicator
                     Expanded(
-                      child: OnboardingSmoothNavigation(pageCount: cubit.pageCount),
+                      child: OnboardingSmoothNavigation(
+                          pageCount: cubit.pageCount),
                     ),
 
                     /// Next button

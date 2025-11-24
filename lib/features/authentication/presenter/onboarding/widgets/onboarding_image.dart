@@ -22,7 +22,7 @@ class OnboardingImage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Image(
-              width: context.screenWidth * 1,
+              width: context.screenWidth,
               height: context.screenHeight * 0.6,
               image: AssetImage(image),
             ),

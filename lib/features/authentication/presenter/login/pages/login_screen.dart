@@ -46,13 +46,13 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     /// google
                     TImageCircularIcon(
-                      imagePath: TImages.google,
+                      assetsImagePath: TImages.google,
                       onPressed: () {},
                     ).withPadding(TSizes.spaceBtwItems.rightPadding),
 
                     /// facebook
                     TImageCircularIcon(
-                      imagePath: TImages.facebook,
+                      assetsImagePath: TImages.facebook,
                       onPressed: () {},
                     ),
                   ],

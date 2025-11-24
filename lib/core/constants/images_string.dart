@@ -6,6 +6,10 @@ class TImages {
   static const String lightLogo = 'assets/images/app_logos/dark_logo.png';
   static const String darkLogo = 'assets/images/app_logos/dark_logo.png';
 
+  /// Bottom Navigation Bar Icons
+  static const String homeIcon = 'assets/vectors/tomato_icon.svg';
+  static const String cartIcon = 'assets/logos/dt_shop_light.png';
+
   /// Social Logos
   static const String google = 'assets/logos/google-icon.png';
   static const String facebook = 'assets/logos/facebook-icon.png';

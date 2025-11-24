@@ -31,7 +31,7 @@ dependencies:
   # Ui & Icons
   iconsax: ^0.0.8
   shimmer: ^3.0.0
-  flutter_svg: ^2.0.10+1
+  flutter_svg: ^2.2.3
   cupertino_icons: ^1.0.8
   flutter_rating_bar: ^4.0.1
   font_awesome_flutter: ^10.9.1

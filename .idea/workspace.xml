@@ -10,12 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0affda8-3a82-48f9-b8f5-a2d29be43d55" name="Changes" comment="update native splash screen">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/authentication/presenter/onboarding/pages/onboarding_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/authentication/presenter/onboarding/pages/onboarding_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/authentication/presenter/onboarding/widgets/onboarding_image.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/authentication/presenter/onboarding/widgets/onboarding_image.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/constants/images_string.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/constants/images_string.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/authentication/presenter/login/pages/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/authentication/presenter/login/pages/login_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/authentication/presenter/register/pages/register_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/authentication/presenter/register/pages/register_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/main_navigation/main_navigation_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/main_navigation/main_navigation_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/l10n/app_de.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_de.arb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/l10n/app_en.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_en.arb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/l10n/app_fr.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_fr.arb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations_de.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations_de.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations_en.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations_en.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations_fr.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations_fr.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/routing/app_router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routing/app_router.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/icons/image_circular.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/icons/image_circular.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

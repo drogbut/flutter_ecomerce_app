@@ -123,6 +123,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get resendEmail => 'Resend Email';
 
   @override
+  String get search => 'Search';
+
+  @override
   String get yourAccountCreatedTitle => 'Your account successfully created!';
 
   @override
@@ -150,7 +153,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get home => 'Home';
+  String get home => 'Shop';
 
   @override
   String get store => 'Store';
@@ -169,6 +172,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get homeCategoriesTitle => 'Popular categories';
+
+  @override
+  String get shoppingCart => 'Cart';
 
   @override
   String get storeTitle => 'Store';
